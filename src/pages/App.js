@@ -1,13 +1,21 @@
 import React from 'react';
 import Projects from '../components/Projects';
-import About from './About'; // Assuming you also have an About component
+import NavBar from './NavBar';
+import About from './About';
+import Skills from './Skills';
+import Education from './Education';
 
 const App = () => {
   return (
     <div>
-      <h1>My Portfolio</h1>
-      <About />
-      <Projects />
+      <NavBar />
+      <main>
+        <h1>Title</h1>
+        <About />
+        <Projects />
+        <Skills />
+        <Education />
+      </main>
     </div>
   );
 };
