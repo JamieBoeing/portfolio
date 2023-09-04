@@ -1,23 +1,13 @@
-import About from '../pages/About';
-import Home from '../pages/Home';
-import Contact from '../pages/Contact';
+import HomePage from '../pages/HomePage/HomePage'
+import AboutPage from '../pages/AboutPage/AboutPage'
+import ContactPage from '../pages/ContactPage/ContactPage'
+
 
 const routes = [
-	{
-		Component: Contact,
-		key: 'Contact',
-		path: '/contact'
-	},
-	{
-		Component: Home,
-		key: 'Home',
-		path: '/'
-	},
-	{
-		Component: About,
-		key: 'About',
-		path: '/about'
-	}
-];
+    { path: '/', component: HomePage },
+    { path: '/about', component: AboutPage },
+    { path: '/contact', component: ContactPage },
+    // Add more routes as needed
+  ]
 
-export default routes;
+export default routes

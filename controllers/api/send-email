@@ -1,0 +1,47 @@
+const nodemailer = require('nodemailer');
+const Submission = require('../../models/api/submission') // Make sure to adjust the path and model as needed
+require('dotenv')
+
+const sendEmail = async (req, res) => {
+  try {
+    const { name, email, message } = req.body;
+
+    // create a transporter with your email provider
+    const transporter = nodemailer.createTransport({
+      service: 'Gmail', // Change to your email service
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
+    });
+
+    // define the email content
+    const mailOptions = {
+      from: email,
+      to: 'boeingjamie@gmail.com', // Change to the recipient's email
+      subject: 'Portfolio Contact Form Submission',
+      text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+    };
+
+    // send the email
+    await transporter.sendMail(mailOptions);
+
+    // save submission to the database
+    const submission = new Submission({
+      name,
+      email,
+      message,
+    });
+    await submission.save();
+
+    res.json({ success: true });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ success: false, error: 'Failed to send email' });
+  }
+};
+
+module.exports = {
+  sendEmail,
+};
+
