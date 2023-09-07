@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import './ContactPage.module.scss'; // Import your SCSS styles
+import React, { useState } from 'react'
+
+
 
 
 const ContactPage = () => {

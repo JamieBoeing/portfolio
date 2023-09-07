@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { sendEmail } from '.../..controllers/api/send-email'
-import './ContactPage.module.scss'
+import '../Contact/Contact.module.scss'
 
 
 const Contact = () => {

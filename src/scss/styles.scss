@@ -1,10 +1,24 @@
 /* App.scss */
+$color1: #ff5733;
+$color2: #33ff57;
+$color3: #5733ff;
+$color4: #ff33a6;
+$color5: #33a6ff;
+
+:export {
+col-1: $color1;
+col-2: $color2;
+col-3: $color3;
+col-4: $color4;
+col-5: $color5;
+}
+
 
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-image: url('https://i.imgur.com/lH4U8ND.jpeg');
   }
   
   .container {

@@ -1,7 +1,6 @@
-import React from 'react';
-import './AboutPage.module.scss'; // Import your SCSS styles
-import { aboutMe } from '../../data';
+import React from 'react'
 
+import { aboutMe }from '../../data'
 
 
 const AboutPage = () => {

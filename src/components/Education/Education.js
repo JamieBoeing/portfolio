@@ -1,6 +1,6 @@
 // Education.js
 import React from 'react';
-import { educationData } from '../../data';
+import { educationData } from '../../data'
 
 const Education = () => {
   return (
@@ -16,7 +16,7 @@ const Education = () => {
         ))}
       </ul>
     </div>
-  );
-};
+  )
+}
 
 export default Education;

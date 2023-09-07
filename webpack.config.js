@@ -9,7 +9,6 @@ module.exports = env => {
 	return {
 		entry: {
 			App: './src/index.js',
-			main: './src/main.js'
 		},
 		output: {
 			path: path.resolve(__dirname, 'public/js/dist'),
