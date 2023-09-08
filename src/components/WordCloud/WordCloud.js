@@ -3,20 +3,19 @@ import WordCloud from 'react-wordcloud'
 import { words } from '../../data'
 import styles from './WordCloud.module.scss'
 
-const WordCloudComponent = () => {
+const WordCloud = () => {
     const colors = [
         styles['col-1'],
         styles['col-2'],
         styles['col-3'],
         styles['col-4'],
         styles['col-5'],
-
     ]
 
     const options = {
-  rotations: 2,
-  rotationAngles: [0, 90],
-  fontSizes: [20, 60], // Define your desired font size range
+    rotations: 2,
+    rotationAngles: [0, 90],
+    fontSizes: [20, 60], // Define your desired font size range
     }
 
     const assignRandomColor = () => colors[Math.floor(Math.random() * colors.length)]
@@ -33,4 +32,4 @@ return (
   )
 }
 
-export default WordCloudComponent;
+export default WordCloud

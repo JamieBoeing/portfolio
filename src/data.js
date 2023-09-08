@@ -143,13 +143,6 @@ const educationData = [
 ]
 
 
-const servicesData = [
-  {
-    category: 'Web Development',
-    service: '',
-  
-  }
-]
 
 const wordData = [
   {
@@ -196,5 +189,17 @@ const wordData = [
 }
 ]
 
+const servicesData = [
+  {
+    category: 'Web Development',
+    service: 'Front-End Web Development',
+  },
+  {
+    category: 'Web Development',
+    service: 'Back-End Web Development',
+  },
+  // Add more services...
+]
 
-export { projects, skills, aboutMe, experienceData, educationData, wordData };
+
+export { projects, skills, aboutMe, experienceData, educationData, wordData, servicesData };
