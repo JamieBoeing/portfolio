@@ -3,14 +3,14 @@ import ReactDOM from 'react-dom'
 import React from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 
-const root = ReactDOM.createRoot(document.getElementById('app'));
 
-root.render(
+ReactDOM.render(
   <React.StrictMode>
     <Router>
        <App /> 
     </Router>
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById('app')
 )
 
 //Entry point for react app
