@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import { sendEmail } from '.../..controllers/api/send-email'
-import '../Contact/Contact.module.scss'
-
+import { sendEmailUtil } from '../../utilities/send-email.js'
+import '../Contact/Contact.module.scss'  
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -11,24 +10,24 @@ const Contact = () => {
   });
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({ ...prevData, [name]: value }));
+    const { name, value } = e.target
+    setFormData((prevData) => ({ ...prevData, [name]: value }))
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
     try {
       // Perform any necessary data validation before sending
       if (!formData.name || !formData.email || !formData.message) {
-        throw new Error('Please fill in all fields.');
+        throw new Error('Please fill in all fields.')
       }
 
       // Call the sendEmail function with the form data
-      const response = await sendEmail(formData);
+      const response = await sendEmailUtil(formData)
 
       // Check the response and handle success or failure
       if (response.success) {
-        console.log('Email sent successfully');
+        console.log('Email sent successfully')
         // Clear the form fields after successful submission
         setFormData({
           name: '',
@@ -39,9 +38,9 @@ const Contact = () => {
         console.error('Failed to send email')
       }
     } catch (error) {
-      console.error(error)
+      console.error(error);
     }
-  }
+  };
 
   return (
     <div className="contact-container">

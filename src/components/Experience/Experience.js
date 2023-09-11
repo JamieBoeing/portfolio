@@ -1,6 +1,6 @@
 // Experience.js
-import React from 'react';
-import { experienceData } from '../../data';
+import React from 'react'
+import { experienceData } from '../../data'
 import './Experience.module.scss'
 
 const Experience = () => {
@@ -18,7 +18,7 @@ const Experience = () => {
         ))}
       </ul>
     </div>
-  );
-};
+  )
+}
 
-export default Experience;
+export default Experience

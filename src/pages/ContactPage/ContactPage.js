@@ -1,78 +1,89 @@
 import React, { useState } from 'react'
 
+const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+    recipientEmail: '', // Optional recipient field
+  });
 
-
-
-const ContactPage = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [submitting, setSubmitting] = useState(false);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setSubmitting(true);
-
-    try {
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ name, email, message }),
-      });
-
-      if (response.ok) {
-        alert('Email sent successfully!');
-      } else {
-        alert('Failed to send email. Please try again.');
-      }
-    } catch (error) {
-      console.error(error);
-      alert('An error occurred. Please try again later.');
-    }
-
-    setSubmitting(false);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }))
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    
+    // Send a POST request to your server with formData
+    const response = await fetch('/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
+      console.log('Email sent successfully')
+      // Clear the form fields after successful submission
+      setFormData({
+        name: '',
+        email: '',
+        message: '',
+        recipientEmail: '',
+      })
+    } else {
+      console.error('Failed to send email')
+    }
+  }
+
   return (
-    <div className="contact-page">
-      <h2>Contact Me</h2>
+    <div>
+      <h2>Contact Us</h2>
       <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label>Name:</label>
+        <label>
+          Name:
           <input
             type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
           />
-        </div>
-        <div className="form-group">
-          <label>Email:</label>
+        </label>
+        <label>
+          Email:
           <input
             type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
           />
-        </div>
-        <div className="form-group">
-          <label>Message:</label>
+        </label>
+        {formData.recipientEmail && ( // Show recipient field if needed
+          <label>
+            Recipient's Email:
+            <input
+              type="email"
+              name="recipientEmail"
+              value={formData.recipientEmail}
+              onChange={handleChange}
+            />
+          </label>
+        )}
+        <label>
+          Message:
           <textarea
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            required
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
           />
-        </div>
-        <div className="form-group">
-          <button type="submit" disabled={submitting}>
-            {submitting ? 'Sending...' : 'Send'}
-          </button>
-        </div>
+        </label>
+        <button type="submit">Send Message</button>
       </form>
     </div>
-  );
-};
+  )
+}
 
-export default ContactPage;
+export default ContactForm

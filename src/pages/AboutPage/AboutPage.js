@@ -1,22 +1,21 @@
 import React from 'react'
-
-import { aboutMe }from '../../data'
-
+import './AboutPage.module.scss'
+import About from '../../components/About/About'
+import Experience from '../../components/Experience/Experience'
+import Skills from '../../components/Skills/Skills'
+import Education from '../../components/Education/Education'
+import { Link } from 'react-router-dom'
 
 const AboutPage = () => {
-  const profileImageUrl = '/img/profileImage.jpg'
-
   return (
-    <div className="about-container">
-      <div className="profile">
-        <img src={profileImageUrl} alt="Profile" />
-        <h1>{aboutMe.name}</h1>
-        <p>{aboutMe.title}</p>
-        <p>{aboutMe.tag}</p>
-        {/* Add more information from aboutMe */}
-      </div>
+    <div>
+     <About />
+     <Experience />
+     <Skills />
+     <Education />
+     {/* Add a Link to the Contact page */}
+     <Link to="/contact">Contact Me</Link>
     </div>
   )
 }
-
 export default AboutPage

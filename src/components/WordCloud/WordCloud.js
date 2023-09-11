@@ -1,7 +1,8 @@
 import React from 'react'
 import ReactWordCloud from 'react-wordcloud2'
-import { words } from '../../data'
+import { wordData } from '../../data'
 import styles from './WordCloud.module.scss'
+
 
 const MyWordCloud = () => {
     const colors = [
@@ -27,7 +28,7 @@ const MyWordCloud = () => {
 
 return (
     <div>
-      <ReactWordCloud words={words} options={options} />
+      <ReactWordCloud wordData={wordData} options={options} />
     </div>
   )
 }

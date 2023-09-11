@@ -1,5 +1,5 @@
-import React from 'react';
-import { servicesData } from '../../data';
+import React from 'react'
+import { servicesData } from '../../data'
 
 
 const Services = () => {
@@ -10,10 +10,11 @@ const Services = () => {
             <div key={index}>
               <h3>{serviceItem.category}</h3>
               <p>{serviceItem.service}</p>
+              {/* <p>{serviceItem.price}</p> */}
             </div>
           ))}
         </section>
-      );
+      )
 }
 
 

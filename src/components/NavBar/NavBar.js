@@ -12,6 +12,9 @@ const NavBar = () => {
 
   return (
     <nav className={`navbar ${isOpen ? 'active' : ''}`}>
+      <div className='navbar-logo'>
+        {/* <img src='/img/rosette.jpg' alt='Logo' /> */}
+      </div>
       <div className='navbar-toggle' onClick={toggleBar}>
         <span></span>
         <span></span>
@@ -25,13 +28,13 @@ const NavBar = () => {
           <Link to="/about">About Me</Link>
         </li>
         <li className='nav-item'>
+          <Link to="/contact">Contact Me</Link>
+        </li>
+        <li className='nav-item'>
           <Link to="/projects">Projects</Link>
         </li>
         <li className='nav-item'>
-          <Link to="/contact">Contact</Link>
-        </li>
-        <li className='nav-item'>
-          <Link to="/experience">Experience</Link>
+          <Link to="/services">Services</Link>
         </li>
       </ul>
     </nav>
