@@ -1,13 +1,25 @@
-const mongoose = require('mongoose')
+// models/Email.js
+const mongoose = require('mongoose');
 
+const emailSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+  },
+  email: {
+    type: String,
+    required: true,
+  },
+  message: {
+    type: String,
+    required: true,
+  },
+  timestamp: {
+    type: Date,
+    default: Date.now,
+  },
+});
 
-const SubmissionSchema = new mongoose.Schema({
-    name: { type: String, requied: true },
-    email: { type: String, required: true },
-    message: { type: String, required: false },
-    timestamp: { type: Date, default: Date.Now },
-})
+const Email = mongoose.model('Email', emailSchema);
 
-const Submission = mongoose.model('Submission', SubmissionSchema)
-
-module.exports = Submission
+module.exports = Email;
