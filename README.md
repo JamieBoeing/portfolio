@@ -68,8 +68,8 @@ package.json: Project dependencies and scripts.
 ## Contact
 If you have any questions, feedback, or would like to discuss potential opportunities, please feel free to reach out to me:
 
-Email: your-email@gmail.com
-GitHub: github.com/your-username
+Email: your-boeingjamie@gmail.com
+GitHub: https://github.com/
 LinkedIn: linkedin.com/in/your-username
 Thank you for visiting my portfolio website! I look forward to connecting with you.
 

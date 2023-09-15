@@ -1,0 +1,54 @@
+/* ContactModal.module.scss */
+
+/* Style the modal backdrop */
+.modal-backdrop {
+  opacity: 0.8;
+}
+
+/* Style the modal itself */
+.modal {
+  border: 2px solid #007bff;
+  border-radius: 10px;
+
+  .modal-dialog {
+    margin: 20px;
+    max-width: 600px;
+  }
+
+  .modal-content {
+    border: none;
+    border-radius: 10px;
+
+    .modal-header {
+      background-color: #007bff;
+      color: #fff;
+      border-bottom: none;
+
+      .modal-title {
+        font-size: 1.5rem;
+      }
+
+      button.close {
+        color: #fff;
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+
+    .modal-body {
+      padding: 20px;
+
+      /* Add custom styling for the modal body content here */
+    }
+
+    .modal-footer {
+      border-top: none;
+      padding: 20px;
+
+      button {
+        margin-right: 10px;
+      }
+    }
+  }
+}
