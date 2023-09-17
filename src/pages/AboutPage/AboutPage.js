@@ -5,6 +5,7 @@ import Experience from '../../components/Experience/Experience'
 import Skills from '../../components/Skills/Skills'
 import Education from '../../components/Education/Education'
 import { Link } from 'react-router-dom'
+import Footer from '../../components/Footer/Footer'
 
 const AboutPage = () => {
   return (
@@ -13,8 +14,7 @@ const AboutPage = () => {
      <Experience />
      <Skills />
      <Education />
-     {/* Add a Link to the Contact page */}
-     <Link to="/contact">Contact Me</Link>
+     <Footer />
     </div>
   )
 }

@@ -8,7 +8,8 @@ import Projects from '../components/Projects/Projects'
 import Skills from '../components/Skills/Skills'
 import Education from '../components/Education/Education'
 import Experience from '../components/Experience/Experience'
-import Services from '../components/Services/services'
+import Services from '../components/Services/Services'
+import ServicesPage from '../pages/ServicesPage/ServicesPage'
 import WordCloud from '../components/WordCloud/WordCloud'
 import Icon from '../components/Icon/Icon'
 
@@ -20,13 +21,16 @@ const App = () => {
         <main>
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route index element={<WordCloud />} />
             <Route path="/about" element={<AboutPage />} />
+            <Route element={<Skills />} />
             <Route path="/projects" element={<Projects />} />
-            <Route path="/skills" element={<Skills />} />
-            <Route path="/education" element={<Education />} />
+           
+            <Route element={<Education />} />
             <Route path="/experience" element={<Experience />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/wordcloud" element={<WordCloud />} />
+            <Route path="/services" element={<ServicesPage />} />
+              <Route index element={<Services />} />
+            
             <Route path="/icon" element={<Icon />} />
         </Routes>
         </main>

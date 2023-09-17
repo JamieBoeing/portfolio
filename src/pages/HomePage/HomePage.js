@@ -1,18 +1,18 @@
 
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import MyWordCloud from '../../components/WordCloud/WordCloud'
+import styles from './HomePage.module.scss'
+import Footer from '../../components/Footer/Footer'
 
 const HomePage = () => {
   return (
-    <div className="home-container">
+    <div className={styles.contaner}>
       <header>
         <h1>Welcome to Jamie Boeing's Portfolio</h1>
         <p>A showcase of my web development and design journey.</p>
       </header>
-      <footer>
-        <p>&copy; 20XX Jamie Boeing</p>
-      </footer>
+    <Footer />
     </div>
   )
 }

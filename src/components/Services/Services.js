@@ -1,13 +1,14 @@
 import React from 'react'
 import { servicesData } from '../../data'
+import styles from './Services.module.scss'
 
 
 const Services = () => {
     return (
         <section id="services">
-          <h2>Our Services</h2>
+          <h2>Available Services</h2>
           {servicesData.map((serviceItem, index) => (
-            <div key={index}>
+            <div className={styles.services} key={index}>
               <h3>{serviceItem.category}</h3>
               <p>{serviceItem.service}</p>
               {/* <p>{serviceItem.price}</p> */}

@@ -22,8 +22,8 @@ const projects = [
     title: 'Bazaar',
     description:'A group completed, full mern stack site, offering a user the ability to login, logout, sign up to be a seller and start entering their own items to add. This artistic website features multi functions utiilzing React, and Node.js',
     technologies: ['React', 'Express', 'MongoDB'],
-    githubLink: 'https://github.com/yourusername/project3',
-    liveDemoLink: 'https://yourproject3demo.com',
+    githubLink: 'https://github.com/joe-bor/Etsy_Capstone',
+    liveDemoLink: 'https://bazaar.hlysllrs.me/home',
   },
   // Add more project objects here...
 ];
