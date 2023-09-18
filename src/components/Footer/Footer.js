@@ -1,9 +1,9 @@
 import React from 'react'
-
+import styles from './Footer.module.scss'
 const Footer = () => {
     return (
         <footer>
-            <p>&copy; 2023 Jamie Boeing</p>
+            <p>&copy; 20XX Jamie Boeing</p>
         </footer>
     )
 }

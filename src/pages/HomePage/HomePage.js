@@ -7,7 +7,7 @@ import Footer from '../../components/Footer/Footer'
 
 const HomePage = () => {
   return (
-    <div className={styles.contaner}>
+    <div className={styles.container}>
       <header>
         <h1>Welcome to Jamie Boeing's Portfolio</h1>
         <p>A showcase of my web development and design journey.</p>
