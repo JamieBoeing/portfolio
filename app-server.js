@@ -28,7 +28,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
 
-app.use('/contact', contactRoutes)
+app.use('/api/contact', contactRoutes)
 
 
 

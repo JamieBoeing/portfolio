@@ -23,14 +23,8 @@ const ContactModalForm = ({ isOpen, onClose }) => {
     e.preventDefault()
     try {
       const formData = { name, email, message }
-      const response = await api.post('/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ formData })
-      })
-
+      const response = await api.post('/contact',formData)
+  
       if (response.ok) {
         setName('');
         setEmail('');
@@ -51,7 +45,7 @@ const ContactModalForm = ({ isOpen, onClose }) => {
  
   return (
     <div className={`modal ${isOpen ? 'open' : ''}`}>
-      <div className="modal-content">
+      <div className="modal-container">
         <button className="close-button" onClick={onClose}>
           &times;
         </button>

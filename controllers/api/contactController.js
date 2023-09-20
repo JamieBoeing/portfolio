@@ -1,4 +1,5 @@
 const dotenv = require('dotenv')
+const Email =  require('../../models/api/submission') 
 const nodemailer = require('nodemailer')
 dotenv.config()
 
@@ -26,7 +27,7 @@ exports.sendEmail = async (req, res) => {
     // Send the email
     await transporter.sendMail(mailOptions)
     // Save the contact submission form in mongodb
-    const newContact = new email({ name, email, message })
+    const newContact = new Email({ name, email, message })
     await newContact.save()
 
 

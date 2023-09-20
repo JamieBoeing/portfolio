@@ -1,10 +1,12 @@
+@import '../../scss/styles.scss';
+
 
 .NavBar {
     display: flex;
     flex-direction: column;
     padding: 1.5rem 2.5rem 1.5rem 2.5rem;
-    background-color: col-5;
-    border-radius: .325vm;
+    background-color:#4c5570;
+    color: white;
 }
 .links {
     display: flex;
@@ -12,10 +14,10 @@
     align-items: center;
         a {
             text-decoration: underline;
-            color: #333;
+            color: #f7f6f5;
             &:hover {
                 color:aliceblue;
-                background-color: #333;
+                background-color: #ced5eb;
                 cursor: pointer;
             }
           }

@@ -1,4 +1,5 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/App/App.js":
@@ -7,7 +8,6 @@
   \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -54,7 +54,6 @@ const App = () => {
   \***************************************/
 /***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _About_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./About.module.scss */ "./src/components/About/About.module.scss");
 // About.js
@@ -82,14 +81,12 @@ const About = () => {
   \****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utilities_send_email__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utilities/send-email */ "./src/utilities/send-email.js");
-/* harmony import */ var _utilities_send_email__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_utilities_send_email__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _ContactModalForm_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ContactModalForm.module.scss */ "./src/components/Contact/ContactModalForm.module.scss");
+/* harmony import */ var _utilities_send_email__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utilities/send-email */ "./src/utilities/send-email.js");
+/* harmony import */ var _ContactModalForm_module_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ContactModalForm.module.scss */ "./src/components/Contact/ContactModalForm.module.scss");
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
@@ -121,15 +118,7 @@ const ContactModalForm = _ref => {
           email,
           message
         };
-        const response = yield _utilities_send_email__WEBPACK_IMPORTED_MODULE_2___default().post('/contact', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            formData
-          })
-        });
+        const response = yield _utilities_send_email__WEBPACK_IMPORTED_MODULE_1__["default"].post('/contact', formData);
         if (response.ok) {
           setName('');
           setEmail('');
@@ -154,7 +143,7 @@ const ContactModalForm = _ref => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "modal ".concat(isOpen ? 'open' : '')
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "modal-content"
+    className: "modal-container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
     className: "close-button",
     onClick: onClose
@@ -194,7 +183,6 @@ const ContactModalForm = _ref => {
   \***********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -230,7 +218,6 @@ const Education = () => {
   \*************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -261,7 +248,6 @@ const Experience = () => {
   \*****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -285,7 +271,6 @@ const Footer = () => {
   \*****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -320,7 +305,6 @@ const NavBar = () => {
   \*********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -356,7 +340,6 @@ const Projects = () => {
   \*********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -384,7 +367,6 @@ const Services = () => {
   \*****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -417,7 +399,6 @@ const Skills = () => {
   \***********************************************/
 /***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_wordcloud2__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-wordcloud2 */ "./node_modules/react-wordcloud2/lib/react-wordcloud2.es.js");
 /* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../data */ "./src/data.js");
@@ -455,7 +436,6 @@ const MyWordCloud = () => {
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   educationData: () => (/* binding */ educationData),
 /* harmony export */   experienceData: () => (/* binding */ experienceData),
@@ -625,7 +605,6 @@ const servicesData = [{
   \**********************/
 /***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony import */ var _App_App__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./App/App */ "./src/App/App.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -646,7 +625,6 @@ react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPOR
   \******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -709,7 +687,6 @@ const AboutPage = () => {
   \****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -737,7 +714,6 @@ const HomePage = () => {
   \**********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -764,7 +740,6 @@ const ProjectPage = () => {
   \************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -790,47 +765,62 @@ const ServicesPage = () => {
 /*!*************************************!*\
   !*** ./src/utilities/send-email.js ***!
   \*************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-// const BASE_URL = process.env.REACT_APP_API_BASE_URL;
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+const BASE_URL = '/api/contact';
+const api = {
+  get: function () {
+    var _get = _asyncToGenerator(function* (url) {
+      try {
+        const response = yield fetch("".concat(BASE_URL).concat(url));
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      } catch (error) {
+        console.error('Error:', error);
+        throw error;
+      }
+    });
+    function get(_x) {
+      return _get.apply(this, arguments);
+    }
+    return get;
+  }(),
+  post: function () {
+    var _post = _asyncToGenerator(function* (url, data) {
+      try {
+        const response = yield fetch("".concat(BASE_URL).concat(url), {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data)
+        });
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      } catch (error) {
+        console.error('Error:', error);
+        throw error;
+      }
+    });
+    function post(_x2, _x3) {
+      return _post.apply(this, arguments);
+    }
+    return post;
+  }()
 
-// const api = {
-//   get: async (url) => {
-//     try {
-//       const response = await fetch(`${BASE_URL}${url}`);
-//       if (!response.ok) {
-//         throw new Error('Network response was not ok');
-//       }
-//       return response.json();
-//     } catch (error) {
-//       console.error('Error:', error);
-//       throw error;
-//     }
-//   },
+  // Add other HTTP methods as needed (e.g., put, delete, etc.)
+};
 
-//   post: async (url, data) => {
-//     try {
-//       const response = await fetch(`${BASE_URL}${url}`, {
-//         method: 'POST',
-//         headers: {
-//           'Content-Type': 'application/json',
-//         },
-//         body: JSON.stringify(data),
-//       });
-//       if (!response.ok) {
-//         throw new Error('Network response was not ok');
-//       }
-//       return response.json();
-//     } catch (error) {
-//       console.error('Error:', error);
-//       throw error;
-//     }
-//   },
-
-//   // Add other HTTP methods as needed (e.g., put, delete, etc.)
-// };
-
-// export default api;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (api);
 
 /***/ }),
 
@@ -840,7 +830,6 @@ const ServicesPage = () => {
   \************************************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -871,7 +860,6 @@ ___CSS_LOADER_EXPORT___.locals = {
   \***************************************************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -913,7 +901,6 @@ ___CSS_LOADER_EXPORT___.locals = {
   \****************************************************************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -934,63 +921,51 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* ContactModal.module.scss */
 
 /* Style the modal itself */
 .qIryTj4fLNoJ0EM0frBc {
-  border: 2px solid #007bff;
+  border: 2px solid #4c5570;
   border-radius: 10px;
 }
 .qIryTj4fLNoJ0EM0frBc .OSbkvbEiHuXAc8C0FyVA {
   margin: 20px;
   max-width: 600px;
 }
-.qIryTj4fLNoJ0EM0frBc .AIug_JSZtjdmQb_ZrqIu {
+.qIryTj4fLNoJ0EM0frBc .QN9mGwPf1aNipbtl4stj {
   border: none;
   border-radius: 10px;
+  background-color: #2c3437;
+  width: 80%; /* Adjust the width as needed */
+  max-width: 600px; /* Limit the maximum width */
+  /* Add custom styling for the modal content here */
+  /* Style the modal overlay */
 }
-.qIryTj4fLNoJ0EM0frBc .AIug_JSZtjdmQb_ZrqIu .uUDQBQOgg_lNM2qJD4ff {
-  background-color: #007bff;
-  color: #fff;
-  border-bottom: none;
-}
-.qIryTj4fLNoJ0EM0frBc .AIug_JSZtjdmQb_ZrqIu .uUDQBQOgg_lNM2qJD4ff .yNPt0R4w3icUtpTbLZ10 {
-  font-size: 1.5rem;
-}
-.qIryTj4fLNoJ0EM0frBc .AIug_JSZtjdmQb_ZrqIu .uUDQBQOgg_lNM2qJD4ff button.i0Ihr8G3jshPjpXV9ZmF {
-  color: #fff;
-}
-.qIryTj4fLNoJ0EM0frBc .AIug_JSZtjdmQb_ZrqIu .uUDQBQOgg_lNM2qJD4ff button.i0Ihr8G3jshPjpXV9ZmF:hover {
-  color: #fff;
-}
-.qIryTj4fLNoJ0EM0frBc .AIug_JSZtjdmQb_ZrqIu .JklruQZgG2I6rX0sx6WH {
+.qIryTj4fLNoJ0EM0frBc .QN9mGwPf1aNipbtl4stj .JklruQZgG2I6rX0sx6WH {
   padding: 20px;
   /* Add custom styling for the modal body content here */
 }
-.qIryTj4fLNoJ0EM0frBc .AIug_JSZtjdmQb_ZrqIu .kHItKmbTvwF6p39wA2Le {
+.qIryTj4fLNoJ0EM0frBc .QN9mGwPf1aNipbtl4stj .kHItKmbTvwF6p39wA2Le {
   border-top: none;
   padding: 20px;
 }
-.qIryTj4fLNoJ0EM0frBc .AIug_JSZtjdmQb_ZrqIu .kHItKmbTvwF6p39wA2Le button {
+.qIryTj4fLNoJ0EM0frBc .QN9mGwPf1aNipbtl4stj .kHItKmbTvwF6p39wA2Le button {
   margin-right: 10px;
 }
-.qIryTj4fLNoJ0EM0frBc .AIug_JSZtjdmQb_ZrqIu .wnFiF8rZltfu7stPrWlW {
+.qIryTj4fLNoJ0EM0frBc .QN9mGwPf1aNipbtl4stj .wnFiF8rZltfu7stPrWlW {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-  display: none; /* Initially hidden */
+  display: flex; /* Initially hidden */
   justify-content: center;
   align-items: center;
   z-index: 1000; /* Ensure it appears on top of other content */
-}`, "",{"version":3,"sources":["webpack://./src/components/Contact/ContactModalForm.module.scss"],"names":[],"mappings":"AAAA,6BAAA;AAEA,6BAAA;AACA;EACE,YAAA;AAAF;;AAGA,2BAAA;AACA;EACE,yBAAA;EACA,mBAAA;AAAF;AAEE;EACE,YAAA;EACA,gBAAA;AAAJ;AAGE;EACE,YAAA;EACA,mBAAA;AADJ;AAGI;EACE,yBAAA;EACA,WAAA;EACA,mBAAA;AADN;AAGM;EACE,iBAAA;AADR;AAIM;EACE,WAAA;AAFR;AAGQ;EACE,WAAA;AADV;AAMI;EACE,aAAA;EAEA,uDAAA;AALN;AAQI;EACE,gBAAA;EACA,aAAA;AANN;AAQM;EACE,kBAAA;AANR;AASI;EACE,eAAA;EACA,MAAA;EACA,OAAA;EACA,WAAA;EACA,YAAA;EACA,oCAAA,EAAA,gCAAA;EACA,aAAA,EAAA,qBAAA;EACA,uBAAA;EACA,mBAAA;EACA,aAAA,EAAA,8CAAA;AAPN","sourcesContent":["/* ContactModal.module.scss */\n\n/* Style the modal backdrop */\n.modal-backdrop {\n  opacity: 0.8;\n}\n\n/* Style the modal itself */\n.modal {\n  border: 2px solid #007bff;\n  border-radius: 10px;\n\n  .modal-dialog {\n    margin: 20px;\n    max-width: 600px;\n  }\n\n  .modal-content {\n    border: none;\n    border-radius: 10px;\n\n    .modal-header {\n      background-color: #007bff;\n      color: #fff;\n      border-bottom: none;\n\n      .modal-title {\n        font-size: 1.5rem;\n      }\n\n      button.close {\n        color: #fff;\n        &:hover {\n          color: #fff;\n        }\n      }\n    }\n\n    .modal-body {\n      padding: 20px;\n\n      /* Add custom styling for the modal body content here */\n    }\n\n    .modal-footer {\n      border-top: none;\n      padding: 20px;\n\n      button {\n        margin-right: 10px;\n      }\n    }\n    .modal-overlay {\n      position: fixed;\n      top: 0;\n      left: 0;\n      width: 100%;\n      height: 100%;\n      background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */\n      display: none; /* Initially hidden */\n      justify-content: center;\n      align-items: center;\n      z-index: 1000; /* Ensure it appears on top of other content */\n    }\n  }\n}\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/Contact/ContactModalForm.module.scss"],"names":[],"mappings":"AAAA,6BAAA;AAEA,6BAAA;AACA;EACE,YAAA;AAAF;;AAGA,2BAAA;AACA;EACE,yBAAA;EACA,mBAAA;AAAF;AAEE;EACE,YAAA;EACA,gBAAA;AAAJ;AAGE;EACE,YAAA;EACA,mBAAA;EACA,yBAAA;EACA,UAAA,EAAA,+BAAA;EACA,gBAAA,EAAA,4BAAA;EAEA,kDAAA;EAiBA,4BAAA;AAlBJ;AAGI;EACE,aAAA;EAEA,uDAAA;AAFN;AAKI;EACE,gBAAA;EACA,aAAA;AAHN;AAKM;EACE,kBAAA;AAHR;AAQI;EACE,eAAA;EACA,MAAA;EACA,OAAA;EACA,WAAA;EACA,YAAA;EACA,oCAAA,EAAA,gCAAA;EACA,aAAA,EAAA,qBAAA;EACA,uBAAA;EACA,mBAAA;EACA,aAAA,EAAA,8CAAA;AANN","sourcesContent":["/* ContactModal.module.scss */\n\n/* Style the modal backdrop */\n.modal-backdrop {\n  opacity: 0.8;\n}\n\n/* Style the modal itself */\n.modal {\n  border: 2px solid #4c5570;\n  border-radius: 10px;\n\n  .modal-dialog {\n    margin: 20px;\n    max-width: 600px;\n  }\n\n  .modal-container {\n    border: none;\n    border-radius: 10px;\n    background-color: #2c3437;\n    width: 80%; /* Adjust the width as needed */\n    max-width: 600px; /* Limit the maximum width */\n\n    /* Add custom styling for the modal content here */\n\n    .modal-body {\n      padding: 20px;\n\n      /* Add custom styling for the modal body content here */\n    }\n\n    .modal-footer {\n      border-top: none;\n      padding: 20px;\n\n      button {\n        margin-right: 10px;\n      }\n    }\n\n    /* Style the modal overlay */\n    .modal-overlay {\n      position: fixed;\n      top: 0;\n      left: 0;\n      width: 100%;\n      height: 100%;\n      background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */\n      display: flex; /* Initially hidden */\n      justify-content: center;\n      align-items: center;\n      z-index: 1000; /* Ensure it appears on top of other content */\n    }\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"modal-backdrop": `Dmxj6FQqeJNkzjBQtP6d`,
 	"modal": `qIryTj4fLNoJ0EM0frBc`,
 	"modal-dialog": `OSbkvbEiHuXAc8C0FyVA`,
-	"modal-content": `AIug_JSZtjdmQb_ZrqIu`,
-	"modal-header": `uUDQBQOgg_lNM2qJD4ff`,
-	"modal-title": `yNPt0R4w3icUtpTbLZ10`,
-	"close": `i0Ihr8G3jshPjpXV9ZmF`,
+	"modal-container": `QN9mGwPf1aNipbtl4stj`,
 	"modal-body": `JklruQZgG2I6rX0sx6WH`,
 	"modal-footer": `kHItKmbTvwF6p39wA2Le`,
 	"modal-overlay": `wnFiF8rZltfu7stPrWlW`
@@ -1006,7 +981,6 @@ ___CSS_LOADER_EXPORT___.locals = {
   \*************************************************************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -1067,7 +1041,6 @@ ___CSS_LOADER_EXPORT___.locals = {
   \*****************************************************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -1105,7 +1078,6 @@ ___CSS_LOADER_EXPORT___.locals = {
   \*****************************************************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -1118,12 +1090,66 @@ ___CSS_LOADER_EXPORT___.locals = {
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `.QpVD3qAS0nYBtoQqAYoe {
+___CSS_LOADER_EXPORT___.push([module.id, `/* App.scss */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Gloock", serif;
+}
+
+.mdO1efiFRbNvsm57g8K7 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 0.625;
+}
+
+header {
+  background-color: #f7f6f5;
+  color: #4c5570;
+  padding: 10px;
+  text-align: center;
+  border-radius: 4vmin;
+  font-size: 50vm;
+}
+
+main {
+  background-color: #ced5eb;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4vmin;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 768px) {
+  main {
+    padding: 10px;
+  }
+}
+/* Add more media queries as needed */
+.QpVD3qAS0nYBtoQqAYoe {
   display: flex;
   flex-direction: column;
   padding: 1.5rem 2.5rem 1.5rem 2.5rem;
-  background-color: col-5;
-  border-radius: 0.325vm;
+  background-color: #4c5570;
+  color: white;
 }
 
 .ihAtZxuRXPyy4yX17Ie8 {
@@ -1133,15 +1159,24 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.QpVD3qAS0nYBtoQqAYoe {
 }
 .ihAtZxuRXPyy4yX17Ie8 a {
   text-decoration: underline;
-  color: #333;
+  color: #f7f6f5;
 }
 .ihAtZxuRXPyy4yX17Ie8 a:hover {
   color: aliceblue;
-  background-color: #333;
+  background-color: #ced5eb;
   cursor: pointer;
-}`, "",{"version":3,"sources":["webpack://./src/components/NavBar/NavBar.module.scss"],"names":[],"mappings":"AACA;EACI,aAAA;EACA,sBAAA;EACA,oCAAA;EACA,uBAAA;EACA,sBAAA;AAAJ;;AAEA;EACI,aAAA;EACA,6BAAA;EACA,mBAAA;AACJ;AAAQ;EACI,0BAAA;EACA,WAAA;AAEZ;AADY;EACI,gBAAA;EACA,sBAAA;EACA,eAAA;AAGhB","sourcesContent":["\n.NavBar {\n    display: flex;\n    flex-direction: column;\n    padding: 1.5rem 2.5rem 1.5rem 2.5rem;\n    background-color: col-5;\n    border-radius: .325vm;\n}\n.links {\n    display: flex;\n    justify-content: space-around;\n    align-items: center;\n        a {\n            text-decoration: underline;\n            color: #333;\n            &:hover {\n                color:aliceblue;\n                background-color: #333;\n                cursor: pointer;\n            }\n          }\n    }\n    \n\n\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/scss/styles.scss","webpack://./src/components/NavBar/NavBar.module.scss"],"names":[],"mappings":"AAAA,aAAA;;AAqBA;EACI,SAAA;EACA,UAAA;EACA,4BAAA;ACRJ;;ADWE;EACE,iBAAA;EACA,cAAA;EACA,aAAA;EACA,oBAAA;ACRJ;;ADWE;EACE,yBAAA;EACA,cAAA;EACA,aAAA;EACA,kBAAA;EACA,oBAAA;EACA,eAAA;ACRJ;;ADWE;EACE,yBAAA;EACA,aAAA;EACA,gBAAA;EACA,0CAAA;EACC,oBAAA;ACRL;;ADWE;EACE,eAAA;EACA,mBAAA;ACRJ;;ADWE;EACE,iBAAA;EACA,mBAAA;ACRJ;;ADWE;EACE,iBAAA;EACA,qBAAA;ACRJ;;ADYE,kCAAA;AACA;EACE;IACE,aAAA;ECTJ;AACF;ADYE,qCAAA;ACvEF;EACI,aAAA;EACA,sBAAA;EACA,oCAAA;EACA,yBAAA;EACA,YAAA;AA8DJ;;AA5DA;EACI,aAAA;EACA,6BAAA;EACA,mBAAA;AA+DJ;AA9DQ;EACI,0BAAA;EACA,cAAA;AAgEZ;AA/DY;EACI,gBAAA;EACA,yBAAA;EACA,eAAA;AAiEhB","sourcesContent":["/* App.scss */\n$color1: #84a888; //sage\n$color2: #3d4742; // olive grey\n$color3: #2c3437; // dark forest grey\n$color4: #e37d4e; // coral\n$color5: #e4ead8; // sage white\n$color6: #4c5570; //med grey purple\n$color7: #ced5eb; // light blue white\n$color8: #f7f6f5 ; // light orange white\n:export {\ncol-1: $color1;\ncol-2: $color2;\ncol-3: $color3;\ncol-4: $color4;\ncol-5: $color5;\ncol-6: $color6;\ncol-7: $color7;\ncol-8: $color8;\n}\n\n\nbody {\n    margin: 0;\n    padding: 0;\n    font-family: 'Gloock', serif;     // background-image: url('https://imgur.com/gallery/K9ZwK62');\n  }\n  \n  .container {\n    max-width: 1200px;\n    margin: 0 auto;\n    padding: 20px;\n    border-radius: .625;\n  }\n  \n  header {\n    background-color: #f7f6f5;\n    color: #4c5570;\n    padding: 10px;\n    text-align: center;\n    border-radius: 4vmin;\n    font-size: 50vm;\n   }\n  \n  main {\n    background-color:#ced5eb;\n    padding: 20px;\n    margin-top: 20px;\n    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);\n     border-radius: 4vmin;\n  }\n  \n  h1 {\n    font-size: 24px;\n    margin-bottom: 20px;\n  }\n  \n  h2 {\n    font-size: 1.5rem;\n    margin-bottom: 1rem;\n  }\n\n  h3 {\n    font-size: 1.2rem;\n    margin-bottom: 0.5rem;\n  }\n\n  \n  /* Responsive layout adjustments */\n  @media (max-width: 768px) {\n    main {\n      padding: 10px;\n    }\n  }\n  \n  /* Add more media queries as needed */\n  ","@import '../../scss/styles.scss';\n\n\n.NavBar {\n    display: flex;\n    flex-direction: column;\n    padding: 1.5rem 2.5rem 1.5rem 2.5rem;\n    background-color:#4c5570;\n    color: white;\n}\n.links {\n    display: flex;\n    justify-content: space-around;\n    align-items: center;\n        a {\n            text-decoration: underline;\n            color: #f7f6f5;\n            &:hover {\n                color:aliceblue;\n                background-color: #ced5eb;\n                cursor: pointer;\n            }\n          }\n    }\n    \n\n\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
+	"col-1": `#84a888`,
+	"col-2": `#3d4742`,
+	"col-3": `#2c3437`,
+	"col-4": `#e37d4e`,
+	"col-5": `#e4ead8`,
+	"col-6": `#4c5570`,
+	"col-7": `#ced5eb`,
+	"col-8": `#f7f6f5`,
+	"container": `mdO1efiFRbNvsm57g8K7`,
 	"NavBar": `QpVD3qAS0nYBtoQqAYoe`,
 	"links": `ihAtZxuRXPyy4yX17Ie8`
 };
@@ -1156,7 +1191,6 @@ ___CSS_LOADER_EXPORT___.locals = {
   \*********************************************************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -1187,7 +1221,6 @@ ___CSS_LOADER_EXPORT___.locals = {
   \*****************************************************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -1238,7 +1271,6 @@ ___CSS_LOADER_EXPORT___.locals = {
   \***********************************************************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -1265,7 +1297,6 @@ ___CSS_LOADER_EXPORT___.locals = {};
   \******************************************************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -1325,7 +1356,6 @@ ___CSS_LOADER_EXPORT___.locals = {
   \****************************************************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -1364,7 +1394,6 @@ ___CSS_LOADER_EXPORT___.locals = {
   \**********************************************************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -1395,7 +1424,6 @@ ___CSS_LOADER_EXPORT___.locals = {
   \************************************************************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -1422,7 +1450,6 @@ ___CSS_LOADER_EXPORT___.locals = {};
   \*********************************/
 /***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
@@ -1473,7 +1500,6 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
   \************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -1527,7 +1553,6 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
   \*************************************************************/
 /***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
@@ -1578,7 +1603,6 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
   \**********************************************************/
 /***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
@@ -1629,7 +1653,6 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
   \**************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -1683,7 +1706,6 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
   \**************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -1737,7 +1759,6 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
   \******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -1791,7 +1812,6 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
   \**************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -1845,7 +1865,6 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
   \********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -1899,7 +1918,6 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
   \***************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -1953,7 +1971,6 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
   \*************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -2007,7 +2024,6 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
   \*******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -2061,7 +2077,6 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
   \*********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -2309,4 +2324,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.9a870fd3b6f29a9134578f363843374d.js.map
+//# sourceMappingURL=App.a6e62dd0b149b1129e4c54fd12dba18f.js.map
