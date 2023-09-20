@@ -1,3 +1,39 @@
-import { sendEmail } from '../../controllers/api/contactController'
+// const BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
-export const sendEmailUtil = sendEmail
+// const api = {
+//   get: async (url) => {
+//     try {
+//       const response = await fetch(`${BASE_URL}${url}`);
+//       if (!response.ok) {
+//         throw new Error('Network response was not ok');
+//       }
+//       return response.json();
+//     } catch (error) {
+//       console.error('Error:', error);
+//       throw error;
+//     }
+//   },
+
+//   post: async (url, data) => {
+//     try {
+//       const response = await fetch(`${BASE_URL}${url}`, {
+//         method: 'POST',
+//         headers: {
+//           'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify(data),
+//       });
+//       if (!response.ok) {
+//         throw new Error('Network response was not ok');
+//       }
+//       return response.json();
+//     } catch (error) {
+//       console.error('Error:', error);
+//       throw error;
+//     }
+//   },
+
+//   // Add other HTTP methods as needed (e.g., put, delete, etc.)
+// };
+
+// export default api;

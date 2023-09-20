@@ -1,9 +1,12 @@
 import React from 'react'
 import styles from './Footer.module.scss'
+
 const Footer = () => {
+
+    const currentYear = new Date().getFullYear()
     return (
-        <footer>
-            <p>&copy; 20XX Jamie Boeing</p>
+        <footer className={styles.footer}>
+            <p>&copy; {currentYear} Jamie Boeing</p>
         </footer>
     )
 }
