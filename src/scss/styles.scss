@@ -4,13 +4,18 @@ $color2: #3d4742; // olive grey
 $color3: #2c3437; // dark forest grey
 $color4: #e37d4e; // coral
 $color5: #e4ead8; // sage white
-
+$color6: #4c5570; //med grey purple
+$color7: #ced5eb; // light blue white
+$color8: #f7f6f5 ; // light orange white
 :export {
 col-1: $color1;
 col-2: $color2;
 col-3: $color3;
 col-4: $color4;
 col-5: $color5;
+col-6: $color6;
+col-7: $color7;
+col-8: $color8;
 }
 
 
@@ -25,20 +30,23 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    border-radius: .625;
   }
   
   header {
-    background-color: #333;
-    color: white;
+    background-color: #f7f6f5;
+    color: #4c5570;
     padding: 10px;
     text-align: center;
+    border-radius: 4vmin;
   }
   
   main {
-    background-color: white;
+    background-color:#ced5eb;
     padding: 20px;
     margin-top: 20px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 4vmin;
   }
   
   h1 {
