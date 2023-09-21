@@ -28,36 +28,104 @@ const projects = [
   // Add more project objects here...
 ];
 
+// const skills = [
+//   {
+//     category: 'Programming Languages',
+//     skills: ['JavaScript', 'Python'],
+//   },
+//   {
+//     category: 'Front-end Development',
+//     skills: ['React', 'HTML', 'CSS'],
+//   },
+//   {
+//     category: 'Back-end Development',
+//     skills: ['Node.js', 'PHP', 'Django'],
+//   },
+//   {
+//     category: 'Databases',
+//     skills: ['MongoDB'],
+//   },
+//   {
+//     category: 'Operating Systems',
+//     skills: ['Mac', 'Windows', 'Linux'],
+//   },
+//   {
+//     category: 'Design Tools',
+//     skills: ['Adobe Photoshop', 'Adobe Illustrator', 'Adobe InDesign'],
+//   },
+//   {
+//     category: 'Other',
+//     skills: ['Management', 'Customer Service', 'Design'],
+//   },
+// ];
 const skills = [
   {
     category: 'Programming Languages',
-    skills: ['JavaScript', 'Python'],
+    skills: [
+      {
+        name: 'JavaScript',
+        image: 'javascript-icon.png', // Image filename for JavaScript
+      },
+      {
+        name: 'Python',
+        image: 'python-icon.png', // Image filename for Python
+      },
+      {
+        name: 'PHP',
+        image: 'phpn-icon.png', // Image filename for Python
+      },
+    ],
   },
   {
     category: 'Front-end Development',
-    skills: ['React', 'HTML', 'CSS'],
-  },
-  {
-    category: 'Back-end Development',
-    skills: ['Node.js', 'PHP', 'Django'],
-  },
-  {
-    category: 'Databases',
-    skills: ['MongoDB'],
-  },
-  {
-    category: 'Operating Systems',
-    skills: ['Mac', 'Windows', 'Linux'],
+    skills: [
+      {
+        name: 'React',
+        image: 'react-icon.png', // Image filename for React
+      },
+      {
+        name: 'HTML',
+        image: 'html.png', // Image filename for HTML
+      },
+      {
+        name: 'CSS',
+        image: 'css.png', // Image filename for CSS
+      },
+    ],
   },
   {
     category: 'Design Tools',
-    skills: ['Adobe Photoshop', 'Adobe Illustrator', 'Adobe InDesign'],
+    skills: [
+      {
+        name: 'Adobe',
+        image: 'adobe-icons.jpeg', // Image filename for React
+      },
+      {
+        name: 'Adobe Illustrator',
+        image: 'ai-icon.jpeg', // Image filename for HTML
+      },
+      {
+        name: 'Node.js',
+        image: 'node-icon.jpeg', // Image filename for HTML
+      },
+    ],
   },
   {
-    category: 'Other',
-    skills: ['Management', 'Customer Service', 'Design'],
+    category: 'Database',
+    skills: [
+      {
+        name: 'MongoDB',
+        image: 'mongoDb-icon.png', // Image filename for React
+      },
+      {
+        name: 'Digital Ocean',
+        image: 'digital-icon.jpeg', // Image filename for HTML
+      },
+    ],
   },
+  // Add more categories and skills as needed...
 ];
+
 
 const aboutMe = {
   name: 'Jamie Boeing',

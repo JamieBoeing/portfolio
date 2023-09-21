@@ -1,6 +1,6 @@
-import React from 'react'
-import { skills } from '../../data'
-import styles from './Skills.module.scss'
+import React from 'react';
+import { skills } from '../../data';
+import styles from './Skills.module.scss';
 
 const Skills = () => {
   return (
@@ -11,13 +11,20 @@ const Skills = () => {
           <h3>{category.category}</h3>
           <ul className={styles.list}>
             {category.skills.map((skill, skillIndex) => (
-              <li className={styles.skill} key={skillIndex}>{skill}</li>
+              <li className={styles.skill} key={skillIndex}>
+                <img
+                  src={`/img/${skill.image}`} 
+                  alt={skill.name}
+                  className={styles.skillImage}
+                />
+                {skill.name}
+              </li>
             ))}
           </ul>
         </div>
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default Skills
+export default Skills;

@@ -1,12 +1,12 @@
 import React from 'react'
 import { projects } from '../../data'
-
+import styles from './Projects.module.scss'
 const Projects = () => {
   return (
-    <div className='projects-container'>
+    <div className={styles.container}>
       <h2>Projects</h2>
       {projects.map((project) => (
-        <div className='project-item' key={project.id}>
+        <div className={styles.item} key={project.id}>
           <h3>{project.title}</h3>
           <p>{project.description}</p>
           <p>{project.technologies}</p>
