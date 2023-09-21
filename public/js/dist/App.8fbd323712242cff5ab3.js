@@ -328,17 +328,28 @@ const Projects = () => {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "Projects"), _data__WEBPACK_IMPORTED_MODULE_1__.projects.map(project => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: _Projects_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].item,
     key: project.id
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, project.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, project.description), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, project.technologies), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, project.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: project.imageUrl // Add the image URL here
+    ,
+    alt: project.title,
+    className: _Projects_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].projectImage
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    className: _Projects_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].description
+  }, project.description), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    className: _Projects_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].technologies
+  }, project.technologies), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: _Projects_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].links
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
     href: project.githubLink,
-    className: "links",
-    target: "blank",
-    rel: "noopener noreferrer"
-  }, "GitHub Link"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+    target: "_blank",
+    rel: "noopener noreferrer",
+    className: _Projects_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].button
+  }, "GitHub"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
     href: project.liveDemoLink,
-    className: "links",
-    target: "blank",
-    rel: "noopener noreferrer"
-  }, "Live Demo Link"))));
+    target: "_blank",
+    rel: "noopener noreferrer",
+    className: _Projects_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].button
+  }, "Live Demo")))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Projects);
 
@@ -1287,43 +1298,60 @@ ___CSS_LOADER_EXPORT___.locals = {
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `.Pq4CtTvz0hjIn_GxlabH {
+___CSS_LOADER_EXPORT___.push([module.id, `.Re9b4dg0VO9C3H0aAuBl {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
   padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-items: center;
 }
-.Pq4CtTvz0hjIn_GxlabH .cIsFEKAcnxXL3zKE5S7R {
+
+.WL_csyXcz9fuX7NR7iMV {
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 1rem;
-  margin-bottom: 1rem;
   width: 100%;
   max-width: 400px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.Pq4CtTvz0hjIn_GxlabH .cIsFEKAcnxXL3zKE5S7R p {
+.WL_csyXcz9fuX7NR7iMV h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.WL_csyXcz9fuX7NR7iMV img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.WL_csyXcz9fuX7NR7iMV p {
   font-size: 1rem;
   margin-bottom: 0.5rem;
 }
-.Pq4CtTvz0hjIn_GxlabH .cIsFEKAcnxXL3zKE5S7R .A7Wz_hoPe6EokPBKnxnQ {
+.WL_csyXcz9fuX7NR7iMV .A7Wz_hoPe6EokPBKnxnQ {
   font-size: 0.9rem;
   color: #555;
   margin-bottom: 0.5rem;
 }
-.Pq4CtTvz0hjIn_GxlabH .cIsFEKAcnxXL3zKE5S7R .zGbJvQU7P0x9do1B25R5 {
+.WL_csyXcz9fuX7NR7iMV .zGbJvQU7P0x9do1B25R5 {
   display: flex;
   justify-content: space-between;
 }
-.Pq4CtTvz0hjIn_GxlabH .cIsFEKAcnxXL3zKE5S7R .zGbJvQU7P0x9do1B25R5 a {
+.WL_csyXcz9fuX7NR7iMV .zGbJvQU7P0x9do1B25R5 a {
+  font-size: 1rem;
   color: #007bff;
   text-decoration: none;
   transition: color 0.2s;
-}`, "",{"version":3,"sources":["webpack://./src/components/Projects/Projects.module.scss"],"names":[],"mappings":"AAEA;EACI,aAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;AADJ;AAKI;EACE,sBAAA;EACA,kBAAA;EACA,aAAA;EACA,mBAAA;EACA,WAAA;EACA,gBAAA;EACA,wCAAA;AAHN;AAMM;EACE,eAAA;EACA,qBAAA;AAJR;AAOM;EACE,iBAAA;EACA,WAAA;EACA,qBAAA;AALR;AAQM;EACE,aAAA;EACA,8BAAA;AANR;AAQQ;EACE,cAAA;EACA,qBAAA;EACA,sBAAA;AANV","sourcesContent":["\n\n.projects-container {\n    padding: 2rem;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n  \n    \n  \n    .project-item {\n      border: 1px solid #ccc;\n      border-radius: 8px;\n      padding: 1rem;\n      margin-bottom: 1rem;\n      width: 100%;\n      max-width: 400px;\n      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n  \n     \n      p {\n        font-size: 1rem;\n        margin-bottom: 0.5rem;\n      }\n  \n      .technologies {\n        font-size: 0.9rem;\n        color: #555;\n        margin-bottom: 0.5rem;\n      }\n  \n      .links {\n        display: flex;\n        justify-content: space-between;\n        \n        a {\n          color: #007bff;\n          text-decoration: none;\n          transition: color 0.2s;\n  \n          \n        }\n      }\n    }\n  }\n  "],"sourceRoot":""}]);
+  cursor: pointer;
+}
+.WL_csyXcz9fuX7NR7iMV .zGbJvQU7P0x9do1B25R5 a:hover {
+  color: #0056b3;
+}`, "",{"version":3,"sources":["webpack://./src/components/Projects/Projects.module.scss"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,2DAAA;EACA,SAAA;EACA,aAAA;EACA,qBAAA;AACF;;AAEA;EACE,sBAAA;EACA,kBAAA;EACA,aAAA;EACA,WAAA;EACA,gBAAA;EACA,wCAAA;AACF;AACE;EACE,iBAAA;EACA,mBAAA;AACJ;AAEE;EACE,eAAA;EACA,YAAA;EACA,mBAAA;EACA,kBAAA;EACA,wCAAA;AAAJ;AAGE;EACE,eAAA;EACA,qBAAA;AADJ;AAIE;EACE,iBAAA;EACA,WAAA;EACA,qBAAA;AAFJ;AAKE;EACE,aAAA;EACA,8BAAA;AAHJ;AAKI;EACE,eAAA;EACA,cAAA;EACA,qBAAA;EACA,sBAAA;EACA,eAAA;AAHN;AAKM;EACE,cAAA;AAHR","sourcesContent":[".container {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\n  gap: 20px;\n  padding: 2rem;\n  justify-items: center;\n}\n\n.item {\n  border: 1px solid #ccc;\n  border-radius: 8px;\n  padding: 1rem;\n  width: 100%;\n  max-width: 400px;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n\n  h3 {\n    font-size: 1.5rem;\n    margin-bottom: 1rem;\n  }\n\n  img {\n    max-width: 100%;\n    height: auto;\n    margin-bottom: 1rem;\n    border-radius: 8px;\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n  }\n\n  p {\n    font-size: 1rem;\n    margin-bottom: 0.5rem;\n  }\n\n  .technologies {\n    font-size: 0.9rem;\n    color: #555;\n    margin-bottom: 0.5rem;\n  }\n\n  .links {\n    display: flex;\n    justify-content: space-between;\n\n    a {\n      font-size: 1rem;\n      color: #007bff;\n      text-decoration: none;\n      transition: color 0.2s;\n      cursor: pointer;\n\n      &:hover {\n        color: #0056b3;\n      }\n    }\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
-	"projects-container": `Pq4CtTvz0hjIn_GxlabH`,
-	"project-item": `cIsFEKAcnxXL3zKE5S7R`,
+	"container": `Re9b4dg0VO9C3H0aAuBl`,
+	"item": `WL_csyXcz9fuX7NR7iMV`,
 	"technologies": `A7Wz_hoPe6EokPBKnxnQ`,
 	"links": `zGbJvQU7P0x9do1B25R5`
 };
@@ -2556,4 +2584,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.fb8cdc47988461555c37b47e5fb8d559.js.map
+//# sourceMappingURL=App.f1281f5eb323b5f2b184a11439e7991e.js.map
