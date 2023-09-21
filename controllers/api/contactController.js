@@ -1,39 +1,33 @@
-const dotenv = require('dotenv')
-const Email =  require('../../models/api/submission') 
-const nodemailer = require('nodemailer')
-dotenv.config()
+const sgMail = require('@sendgrid/mail');
+require('dotenv').config()
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-exports.sendEmail = async (req, res) => {
+
+const sendEmail = async (req, res) => {
   try {
-    // Extract data from the request body (e.g., name, email, message)
     const { name, email, message } = req.body;
 
-    const senderEmail = process.env.EMAIL_USER
-    // Nodemailer Configurations
-  const transporter = nodemailer.createTransport({
-    service: process.env.EMAIL_SERVICE,
-    auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-    },
-  })
-    const mailOptions = {
-      from: senderEmail,
-      to: process.env.RECIPIENT_EMAIL,
-      subject: 'New Contact Form Submission',
-      text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+    if (!name || !email || !message ) {
+      return res.status(400).json({ message: 'Invalid request body' });
     }
-   
-    // Send the email
-    await transporter.sendMail(mailOptions)
-    // Save the contact submission form in mongodb
-    const newContact = new Email({ name, email, message })
-    await newContact.save()
 
+    const msg = {
+      to: process.env.EMAIL_USER,
+      from: email,
+      subject: 'New Contact Form Submission',
+           text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
 
-    res.status(200).json({ success: true })
+    };
+
+    await sgMail.send(msg);
+
+    return res.status(200).json({ message: 'Email sent successfully' });
   } catch (error) {
     console.error('Error sending email:', error);
-    res.status(500).json({ success: false, error: 'Failed to send email' })
+    return res.status(500).json({ message: 'Internal server error' });
   }
-}
+};
+
+module.exports = {
+  sendEmail,
+};

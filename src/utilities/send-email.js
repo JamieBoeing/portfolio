@@ -36,4 +36,4 @@ const api = {
   // Add other HTTP methods as needed (e.g., put, delete, etc.)
 };
 
-export default api;
+module.exports = api;

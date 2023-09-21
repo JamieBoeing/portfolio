@@ -26,8 +26,8 @@ const AboutPage = () => {
       <section className={styles.intro}>
         <img src="profile-picture.jpg" alt="Your Name" />
         <p>
-          Hello! I'm [Your Name], a [Your Profession] with a passion for [Your Passion].
-          I have [X] years of experience in [Your Field] and a strong background in [Your Skills].
+          Hello! I'm Jamie Boeing, a Software Engineer with a passion for Coding.
+          I have 7 years of experience in Graphic Design and a strong background in Art, Design and Customer Service.
           Let me tell you a bit more about my journey.
         </p>
       </section>

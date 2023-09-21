@@ -23,7 +23,7 @@ const ContactModalForm = ({ isOpen, onClose }) => {
     e.preventDefault()
     try {
       const formData = { name, email, message }
-      const response = await api.post('/contact',formData)
+      const response = await api.post('/api/contact',formData)
   
       if (response.ok) {
         setName('');
