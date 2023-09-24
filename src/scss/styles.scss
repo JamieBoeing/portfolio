@@ -28,7 +28,7 @@ body {
   padding: 0;
   font-family: 'Gloock', serif; // Use the correct font family or a web-safe font
   animation: backgroundAnimation 25s ease-in-out infinite;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .container {
