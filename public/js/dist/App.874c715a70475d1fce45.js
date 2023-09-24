@@ -260,9 +260,34 @@ const Experience = () => {
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const [showEmail, setShowEmail] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+  const emailAddress = 'your.email@example.com';
+  const handleMouseEnter = () => {
+    setShowEmail(true);
+  };
+  const handleMouseLeave = () => {
+    setShowEmail(false);
+  };
+  const handleCopyEmail = () => {
+    const textArea = document.createElement('textarea');
+    textArea.value = emailAddress;
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textArea);
+    alert('Email address copied to clipboard.');
+  };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("footer", {
     className: _Footer_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].footer
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "\xA9 ", currentYear, " Jamie Boeing"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: _Footer_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].contactInfo
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    onMouseEnter: handleMouseEnter,
+    onMouseLeave: handleMouseLeave
+  }, "\xA9 ", currentYear, " Jamie Boeing"), showEmail && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    className: _Footer_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].email,
+    onClick: handleCopyEmail
+  }, emailAddress)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: _Footer_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].links
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
     href: "https://www.linkedin.com/in/jamie-boeing-b59342272/",
@@ -1173,7 +1198,7 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `/* Footer.module.scss */
 .ceS4EgxnSPoT9JOwqjeP {
-  padding: 10px;
+  padding: 15px;
   text-align: center;
   position: fixed;
   bottom: 0;
@@ -1185,27 +1210,67 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* Footer.module.scss */
   opacity: 70%;
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-.ceS4EgxnSPoT9JOwqjeP a {
-  margin: 0 10px;
-}
-.ceS4EgxnSPoT9JOwqjeP img {
-  width: 30px; /* Adjust the width to your preferred size */
-  height: auto; /* To maintain the aspect ratio */
-}
-.ceS4EgxnSPoT9JOwqjeP p {
-  margin: 0;
-  font-size: 14px;
+  justify-content: space-between; /* Adjust to align to the right */
 }
 
 .NXxFbXHLaIT7eYOW7Tit {
-  padding: auto;
-}`, "",{"version":3,"sources":["webpack://./src/components/Footer/Footer.module.scss"],"names":[],"mappings":"AAAA,uBAAA;AAEA;EACE,aAAA;EACA,kBAAA;EACA,eAAA;EACA,SAAA;EACA,OAAA;EACA,QAAA;EACA,yBAAA;EACA,WAAA;EACA,WAAA;EACA,YAAA;EACA,aAAA;EACA,mBAAA;EACA,uBAAA;AAAF;AAEE;EACE,cAAA;AAAJ;AAGE;EACE,WAAA,EAAA,4CAAA;EACA,YAAA,EAAA,iCAAA;AADJ;AAIE;EACE,SAAA;EACA,eAAA;AAFJ;;AAMA;EACE,aAAA;AAHF","sourcesContent":["/* Footer.module.scss */\n\n.footer {\n  padding: 10px;\n  text-align: center;\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  background-color: #1f1c30;\n  color: #fff;\n  width: 100%;\n  opacity: 70%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n\n  a {\n    margin: 0 10px;\n  }\n\n  img {\n    width: 30px; /* Adjust the width to your preferred size */\n    height: auto; /* To maintain the aspect ratio */\n  }\n\n  p {\n    margin: 0;\n    font-size: 14px;\n  }\n}\n\n.links {\n  padding: auto;\n}"],"sourceRoot":""}]);
+  display: flex;
+  align-items: center;
+}
+
+.eW9ij6nP8axm1anPkNAw {
+  display: flex;
+  align-items: center; /* Center the content vertically within the contactInfo div */
+  justify-content: center; /* Center the content horizontally within the contactInfo div */
+}
+
+a {
+  margin: 0 10px;
+  display: inline-block;
+  transition: transform 0.3s;
+  position: relative;
+  padding: 20px;
+  margin: -20px;
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+  z-index: -1;
+}
+
+a:hover::before {
+  opacity: 1;
+}
+
+a:hover::before,
+a:hover {
+  transform: scale(1.9);
+}
+
+img {
+  width: 35px;
+  height: auto;
+  padding: 8px; /* Reduce padding to bring the links closer to the center */
+  border-radius: 50%;
+  margin-right: 24px; /* Add margin to push the links to the right */
+}
+
+p {
+  margin: 0;
+  font-size: 14px;
+}`, "",{"version":3,"sources":["webpack://./src/components/Footer/Footer.module.scss"],"names":[],"mappings":"AAAA,uBAAA;AAEA;EACE,aAAA;EACA,kBAAA;EACA,eAAA;EACA,SAAA;EACA,OAAA;EACA,QAAA;EACA,yBAAA;EACA,WAAA;EACA,WAAA;EACA,YAAA;EACA,aAAA;EACA,mBAAA;EACA,8BAAA,EAAA,iCAAA;AAAF;;AAGA;EACE,aAAA;EACA,mBAAA;AAAF;;AAGA;EACE,aAAA;EACA,mBAAA,EAAA,6DAAA;EACA,uBAAA,EAAA,+DAAA;AAAF;;AAGA;EACE,cAAA;EACA,qBAAA;EACA,0BAAA;EACA,kBAAA;EACA,aAAA;EACA,aAAA;AAAF;;AAGA;EACE,WAAA;EACA,kBAAA;EACA,UAAA;EACA,WAAA;EACA,YAAA;EACA,aAAA;EACA,UAAA;EACA,gCAAA;EACA,WAAA;AAAF;;AAGA;EACE,UAAA;AAAF;;AAGA;;EAEE,qBAAA;AAAF;;AAGA;EACE,WAAA;EACA,YAAA;EACA,YAAA,EAAA,2DAAA;EACA,kBAAA;EACA,kBAAA,EAAA,8CAAA;AAAF;;AAGA;EACE,SAAA;EACA,eAAA;AAAF","sourcesContent":["/* Footer.module.scss */\n\n.footer {\n  padding: 15px;\n  text-align: center;\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  background-color: #1f1c30;\n  color: #fff;\n  width: 100%;\n  opacity: 70%;\n  display: flex;\n  align-items: center;\n  justify-content: space-between; /* Adjust to align to the right */\n}\n\n.links {\n  display: flex;\n  align-items: center;\n}\n\n.contactInfo {\n  display: flex;\n  align-items: center; /* Center the content vertically within the contactInfo div */\n  justify-content: center; /* Center the content horizontally within the contactInfo div */\n}\n\na {\n  margin: 0 10px;\n  display: inline-block;\n  transition: transform 0.3s;\n  position: relative;\n  padding: 20px;\n  margin: -20px;\n}\n\na::before {\n  content: '';\n  position: absolute;\n  top: -20px;\n  left: -20px;\n  right: -20px;\n  bottom: -20px;\n  opacity: 0;\n  transition: opacity 0.3s ease-in;\n  z-index: -1;\n}\n\na:hover::before {\n  opacity: 1;\n}\n\na:hover::before,\na:hover {\n  transform: scale(1.9);\n}\n\nimg {\n  width: 35px;\n  height: auto;\n  padding: 8px; /* Reduce padding to bring the links closer to the center */\n  border-radius: 50%;\n  margin-right: 24px; /* Add margin to push the links to the right */\n}\n\np {\n  margin: 0;\n  font-size: 14px;\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"footer": `ceS4EgxnSPoT9JOwqjeP`,
-	"links": `NXxFbXHLaIT7eYOW7Tit`
+	"links": `NXxFbXHLaIT7eYOW7Tit`,
+	"contactInfo": `eW9ij6nP8axm1anPkNAw`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1239,7 +1304,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, `body {
 }
 
 .mdO1efiFRbNvsm57g8K7 {
-  max-width: 600px;
   padding: 5px;
   border-radius: 4px;
 }
@@ -1247,7 +1311,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `body {
 header {
   background-color: #f7f6f5;
   color: #4c5570;
-  padding: 2px;
+  padding: 1px;
   text-align: center;
   border-radius: 4vmin;
   font-size: 1.8rem;
@@ -1328,7 +1392,7 @@ h3 {
   color: aliceblue;
   background-color: #ced5eb;
   cursor: pointer;
-}`, "",{"version":3,"sources":["webpack://./src/scss/styles.scss","webpack://./src/components/NavBar/NavBar.module.scss"],"names":[],"mappings":"AAyBA;EACE,SAAA;EACA,UAAA;EACA,4BAAA;EACA,wDAAA;ACZF;;ADeA;EACE,gBAAA;EACA,YAAA;EACA,kBAAA;ACZF;;ADeA;EACE,yBAAA;EACA,cAAA;EACA,YAAA;EACA,kBAAA;EACA,oBAAA;EACA,iBAAA;ACZF;;ADeA;EACE,yBAAA;EACA,cAAA;EACA,wCAAA;EACA,oBAAA;ACZF;;ADeA;EACE,mBAAA;EACA,mBAAA;ACZF;;ADeA;EACE,iBAAA;EACA,mBAAA;ACZF;;ADeA;EACE,iBAAA;EACA,qBAAA;ACZF;;ADgBA;EACE;IACE,yBA7DM,EA6DsB,6BAAA;ECb9B;EDeA;IACE,yBA3EK,EA2EsB,4BAAA;ECb7B;EDeA;IACE,yBA7EK,EA6EsB,6BAAA;ECb7B;EDgBA;IACE,yBAhFK,EAgFsB,mCAAA;ECd7B;EDiBA;IACE,yBAAA,EAAA,kCAAA;ECfF;EDiBA;IACE,yBAjFK,EAiFsB,iCAAA;ECf7B;EDiBA;IACE,yBAnFK,EAmFuB,kCAAA;ECf9B;EDiBA;IACE,yBAvFK,EAuFuB,8BAAA;ECf9B;EDiBA;IACE,yBAxFM,EAwFsB,gCAAA;ECf9B;EDiBA;IACE,yBA1FM,EA0FsB,2BAAA;ECf9B;AACF;AApFA;EACI,aAAA;EACA,sBAAA;EACA,oCAAA;EACA,yBAAA;EACA,YAAA;AAsFJ;;AApFA;EACI,aAAA;EACA,6BAAA;EACA,mBAAA;AAuFJ;AAtFQ;EACI,0BAAA;EACA,cAAA;AAwFZ;AAvFY;EACI,gBAAA;EACA,yBAAA;EACA,eAAA;AAyFhB","sourcesContent":["$color1: #646e67; // Sage\n$color2: #3d4742; // Olive Grey\n$color3: #2c3437; // Dark Forest Grey\n$color4: #e37d4e; // Coral\n$color5: #e4ead8; // Sage White\n$color6: #4c5570; // Medium Grey Purple\n$color7: #ced5eb; // Light Blue White\n$color8: #f7f6f5; // Light Orange White\n$color9: #1f1c30; // Dark Purple\n$color10:#572387; // DRDC purple\n$color11: #2a1961; // Dark Blue\n$color12: #1a3d5c; // Dark Teal\n\n:export {\n  col-1: $color1;\n  col-2: $color2;\n  col-3: $color3;\n  col-4: $color4;\n  col-5: $color5;\n  col-6: $color6;\n  col-7: $color7;\n  col-8: $color8;\n  col-9: $color9;\n}\n\nbody {\n  margin: 0;\n  padding: 0;\n  font-family: 'Gloock', serif; // Use the correct font family or a web-safe font\n  animation: backgroundAnimation 25s ease-in-out infinite;\n}\n\n.container {\n  max-width: 600px;\n  padding: 5px;\n  border-radius: 4px; \n}\n\nheader {\n  background-color: #f7f6f5;\n  color: #4c5570;\n  padding: 2px;\n  text-align: center;\n  border-radius: 4vmin;\n  font-size: 1.8rem; \n}\n\nmain {\n  background-color: #ced5eb;\n  padding: 1.5px;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);\n  border-radius: 4vmin;\n}\n\nh1 {\n  font-size: 1.875rem; // Use 'rem' for font size\n  margin-bottom: 1rem;\n}\n\nh2 {\n  font-size: 1.5rem; // Use 'rem' for font size\n  margin-bottom: 1rem;\n}\n\nh3 {\n  font-size: 1.2rem;\n  margin-bottom: 0.5rem;\n}\n\n\n@keyframes backgroundAnimation {\n  0% {\n    background-color: $color12; /* Starting color Dark Teal */\n  }\n  8% {\n    background-color: $color1; /* Transition color (Sage) */\n  }\n  17% {\n    background-color: $color2; /* Transition to Olive Grey */\n   \n  }\n  25% {\n    background-color: $color3; /* Transition to Dark Forest Grey */\n    \n  }\n  37% {\n    background-color: #161417 ; /* Transition color purple black */\n  }\n  50% {\n    background-color: $color9; /* Transition color Dark Purple */\n  }\n  63% {\n    background-color: $color10; /* Transition color DRDC purple  */\n  }\n  75% {\n    background-color: $color9;  /* Transition to Dark Purple */\n  }\n  84% {\n    background-color: $color11; /* Transition color  Dark Blue */\n  }\n  100% {\n    background-color: $color12; /* Ending color Dark Teal */\n  }\n}\n\n\n\n\n","@import '../../scss/styles.scss';\n\n\n.NavBar {\n    display: flex;\n    flex-direction: column;\n    padding: 1.5rem 2.5rem 1.5rem 2.5rem;\n    background-color:#4c5570;\n    color: white;\n}\n.links {\n    display: flex;\n    justify-content: space-around;\n    align-items: center;\n        a {\n            text-decoration: underline;\n            color: #f7f6f5;\n            &:hover {\n                color:aliceblue;\n                background-color: #ced5eb;\n                cursor: pointer;\n            }\n          }\n    }\n    \n\n\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/scss/styles.scss","webpack://./src/components/NavBar/NavBar.module.scss"],"names":[],"mappings":"AAyBA;EACE,SAAA;EACA,UAAA;EACA,4BAAA;EACA,wDAAA;ACZF;;ADeA;EACE,YAAA;EACA,kBAAA;ACZF;;ADeA;EACE,yBAAA;EACA,cAAA;EACA,YAAA;EACA,kBAAA;EACA,oBAAA;EACA,iBAAA;ACZF;;ADeA;EACE,yBAAA;EACA,cAAA;EACA,wCAAA;EACA,oBAAA;ACZF;;ADeA;EACE,mBAAA;EACA,mBAAA;ACZF;;ADeA;EACE,iBAAA;EACA,mBAAA;ACZF;;ADeA;EACE,iBAAA;EACA,qBAAA;ACZF;;ADgBA;EACE;IACE,yBA5DM,EA4DsB,6BAAA;ECb9B;EDeA;IACE,yBA1EK,EA0EsB,4BAAA;ECb7B;EDeA;IACE,yBA5EK,EA4EsB,6BAAA;ECb7B;EDgBA;IACE,yBA/EK,EA+EsB,mCAAA;ECd7B;EDiBA;IACE,yBAAA,EAAA,kCAAA;ECfF;EDiBA;IACE,yBAhFK,EAgFsB,iCAAA;ECf7B;EDiBA;IACE,yBAlFK,EAkFuB,kCAAA;ECf9B;EDiBA;IACE,yBAtFK,EAsFuB,8BAAA;ECf9B;EDiBA;IACE,yBAvFM,EAuFsB,gCAAA;ECf9B;EDiBA;IACE,yBAzFM,EAyFsB,2BAAA;ECf9B;AACF;AAnFA;EACI,aAAA;EACA,sBAAA;EACA,oCAAA;EACA,yBAAA;EACA,YAAA;AAqFJ;;AAnFA;EACI,aAAA;EACA,6BAAA;EACA,mBAAA;AAsFJ;AArFQ;EACI,0BAAA;EACA,cAAA;AAuFZ;AAtFY;EACI,gBAAA;EACA,yBAAA;EACA,eAAA;AAwFhB","sourcesContent":["$color1: #646e67; // Sage\n$color2: #3d4742; // Olive Grey\n$color3: #2c3437; // Dark Forest Grey\n$color4: #e37d4e; // Coral\n$color5: #e4ead8; // Sage White\n$color6: #4c5570; // Medium Grey Purple\n$color7: #ced5eb; // Light Blue White\n$color8: #f7f6f5; // Light Orange White\n$color9: #1f1c30; // Dark Purple\n$color10:#572387; // DRDC purple\n$color11: #2a1961; // Dark Blue\n$color12: #1a3d5c; // Dark Teal\n\n:export {\n  col-1: $color1;\n  col-2: $color2;\n  col-3: $color3;\n  col-4: $color4;\n  col-5: $color5;\n  col-6: $color6;\n  col-7: $color7;\n  col-8: $color8;\n  col-9: $color9;\n}\n\nbody {\n  margin: 0;\n  padding: 0;\n  font-family: 'Gloock', serif; // Use the correct font family or a web-safe font\n  animation: backgroundAnimation 25s ease-in-out infinite;\n}\n\n.container {\n  padding: 5px;\n  border-radius: 4px; \n}\n\nheader {\n  background-color: #f7f6f5;\n  color: #4c5570;\n  padding: 1px;\n  text-align: center;\n  border-radius: 4vmin;\n  font-size: 1.8rem; \n}\n\nmain {\n  background-color: #ced5eb;\n  padding: 1.5px;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);\n  border-radius: 4vmin;\n }\n\nh1 {\n  font-size: 1.875rem; // Use 'rem' for font size\n  margin-bottom: 1rem;\n}\n\nh2 {\n  font-size: 1.5rem; // Use 'rem' for font size\n  margin-bottom: 1rem;\n}\n\nh3 {\n  font-size: 1.2rem;\n  margin-bottom: 0.5rem;\n}\n\n\n@keyframes backgroundAnimation {\n  0% {\n    background-color: $color12; /* Starting color Dark Teal */\n  }\n  8% {\n    background-color: $color1; /* Transition color (Sage) */\n  }\n  17% {\n    background-color: $color2; /* Transition to Olive Grey */\n   \n  }\n  25% {\n    background-color: $color3; /* Transition to Dark Forest Grey */\n    \n  }\n  37% {\n    background-color: #161417 ; /* Transition color purple black */\n  }\n  50% {\n    background-color: $color9; /* Transition color Dark Purple */\n  }\n  63% {\n    background-color: $color10; /* Transition color DRDC purple  */\n  }\n  75% {\n    background-color: $color9;  /* Transition to Dark Purple */\n  }\n  84% {\n    background-color: $color11; /* Transition color  Dark Blue */\n  }\n  100% {\n    background-color: $color12; /* Ending color Dark Teal */\n  }\n}\n\n\n\n\n","@import '../../scss/styles.scss';\n\n\n.NavBar {\n    display: flex;\n    flex-direction: column;\n    padding: 1.5rem 2.5rem 1.5rem 2.5rem;\n    background-color:#4c5570;\n    color: white;\n}\n.links {\n    display: flex;\n    justify-content: space-around;\n    align-items: center;\n        a {\n            text-decoration: underline;\n            color: #f7f6f5;\n            &:hover {\n                color:aliceblue;\n                background-color: #ced5eb;\n                cursor: pointer;\n            }\n          }\n    }\n    \n\n\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"col-1": `#646e67`,
@@ -2695,4 +2759,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.480e449490f18de79b480e3973c429ac.js.map
+//# sourceMappingURL=App.a297472e55e7821b5300947ddbbaae64.js.map

@@ -1,7 +1,7 @@
 /* Footer.module.scss */
 
 .footer {
-  padding: 10px;
+  padding: 15px;
   text-align: center;
   position: fixed;
   bottom: 0;
@@ -13,23 +13,59 @@
   opacity: 70%;
   display: flex;
   align-items: center;
-  justify-content: center;
-
-  a {
-    margin: 0 10px;
-  }
-
-  img {
-    width: 30px; /* Adjust the width to your preferred size */
-    height: auto; /* To maintain the aspect ratio */
-  }
-
-  p {
-    margin: 0;
-    font-size: 14px;
-  }
+  justify-content: space-between; /* Adjust to align to the right */
 }
 
 .links {
-  padding: auto;
+  display: flex;
+  align-items: center;
+}
+
+.contactInfo {
+  display: flex;
+  align-items: center; /* Center the content vertically within the contactInfo div */
+  justify-content: center; /* Center the content horizontally within the contactInfo div */
+}
+
+a {
+  margin: 0 10px;
+  display: inline-block;
+  transition: transform 0.3s;
+  position: relative;
+  padding: 20px;
+  margin: -20px;
+}
+
+a::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+  z-index: -1;
+}
+
+a:hover::before {
+  opacity: 1;
+}
+
+a:hover::before,
+a:hover {
+  transform: scale(1.9);
+}
+
+img {
+  width: 35px;
+  height: auto;
+  padding: 8px; /* Reduce padding to bring the links closer to the center */
+  border-radius: 50%;
+  margin-right: 24px; /* Add margin to push the links to the right */
+}
+
+p {
+  margin: 0;
+  font-size: 14px;
 }
