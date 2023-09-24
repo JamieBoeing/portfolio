@@ -28,7 +28,6 @@ body {
   padding: 0;
   font-family: 'Gloock', serif; // Use the correct font family or a web-safe font
   animation: backgroundAnimation 25s ease-in-out infinite;
-  overflow: scroll;
 }
 
 .container {
@@ -106,13 +105,4 @@ h3 {
 
 
 
-/* Responsive layout adjustments */
-@media (max-width: 768px) {
-  main {
-    padding: 10px;
-  }
-}
-@media (min-width: 768px) {
-  /* Tablet styles */
-}
 
