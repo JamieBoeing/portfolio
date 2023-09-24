@@ -72,7 +72,7 @@ const skills = [
       },
       {
         name: 'PHP',
-        image: 'phpn-icon.png', // Image filename for Python
+        image: 'php-icon.png', // Image filename for Python
       },
     ],
   },
@@ -85,11 +85,11 @@ const skills = [
       },
       {
         name: 'HTML',
-        image: 'html.png', // Image filename for HTML
+        image: 'html-icon.png', // Image filename for HTML
       },
       {
         name: 'CSS',
-        image: 'css.png', // Image filename for CSS
+        image: 'css-icon.png', // Image filename for CSS
       },
     ],
   },
@@ -97,16 +97,16 @@ const skills = [
     category: 'Design Tools',
     skills: [
       {
-        name: 'Adobe',
-        image: 'adobe-icons.jpeg', // Image filename for React
+        name: 'Adobe Photoshop',
+        image: 'photoshop-logo.png', 
       },
       {
         name: 'Adobe Illustrator',
-        image: 'ai-icon.jpeg', // Image filename for HTML
+        image: 'ai-icon.png', 
       },
       {
         name: 'Node.js',
-        image: 'node-icon.jpeg', // Image filename for HTML
+        image: 'node-icon.png', 
       },
     ],
   },
@@ -119,7 +119,7 @@ const skills = [
       },
       {
         name: 'Digital Ocean',
-        image: 'digital-icon.jpeg', // Image filename for HTML
+        image: 'digital-icon.png', // Image filename for HTML
       },
     ],
   },

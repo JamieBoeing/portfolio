@@ -8,7 +8,6 @@ const favicon = require('serve-favicon')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 const contactRoutes = require('./routes/api/contact')
-const nodemailer = require('nodemailer')
 
 
 // middleware

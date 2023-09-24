@@ -1,3 +1,5 @@
+/* Projects.module.scss */
+
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -10,13 +12,19 @@
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 400px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
 
+  &:hover {
+    transform: scale(1.05); /* Enlarge the item */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a box shadow for elevation */
+  }
   h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    text-align: center; /* Center-align the titles */
   }
 
   img {
@@ -30,6 +38,9 @@
   p {
     font-size: 1rem;
     margin-bottom: 0.5rem;
+    background-color: white;
+    border-radius: 8px;
+    padding: 1rem;
   }
 
   .technologies {
@@ -40,7 +51,7 @@
 
   .links {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 
     a {
       font-size: 1rem;
@@ -50,8 +61,33 @@
       cursor: pointer;
 
       &:hover {
-        color: #0056b3;
+        color: #301b5e;
       }
     }
   }
+}
+
+/* Projects.module.scss */
+
+/* ... other styles ... */
+
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #1f1c30;
+}
+
+.description {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  white-space: pre-wrap; /* Wrap text */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Add ellipsis for long text */
+}
+
+.technologies {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.5rem;
 }

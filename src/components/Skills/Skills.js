@@ -17,7 +17,7 @@ const Skills = () => {
                   alt={skill.name}
                   className={styles.skillImage}
                 />
-                {skill.name}
+                <span className={skill.name}>{skill.name}</span>
               </li>
             ))}
           </ul>

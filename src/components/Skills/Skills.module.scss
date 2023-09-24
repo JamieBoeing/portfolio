@@ -7,6 +7,12 @@
   .category {
     margin-bottom: 1rem;
 
+    h3 {
+      font-size: 1.2rem;
+      color: #1f1c30;
+      margin-bottom: 10px;
+    }
+
     .list {
       display: flex;
       flex-wrap: wrap;
@@ -14,18 +20,22 @@
       .skill {
         padding: 0.3rem;
         margin: 0.2rem;
-        background-color: #f0f0f0;
         border-radius: 4px;
         font-size: 0.9rem;
         display: flex;
         align-items: center; /* Center the image and text vertically */
 
         img.skillImage {
-          width: 40px; /* Set desired width for the images */
-          height: 40px; /* Set  desired height for the images */
+          width: 50px; /* Set desired width for the images */
+          height: 50px; /* Set  desired height for the images */
           object-fit: cover; /* Maintain aspect ratio and cover the entire space */
           border-radius: 50%; /* Create a circular shape for the image */
           margin-right: 8px; /* Add spacing between the image and text */
+        }
+        span.skillName {
+          font-weight: bold;
+          color:#1f1c30;
+          font-size: 1rem;
         }
       }
     }

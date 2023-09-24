@@ -1,76 +1,118 @@
-/* App.scss */
-$color1: #84a888; //sage
-$color2: #3d4742; // olive grey
-$color3: #2c3437; // dark forest grey
-$color4: #e37d4e; // coral
-$color5: #e4ead8; // sage white
-$color6: #4c5570; //med grey purple
-$color7: #ced5eb; // light blue white
-$color8: #f7f6f5 ; // light orange white
+$color1: #646e67; // Sage
+$color2: #3d4742; // Olive Grey
+$color3: #2c3437; // Dark Forest Grey
+$color4: #e37d4e; // Coral
+$color5: #e4ead8; // Sage White
+$color6: #4c5570; // Medium Grey Purple
+$color7: #ced5eb; // Light Blue White
+$color8: #f7f6f5; // Light Orange White
+$color9: #1f1c30; // Dark Purple
+$color10:#572387; // DRDC purple
+$color11: #2a1961; // Dark Blue
+$color12: #1a3d5c; // Dark Teal
+
 :export {
-col-1: $color1;
-col-2: $color2;
-col-3: $color3;
-col-4: $color4;
-col-5: $color5;
-col-6: $color6;
-col-7: $color7;
-col-8: $color8;
+  col-1: $color1;
+  col-2: $color2;
+  col-3: $color3;
+  col-4: $color4;
+  col-5: $color5;
+  col-6: $color6;
+  col-7: $color7;
+  col-8: $color8;
+  col-9: $color9;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Gloock', serif; // Use the correct font family or a web-safe font
+  animation: backgroundAnimation 25s ease-in-out infinite;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 600px;
+  padding: 5px;
+  border-radius: 4px; 
+}
+
+header {
+  background-color: #f7f6f5;
+  color: #4c5570;
+  padding: 2px;
+  text-align: center;
+  border-radius: 4vmin;
+  font-size: 1.8rem; 
+}
+
+main {
+  background-color: #ced5eb;
+  padding: 1.5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4vmin;
+}
+
+h1 {
+  font-size: 1.875rem; // Use 'rem' for font size
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.5rem; // Use 'rem' for font size
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
 }
 
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Gloock', serif;     // background-image: url('https://imgur.com/gallery/K9ZwK62');
+@keyframes backgroundAnimation {
+  0% {
+    background-color: $color12; /* Starting color Dark Teal */
   }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: .625;
+  8% {
+    background-color: $color1; /* Transition color (Sage) */
   }
-  
-  header {
-    background-color: #f7f6f5;
-    color: #4c5570;
-    padding: 10px;
-    text-align: center;
-    border-radius: 4vmin;
-    font-size: 50vm;
-   }
-  
+  17% {
+    background-color: $color2; /* Transition to Olive Grey */
+   
+  }
+  25% {
+    background-color: $color3; /* Transition to Dark Forest Grey */
+    
+  }
+  37% {
+    background-color: #161417 ; /* Transition color purple black */
+  }
+  50% {
+    background-color: $color9; /* Transition color Dark Purple */
+  }
+  63% {
+    background-color: $color10; /* Transition color DRDC purple  */
+  }
+  75% {
+    background-color: $color9;  /* Transition to Dark Purple */
+  }
+  84% {
+    background-color: $color11; /* Transition color  Dark Blue */
+  }
+  100% {
+    background-color: $color12; /* Ending color Dark Teal */
+  }
+}
+
+
+
+/* Responsive layout adjustments */
+@media (max-width: 768px) {
   main {
-    background-color:#ced5eb;
-    padding: 20px;
-    margin-top: 20px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-     border-radius: 4vmin;
+    padding: 10px;
   }
-  
-  h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
+}
+@media (min-width: 768px) {
+  /* Tablet styles */
+}
 
-  h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-  }
-
-  
-  /* Responsive layout adjustments */
-  @media (max-width: 768px) {
-    main {
-      padding: 10px;
-    }
-  }
-  
-  /* Add more media queries as needed */
-  
