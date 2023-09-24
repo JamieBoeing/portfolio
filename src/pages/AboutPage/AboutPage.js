@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 import Footer from '../../components/Footer/Footer'
 import styles from './AboutPage.module.scss'
 import ContactModalForm from '../../components/Contact/ContactModalForm'
+import { projects, skills, aboutMe, experienceData, educationData, wordData, servicesData, images } from '../../data';
 
 const AboutPage = () => {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
@@ -24,7 +25,7 @@ const AboutPage = () => {
         <h1>About Me</h1>
       </header>
       <section className={styles.intro}>
-        <img src="profile-picture.jpg" alt="Jamie Boeing" />
+        {/* <img src="profile-picture.jpg" alt="Jamie Boeing" /> */}
         <p>
           Hello! I'm Jamie Boeing, a Software Engineer with a passion for Coding.
           I have 7 years of experience in Graphic Design and a strong background in Art, Design and Customer Service.

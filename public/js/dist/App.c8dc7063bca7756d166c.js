@@ -76,6 +76,44 @@ const About = () => {
 
 /***/ }),
 
+/***/ "./src/components/Carousel/Carousel.js":
+/*!*********************************************!*\
+  !*** ./src/components/Carousel/Carousel.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../data */ "./src/data.js");
+
+
+const Carousel = () => {
+  const [currentImageIndex, setCurrentImageIndex] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    // Function to cycle through images automatically
+    const nextImage = () => {
+      setCurrentImageIndex(prevIndex => (prevIndex + 1) % _data__WEBPACK_IMPORTED_MODULE_1__.images.length);
+    };
+    const interval = setInterval(nextImage, 5000); // Change image every 5 seconds
+
+    return () => {
+      clearInterval(interval); // Cleanup to prevent memory leaks
+    };
+  }, []);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "carousel"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "/img/".concat(_data__WEBPACK_IMPORTED_MODULE_1__.images[currentImageIndex]),
+    alt: "Image ".concat(currentImageIndex + 1)
+  }));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Carousel);
+
+/***/ }),
+
 /***/ "./src/components/Contact/ContactModalForm.js":
 /*!****************************************************!*\
   !*** ./src/components/Contact/ContactModalForm.js ***!
@@ -261,7 +299,7 @@ const Experience = () => {
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const [showEmail, setShowEmail] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
-  const emailAddress = 'your.email@example.com';
+  const emailAddress = 'boeingjamie@gmail.com';
   const handleMouseEnter = () => {
     setShowEmail(true);
   };
@@ -284,7 +322,9 @@ const Footer = () => {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
     onMouseEnter: handleMouseEnter,
     onMouseLeave: handleMouseLeave
-  }, "\xA9 ", currentYear, " Jamie Boeing"), showEmail && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+  }, "\xA9 ", currentYear, " Jamie Boeing")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: _Footer_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].emailContainer
+  }, showEmail && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
     className: _Footer_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].email,
     onClick: handleCopyEmail
   }, emailAddress)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -527,6 +567,7 @@ const MyWordCloud = () => {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   educationData: () => (/* binding */ educationData),
 /* harmony export */   experienceData: () => (/* binding */ experienceData),
+/* harmony export */   images: () => (/* binding */ images),
 /* harmony export */   projects: () => (/* binding */ projects),
 /* harmony export */   servicesData: () => (/* binding */ servicesData),
 /* harmony export */   skills: () => (/* binding */ skills),
@@ -689,46 +730,7 @@ const educationData = [{
 ];
 
 const wordData = [{
-  word: 'Full-Stack Developer',
-  word: 'Web Development',
-  word: 'JavaScript',
-  word: 'React',
-  word: 'Node.js',
-  word: 'Express.js',
-  word: 'HTML',
-  word: 'CSS',
-  word: 'MongoDB',
-  word: 'Responsive Design',
-  word: 'Git',
-  word: 'RESTful API',
-  word: 'UI/UX Design',
-  word: 'Problem Solving',
-  word: 'Agile',
-  word: 'Scrum',
-  word: 'Team Collaboration',
-  word: 'Front-end',
-  word: 'Back-end',
-  word: 'Database',
-  word: 'Creative',
-  word: 'Adaptable',
-  word: 'Innovative',
-  word: 'Detail-Oriented',
-  word: 'Problem Solver',
-  word: 'Collaborative',
-  word: 'Communicative',
-  word: 'Organized',
-  word: 'Curious',
-  word: 'Motivated',
-  word: 'Resourceful',
-  word: 'Analytical',
-  word: 'Patient',
-  word: 'Empathetic',
-  word: 'Positive',
-  word: 'Team Player',
-  word: 'Leadership',
-  word: 'Self-Motivated',
-  word: 'Open-Minded',
-  word: 'Resilient'
+  words: ['Full-Stack Developer', 'Web Development', 'JavaScript', 'React', 'Node.js', 'Express.js', 'HTML', 'CSS', 'MongoDB', 'Responsive Design', 'Git', 'RESTful API', 'UI/UX Design', 'Problem Solving', 'Agile', 'Scrum', 'Team Collaboration', 'Front-end', 'Back-end', 'Database', 'Creative', 'Adaptable', 'Innovative', 'Detail-Oriented', 'Problem Solver', 'Collaborative', 'Communicative', 'Organized', 'Curious', 'Motivated', 'Resourceful', 'Analytical', 'Patient', 'Empathetic', 'Positive', 'Team Player', 'Leadership', 'Self-Motivated', 'Open-Minded', 'Resilient']
 }];
 const servicesData = [{
   category: 'Web Development',
@@ -740,6 +742,7 @@ const servicesData = [{
 // Add more services...
 ];
 
+const images = ['image1.jpeg', 'image2.jpeg', 'image3.jpeg', 'image4.jpeg', 'image5.jpeg'];
 
 
 /***/ }),
@@ -783,6 +786,8 @@ react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPOR
 /* harmony import */ var _components_Footer_Footer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/Footer/Footer */ "./src/components/Footer/Footer.js");
 /* harmony import */ var _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./AboutPage.module.scss */ "./src/pages/AboutPage/AboutPage.module.scss");
 /* harmony import */ var _components_Contact_ContactModalForm__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/Contact/ContactModalForm */ "./src/components/Contact/ContactModalForm.js");
+/* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../data */ "./src/data.js");
+
 
 
 
@@ -804,10 +809,7 @@ const AboutPage = () => {
     className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].container
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "About Me")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
     className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].intro
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    src: "profile-picture.jpg",
-    alt: "Jamie Boeing"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Hello! I'm Jamie Boeing, a Software Engineer with a passion for Coding. I have 7 years of experience in Graphic Design and a strong background in Art, Design and Customer Service. Let me tell you a bit more about my journey.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Hello! I'm Jamie Boeing, a Software Engineer with a passion for Coding. I have 7 years of experience in Graphic Design and a strong background in Art, Design and Customer Service. Let me tell you a bit more about my journey.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
     className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].experience
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "Experience"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Experience_Experience__WEBPACK_IMPORTED_MODULE_2__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
     className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].skills
@@ -833,6 +835,10 @@ const AboutPage = () => {
 /* harmony import */ var _components_WordCloud_WordCloud__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/WordCloud/WordCloud */ "./src/components/WordCloud/WordCloud.js");
 /* harmony import */ var _HomePage_module_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./HomePage.module.scss */ "./src/pages/HomePage/HomePage.module.scss");
 /* harmony import */ var _components_Footer_Footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/Footer/Footer */ "./src/components/Footer/Footer.js");
+/* harmony import */ var _components_Carousel_Carousel__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/Carousel/Carousel */ "./src/components/Carousel/Carousel.js");
+/* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../data */ "./src/data.js");
+
+
 
 
 
@@ -841,7 +847,9 @@ const AboutPage = () => {
 const HomePage = () => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: _HomePage_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].container
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Welcome to Jamie Boeing's Portfolio"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "A showcase of my web development and design journey.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], null));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Welcome to Jamie Boeing's Portfolio"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "A showcase of my web development and design journey.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Carousel_Carousel__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    images: _data__WEBPACK_IMPORTED_MODULE_5__.images
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], null));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HomePage);
 
@@ -1219,9 +1227,21 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* Footer.module.scss */
 }
 
 .eW9ij6nP8axm1anPkNAw {
+  margin-bottom: 10px;
   display: flex;
   align-items: center; /* Center the content vertically within the contactInfo div */
   justify-content: center; /* Center the content horizontally within the contactInfo div */
+}
+
+.GkCpZLzisdZbfn8OT1RQ {
+  font-size: 0.9rem;
+  color: #f7f6f5;
+  cursor: pointer;
+}
+
+.NXxFbXHLaIT7eYOW7Tit {
+  display: flex;
+  justify-content: space-between;
 }
 
 a {
@@ -1265,12 +1285,13 @@ img {
 p {
   margin: 0;
   font-size: 14px;
-}`, "",{"version":3,"sources":["webpack://./src/components/Footer/Footer.module.scss"],"names":[],"mappings":"AAAA,uBAAA;AAEA;EACE,aAAA;EACA,kBAAA;EACA,eAAA;EACA,SAAA;EACA,OAAA;EACA,QAAA;EACA,yBAAA;EACA,WAAA;EACA,WAAA;EACA,YAAA;EACA,aAAA;EACA,mBAAA;EACA,8BAAA,EAAA,iCAAA;AAAF;;AAGA;EACE,aAAA;EACA,mBAAA;AAAF;;AAGA;EACE,aAAA;EACA,mBAAA,EAAA,6DAAA;EACA,uBAAA,EAAA,+DAAA;AAAF;;AAGA;EACE,cAAA;EACA,qBAAA;EACA,0BAAA;EACA,kBAAA;EACA,aAAA;EACA,aAAA;AAAF;;AAGA;EACE,WAAA;EACA,kBAAA;EACA,UAAA;EACA,WAAA;EACA,YAAA;EACA,aAAA;EACA,UAAA;EACA,gCAAA;EACA,WAAA;AAAF;;AAGA;EACE,UAAA;AAAF;;AAGA;;EAEE,qBAAA;AAAF;;AAGA;EACE,WAAA;EACA,YAAA;EACA,YAAA,EAAA,2DAAA;EACA,kBAAA;EACA,kBAAA,EAAA,8CAAA;AAAF;;AAGA;EACE,SAAA;EACA,eAAA;AAAF","sourcesContent":["/* Footer.module.scss */\n\n.footer {\n  padding: 15px;\n  text-align: center;\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  background-color: #1f1c30;\n  color: #fff;\n  width: 100%;\n  opacity: 70%;\n  display: flex;\n  align-items: center;\n  justify-content: space-between; /* Adjust to align to the right */\n}\n\n.links {\n  display: flex;\n  align-items: center;\n}\n\n.contactInfo {\n  display: flex;\n  align-items: center; /* Center the content vertically within the contactInfo div */\n  justify-content: center; /* Center the content horizontally within the contactInfo div */\n}\n\na {\n  margin: 0 10px;\n  display: inline-block;\n  transition: transform 0.3s;\n  position: relative;\n  padding: 20px;\n  margin: -20px;\n}\n\na::before {\n  content: '';\n  position: absolute;\n  top: -20px;\n  left: -20px;\n  right: -20px;\n  bottom: -20px;\n  opacity: 0;\n  transition: opacity 0.3s ease-in;\n  z-index: -1;\n}\n\na:hover::before {\n  opacity: 1;\n}\n\na:hover::before,\na:hover {\n  transform: scale(1.9);\n}\n\nimg {\n  width: 35px;\n  height: auto;\n  padding: 8px; /* Reduce padding to bring the links closer to the center */\n  border-radius: 50%;\n  margin-right: 24px; /* Add margin to push the links to the right */\n}\n\np {\n  margin: 0;\n  font-size: 14px;\n}\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/Footer/Footer.module.scss"],"names":[],"mappings":"AAAA,uBAAA;AAEA;EACE,aAAA;EACA,kBAAA;EACA,eAAA;EACA,SAAA;EACA,OAAA;EACA,QAAA;EACA,yBAAA;EACA,WAAA;EACA,WAAA;EACA,YAAA;EACA,aAAA;EACA,mBAAA;EACA,8BAAA,EAAA,iCAAA;AAAF;;AAGA;EACE,aAAA;EACA,mBAAA;AAAF;;AAGA;EACE,mBAAA;EACA,aAAA;EACA,mBAAA,EAAA,6DAAA;EACA,uBAAA,EAAA,+DAAA;AAAF;;AAGA;EACE,iBAAA;EACA,cAAA;EACA,eAAA;AAAF;;AAEA;EACE,aAAA;EACA,8BAAA;AACF;;AAEA;EACE,cAAA;EACA,qBAAA;EACA,0BAAA;EACA,kBAAA;EACA,aAAA;EACA,aAAA;AACF;;AAEA;EACE,WAAA;EACA,kBAAA;EACA,UAAA;EACA,WAAA;EACA,YAAA;EACA,aAAA;EACA,UAAA;EACA,gCAAA;EACA,WAAA;AACF;;AAEA;EACE,UAAA;AACF;;AAEA;;EAEE,qBAAA;AACF;;AAEA;EACE,WAAA;EACA,YAAA;EACA,YAAA,EAAA,2DAAA;EACA,kBAAA;EACA,kBAAA,EAAA,8CAAA;AACF;;AAEA;EACE,SAAA;EACA,eAAA;AACF","sourcesContent":["/* Footer.module.scss */\n\n.footer {\n  padding: 15px;\n  text-align: center;\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  background-color: #1f1c30;\n  color: #fff;\n  width: 100%;\n  opacity: 70%;\n  display: flex;\n  align-items: center;\n  justify-content: space-between; /* Adjust to align to the right */\n}\n\n.links {\n  display: flex;\n  align-items: center;\n}\n\n.contactInfo {\n  margin-bottom: 10px;\n  display: flex;\n  align-items: center; /* Center the content vertically within the contactInfo div */\n  justify-content: center; /* Center the content horizontally within the contactInfo div */\n}\n\n.email {\n  font-size: 0.9rem;\n  color: #f7f6f5;\n  cursor: pointer;\n}\n.links {\n  display: flex;\n  justify-content: space-between;\n}\n\na {\n  margin: 0 10px;\n  display: inline-block;\n  transition: transform 0.3s;\n  position: relative;\n  padding: 20px;\n  margin: -20px;\n}\n\na::before {\n  content: '';\n  position: absolute;\n  top: -20px;\n  left: -20px;\n  right: -20px;\n  bottom: -20px;\n  opacity: 0;\n  transition: opacity 0.3s ease-in;\n  z-index: -1;\n}\n\na:hover::before {\n  opacity: 1;\n}\n\na:hover::before,\na:hover {\n  transform: scale(1.9);\n}\n\nimg {\n  width: 35px;\n  height: auto;\n  padding: 8px; /* Reduce padding to bring the links closer to the center */\n  border-radius: 50%;\n  margin-right: 24px; /* Add margin to push the links to the right */\n}\n\np {\n  margin: 0;\n  font-size: 14px;\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"footer": `ceS4EgxnSPoT9JOwqjeP`,
 	"links": `NXxFbXHLaIT7eYOW7Tit`,
-	"contactInfo": `eW9ij6nP8axm1anPkNAw`
+	"contactInfo": `eW9ij6nP8axm1anPkNAw`,
+	"email": `GkCpZLzisdZbfn8OT1RQ`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -2759,4 +2780,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.a297472e55e7821b5300947ddbbaae64.js.map
+//# sourceMappingURL=App.c899b1ace3282466070e8cfb25354e35.js.map

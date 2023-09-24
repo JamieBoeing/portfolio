@@ -4,7 +4,7 @@ import styles from './Footer.module.scss';
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const [showEmail, setShowEmail] = useState(false);
-  const emailAddress = 'your.email@example.com';
+  const emailAddress = 'boeingjamie@gmail.com';
 
   const handleMouseEnter = () => {
     setShowEmail(true);
@@ -30,6 +30,8 @@ const Footer = () => {
         <p onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
           &copy; {currentYear} Jamie Boeing
         </p>
+        </div>
+        <div className={styles.emailContainer}>
         {showEmail && (
           <p className={styles.email} onClick={handleCopyEmail}>
             {emailAddress}

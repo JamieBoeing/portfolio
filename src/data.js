@@ -214,47 +214,49 @@ const educationData = [
 
 const wordData = [
   {
-  word:'Full-Stack Developer', 
-  word:'Web Development', 
-  word:'JavaScript', 
-  word:'React', 
-  word:'Node.js', 
-  word:'Express.js', 
-  word:'HTML',
-  word:'CSS',
-  word:'MongoDB', 
-  word:'Responsive Design',
-  word:'Git', 
-  word:'RESTful API', 
-  word:'UI/UX Design', 
-  word:'Problem Solving', 
-  word:'Agile', 
-  word:'Scrum',
-  word:'Team Collaboration',
-  word:'Front-end', 
-  word:'Back-end', 
-  word:'Database', 
-  word:'Creative', 
-  word:'Adaptable', 
-  word:'Innovative', 
-  word:'Detail-Oriented', 
-  word:'Problem Solver', 
-  word:'Collaborative', 
-  word:'Communicative', 
-  word:'Organized', 
-  word:'Curious', 
-  word:'Motivated', 
-  word:'Resourceful', 
-  word:'Analytical', 
-  word:'Patient', 
-  word:'Empathetic', 
-  word:'Positive', 
-  word:'Team Player', 
-  word:'Leadership',
-  word:'Self-Motivated', 
-  word:'Open-Minded', 
-  word:'Resilient',
-}
+  words: [
+  'Full-Stack Developer', 
+  'Web Development', 
+  'JavaScript', 
+  'React', 
+  'Node.js', 
+  'Express.js', 
+  'HTML',
+  'CSS',
+  'MongoDB', 
+  'Responsive Design',
+  'Git', 
+  'RESTful API', 
+  'UI/UX Design', 
+  'Problem Solving', 
+  'Agile', 
+  'Scrum',
+  'Team Collaboration',
+  'Front-end', 
+  'Back-end', 
+  'Database', 
+  'Creative', 
+  'Adaptable', 
+  'Innovative', 
+  'Detail-Oriented', 
+  'Problem Solver', 
+  'Collaborative', 
+  'Communicative', 
+  'Organized', 
+  'Curious', 
+  'Motivated', 
+  'Resourceful', 
+  'Analytical', 
+  'Patient', 
+  'Empathetic', 
+  'Positive', 
+  'Team Player', 
+  'Leadership',
+  'Self-Motivated', 
+  'Open-Minded', 
+  'Resilient'
+  ],
+},
 ]
 
 const servicesData = [
@@ -270,4 +272,14 @@ const servicesData = [
 ]
 
 
-export { projects, skills, aboutMe, experienceData, educationData, wordData, servicesData };
+const images = [
+  'image1.jpeg',
+  'image2.jpeg',
+  'image3.jpeg',
+  'image4.jpeg',
+  'image5.jpeg',
+
+]
+
+
+export { projects, skills, aboutMe, experienceData, educationData, wordData, servicesData, images };

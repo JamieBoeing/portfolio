@@ -22,9 +22,20 @@
 }
 
 .contactInfo {
+  margin-bottom: 10px;
   display: flex;
   align-items: center; /* Center the content vertically within the contactInfo div */
   justify-content: center; /* Center the content horizontally within the contactInfo div */
+}
+
+.email {
+  font-size: 0.9rem;
+  color: #f7f6f5;
+  cursor: pointer;
+}
+.links {
+  display: flex;
+  justify-content: space-between;
 }
 
 a {
