@@ -88,6 +88,8 @@ const About = () => {
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../data */ "./src/data.js");
+/* harmony import */ var _Carousel_module_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Carousel.module.scss */ "./src/components/Carousel/Carousel.module.scss");
+
 
 
 const Carousel = () => {
@@ -104,8 +106,9 @@ const Carousel = () => {
     };
   }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "carousel"
+    className: _Carousel_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].carousel
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    className: _Carousel_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].carouselImage /* Create this class in your CSS */,
     src: "/img/".concat(_data__WEBPACK_IMPORTED_MODULE_1__.images[currentImageIndex]),
     alt: "Image ".concat(currentImageIndex + 1)
   }));
@@ -847,9 +850,11 @@ const AboutPage = () => {
 const HomePage = () => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: _HomePage_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].container
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Welcome to Jamie Boeing's Portfolio"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "A showcase of my web development and design journey.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Carousel_Carousel__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Welcome to Jamie Boeing's Portfolio"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "A showcase of my web development and design journey.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: _HomePage_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].imageCarousel
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Carousel_Carousel__WEBPACK_IMPORTED_MODULE_4__["default"], {
     images: _data__WEBPACK_IMPORTED_MODULE_5__.images
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], null));
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], null));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HomePage);
 
@@ -1043,6 +1048,51 @@ ___CSS_LOADER_EXPORT___.locals = {
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/components/Carousel/Carousel.module.scss":
+/*!*********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/components/Carousel/Carousel.module.scss ***!
+  \*********************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `/* Carousel.module.scss */
+.gpetVLQZHYUp_GY0Hsng {
+  width: 100%; /* Make the container full-width */
+  height: auto;
+  margin: 0 auto; /* Center the container horizontally */
+  text-align: center; /* Center the contents within the container */
+  padding: 20px; /* Add some spacing if desired */
+  /* Remove rounded corners */
+  background-color: transparent; /* Remove background color */
+}
+
+.us6xXbnTOqgJpV586KPQ {
+  width: 350px; /* Adjust the width to the desired size */
+  height: auto; /* Maintain the aspect ratio */
+  border-radius: 2.2px;
+}`, "",{"version":3,"sources":["webpack://./src/components/Carousel/Carousel.module.scss"],"names":[],"mappings":"AAAA,yBAAA;AAEA;EACI,WAAA,EAAA,kCAAA;EACA,YAAA;EACA,cAAA,EAAA,sCAAA;EACA,kBAAA,EAAA,6CAAA;EACA,aAAA,EAAA,gCAAA;EACF,2BAAA;EACE,6BAAA,EAAA,4BAAA;AAAJ;;AAGE;EACE,YAAA,EAAA,yCAAA;EACA,YAAA,EAAA,8BAAA;EACA,oBAAA;AAAJ","sourcesContent":["/* Carousel.module.scss */\n\n.carousel {\n    width: 100%; /* Make the container full-width */\n    height: auto;\n    margin: 0 auto; /* Center the container horizontally */\n    text-align: center; /* Center the contents within the container */\n    padding: 20px; /* Add some spacing if desired */\n  /* Remove rounded corners */\n    background-color: transparent; /* Remove background color */\n  }\n  \n  .carouselImage {\n    width: 350px; /* Adjust the width to the desired size */\n    height: auto; /* Maintain the aspect ratio */\n    border-radius: 2.2px;\n  }\n  \n"],"sourceRoot":""}]);
+// Exports
+___CSS_LOADER_EXPORT___.locals = {
+	"carousel": `gpetVLQZHYUp_GY0Hsng`,
+	"carouselImage": `us6xXbnTOqgJpV586KPQ`
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/components/Contact/ContactModalForm.module.scss":
 /*!****************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/components/Contact/ContactModalForm.module.scss ***!
@@ -1221,14 +1271,14 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* Footer.module.scss */
   justify-content: space-between; /* Adjust to align to the right */
 }
 
-.NXxFbXHLaIT7eYOW7Tit {
+.aFyFehz8aeZeiJnpnjpE {
   display: flex;
   align-items: center;
 }
 
 .eW9ij6nP8axm1anPkNAw {
   margin-bottom: 10px;
-  display: flex;
+  display: flexs;
   align-items: center; /* Center the content vertically within the contactInfo div */
   justify-content: center; /* Center the content horizontally within the contactInfo div */
 }
@@ -1284,14 +1334,14 @@ img {
 
 p {
   margin: 0;
-  font-size: 14px;
-}`, "",{"version":3,"sources":["webpack://./src/components/Footer/Footer.module.scss"],"names":[],"mappings":"AAAA,uBAAA;AAEA;EACE,aAAA;EACA,kBAAA;EACA,eAAA;EACA,SAAA;EACA,OAAA;EACA,QAAA;EACA,yBAAA;EACA,WAAA;EACA,WAAA;EACA,YAAA;EACA,aAAA;EACA,mBAAA;EACA,8BAAA,EAAA,iCAAA;AAAF;;AAGA;EACE,aAAA;EACA,mBAAA;AAAF;;AAGA;EACE,mBAAA;EACA,aAAA;EACA,mBAAA,EAAA,6DAAA;EACA,uBAAA,EAAA,+DAAA;AAAF;;AAGA;EACE,iBAAA;EACA,cAAA;EACA,eAAA;AAAF;;AAEA;EACE,aAAA;EACA,8BAAA;AACF;;AAEA;EACE,cAAA;EACA,qBAAA;EACA,0BAAA;EACA,kBAAA;EACA,aAAA;EACA,aAAA;AACF;;AAEA;EACE,WAAA;EACA,kBAAA;EACA,UAAA;EACA,WAAA;EACA,YAAA;EACA,aAAA;EACA,UAAA;EACA,gCAAA;EACA,WAAA;AACF;;AAEA;EACE,UAAA;AACF;;AAEA;;EAEE,qBAAA;AACF;;AAEA;EACE,WAAA;EACA,YAAA;EACA,YAAA,EAAA,2DAAA;EACA,kBAAA;EACA,kBAAA,EAAA,8CAAA;AACF;;AAEA;EACE,SAAA;EACA,eAAA;AACF","sourcesContent":["/* Footer.module.scss */\n\n.footer {\n  padding: 15px;\n  text-align: center;\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  background-color: #1f1c30;\n  color: #fff;\n  width: 100%;\n  opacity: 70%;\n  display: flex;\n  align-items: center;\n  justify-content: space-between; /* Adjust to align to the right */\n}\n\n.links {\n  display: flex;\n  align-items: center;\n}\n\n.contactInfo {\n  margin-bottom: 10px;\n  display: flex;\n  align-items: center; /* Center the content vertically within the contactInfo div */\n  justify-content: center; /* Center the content horizontally within the contactInfo div */\n}\n\n.email {\n  font-size: 0.9rem;\n  color: #f7f6f5;\n  cursor: pointer;\n}\n.links {\n  display: flex;\n  justify-content: space-between;\n}\n\na {\n  margin: 0 10px;\n  display: inline-block;\n  transition: transform 0.3s;\n  position: relative;\n  padding: 20px;\n  margin: -20px;\n}\n\na::before {\n  content: '';\n  position: absolute;\n  top: -20px;\n  left: -20px;\n  right: -20px;\n  bottom: -20px;\n  opacity: 0;\n  transition: opacity 0.3s ease-in;\n  z-index: -1;\n}\n\na:hover::before {\n  opacity: 1;\n}\n\na:hover::before,\na:hover {\n  transform: scale(1.9);\n}\n\nimg {\n  width: 35px;\n  height: auto;\n  padding: 8px; /* Reduce padding to bring the links closer to the center */\n  border-radius: 50%;\n  margin-right: 24px; /* Add margin to push the links to the right */\n}\n\np {\n  margin: 0;\n  font-size: 14px;\n}\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/Footer/Footer.module.scss"],"names":[],"mappings":"AAAA,uBAAA;AAEA;EACE,aAAA;EACA,kBAAA;EACA,eAAA;EACA,SAAA;EACA,OAAA;EACA,QAAA;EACA,yBAAA;EACA,WAAA;EACA,WAAA;EACA,YAAA;EACA,aAAA;EACA,mBAAA;EACA,8BAAA,EAAA,iCAAA;AAAF;;AAGA;EACE,aAAA;EACA,mBAAA;AAAF;;AAGA;EACE,mBAAA;EACA,cAAA;EACA,mBAAA,EAAA,6DAAA;EACA,uBAAA,EAAA,+DAAA;AAAF;;AAGA;EACE,iBAAA;EACA,cAAA;EACA,eAAA;AAAF;;AAEA;EACE,aAAA;EACA,8BAAA;AACF;;AAEA;EACE,cAAA;EACA,qBAAA;EACA,0BAAA;EACA,kBAAA;EACA,aAAA;EACA,aAAA;AACF;;AAEA;EACE,WAAA;EACA,kBAAA;EACA,UAAA;EACA,WAAA;EACA,YAAA;EACA,aAAA;EACA,UAAA;EACA,gCAAA;EACA,WAAA;AACF;;AAEA;EACE,UAAA;AACF;;AAEA;;EAEE,qBAAA;AACF;;AAEA;EACE,WAAA;EACA,YAAA;EACA,YAAA,EAAA,2DAAA;EACA,kBAAA;EACA,kBAAA,EAAA,8CAAA;AACF;;AAEA;EACE,SAAA;AACF","sourcesContent":["/* Footer.module.scss */\n\n.footer {\n  padding: 15px;\n  text-align: center;\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  background-color: #1f1c30;\n  color: #fff;\n  width: 100%;\n  opacity: 70%;\n  display: flex;\n  align-items: center;\n  justify-content: space-between; /* Adjust to align to the right */\n}\n\n.linked {\n  display: flex;\n  align-items: center;\n}\n\n.contactInfo {\n  margin-bottom: 10px;\n  display: flexs;\n  align-items: center; /* Center the content vertically within the contactInfo div */\n  justify-content: center; /* Center the content horizontally within the contactInfo div */\n}\n\n.email {\n  font-size: 0.9rem;\n  color: #f7f6f5;\n  cursor: pointer;\n}\n.links {\n  display: flex;\n  justify-content: space-between;\n}\n\na {\n  margin: 0 10px;\n  display: inline-block;\n  transition: transform 0.3s;\n  position: relative;\n  padding: 20px;\n  margin: -20px;\n}\n\na::before {\n  content: '';\n  position: absolute;\n  top: -20px;\n  left: -20px;\n  right: -20px;\n  bottom: -20px;\n  opacity: 0;\n  transition: opacity 0.3s ease-in;\n  z-index: -1;\n}\n\na:hover::before {\n  opacity: 1;\n}\n\na:hover::before,\na:hover {\n  transform: scale(1.9);\n}\n\nimg {\n  width: 35px;\n  height: auto;\n  padding: 8px; /* Reduce padding to bring the links closer to the center */\n  border-radius: 50%;\n  margin-right: 24px; /* Add margin to push the links to the right */\n}\n\np {\n  margin: 0;\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"footer": `ceS4EgxnSPoT9JOwqjeP`,
-	"links": `NXxFbXHLaIT7eYOW7Tit`,
+	"linked": `aFyFehz8aeZeiJnpnjpE`,
 	"contactInfo": `eW9ij6nP8axm1anPkNAw`,
-	"email": `GkCpZLzisdZbfn8OT1RQ`
+	"email": `GkCpZLzisdZbfn8OT1RQ`,
+	"links": `NXxFbXHLaIT7eYOW7Tit`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1342,7 +1392,7 @@ main {
   background-color: #ced5eb;
   padding: 1.5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 4vmin;
+  border-radius: 4vmin 4vmin 0 0;
 }
 
 h1 {
@@ -1413,7 +1463,7 @@ h3 {
   color: aliceblue;
   background-color: #ced5eb;
   cursor: pointer;
-}`, "",{"version":3,"sources":["webpack://./src/scss/styles.scss","webpack://./src/components/NavBar/NavBar.module.scss"],"names":[],"mappings":"AAyBA;EACE,SAAA;EACA,UAAA;EACA,4BAAA;EACA,wDAAA;ACZF;;ADeA;EACE,YAAA;EACA,kBAAA;ACZF;;ADeA;EACE,yBAAA;EACA,cAAA;EACA,YAAA;EACA,kBAAA;EACA,oBAAA;EACA,iBAAA;ACZF;;ADeA;EACE,yBAAA;EACA,cAAA;EACA,wCAAA;EACA,oBAAA;ACZF;;ADeA;EACE,mBAAA;EACA,mBAAA;ACZF;;ADeA;EACE,iBAAA;EACA,mBAAA;ACZF;;ADeA;EACE,iBAAA;EACA,qBAAA;ACZF;;ADgBA;EACE;IACE,yBA5DM,EA4DsB,6BAAA;ECb9B;EDeA;IACE,yBA1EK,EA0EsB,4BAAA;ECb7B;EDeA;IACE,yBA5EK,EA4EsB,6BAAA;ECb7B;EDgBA;IACE,yBA/EK,EA+EsB,mCAAA;ECd7B;EDiBA;IACE,yBAAA,EAAA,kCAAA;ECfF;EDiBA;IACE,yBAhFK,EAgFsB,iCAAA;ECf7B;EDiBA;IACE,yBAlFK,EAkFuB,kCAAA;ECf9B;EDiBA;IACE,yBAtFK,EAsFuB,8BAAA;ECf9B;EDiBA;IACE,yBAvFM,EAuFsB,gCAAA;ECf9B;EDiBA;IACE,yBAzFM,EAyFsB,2BAAA;ECf9B;AACF;AAnFA;EACI,aAAA;EACA,sBAAA;EACA,oCAAA;EACA,yBAAA;EACA,YAAA;AAqFJ;;AAnFA;EACI,aAAA;EACA,6BAAA;EACA,mBAAA;AAsFJ;AArFQ;EACI,0BAAA;EACA,cAAA;AAuFZ;AAtFY;EACI,gBAAA;EACA,yBAAA;EACA,eAAA;AAwFhB","sourcesContent":["$color1: #646e67; // Sage\n$color2: #3d4742; // Olive Grey\n$color3: #2c3437; // Dark Forest Grey\n$color4: #e37d4e; // Coral\n$color5: #e4ead8; // Sage White\n$color6: #4c5570; // Medium Grey Purple\n$color7: #ced5eb; // Light Blue White\n$color8: #f7f6f5; // Light Orange White\n$color9: #1f1c30; // Dark Purple\n$color10:#572387; // DRDC purple\n$color11: #2a1961; // Dark Blue\n$color12: #1a3d5c; // Dark Teal\n\n:export {\n  col-1: $color1;\n  col-2: $color2;\n  col-3: $color3;\n  col-4: $color4;\n  col-5: $color5;\n  col-6: $color6;\n  col-7: $color7;\n  col-8: $color8;\n  col-9: $color9;\n}\n\nbody {\n  margin: 0;\n  padding: 0;\n  font-family: 'Gloock', serif; // Use the correct font family or a web-safe font\n  animation: backgroundAnimation 25s ease-in-out infinite;\n}\n\n.container {\n  padding: 5px;\n  border-radius: 4px; \n}\n\nheader {\n  background-color: #f7f6f5;\n  color: #4c5570;\n  padding: 1px;\n  text-align: center;\n  border-radius: 4vmin;\n  font-size: 1.8rem; \n}\n\nmain {\n  background-color: #ced5eb;\n  padding: 1.5px;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);\n  border-radius: 4vmin;\n }\n\nh1 {\n  font-size: 1.875rem; // Use 'rem' for font size\n  margin-bottom: 1rem;\n}\n\nh2 {\n  font-size: 1.5rem; // Use 'rem' for font size\n  margin-bottom: 1rem;\n}\n\nh3 {\n  font-size: 1.2rem;\n  margin-bottom: 0.5rem;\n}\n\n\n@keyframes backgroundAnimation {\n  0% {\n    background-color: $color12; /* Starting color Dark Teal */\n  }\n  8% {\n    background-color: $color1; /* Transition color (Sage) */\n  }\n  17% {\n    background-color: $color2; /* Transition to Olive Grey */\n   \n  }\n  25% {\n    background-color: $color3; /* Transition to Dark Forest Grey */\n    \n  }\n  37% {\n    background-color: #161417 ; /* Transition color purple black */\n  }\n  50% {\n    background-color: $color9; /* Transition color Dark Purple */\n  }\n  63% {\n    background-color: $color10; /* Transition color DRDC purple  */\n  }\n  75% {\n    background-color: $color9;  /* Transition to Dark Purple */\n  }\n  84% {\n    background-color: $color11; /* Transition color  Dark Blue */\n  }\n  100% {\n    background-color: $color12; /* Ending color Dark Teal */\n  }\n}\n\n\n\n\n","@import '../../scss/styles.scss';\n\n\n.NavBar {\n    display: flex;\n    flex-direction: column;\n    padding: 1.5rem 2.5rem 1.5rem 2.5rem;\n    background-color:#4c5570;\n    color: white;\n}\n.links {\n    display: flex;\n    justify-content: space-around;\n    align-items: center;\n        a {\n            text-decoration: underline;\n            color: #f7f6f5;\n            &:hover {\n                color:aliceblue;\n                background-color: #ced5eb;\n                cursor: pointer;\n            }\n          }\n    }\n    \n\n\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/scss/styles.scss","webpack://./src/components/NavBar/NavBar.module.scss"],"names":[],"mappings":"AAyBA;EACE,SAAA;EACA,UAAA;EACA,4BAAA;EACA,wDAAA;ACZF;;ADeA;EACE,YAAA;EACA,kBAAA;ACZF;;ADeA;EACE,yBAAA;EACA,cAAA;EACA,YAAA;EACA,kBAAA;EACA,oBAAA;EACA,iBAAA;ACZF;;ADeA;EACE,yBAAA;EACA,cAAA;EACA,wCAAA;EACA,8BAAA;ACZF;;ADeA;EACE,mBAAA;EACA,mBAAA;ACZF;;ADeA;EACE,iBAAA;EACA,mBAAA;ACZF;;ADeA;EACE,iBAAA;EACA,qBAAA;ACZF;;ADgBA;EACE;IACE,yBA5DM,EA4DsB,6BAAA;ECb9B;EDeA;IACE,yBA1EK,EA0EsB,4BAAA;ECb7B;EDeA;IACE,yBA5EK,EA4EsB,6BAAA;ECb7B;EDgBA;IACE,yBA/EK,EA+EsB,mCAAA;ECd7B;EDiBA;IACE,yBAAA,EAAA,kCAAA;ECfF;EDiBA;IACE,yBAhFK,EAgFsB,iCAAA;ECf7B;EDiBA;IACE,yBAlFK,EAkFuB,kCAAA;ECf9B;EDiBA;IACE,yBAtFK,EAsFuB,8BAAA;ECf9B;EDiBA;IACE,yBAvFM,EAuFsB,gCAAA;ECf9B;EDiBA;IACE,yBAzFM,EAyFsB,2BAAA;ECf9B;AACF;AAnFA;EACI,aAAA;EACA,sBAAA;EACA,oCAAA;EACA,yBAAA;EACA,YAAA;AAqFJ;;AAnFA;EACI,aAAA;EACA,6BAAA;EACA,mBAAA;AAsFJ;AArFQ;EACI,0BAAA;EACA,cAAA;AAuFZ;AAtFY;EACI,gBAAA;EACA,yBAAA;EACA,eAAA;AAwFhB","sourcesContent":["$color1: #646e67; // Sage\n$color2: #3d4742; // Olive Grey\n$color3: #2c3437; // Dark Forest Grey\n$color4: #e37d4e; // Coral\n$color5: #e4ead8; // Sage White\n$color6: #4c5570; // Medium Grey Purple\n$color7: #ced5eb; // Light Blue White\n$color8: #f7f6f5; // Light Orange White\n$color9: #1f1c30; // Dark Purple\n$color10:#572387; // DRDC purple\n$color11: #2a1961; // Dark Blue\n$color12: #1a3d5c; // Dark Teal\n\n:export {\n  col-1: $color1;\n  col-2: $color2;\n  col-3: $color3;\n  col-4: $color4;\n  col-5: $color5;\n  col-6: $color6;\n  col-7: $color7;\n  col-8: $color8;\n  col-9: $color9;\n}\n\nbody {\n  margin: 0;\n  padding: 0;\n  font-family: 'Gloock', serif; // Use the correct font family or a web-safe font\n  animation: backgroundAnimation 25s ease-in-out infinite;\n}\n\n.container {\n  padding: 5px;\n  border-radius: 4px; \n}\n\nheader {\n  background-color: #f7f6f5;\n  color: #4c5570;\n  padding: 1px;\n  text-align: center;\n  border-radius: 4vmin;\n  font-size: 1.8rem; \n}\n\nmain {\n  background-color: #ced5eb;\n  padding: 1.5px;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);\n  border-radius: 4vmin 4vmin 0 0;\n }\n\nh1 {\n  font-size: 1.875rem; // Use 'rem' for font size\n  margin-bottom: 1rem;\n}\n\nh2 {\n  font-size: 1.5rem; // Use 'rem' for font size\n  margin-bottom: 1rem;\n}\n\nh3 {\n  font-size: 1.2rem;\n  margin-bottom: 0.5rem;\n}\n\n\n@keyframes backgroundAnimation {\n  0% {\n    background-color: $color12; /* Starting color Dark Teal */\n  }\n  8% {\n    background-color: $color1; /* Transition color (Sage) */\n  }\n  17% {\n    background-color: $color2; /* Transition to Olive Grey */\n   \n  }\n  25% {\n    background-color: $color3; /* Transition to Dark Forest Grey */\n    \n  }\n  37% {\n    background-color: #161417 ; /* Transition color purple black */\n  }\n  50% {\n    background-color: $color9; /* Transition color Dark Purple */\n  }\n  63% {\n    background-color: $color10; /* Transition color DRDC purple  */\n  }\n  75% {\n    background-color: $color9;  /* Transition to Dark Purple */\n  }\n  84% {\n    background-color: $color11; /* Transition color  Dark Blue */\n  }\n  100% {\n    background-color: $color12; /* Ending color Dark Teal */\n  }\n}\n\n\n\n\n","@import '../../scss/styles.scss';\n\n\n.NavBar {\n    display: flex;\n    flex-direction: column;\n    padding: 1.5rem 2.5rem 1.5rem 2.5rem;\n    background-color:#4c5570;\n    color: white;\n}\n.links {\n    display: flex;\n    justify-content: space-around;\n    align-items: center;\n        a {\n            text-decoration: underline;\n            color: #f7f6f5;\n            &:hover {\n                color:aliceblue;\n                background-color: #ced5eb;\n                cursor: pointer;\n            }\n          }\n    }\n    \n\n\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"col-1": `#646e67`,
@@ -1760,12 +1810,13 @@ ___CSS_LOADER_EXPORT___.locals = {
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `.Jz0VUpgfH2anQkRZWoen {
-  padding: 2rem;
-}`, "",{"version":3,"sources":["webpack://./src/pages/HomePage/HomePage.module.scss"],"names":[],"mappings":"AACE;EACE,aAAA;AAAJ","sourcesContent":["\n  .container {\n    padding: 2rem;\n  }\n  \n    \n  "],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, `.uYIIXhYJv5OixJHJsMbR {
+  border: solid #e4ead8;
+  border-radius: 0%;
+}`, "",{"version":3,"sources":["webpack://./src/pages/HomePage/HomePage.module.scss"],"names":[],"mappings":"AAEE;EACE,qBAAA;EACA,iBAAA;AADJ","sourcesContent":["\n\n  .imageCarousel {\n    border: solid #e4ead8;\n    border-radius: 0%;\n  }"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
-	"container": `Jz0VUpgfH2anQkRZWoen`
+	"imageCarousel": `uYIIXhYJv5OixJHJsMbR`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1934,6 +1985,60 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
        /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_About_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_About_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_About_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+
+
+/***/ }),
+
+/***/ "./src/components/Carousel/Carousel.module.scss":
+/*!******************************************************!*\
+  !*** ./src/components/Carousel/Carousel.module.scss ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_Carousel_module_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!../../../node_modules/sass-loader/dist/cjs.js!../../../node_modules/postcss-loader/dist/cjs.js!./Carousel.module.scss */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/components/Carousel/Carousel.module.scss");
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
+options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
+
+      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
+    
+options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
+options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_Carousel_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+
+
+
+
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_Carousel_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_Carousel_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_Carousel_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
 
 
 /***/ }),
@@ -2780,4 +2885,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.c899b1ace3282466070e8cfb25354e35.js.map
+//# sourceMappingURL=App.36160dad77494996fd2478633b85d1d4.js.map

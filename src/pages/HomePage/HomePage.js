@@ -16,7 +16,9 @@ const HomePage = () => {
         <h1>Welcome to Jamie Boeing's Portfolio</h1>
         <p>A showcase of my web development and design journey.</p>
       </header>
+      <div className={styles.imageCarousel}>
       <Carousel images={images} />
+      </div>
     <Footer />
     </div>
   )

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { images } from '../../data'; 
+import styles from './Carousel.module.scss'
 
 const Carousel = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -18,9 +19,14 @@ const Carousel = () => {
   }, []);
 
   return (
-    <div className="carousel">
-      <img src={`/img/${images[currentImageIndex]}`} alt={`Image ${currentImageIndex + 1}`} />
-    </div>
+    <div className={styles.carousel}>
+    {/* Add a class to the img element to control its size */}
+    <img
+      className={styles.carouselImage} /* Create this class in your CSS */
+      src={`/img/${images[currentImageIndex]}`}
+      alt={`Image ${currentImageIndex + 1}`}
+    />
+  </div>
   );
 };
 

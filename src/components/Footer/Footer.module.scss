@@ -16,14 +16,14 @@
   justify-content: space-between; /* Adjust to align to the right */
 }
 
-.links {
+.linked {
   display: flex;
   align-items: center;
 }
 
 .contactInfo {
   margin-bottom: 10px;
-  display: flex;
+  display: flexs;
   align-items: center; /* Center the content vertically within the contactInfo div */
   justify-content: center; /* Center the content horizontally within the contactInfo div */
 }
@@ -78,5 +78,4 @@ img {
 
 p {
   margin: 0;
-  font-size: 14px;
 }

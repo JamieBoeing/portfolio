@@ -277,7 +277,7 @@ const images = [
   'image2.jpeg',
   'image3.jpeg',
   'image4.jpeg',
-  'image5.jpeg',
+  'image5.jpeg'
 
 ]
 
