@@ -1,24 +1,24 @@
 // Experience.js
-import React from 'react'
-import { experienceData } from '../../data'
-import './Experience.module.scss'
+import React from 'react';
+import { experienceData } from '../../data';
+import styles from './Experience.module.scss';
 
 const Experience = () => {
   return (
-    <div className='experience-container'>
+    <div className={styles.experienceContainer}>
       <h2>Work Experience</h2>
-      <ul className='experience-list'>
+      <ul className={styles.experienceList}>
         {experienceData.map((entry, index) => (
-          <li key={index} className='experience-entry'>
-            <h3>{entry.jobTitle}</h3>
+          <li key={index} className={styles.experienceItem}>
+            <h3>{entry.title}</h3>
             <p>{entry.company}</p>
-            <p>{entry.year}</p>
-            <p>{entry.description}</p>
-            </li>
+            <p className={styles.dates}>{entry.date}</p>
+            <p>{entry.description.join('\n')}</p>
+          </li>
         ))}
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default Experience
+export default Experience;

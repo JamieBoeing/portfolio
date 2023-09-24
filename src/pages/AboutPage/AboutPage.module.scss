@@ -1,35 +1,44 @@
-.contianer {
-    padding: auto;
-    max-width: 800px;
+
+.contentWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; /* Align the left column at the top */
+  justify-content: space-between; /* Create space between columns */
+  width: 100%;
+  padding: 1rem;
 }
-.footer {
-    padding: 10px; 
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-  }
-  /* AboutPage.module.scss */
 
+.leftColumn {
+  width: 40%; /* Adjust as needed */
+  margin-right: 1rem;
+}
 
-  
-  
-  
-  
-  .contactButton {
+.rightColumn {
+  width: 60%; /* Adjust as needed */
+}
 
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .contactButton:hover {
-    background-color: #0056b3;
-  }
-  
-  .contact p {
-    margin: 20px 0;
-  }
-  
+.skills {
+  padding: 1rem;
+}
+
+.education {
+  text-align: center;
+  margin-top: auto; /* Push the education section to the bottom */
+}
+
+.contactButton {
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contactButton:hover {
+  background-color: #0056b3;
+}
+
+.contact p {
+  margin: 20px 0;
+}

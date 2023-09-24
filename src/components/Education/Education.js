@@ -1,6 +1,7 @@
 // Education.js
 import React from 'react';
-import { educationData } from '../../data'
+import { educationData } from '../../data';
+import styles from './Education.module.scss';
 
 const Education = () => {
   return (
@@ -9,24 +10,25 @@ const Education = () => {
       <ul className='education-list'>
         {educationData.map((entry, index) => (
           <li key={index} className='education-entry'>
-            <h3>{entry.degree}</h3>
-            <p>{entry.certification}</p>
-            <p>{entry.university}</p>
-            <p>{entry.graduationYear}</p>
-            <p>{entry.achievements}</p>
-            </li>
+            <div className="education-item">
+              <img 
+                src={`/img/${entry.image}`} // Change 'educationData.image' to 'entry.image'
+                alt={entry.university} 
+                className={styles.edImage} 
+              />
+              <div>
+                <h3>{entry.degree}</h3>
+                <p>{entry.certification}</p>
+                <p>{entry.university}</p>
+                <p>{entry.graduationYear}</p>
+                <p>{entry.achievements}</p>
+              </div>
+            </div>
+          </li>
         ))}
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default Education
-
-
-// id: 1,
-//     degree: 'Associates in Computer Aided Design', 
-//     certification: 'Web Certification',
-//     university: 'John Wood Community College',
-//     graduationYear: 2016,
-//     achievements: 'Academic Sorority, and Dean list student'
+export default Education;

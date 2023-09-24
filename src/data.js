@@ -60,7 +60,7 @@ const projects = [
 // ];
 const skills = [
   {
-    category: 'Programming Languages',
+    category: 'Front-end Development &  Programming Languages',
     skills: [
       {
         name: 'JavaScript',
@@ -74,11 +74,6 @@ const skills = [
         name: 'PHP',
         image: 'php-icon.png', // Image filename for Python
       },
-    ],
-  },
-  {
-    category: 'Front-end Development',
-    skills: [
       {
         name: 'React',
         image: 'react-icon.png', // Image filename for React
@@ -130,9 +125,8 @@ const skills = [
 const aboutMe = {
   name: 'Jamie Boeing',
   title: 'Full-Stack Web Developer',
-  tag: 'As an accomplished and versatile professional with over 10 years of experience, I possess a unique blend of skills in software engineering, graphic design, artistry, management, and communications. My passion for people, meticulous attention to detail, and boundless creativity make me an exceptional asset for any project. I thrive on facing difficult challenges, an educational environment, and personal growth.',
-  bio: 'My name is Jamie Boeing, I am a Full-Stack Web developer, Graphic Designer/Artist, Business Owner/Salon Operator. I love to travel the world trying new things, and meeting new people along the way. On my free time you will find me playing Roller Derby, kayaking, practicing yoga or riding my moped around town. Most people would say that I am extremely outgoing, and like to think outside the box. My passions are art, music, people, and nature. It is so great to meet you!' 
-  // Add more personal details here...
+  tag: 'As an accomplished and versatile professional with over a decade of experience, I possess a unique blend of skills in software engineering, graphic design, artistry, management, and communications. My passion for people, meticulous attention to detail, and creativity make me an exceptional asset for any project. I thrive on overcoming challenges, embracing learning opportunities, and pursuing personal growth.',
+  bio: 'My name is Jamie Boeing, I am a Full-Stack Web developer, Graphic Designer and Artist. I Would love to tell you more about myself',
 }
 
 
@@ -191,6 +185,7 @@ const experienceData = [
 const educationData = [
   {
     id: 1,
+    image: 'degree.png',
     degree: 'Associates in Computer Aided Design', 
     certification: 'Web Certification',
     university: 'John Wood Community College',
@@ -199,6 +194,7 @@ const educationData = [
   },
   {
     id: 2,
+    image: 'degree.png',
     degree: 'Web Development Bootcamp',
     university: 'General Assembly',
     graduationYear: 2023,

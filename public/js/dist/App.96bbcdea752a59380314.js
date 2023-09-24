@@ -121,9 +121,12 @@ const Carousel = () => {
 /*!****************************************************!*\
   !*** ./src/components/Contact/ContactModalForm.js ***!
   \****************************************************/
-/***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _utilities_send_email__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utilities/send-email */ "./src/utilities/send-email.js");
 /* harmony import */ var _utilities_send_email__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_utilities_send_email__WEBPACK_IMPORTED_MODULE_1__);
@@ -214,7 +217,7 @@ const ContactModalForm = _ref => {
     type: "submit"
   }, "Send"))));
 };
-/* unused harmony default export */ var __WEBPACK_DEFAULT_EXPORT__ = (ContactModalForm);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ContactModalForm);
 
 /***/ }),
 
@@ -230,7 +233,9 @@ const ContactModalForm = _ref => {
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../data */ "./src/data.js");
+/* harmony import */ var _Education_module_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Education.module.scss */ "./src/components/Education/Education.module.scss");
 // Education.js
+
 
 
 const Education = () => {
@@ -241,16 +246,16 @@ const Education = () => {
   }, _data__WEBPACK_IMPORTED_MODULE_1__.educationData.map((entry, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
     key: index,
     className: "education-entry"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, entry.degree), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, entry.certification), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, entry.university), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, entry.graduationYear), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, entry.achievements)))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "education-item"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "/img/".concat(entry.image) // Change 'educationData.image' to 'entry.image'
+    ,
+    alt: entry.university,
+    className: _Education_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].edImage
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, entry.degree), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, entry.certification), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, entry.university), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, entry.graduationYear), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, entry.achievements)))))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Education);
-
-// id: 1,
-//     degree: 'Associates in Computer Aided Design', 
-//     certification: 'Web Certification',
-//     university: 'John Wood Community College',
-//     graduationYear: 2016,
-//     achievements: 'Academic Sorority, and Dean list student'
 
 /***/ }),
 
@@ -273,13 +278,15 @@ const Education = () => {
 
 const Experience = () => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "experience-container"
+    className: _Experience_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].experienceContainer
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "Work Experience"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
-    className: "experience-list"
+    className: _Experience_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].experienceList
   }, _data__WEBPACK_IMPORTED_MODULE_1__.experienceData.map((entry, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
     key: index,
-    className: "experience-entry"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, entry.jobTitle), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, entry.company), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, entry.year), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, entry.description)))));
+    className: _Experience_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].experienceItem
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, entry.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, entry.company), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    className: _Experience_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].dates
+  }, entry.date), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, entry.description.join('\n'))))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Experience);
 
@@ -568,6 +575,7 @@ const MyWordCloud = () => {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   aboutMe: () => (/* binding */ aboutMe),
 /* harmony export */   educationData: () => (/* binding */ educationData),
 /* harmony export */   experienceData: () => (/* binding */ experienceData),
 /* harmony export */   images: () => (/* binding */ images),
@@ -576,7 +584,6 @@ const MyWordCloud = () => {
 /* harmony export */   skills: () => (/* binding */ skills),
 /* harmony export */   wordData: () => (/* binding */ wordData)
 /* harmony export */ });
-/* unused harmony export aboutMe */
 // data.js
 
 const projects = [{
@@ -635,7 +642,7 @@ const projects = [{
 //   },
 // ];
 const skills = [{
-  category: 'Programming Languages',
+  category: 'Front-end Development &  Programming Languages',
   skills: [{
     name: 'JavaScript',
     image: 'javascript-icon.png' // Image filename for JavaScript
@@ -645,10 +652,7 @@ const skills = [{
   }, {
     name: 'PHP',
     image: 'php-icon.png' // Image filename for Python
-  }]
-}, {
-  category: 'Front-end Development',
-  skills: [{
+  }, {
     name: 'React',
     image: 'react-icon.png' // Image filename for React
   }, {
@@ -686,11 +690,9 @@ const skills = [{
 const aboutMe = {
   name: 'Jamie Boeing',
   title: 'Full-Stack Web Developer',
-  tag: 'As an accomplished and versatile professional with over 10 years of experience, I possess a unique blend of skills in software engineering, graphic design, artistry, management, and communications. My passion for people, meticulous attention to detail, and boundless creativity make me an exceptional asset for any project. I thrive on facing difficult challenges, an educational environment, and personal growth.',
-  bio: 'My name is Jamie Boeing, I am a Full-Stack Web developer, Graphic Designer/Artist, Business Owner/Salon Operator. I love to travel the world trying new things, and meeting new people along the way. On my free time you will find me playing Roller Derby, kayaking, practicing yoga or riding my moped around town. Most people would say that I am extremely outgoing, and like to think outside the box. My passions are art, music, people, and nature. It is so great to meet you!'
-  // Add more personal details here...
+  tag: 'As an accomplished and versatile professional with over a decade of experience, I possess a unique blend of skills in software engineering, graphic design, artistry, management, and communications. My passion for people, meticulous attention to detail, and creativity make me an exceptional asset for any project. I thrive on overcoming challenges, embracing learning opportunities, and pursuing personal growth.',
+  bio: 'My name is Jamie Boeing, I am a Full-Stack Web developer, Graphic Designer and Artist. I Would love to tell you more about myself'
 };
-
 const experienceData = [{
   id: 1,
   title: 'Software Engineering Student',
@@ -717,6 +719,7 @@ const experienceData = [{
 
 const educationData = [{
   id: 1,
+  image: 'degree.png',
   degree: 'Associates in Computer Aided Design',
   certification: 'Web Certification',
   university: 'John Wood Community College',
@@ -724,6 +727,7 @@ const educationData = [{
   achievements: 'Academic Sorority, and Dean list student'
 }, {
   id: 2,
+  image: 'degree.png',
   degree: 'Web Development Bootcamp',
   university: 'General Assembly',
   graduationYear: 2023,
@@ -812,13 +816,22 @@ const AboutPage = () => {
     className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].container
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "About Me")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
     className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].intro
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Hello! I'm Jamie Boeing, a Software Engineer with a passion for Coding. I have 7 years of experience in Graphic Design and a strong background in Art, Design and Customer Service. Let me tell you a bit more about my journey.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, _data__WEBPACK_IMPORTED_MODULE_8__.aboutMe.bio)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].contentWrapper
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].leftColumn
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
     className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].experience
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "Experience"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Experience_Experience__WEBPACK_IMPORTED_MODULE_2__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Experience_Experience__WEBPACK_IMPORTED_MODULE_2__["default"], null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].rightColumn
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
     className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].skills
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Skills_Skills__WEBPACK_IMPORTED_MODULE_3__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Skills_Skills__WEBPACK_IMPORTED_MODULE_3__["default"], null)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
     className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].education
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "Education"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Education_Education__WEBPACK_IMPORTED_MODULE_4__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_5__["default"], null));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Education_Education__WEBPACK_IMPORTED_MODULE_4__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_5__["default"], null), isContactModalOpen && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Contact_ContactModalForm__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    isOpen: isContactModalOpen,
+    onClose: closeContactModal
+  }));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AboutPage);
 
@@ -850,7 +863,9 @@ const AboutPage = () => {
 const HomePage = () => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: _HomePage_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].container
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Welcome to Jamie Boeing's Portfolio"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "A showcase of my web development and design journey.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Welcome to Jamie Boeing's Portfolio"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "A showcase of my web development and design journey.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
+    className: _HomePage_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].tag
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, _data__WEBPACK_IMPORTED_MODULE_5__.aboutMe.tag)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: _HomePage_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].imageCarousel
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Carousel_Carousel__WEBPACK_IMPORTED_MODULE_4__["default"], {
     images: _data__WEBPACK_IMPORTED_MODULE_5__.images
@@ -1174,6 +1189,72 @@ ___CSS_LOADER_EXPORT___.locals = {
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/components/Education/Education.module.scss":
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/components/Education/Education.module.scss ***!
+  \***********************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `.cdFg0y0n186gtHrhrzOP {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cdFg0y0n186gtHrhrzOP h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.cdFg0y0n186gtHrhrzOP .PWB_Nk92mjZdNv9X35YF {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.cdFg0y0n186gtHrhrzOP .PWB_Nk92mjZdNv9X35YF h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.cdFg0y0n186gtHrhrzOP .PWB_Nk92mjZdNv9X35YF p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+.cdFg0y0n186gtHrhrzOP .PWB_Nk92mjZdNv9X35YF .dEJqsUBLQoz0dILIIW6t {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.MXCQmfDKMNYFwLK38M23 {
+  padding: auto;
+}`, "",{"version":3,"sources":["webpack://./src/components/Education/Education.module.scss"],"names":[],"mappings":"AACA;EACI,aAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;AAAJ;AAEI;EACE,iBAAA;EACA,mBAAA;AAAN;AAGI;EACE,sBAAA;EACA,kBAAA;EACA,aAAA;EACA,mBAAA;EACA,WAAA;EACA,gBAAA;EACA,wCAAA;AADN;AAGM;EACE,iBAAA;EACA,qBAAA;AADR;AAIM;EACE,eAAA;EACA,qBAAA;AAFR;AAKM;EACE,iBAAA;EACA,WAAA;AAHR;;AAOE;EACE,aAAA;AAJJ","sourcesContent":["\n.education-container {\n    padding: 2rem;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n  \n    h2 {\n      font-size: 1.5rem;\n      margin-bottom: 1rem;\n    }\n  \n    .education-item {\n      border: 1px solid #ccc;\n      border-radius: 8px;\n      padding: 1rem;\n      margin-bottom: 1rem;\n      width: 100%;\n      max-width: 400px;\n      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n  \n      h3 {\n        font-size: 1.2rem;\n        margin-bottom: 0.5rem;\n      }\n  \n      p {\n        font-size: 1rem;\n        margin-bottom: 0.5rem;\n      }\n  \n      .dates {\n        font-size: 0.9rem;\n        color: #555;\n      }\n    }\n  }\n  .edImage {\n    padding: auto;\n  }"],"sourceRoot":""}]);
+// Exports
+___CSS_LOADER_EXPORT___.locals = {
+	"education-container": `cdFg0y0n186gtHrhrzOP`,
+	"education-item": `PWB_Nk92mjZdNv9X35YF`,
+	"dates": `dEJqsUBLQoz0dILIIW6t`,
+	"edImage": `MXCQmfDKMNYFwLK38M23`
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/components/Experience/Experience.module.scss":
 /*!*************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/components/Experience/Experience.module.scss ***!
@@ -1193,41 +1274,42 @@ ___CSS_LOADER_EXPORT___.locals = {
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `.mdWOyo_mP7ic3r9sPksA {
+___CSS_LOADER_EXPORT___.push([module.id, `/* Experience.module.scss */
+.l_wko_W3JfW1JmNK3RIC {
   padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.mdWOyo_mP7ic3r9sPksA h2 {
+.l_wko_W3JfW1JmNK3RIC h2 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
-.mdWOyo_mP7ic3r9sPksA .rusg1k7lfTkME_7KiGiy {
+.l_wko_W3JfW1JmNK3RIC .LGNR_UfT0Xr8tEQq4cbg {
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem; /* Increase margin to separate entries */
   width: 100%;
-  max-width: 400px;
+  max-width: 600px; /* Wider container for better spacing */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.mdWOyo_mP7ic3r9sPksA .rusg1k7lfTkME_7KiGiy h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+.l_wko_W3JfW1JmNK3RIC .LGNR_UfT0Xr8tEQq4cbg h3 {
+  font-size: 1.5rem; /* Slightly larger heading */
+  margin-bottom: 1rem; /* More spacing below the title */
 }
-.mdWOyo_mP7ic3r9sPksA .rusg1k7lfTkME_7KiGiy p {
+.l_wko_W3JfW1JmNK3RIC .LGNR_UfT0Xr8tEQq4cbg p {
+  font-size: 1.1rem; /* Larger font size for description */
+  margin-bottom: 1rem; /* More spacing between lines */
+}
+.l_wko_W3JfW1JmNK3RIC .LGNR_UfT0Xr8tEQq4cbg ._8fLtJdD6OAp2alkiw82p {
   font-size: 1rem;
-  margin-bottom: 0.5rem;
-}
-.mdWOyo_mP7ic3r9sPksA .rusg1k7lfTkME_7KiGiy ._8fLtJdD6OAp2alkiw82p {
-  font-size: 0.9rem;
   color: #555;
-}`, "",{"version":3,"sources":["webpack://./src/components/Experience/Experience.module.scss"],"names":[],"mappings":"AAEA;EACI,aAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;AADJ;AAGI;EACE,iBAAA;EACA,mBAAA;AADN;AAII;EACE,sBAAA;EACA,kBAAA;EACA,aAAA;EACA,mBAAA;EACA,WAAA;EACA,gBAAA;EACA,wCAAA;AAFN;AAIM;EACE,iBAAA;EACA,qBAAA;AAFR;AAKM;EACE,eAAA;EACA,qBAAA;AAHR;AAMM;EACE,iBAAA;EACA,WAAA;AAJR","sourcesContent":["\n\n.experience-container {\n    padding: 2rem;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n  \n    h2 {\n      font-size: 1.5rem;\n      margin-bottom: 1rem;\n    }\n  \n    .experience-item {\n      border: 1px solid #ccc;\n      border-radius: 8px;\n      padding: 1rem;\n      margin-bottom: 1rem;\n      width: 100%;\n      max-width: 400px;\n      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n  \n      h3 {\n        font-size: 1.2rem;\n        margin-bottom: 0.5rem;\n      }\n  \n      p {\n        font-size: 1rem;\n        margin-bottom: 0.5rem;\n      }\n  \n      .dates {\n        font-size: 0.9rem;\n        color: #555;\n      }\n    }\n  }\n\n  "],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/Experience/Experience.module.scss"],"names":[],"mappings":"AAAA,2BAAA;AAEA;EACE,aAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;AAAF;AAEE;EACE,iBAAA;EACA,mBAAA;AAAJ;AAGE;EACE,sBAAA;EACA,kBAAA;EACA,aAAA;EACA,mBAAA,EAAA,wCAAA;EACA,WAAA;EACA,gBAAA,EAAA,uCAAA;EACA,wCAAA;AADJ;AAGI;EACE,iBAAA,EAAA,4BAAA;EACA,mBAAA,EAAA,iCAAA;AADN;AAII;EACE,iBAAA,EAAA,qCAAA;EACA,mBAAA,EAAA,+BAAA;AAFN;AAKI;EACE,eAAA;EACA,WAAA;AAHN","sourcesContent":["/* Experience.module.scss */\n\n.experienceContainer {\n  padding: 2rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n\n  h2 {\n    font-size: 1.5rem;\n    margin-bottom: 1rem;\n  }\n\n  .experienceItem {\n    border: 1px solid #ccc;\n    border-radius: 8px;\n    padding: 1rem;\n    margin-bottom: 2rem; /* Increase margin to separate entries */\n    width: 100%;\n    max-width: 600px; /* Wider container for better spacing */\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n\n    h3 {\n      font-size: 1.5rem; /* Slightly larger heading */\n      margin-bottom: 1rem; /* More spacing below the title */\n    }\n\n    p {\n      font-size: 1.1rem; /* Larger font size for description */\n      margin-bottom: 1rem; /* More spacing between lines */\n    }\n\n    .dates {\n      font-size: 1rem;\n      color: #555;\n    }\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
-	"experience-container": `mdWOyo_mP7ic3r9sPksA`,
-	"experience-item": `rusg1k7lfTkME_7KiGiy`,
+	"experienceContainer": `l_wko_W3JfW1JmNK3RIC`,
+	"experienceItem": `LGNR_UfT0Xr8tEQq4cbg`,
 	"dates": `_8fLtJdD6OAp2alkiw82p`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
@@ -1384,8 +1466,9 @@ header {
   color: #4c5570;
   padding: 1px;
   text-align: center;
-  border-radius: 4vmin;
+  border-radius: 1vmin;
   font-size: 1.8rem;
+  max-width: 99.9%;
 }
 
 main {
@@ -1463,7 +1546,7 @@ h3 {
   color: aliceblue;
   background-color: #ced5eb;
   cursor: pointer;
-}`, "",{"version":3,"sources":["webpack://./src/scss/styles.scss","webpack://./src/components/NavBar/NavBar.module.scss"],"names":[],"mappings":"AAyBA;EACE,SAAA;EACA,UAAA;EACA,4BAAA;EACA,wDAAA;ACZF;;ADeA;EACE,YAAA;EACA,kBAAA;ACZF;;ADeA;EACE,yBAAA;EACA,cAAA;EACA,YAAA;EACA,kBAAA;EACA,oBAAA;EACA,iBAAA;ACZF;;ADeA;EACE,yBAAA;EACA,cAAA;EACA,wCAAA;EACA,8BAAA;ACZF;;ADeA;EACE,mBAAA;EACA,mBAAA;ACZF;;ADeA;EACE,iBAAA;EACA,mBAAA;ACZF;;ADeA;EACE,iBAAA;EACA,qBAAA;ACZF;;ADgBA;EACE;IACE,yBA5DM,EA4DsB,6BAAA;ECb9B;EDeA;IACE,yBA1EK,EA0EsB,4BAAA;ECb7B;EDeA;IACE,yBA5EK,EA4EsB,6BAAA;ECb7B;EDgBA;IACE,yBA/EK,EA+EsB,mCAAA;ECd7B;EDiBA;IACE,yBAAA,EAAA,kCAAA;ECfF;EDiBA;IACE,yBAhFK,EAgFsB,iCAAA;ECf7B;EDiBA;IACE,yBAlFK,EAkFuB,kCAAA;ECf9B;EDiBA;IACE,yBAtFK,EAsFuB,8BAAA;ECf9B;EDiBA;IACE,yBAvFM,EAuFsB,gCAAA;ECf9B;EDiBA;IACE,yBAzFM,EAyFsB,2BAAA;ECf9B;AACF;AAnFA;EACI,aAAA;EACA,sBAAA;EACA,oCAAA;EACA,yBAAA;EACA,YAAA;AAqFJ;;AAnFA;EACI,aAAA;EACA,6BAAA;EACA,mBAAA;AAsFJ;AArFQ;EACI,0BAAA;EACA,cAAA;AAuFZ;AAtFY;EACI,gBAAA;EACA,yBAAA;EACA,eAAA;AAwFhB","sourcesContent":["$color1: #646e67; // Sage\n$color2: #3d4742; // Olive Grey\n$color3: #2c3437; // Dark Forest Grey\n$color4: #e37d4e; // Coral\n$color5: #e4ead8; // Sage White\n$color6: #4c5570; // Medium Grey Purple\n$color7: #ced5eb; // Light Blue White\n$color8: #f7f6f5; // Light Orange White\n$color9: #1f1c30; // Dark Purple\n$color10:#572387; // DRDC purple\n$color11: #2a1961; // Dark Blue\n$color12: #1a3d5c; // Dark Teal\n\n:export {\n  col-1: $color1;\n  col-2: $color2;\n  col-3: $color3;\n  col-4: $color4;\n  col-5: $color5;\n  col-6: $color6;\n  col-7: $color7;\n  col-8: $color8;\n  col-9: $color9;\n}\n\nbody {\n  margin: 0;\n  padding: 0;\n  font-family: 'Gloock', serif; // Use the correct font family or a web-safe font\n  animation: backgroundAnimation 25s ease-in-out infinite;\n}\n\n.container {\n  padding: 5px;\n  border-radius: 4px; \n}\n\nheader {\n  background-color: #f7f6f5;\n  color: #4c5570;\n  padding: 1px;\n  text-align: center;\n  border-radius: 4vmin;\n  font-size: 1.8rem; \n}\n\nmain {\n  background-color: #ced5eb;\n  padding: 1.5px;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);\n  border-radius: 4vmin 4vmin 0 0;\n }\n\nh1 {\n  font-size: 1.875rem; // Use 'rem' for font size\n  margin-bottom: 1rem;\n}\n\nh2 {\n  font-size: 1.5rem; // Use 'rem' for font size\n  margin-bottom: 1rem;\n}\n\nh3 {\n  font-size: 1.2rem;\n  margin-bottom: 0.5rem;\n}\n\n\n@keyframes backgroundAnimation {\n  0% {\n    background-color: $color12; /* Starting color Dark Teal */\n  }\n  8% {\n    background-color: $color1; /* Transition color (Sage) */\n  }\n  17% {\n    background-color: $color2; /* Transition to Olive Grey */\n   \n  }\n  25% {\n    background-color: $color3; /* Transition to Dark Forest Grey */\n    \n  }\n  37% {\n    background-color: #161417 ; /* Transition color purple black */\n  }\n  50% {\n    background-color: $color9; /* Transition color Dark Purple */\n  }\n  63% {\n    background-color: $color10; /* Transition color DRDC purple  */\n  }\n  75% {\n    background-color: $color9;  /* Transition to Dark Purple */\n  }\n  84% {\n    background-color: $color11; /* Transition color  Dark Blue */\n  }\n  100% {\n    background-color: $color12; /* Ending color Dark Teal */\n  }\n}\n\n\n\n\n","@import '../../scss/styles.scss';\n\n\n.NavBar {\n    display: flex;\n    flex-direction: column;\n    padding: 1.5rem 2.5rem 1.5rem 2.5rem;\n    background-color:#4c5570;\n    color: white;\n}\n.links {\n    display: flex;\n    justify-content: space-around;\n    align-items: center;\n        a {\n            text-decoration: underline;\n            color: #f7f6f5;\n            &:hover {\n                color:aliceblue;\n                background-color: #ced5eb;\n                cursor: pointer;\n            }\n          }\n    }\n    \n\n\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/scss/styles.scss","webpack://./src/components/NavBar/NavBar.module.scss"],"names":[],"mappings":"AAyBA;EACE,SAAA;EACA,UAAA;EACA,4BAAA;EACA,wDAAA;ACZF;;ADeA;EACE,YAAA;EACA,kBAAA;ACZF;;ADeA;EACE,yBAAA;EACA,cAAA;EACA,YAAA;EACA,kBAAA;EACA,oBAAA;EACA,iBAAA;EACA,gBAAA;ACZF;;ADeA;EACE,yBAAA;EACA,cAAA;EACA,wCAAA;EACA,8BAAA;ACZF;;ADeA;EACE,mBAAA;EACA,mBAAA;ACZF;;ADeA;EACE,iBAAA;EACA,mBAAA;ACZF;;ADeA;EACE,iBAAA;EACA,qBAAA;ACZF;;ADgBA;EACE;IACE,yBA7DM,EA6DsB,6BAAA;ECb9B;EDeA;IACE,yBA3EK,EA2EsB,4BAAA;ECb7B;EDeA;IACE,yBA7EK,EA6EsB,6BAAA;ECb7B;EDgBA;IACE,yBAhFK,EAgFsB,mCAAA;ECd7B;EDiBA;IACE,yBAAA,EAAA,kCAAA;ECfF;EDiBA;IACE,yBAjFK,EAiFsB,iCAAA;ECf7B;EDiBA;IACE,yBAnFK,EAmFuB,kCAAA;ECf9B;EDiBA;IACE,yBAvFK,EAuFuB,8BAAA;ECf9B;EDiBA;IACE,yBAxFM,EAwFsB,gCAAA;ECf9B;EDiBA;IACE,yBA1FM,EA0FsB,2BAAA;ECf9B;AACF;AApFA;EACI,aAAA;EACA,sBAAA;EACA,oCAAA;EACA,yBAAA;EACA,YAAA;AAsFJ;;AApFA;EACI,aAAA;EACA,6BAAA;EACA,mBAAA;AAuFJ;AAtFQ;EACI,0BAAA;EACA,cAAA;AAwFZ;AAvFY;EACI,gBAAA;EACA,yBAAA;EACA,eAAA;AAyFhB","sourcesContent":["$color1: #646e67; // Sage\n$color2: #3d4742; // Olive Grey\n$color3: #2c3437; // Dark Forest Grey\n$color4: #e37d4e; // Coral\n$color5: #e4ead8; // Sage White\n$color6: #4c5570; // Medium Grey Purple\n$color7: #ced5eb; // Light Blue White\n$color8: #f7f6f5; // Light Orange White\n$color9: #1f1c30; // Dark Purple\n$color10:#572387; // DRDC purple\n$color11: #2a1961; // Dark Blue\n$color12: #1a3d5c; // Dark Teal\n\n:export {\n  col-1: $color1;\n  col-2: $color2;\n  col-3: $color3;\n  col-4: $color4;\n  col-5: $color5;\n  col-6: $color6;\n  col-7: $color7;\n  col-8: $color8;\n  col-9: $color9;\n}\n\nbody {\n  margin: 0;\n  padding: 0;\n  font-family: 'Gloock', serif; // Use the correct font family or a web-safe font\n  animation: backgroundAnimation 25s ease-in-out infinite;\n}\n\n.container {\n  padding: 5px;\n  border-radius: 4px; \n}\n\nheader {\n  background-color: #f7f6f5;\n  color: #4c5570;\n  padding: 1px;\n  text-align: center;\n  border-radius: 1vmin;\n  font-size: 1.8rem; \n  max-width: 99.9%;\n}\n\nmain {\n  background-color: #ced5eb;\n  padding: 1.5px;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);\n  border-radius: 4vmin 4vmin 0 0;\n }\n\nh1 {\n  font-size: 1.875rem; // Use 'rem' for font size\n  margin-bottom: 1rem;\n}\n\nh2 {\n  font-size: 1.5rem; // Use 'rem' for font size\n  margin-bottom: 1rem;\n}\n\nh3 {\n  font-size: 1.2rem;\n  margin-bottom: 0.5rem;\n}\n\n\n@keyframes backgroundAnimation {\n  0% {\n    background-color: $color12; /* Starting color Dark Teal */\n  }\n  8% {\n    background-color: $color1; /* Transition color (Sage) */\n  }\n  17% {\n    background-color: $color2; /* Transition to Olive Grey */\n   \n  }\n  25% {\n    background-color: $color3; /* Transition to Dark Forest Grey */\n    \n  }\n  37% {\n    background-color: #161417 ; /* Transition color purple black */\n  }\n  50% {\n    background-color: $color9; /* Transition color Dark Purple */\n  }\n  63% {\n    background-color: $color10; /* Transition color DRDC purple  */\n  }\n  75% {\n    background-color: $color9;  /* Transition to Dark Purple */\n  }\n  84% {\n    background-color: $color11; /* Transition color  Dark Blue */\n  }\n  100% {\n    background-color: $color12; /* Ending color Dark Teal */\n  }\n}\n\n\n\n\n","@import '../../scss/styles.scss';\n\n\n.NavBar {\n    display: flex;\n    flex-direction: column;\n    padding: 1.5rem 2.5rem 1.5rem 2.5rem;\n    background-color:#4c5570;\n    color: white;\n}\n.links {\n    display: flex;\n    justify-content: space-around;\n    align-items: center;\n        a {\n            text-decoration: underline;\n            color: #f7f6f5;\n            &:hover {\n                color:aliceblue;\n                background-color: #ced5eb;\n                cursor: pointer;\n            }\n          }\n    }\n    \n\n\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"col-1": `#646e67`,
@@ -1678,18 +1761,19 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.Brf_yR15dYo4NETg0JTU {
   align-items: center; /* Center the image and text vertically */
 }
 .Brf_yR15dYo4NETg0JTU .iR2y6namh21c3PIQrXun .OGzEytfFmVnevKN7eEia .uI2pMXmkaNRvrDmKpVf4 img.fUHE4gBT0lLidQwqH56K {
-  width: 50px; /* Set desired width for the images */
-  height: 50px; /* Set  desired height for the images */
+  width: 70px; /* Set desired width for the images */
+  height: 7cap; /* Set  desired height for the images */
   -o-object-fit: cover;
   object-fit: cover; /* Maintain aspect ratio and cover the entire space */
   border-radius: 50%; /* Create a circular shape for the image */
   margin-right: 8px; /* Add spacing between the image and text */
+  padding: auto;
 }
 .Brf_yR15dYo4NETg0JTU .iR2y6namh21c3PIQrXun .OGzEytfFmVnevKN7eEia .uI2pMXmkaNRvrDmKpVf4 span.jFnD1QfjiGUL11LaqyrA {
   font-weight: bold;
   color: #1f1c30;
   font-size: 1rem;
-}`, "",{"version":3,"sources":["webpack://./src/components/Skills/Skills.module.scss"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;AACF;AACE;EACE,mBAAA;AACJ;AACI;EACE,iBAAA;EACA,cAAA;EACA,mBAAA;AACN;AAEI;EACE,aAAA;EACA,eAAA;AAAN;AAEM;EACE,eAAA;EACA,cAAA;EACA,kBAAA;EACA,iBAAA;EACA,aAAA;EACA,mBAAA,EAAA,yCAAA;AAAR;AAEQ;EACE,WAAA,EAAA,qCAAA;EACA,YAAA,EAAA,uCAAA;EACA,oBAAA;EACG,iBAAA,EAAA,qDAAA;EACH,kBAAA,EAAA,0CAAA;EACA,iBAAA,EAAA,2CAAA;AAAV;AAEQ;EACE,iBAAA;EACA,cAAA;EACA,eAAA;AAAV","sourcesContent":[".container {\n  padding: 2rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n\n  .category {\n    margin-bottom: 1rem;\n\n    h3 {\n      font-size: 1.2rem;\n      color: #1f1c30;\n      margin-bottom: 10px;\n    }\n\n    .list {\n      display: flex;\n      flex-wrap: wrap;\n\n      .skill {\n        padding: 0.3rem;\n        margin: 0.2rem;\n        border-radius: 4px;\n        font-size: 0.9rem;\n        display: flex;\n        align-items: center; /* Center the image and text vertically */\n\n        img.skillImage {\n          width: 50px; /* Set desired width for the images */\n          height: 50px; /* Set  desired height for the images */\n          -o-object-fit: cover;\n             object-fit: cover; /* Maintain aspect ratio and cover the entire space */\n          border-radius: 50%; /* Create a circular shape for the image */\n          margin-right: 8px; /* Add spacing between the image and text */\n        }\n        span.skillName {\n          font-weight: bold;\n          color:#1f1c30;\n          font-size: 1rem;\n        }\n      }\n    }\n  }\n}\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/Skills/Skills.module.scss"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;AACF;AACE;EACE,mBAAA;AACJ;AACI;EACE,iBAAA;EACA,cAAA;EACA,mBAAA;AACN;AAEI;EACE,aAAA;EACA,eAAA;AAAN;AAEM;EACE,eAAA;EACA,cAAA;EACA,kBAAA;EACA,iBAAA;EACA,aAAA;EACA,mBAAA,EAAA,yCAAA;AAAR;AAEQ;EACE,WAAA,EAAA,qCAAA;EACA,YAAA,EAAA,uCAAA;EACA,oBAAA;EACG,iBAAA,EAAA,qDAAA;EACH,kBAAA,EAAA,0CAAA;EACA,iBAAA,EAAA,2CAAA;EACA,aAAA;AAAV;AAEQ;EACE,iBAAA;EACA,cAAA;EACA,eAAA;AAAV","sourcesContent":[".container {\n  padding: 2rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n\n  .category {\n    margin-bottom: 1rem;\n\n    h3 {\n      font-size: 1.2rem;\n      color: #1f1c30;\n      margin-bottom: 10px;\n    }\n\n    .list {\n      display: flex;\n      flex-wrap: wrap;\n\n      .skill {\n        padding: 0.3rem;\n        margin: 0.2rem;\n        border-radius: 4px;\n        font-size: 0.9rem;\n        display: flex;\n        align-items: center; /* Center the image and text vertically */\n\n        img.skillImage {\n          width: 70px; /* Set desired width for the images */\n          height: 7cap; /* Set  desired height for the images */\n          -o-object-fit: cover;\n             object-fit: cover; /* Maintain aspect ratio and cover the entire space */\n          border-radius: 50%; /* Create a circular shape for the image */\n          margin-right: 8px; /* Add spacing between the image and text */\n          padding: auto;\n        }\n        span.skillName {\n          font-weight: bold;\n          color:#1f1c30;\n          font-size: 1rem;\n        }\n      }\n    }\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"container": `Brf_yR15dYo4NETg0JTU`,
@@ -1750,19 +1834,33 @@ ___CSS_LOADER_EXPORT___.locals = {};
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `.AxBtqm00OHnds3pzhx6u {
-  padding: auto;
-  max-width: 800px;
+___CSS_LOADER_EXPORT___.push([module.id, `.sQkdi7KRaUR4jafWumCI {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; /* Align the left column at the top */
+  justify-content: space-between; /* Create space between columns */
+  width: 100%;
+  padding: 1rem;
 }
 
-.KLGYfFouwJUIonhSJ6A4 {
-  padding: 10px;
+.xc6Y6XUpPgPqycXM6Nrg {
+  width: 40%; /* Adjust as needed */
+  margin-right: 1rem;
+}
+
+.K2fI0tJ2EKl7u0ykMEHz {
+  width: 60%; /* Adjust as needed */
+}
+
+.TQtoyLM4BCcepFioP8zK {
+  padding: 1rem;
+}
+
+.xouQhGwjP45KgPHzkj5V {
   text-align: center;
-  position: absolute;
-  bottom: 0;
+  margin-top: auto; /* Push the education section to the bottom */
 }
 
-/* AboutPage.module.scss */
 .xv88iKLs2S2f6PKgaSn0 {
   color: #fff;
   padding: 10px 20px;
@@ -1778,11 +1876,14 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.AxBtqm00OHnds3pzhx6u {
 
 .lk2tEymXQqD96bCWLCJ7 p {
   margin: 20px 0;
-}`, "",{"version":3,"sources":["webpack://./src/pages/AboutPage/AboutPage.module.scss"],"names":[],"mappings":"AAAA;EACI,aAAA;EACA,gBAAA;AACJ;;AACA;EACI,aAAA;EACA,kBAAA;EACA,kBAAA;EACA,SAAA;AAEJ;;AAAE,0BAAA;AAOA;EAEE,WAAA;EACA,kBAAA;EACA,YAAA;EACA,kBAAA;EACA,eAAA;EACA,sCAAA;AAJJ;;AAOE;EACE,yBAAA;AAJJ;;AAOE;EACE,cAAA;AAJJ","sourcesContent":[".contianer {\n    padding: auto;\n    max-width: 800px;\n}\n.footer {\n    padding: 10px; \n    text-align: center;\n    position: absolute;\n    bottom: 0;\n  }\n  /* AboutPage.module.scss */\n\n\n  \n  \n  \n  \n  .contactButton {\n\n    color: #fff;\n    padding: 10px 20px;\n    border: none;\n    border-radius: 5px;\n    cursor: pointer;\n    transition: background-color 0.3s ease;\n  }\n  \n  .contactButton:hover {\n    background-color: #0056b3;\n  }\n  \n  .contact p {\n    margin: 20px 0;\n  }\n  \n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/pages/AboutPage/AboutPage.module.scss"],"names":[],"mappings":"AACA;EACE,aAAA;EACA,mBAAA;EACA,uBAAA,EAAA,qCAAA;EACA,8BAAA,EAAA,iCAAA;EACA,WAAA;EACA,aAAA;AAAF;;AAGA;EACE,UAAA,EAAA,qBAAA;EACA,kBAAA;AAAF;;AAGA;EACE,UAAA,EAAA,qBAAA;AAAF;;AAGA;EACE,aAAA;AAAF;;AAGA;EACE,kBAAA;EACA,gBAAA,EAAA,6CAAA;AAAF;;AAGA;EACE,WAAA;EACA,kBAAA;EACA,YAAA;EACA,kBAAA;EACA,eAAA;EACA,sCAAA;AAAF;;AAGA;EACE,yBAAA;AAAF;;AAGA;EACE,cAAA;AAAF","sourcesContent":["\n.contentWrapper {\n  display: flex;\n  flex-direction: row;\n  align-items: flex-start; /* Align the left column at the top */\n  justify-content: space-between; /* Create space between columns */\n  width: 100%;\n  padding: 1rem;\n}\n\n.leftColumn {\n  width: 40%; /* Adjust as needed */\n  margin-right: 1rem;\n}\n\n.rightColumn {\n  width: 60%; /* Adjust as needed */\n}\n\n.skills {\n  padding: 1rem;\n}\n\n.education {\n  text-align: center;\n  margin-top: auto; /* Push the education section to the bottom */\n}\n\n.contactButton {\n  color: #fff;\n  padding: 10px 20px;\n  border: none;\n  border-radius: 5px;\n  cursor: pointer;\n  transition: background-color 0.3s ease;\n}\n\n.contactButton:hover {\n  background-color: #0056b3;\n}\n\n.contact p {\n  margin: 20px 0;\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
-	"contianer": `AxBtqm00OHnds3pzhx6u`,
-	"footer": `KLGYfFouwJUIonhSJ6A4`,
+	"contentWrapper": `sQkdi7KRaUR4jafWumCI`,
+	"leftColumn": `xc6Y6XUpPgPqycXM6Nrg`,
+	"rightColumn": `K2fI0tJ2EKl7u0ykMEHz`,
+	"skills": `TQtoyLM4BCcepFioP8zK`,
+	"education": `xouQhGwjP45KgPHzkj5V`,
 	"contactButton": `xv88iKLs2S2f6PKgaSn0`,
 	"contact": `lk2tEymXQqD96bCWLCJ7`
 };
@@ -2094,13 +2195,70 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
+/***/ "./src/components/Education/Education.module.scss":
+/*!********************************************************!*\
+  !*** ./src/components/Education/Education.module.scss ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_Education_module_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!../../../node_modules/sass-loader/dist/cjs.js!../../../node_modules/postcss-loader/dist/cjs.js!./Education.module.scss */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/components/Education/Education.module.scss");
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
+options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
+
+      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
+    
+options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
+options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_Education_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+
+
+
+
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_Education_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_Education_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_Education_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+
+
+/***/ }),
+
 /***/ "./src/components/Experience/Experience.module.scss":
 /*!**********************************************************!*\
   !*** ./src/components/Experience/Experience.module.scss ***!
   \**********************************************************/
-/***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
@@ -2140,7 +2298,7 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
 
-       /* unused harmony default export */ var __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_Experience_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_Experience_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_Experience_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_Experience_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_Experience_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_Experience_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
 
 
 /***/ }),
@@ -2885,4 +3043,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.36160dad77494996fd2478633b85d1d4.js.map
+//# sourceMappingURL=App.da8533a1885f1f2ef421007f96bb7654.js.map

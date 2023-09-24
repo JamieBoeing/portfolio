@@ -26,11 +26,12 @@
         align-items: center; /* Center the image and text vertically */
 
         img.skillImage {
-          width: 50px; /* Set desired width for the images */
-          height: 50px; /* Set  desired height for the images */
+          width: 70px; /* Set desired width for the images */
+          height: 7cap; /* Set  desired height for the images */
           object-fit: cover; /* Maintain aspect ratio and cover the entire space */
           border-radius: 50%; /* Create a circular shape for the image */
           margin-right: 8px; /* Add spacing between the image and text */
+          padding: auto;
         }
         span.skillName {
           font-weight: bold;
