@@ -99,7 +99,7 @@ const Carousel = () => {
     const nextImage = () => {
       setCurrentImageIndex(prevIndex => (prevIndex + 1) % _data__WEBPACK_IMPORTED_MODULE_1__.images.length);
     };
-    const interval = setInterval(nextImage, 5000); // Change image every 5 seconds
+    const interval = setInterval(nextImage, 3000); // Change image every 5 seconds
 
     return () => {
       clearInterval(interval); // Cleanup to prevent memory leaks
@@ -338,7 +338,7 @@ const Footer = () => {
     className: _Footer_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].email,
     onClick: handleCopyEmail
   }, emailAddress)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _Footer_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].links
+    className: _Footer_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].linked
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
     href: "https://www.linkedin.com/in/jamie-boeing-b59342272/",
     target: "_blank",
@@ -379,15 +379,19 @@ const NavBar = () => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("nav", {
     className: _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].NavBar
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].links
+    className: _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].navBarLinks
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
-    to: "/"
+    to: "/",
+    className: _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].shimmer + ' ' + _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"]['shimmer-text']
   }, "Home"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
-    to: "/about"
+    to: "/about",
+    className: _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].shimmer + ' ' + _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"]['shimmer-text']
   }, "About Me"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
-    to: "/projects"
+    to: "/projects",
+    className: _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].shimmer + ' ' + _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"]['shimmer-text']
   }, "Projects"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
-    to: "/services"
+    to: "/services",
+    className: _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].shimmer + ' ' + _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"]['shimmer-text']
   }, "Services")));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (NavBar);
@@ -859,17 +863,18 @@ const AboutPage = () => {
 
 
 
-
 const HomePage = () => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: _HomePage_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].container
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Welcome to Jamie Boeing's Portfolio"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "A showcase of my web development and design journey.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Welcome to Jamie Boeing's Portfolio"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "A showcase of my web development and design journey.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: _HomePage_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].contentWrapper
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
     className: _HomePage_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].tag
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, _data__WEBPACK_IMPORTED_MODULE_5__.aboutMe.tag)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: _HomePage_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].imageCarousel
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Carousel_Carousel__WEBPACK_IMPORTED_MODULE_4__["default"], {
     images: _data__WEBPACK_IMPORTED_MODULE_5__.images
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], null));
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], null));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HomePage);
 
@@ -1242,7 +1247,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.cdFg0y0n186gtHrhrzOP {
 
 .MXCQmfDKMNYFwLK38M23 {
   padding: auto;
-}`, "",{"version":3,"sources":["webpack://./src/components/Education/Education.module.scss"],"names":[],"mappings":"AACA;EACI,aAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;AAAJ;AAEI;EACE,iBAAA;EACA,mBAAA;AAAN;AAGI;EACE,sBAAA;EACA,kBAAA;EACA,aAAA;EACA,mBAAA;EACA,WAAA;EACA,gBAAA;EACA,wCAAA;AADN;AAGM;EACE,iBAAA;EACA,qBAAA;AADR;AAIM;EACE,eAAA;EACA,qBAAA;AAFR;AAKM;EACE,iBAAA;EACA,WAAA;AAHR;;AAOE;EACE,aAAA;AAJJ","sourcesContent":["\n.education-container {\n    padding: 2rem;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n  \n    h2 {\n      font-size: 1.5rem;\n      margin-bottom: 1rem;\n    }\n  \n    .education-item {\n      border: 1px solid #ccc;\n      border-radius: 8px;\n      padding: 1rem;\n      margin-bottom: 1rem;\n      width: 100%;\n      max-width: 400px;\n      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n  \n      h3 {\n        font-size: 1.2rem;\n        margin-bottom: 0.5rem;\n      }\n  \n      p {\n        font-size: 1rem;\n        margin-bottom: 0.5rem;\n      }\n  \n      .dates {\n        font-size: 0.9rem;\n        color: #555;\n      }\n    }\n  }\n  .edImage {\n    padding: auto;\n  }"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/Education/Education.module.scss"],"names":[],"mappings":"AACA;EACI,aAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;AAAJ;AAEI;EACE,iBAAA;EACA,mBAAA;AAAN;AAGI;EACE,sBAAA;EACA,kBAAA;EACA,aAAA;EACA,mBAAA;EACA,WAAA;EACA,gBAAA;EACA,wCAAA;AADN;AAGM;EACE,iBAAA;EACA,qBAAA;AADR;AAIM;EACE,eAAA;EACA,qBAAA;AAFR;AAKM;EACE,iBAAA;EACA,WAAA;AAHR;;AAOE;EACE,aAAA;AAJJ","sourcesContent":["\n.education-container {\n    padding: 2rem;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n  \n    h2 {\n      font-size: 1.5rem;\n      margin-bottom: 1rem;\n    }\n  \n    .education-item {\n      border: 1px solid #ccc;\n      border-radius: 8px;\n      padding: 1rem;\n      margin-bottom: 1rem;\n      width: 100%;\n      max-width: 400px;\n      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n  \n      h3 {\n        font-size: 1.2rem;\n        margin-bottom: 0.5rem;\n      }\n  \n      p {\n        font-size: 1rem;\n        margin-bottom: 0.5rem;\n      }\n  \n      .dates {\n        font-size: 0.9rem;\n        color: #555;\n      }\n    }\n  }\n  .edImage {\n    padding: auto;\n  }\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"education-container": `cdFg0y0n186gtHrhrzOP`,
@@ -1449,119 +1454,49 @@ ___CSS_LOADER_EXPORT___.locals = {
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `body {
-  margin: 0;
-  padding: 0;
-  font-family: "Gloock", serif;
-  animation: FESTl1R24EfeOa9ZTtkr 25s ease-in-out infinite;
-}
-
-.mdO1efiFRbNvsm57g8K7 {
-  padding: 5px;
-  border-radius: 4px;
-}
-
-header {
-  background-color: #f7f6f5;
-  color: #4c5570;
-  padding: 1px;
-  text-align: center;
-  border-radius: 1vmin;
-  font-size: 1.8rem;
-  max-width: 99.9%;
-}
-
-main {
-  background-color: #ced5eb;
-  padding: 1.5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 4vmin 4vmin 0 0;
-}
-
-h1 {
-  font-size: 1.875rem;
-  margin-bottom: 1rem;
-}
-
-h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-
-@keyframes FESTl1R24EfeOa9ZTtkr {
-  0% {
-    background-color: #1a3d5c; /* Starting color Dark Teal */
-  }
-  8% {
-    background-color: #646e67; /* Transition color (Sage) */
-  }
-  17% {
-    background-color: #3d4742; /* Transition to Olive Grey */
-  }
-  25% {
-    background-color: #2c3437; /* Transition to Dark Forest Grey */
-  }
-  37% {
-    background-color: #161417; /* Transition color purple black */
-  }
-  50% {
-    background-color: #1f1c30; /* Transition color Dark Purple */
-  }
-  63% {
-    background-color: #572387; /* Transition color DRDC purple  */
-  }
-  75% {
-    background-color: #1f1c30; /* Transition to Dark Purple */
-  }
-  84% {
-    background-color: #2a1961; /* Transition color  Dark Blue */
-  }
-  100% {
-    background-color: #1a3d5c; /* Ending color Dark Teal */
-  }
-}
-.QpVD3qAS0nYBtoQqAYoe {
+___CSS_LOADER_EXPORT___.push([module.id, `.QpVD3qAS0nYBtoQqAYoe {
   display: flex;
   flex-direction: column;
   padding: 1.5rem 2.5rem 1.5rem 2.5rem;
   background-color: #4c5570;
   color: white;
 }
-
-.ihAtZxuRXPyy4yX17Ie8 {
+.QpVD3qAS0nYBtoQqAYoe .EfcguAt9VgWgnagI0yQp {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.ihAtZxuRXPyy4yX17Ie8 a {
+.QpVD3qAS0nYBtoQqAYoe .EfcguAt9VgWgnagI0yQp a {
   text-decoration: underline;
   color: #f7f6f5;
 }
-.ihAtZxuRXPyy4yX17Ie8 a:hover {
-  color: aliceblue;
-  background-color: #ced5eb;
+.QpVD3qAS0nYBtoQqAYoe .EfcguAt9VgWgnagI0yQp a:hover {
   cursor: pointer;
-}`, "",{"version":3,"sources":["webpack://./src/scss/styles.scss","webpack://./src/components/NavBar/NavBar.module.scss"],"names":[],"mappings":"AAyBA;EACE,SAAA;EACA,UAAA;EACA,4BAAA;EACA,wDAAA;ACZF;;ADeA;EACE,YAAA;EACA,kBAAA;ACZF;;ADeA;EACE,yBAAA;EACA,cAAA;EACA,YAAA;EACA,kBAAA;EACA,oBAAA;EACA,iBAAA;EACA,gBAAA;ACZF;;ADeA;EACE,yBAAA;EACA,cAAA;EACA,wCAAA;EACA,8BAAA;ACZF;;ADeA;EACE,mBAAA;EACA,mBAAA;ACZF;;ADeA;EACE,iBAAA;EACA,mBAAA;ACZF;;ADeA;EACE,iBAAA;EACA,qBAAA;ACZF;;ADgBA;EACE;IACE,yBA7DM,EA6DsB,6BAAA;ECb9B;EDeA;IACE,yBA3EK,EA2EsB,4BAAA;ECb7B;EDeA;IACE,yBA7EK,EA6EsB,6BAAA;ECb7B;EDgBA;IACE,yBAhFK,EAgFsB,mCAAA;ECd7B;EDiBA;IACE,yBAAA,EAAA,kCAAA;ECfF;EDiBA;IACE,yBAjFK,EAiFsB,iCAAA;ECf7B;EDiBA;IACE,yBAnFK,EAmFuB,kCAAA;ECf9B;EDiBA;IACE,yBAvFK,EAuFuB,8BAAA;ECf9B;EDiBA;IACE,yBAxFM,EAwFsB,gCAAA;ECf9B;EDiBA;IACE,yBA1FM,EA0FsB,2BAAA;ECf9B;AACF;AApFA;EACI,aAAA;EACA,sBAAA;EACA,oCAAA;EACA,yBAAA;EACA,YAAA;AAsFJ;;AApFA;EACI,aAAA;EACA,6BAAA;EACA,mBAAA;AAuFJ;AAtFQ;EACI,0BAAA;EACA,cAAA;AAwFZ;AAvFY;EACI,gBAAA;EACA,yBAAA;EACA,eAAA;AAyFhB","sourcesContent":["$color1: #646e67; // Sage\n$color2: #3d4742; // Olive Grey\n$color3: #2c3437; // Dark Forest Grey\n$color4: #e37d4e; // Coral\n$color5: #e4ead8; // Sage White\n$color6: #4c5570; // Medium Grey Purple\n$color7: #ced5eb; // Light Blue White\n$color8: #f7f6f5; // Light Orange White\n$color9: #1f1c30; // Dark Purple\n$color10:#572387; // DRDC purple\n$color11: #2a1961; // Dark Blue\n$color12: #1a3d5c; // Dark Teal\n\n:export {\n  col-1: $color1;\n  col-2: $color2;\n  col-3: $color3;\n  col-4: $color4;\n  col-5: $color5;\n  col-6: $color6;\n  col-7: $color7;\n  col-8: $color8;\n  col-9: $color9;\n}\n\nbody {\n  margin: 0;\n  padding: 0;\n  font-family: 'Gloock', serif; // Use the correct font family or a web-safe font\n  animation: backgroundAnimation 25s ease-in-out infinite;\n}\n\n.container {\n  padding: 5px;\n  border-radius: 4px; \n}\n\nheader {\n  background-color: #f7f6f5;\n  color: #4c5570;\n  padding: 1px;\n  text-align: center;\n  border-radius: 1vmin;\n  font-size: 1.8rem; \n  max-width: 99.9%;\n}\n\nmain {\n  background-color: #ced5eb;\n  padding: 1.5px;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);\n  border-radius: 4vmin 4vmin 0 0;\n }\n\nh1 {\n  font-size: 1.875rem; // Use 'rem' for font size\n  margin-bottom: 1rem;\n}\n\nh2 {\n  font-size: 1.5rem; // Use 'rem' for font size\n  margin-bottom: 1rem;\n}\n\nh3 {\n  font-size: 1.2rem;\n  margin-bottom: 0.5rem;\n}\n\n\n@keyframes backgroundAnimation {\n  0% {\n    background-color: $color12; /* Starting color Dark Teal */\n  }\n  8% {\n    background-color: $color1; /* Transition color (Sage) */\n  }\n  17% {\n    background-color: $color2; /* Transition to Olive Grey */\n   \n  }\n  25% {\n    background-color: $color3; /* Transition to Dark Forest Grey */\n    \n  }\n  37% {\n    background-color: #161417 ; /* Transition color purple black */\n  }\n  50% {\n    background-color: $color9; /* Transition color Dark Purple */\n  }\n  63% {\n    background-color: $color10; /* Transition color DRDC purple  */\n  }\n  75% {\n    background-color: $color9;  /* Transition to Dark Purple */\n  }\n  84% {\n    background-color: $color11; /* Transition color  Dark Blue */\n  }\n  100% {\n    background-color: $color12; /* Ending color Dark Teal */\n  }\n}\n\n\n\n\n","@import '../../scss/styles.scss';\n\n\n.NavBar {\n    display: flex;\n    flex-direction: column;\n    padding: 1.5rem 2.5rem 1.5rem 2.5rem;\n    background-color:#4c5570;\n    color: white;\n}\n.links {\n    display: flex;\n    justify-content: space-around;\n    align-items: center;\n        a {\n            text-decoration: underline;\n            color: #f7f6f5;\n            &:hover {\n                color:aliceblue;\n                background-color: #ced5eb;\n                cursor: pointer;\n            }\n          }\n    }\n    \n\n\n"],"sourceRoot":""}]);
+  border-radius: 7px;
+  padding: 3px;
+  margin: 3px;
+  background: linear-gradient(90deg, #646e67 12.5%, #3d4742 25%, #2c3437 37.5%, #e37d4e 50%, #e4ead8 62.5%, #4c5570 75%, #ced5eb 87.5%, #f7f6f5 100%);
+  background-size: 1000px 100%;
+  animation: vPrwvlxTcWrOTMBgZ6_3 38s infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: ease-in-out;
+}
+
+@keyframes vPrwvlxTcWrOTMBgZ6_3 {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}`, "",{"version":3,"sources":["webpack://./src/components/NavBar/NavBar.module.scss"],"names":[],"mappings":"AAAA;EACI,aAAA;EACA,sBAAA;EACA,oCAAA;EACA,yBAAA;EACA,YAAA;AACJ;AACI;EACE,aAAA;EACA,6BAAA;EACA,mBAAA;AACN;AACM;EACE,0BAAA;EACA,cAAA;AACR;AACQ;EACE,eAAA;EACA,kBAAA;EACA,YAAA;EACA,WAAA;EACA,mJAAA;EAWA,4BAAA;EACA,4CAAA;EACA,qBAAA;EACA,6BAAA;EACA,kBAAA;EACA,uBAAA;AATV;;AAeE;EACE;IACE,8BAAA;EAZJ;EAcE;IACE,6BAAA;EAZJ;AACF","sourcesContent":[".NavBar {\n    display: flex;\n    flex-direction: column;\n    padding: 1.5rem 2.5rem 1.5rem 2.5rem;\n    background-color: #4c5570;\n    color: white;\n  \n    .navBarLinks {\n      display: flex;\n      justify-content: space-around;\n      align-items: center;\n  \n      a {\n        text-decoration: underline;\n        color: #f7f6f5;\n  \n        &:hover {\n          cursor: pointer;\n          border-radius: 7px;\n          padding: 3px;\n          margin: 3px;\n          background: linear-gradient(\n            90deg,\n            #646e67 12.5%,\n            #3d4742 25%,\n            #2c3437 37.5%,\n            #e37d4e 50%,\n            #e4ead8 62.5%,\n            #4c5570 75%,\n            #ced5eb 87.5%,\n            #f7f6f5 100%\n          );\n          background-size: 1000px 100%;\n          animation: shimmer 38s infinite;\n          background-clip: text;\n          -webkit-background-clip: text;\n          color: transparent;\n          transition: ease-in-out;\n        }\n      }\n    }\n  }\n  \n  @keyframes shimmer {\n    0% {\n      background-position: -1000px 0;\n    }\n    100% {\n      background-position: 1000px 0;\n    }\n  }\n  "],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
-	"col-1": `#646e67`,
-	"col-2": `#3d4742`,
-	"col-3": `#2c3437`,
-	"col-4": `#e37d4e`,
-	"col-5": `#e4ead8`,
-	"col-6": `#4c5570`,
-	"col-7": `#ced5eb`,
-	"col-8": `#f7f6f5`,
-	"col-9": `#1f1c30`,
-	"backgroundAnimation": `FESTl1R24EfeOa9ZTtkr`,
-	"container": `mdO1efiFRbNvsm57g8K7`,
 	"NavBar": `QpVD3qAS0nYBtoQqAYoe`,
-	"links": `ihAtZxuRXPyy4yX17Ie8`
+	"navBarLinks": `EfcguAt9VgWgnagI0yQp`,
+	"shimmer": `vPrwvlxTcWrOTMBgZ6_3`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1911,13 +1846,33 @@ ___CSS_LOADER_EXPORT___.locals = {
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `.uYIIXhYJv5OixJHJsMbR {
-  border: solid #e4ead8;
-  border-radius: 0%;
-}`, "",{"version":3,"sources":["webpack://./src/pages/HomePage/HomePage.module.scss"],"names":[],"mappings":"AAEE;EACE,qBAAA;EACA,iBAAA;AADJ","sourcesContent":["\n\n  .imageCarousel {\n    border: solid #e4ead8;\n    border-radius: 0%;\n  }"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, `.i7JD0mLtNn3FLv6dkbiC {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.uYIIXhYJv5OixJHJsMbR {
+  margin-right: 10px;
+  border-radius: 7px;
+}
+
+.DUEGqbTIf5ob2wpiWA_Z {
+  padding: 20px;
+  margin: 20px;
+  margin-left: 60px;
+  text-align: center;
+  border: 1px solid #e4ead8;
+  border-radius: 7px;
+  background-color: #f5f5f5;
+  font-size: 1.2rem;
+  max-width: 600px;
+}`, "",{"version":3,"sources":["webpack://./src/pages/HomePage/HomePage.module.scss"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,8BAAA;EACA,mBAAA;AACF;;AAEE;EACE,kBAAA;EACA,kBAAA;AACJ;;AAGE;EACE,aAAA;EACA,YAAA;EACA,iBAAA;EACA,kBAAA;EACA,yBAAA;EACA,kBAAA;EACA,yBAAA;EACA,iBAAA;EACA,gBAAA;AAAJ","sourcesContent":[".contentWrapper {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n\n  .imageCarousel {\n    margin-right: 10px;\n    border-radius: 7px;\n  }\n\n\n  .tag {\n    padding: 20px;\n    margin:20px;\n    margin-left: 60px;\n    text-align: center;\n    border: 1px solid #e4ead8;\n    border-radius: 7px;\n    background-color: #f5f5f5;\n    font-size: 1.2rem;\n    max-width: 600px;\n  }"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
-	"imageCarousel": `uYIIXhYJv5OixJHJsMbR`
+	"contentWrapper": `i7JD0mLtNn3FLv6dkbiC`,
+	"imageCarousel": `uYIIXhYJv5OixJHJsMbR`,
+	"tag": `DUEGqbTIf5ob2wpiWA_Z`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -3043,4 +2998,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.da8533a1885f1f2ef421007f96bb7654.js.map
+//# sourceMappingURL=App.bd3bdcf94fcfc344ebb9fa84385195d7.js.map

@@ -11,7 +11,7 @@ const Carousel = () => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
     };
 
-    const interval = setInterval(nextImage, 5000); // Change image every 5 seconds
+    const interval = setInterval(nextImage, 3000); // Change image every 5 seconds
 
     return () => {
       clearInterval(interval); // Cleanup to prevent memory leaks

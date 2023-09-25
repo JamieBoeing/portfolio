@@ -38,7 +38,7 @@ const Footer = () => {
           </p>
         )}
       </div>
-      <div className={styles.links}>
+      <div className={styles.linked}>
         <a href="https://www.linkedin.com/in/jamie-boeing-b59342272/" target="_blank" rel="noopener noreferrer">
           <img src="/img/linked-in-icon.png" alt="Linked-in" />
         </a>

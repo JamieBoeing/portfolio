@@ -10,6 +10,8 @@ $color9: #1f1c30; // Dark Purple
 $color10:#572387; // DRDC purple
 $color11: #2a1961; // Dark Blue
 $color12: #1a3d5c; // Dark Teal
+$color13: #161417;
+$color14: #60b4c4;
 
 :export {
   col-1: $color1;
@@ -18,56 +20,64 @@ $color12: #1a3d5c; // Dark Teal
   col-4: $color4;
   col-5: $color5;
   col-6: $color6;
-  col-7: $color7;
-  col-8: $color8;
+  col-10: $color10;
+  col-14: $color14;
   col-9: $color9;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Gloock', serif; // Use the correct font family or a web-safe font
+  font-family: 'Gloock', serif; 
   animation: backgroundAnimation 25s ease-in-out infinite;
 }
+
+main {
+  background-color: #ced5eb;
+  padding: 1.5px;
+ }
 
 .container {
   padding: 5px;
   border-radius: 4px; 
 }
 
-header {
-  background-color: #f7f6f5;
-  color: #4c5570;
-  padding: 1px;
-  text-align: center;
-  border-radius: 1vmin;
-  font-size: 1.8rem; 
-  max-width: 99.9%;
-}
-
-main {
-  background-color: #ced5eb;
-  padding: 1.5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 4vmin 4vmin 0 0;
- }
-
 h1 {
-  font-size: 1.875rem; // Use 'rem' for font size
+  background-image: linear-gradient(
+    90deg,
+    $color11 12.5%,
+    $color2 25%,
+    $color3 37.5%,
+    $color4 50%,
+    $color5 62.5%,
+    $color6 75%,
+    $color10 87.5%,
+    $color14 100%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 38s infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 4rem;
   margin-bottom: 1rem;
+  margin-left:20px;
+  transition: ease-in-out;
+  justify-content: center;
+  align-items: center;
 }
 
 h2 {
-  font-size: 1.5rem; // Use 'rem' for font size
+  font-size: 1.875rem; 
   margin-bottom: 1rem;
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
 
-
+/* animations */
 @keyframes backgroundAnimation {
   0% {
     background-color: $color12; /* Starting color Dark Teal */
@@ -84,7 +94,7 @@ h3 {
     
   }
   37% {
-    background-color: #161417 ; /* Transition color purple black */
+    background-color: $color13 ; /* Transition color purple black */
   }
   50% {
     background-color: $color9; /* Transition color Dark Purple */
@@ -102,6 +112,15 @@ h3 {
     background-color: $color12; /* Ending color Dark Teal */
   }
 }
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
 
 
 
