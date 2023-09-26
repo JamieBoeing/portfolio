@@ -6,13 +6,12 @@
     margin: 0 auto; /* Center the container horizontally */
     text-align: center; /* Center the contents within the container */
     padding: 20px; /* Add some spacing if desired */
-  /* Remove rounded corners */
     background-color: transparent; /* Remove background color */
   }
   
   .carouselImage {
     width: 350px; /* Adjust the width to the desired size */
     height: auto; /* Maintain the aspect ratio */
-    border-radius: 2.2px;
+    border-radius: 6px;
   }
   

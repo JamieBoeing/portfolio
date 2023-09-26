@@ -58,6 +58,10 @@ const projects = [
 //     skills: ['Management', 'Customer Service', 'Design'],
 //   },
 // ];
+
+
+// Express, VS Code, Github, OpenAI API, Gulp, WebPack, Nginx, PM2, Bootstrap, Jest, Supertest, JsonWebToken, Certbot
+
 const skills = [
   {
     category: 'Front-end Development &  Programming Languages',
@@ -125,7 +129,7 @@ const skills = [
 const aboutMe = {
   name: 'Jamie Boeing',
   title: 'Full-Stack Web Developer',
-  tag: 'As an accomplished and versatile professional with over a decade of experience, I possess a unique blend of skills in software engineering, graphic design, artistry, management, and communications. My passion for people, meticulous attention to detail, and creativity make me an exceptional asset for any project. I thrive on overcoming challenges, embracing learning opportunities, and pursuing personal growth.',
+  tag: 'As an accomplished and versatile professional with over a decade of experience, I bring a unique blend of skills in software engineering, graphic design, artistry, management, and communication to the table. My career journey reflects a passion for both people and technology, where meticulous attention to detail and boundless creativity shine as my defining attributes. I thrive on embracing complex challenges, fostering an environment of continuous learning, and nurturing personal growth.',
   bio: 'My name is Jamie Boeing, I am a Full-Stack Web developer, Graphic Designer and Artist. I Would love to tell you more about myself',
 }
 

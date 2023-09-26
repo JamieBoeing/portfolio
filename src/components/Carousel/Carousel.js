@@ -11,7 +11,7 @@ const Carousel = () => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
     };
 
-    const interval = setInterval(nextImage, 3000); // Change image every 5 seconds
+    const interval = setInterval(nextImage, 3000); // Change image every 3 seconds
 
     return () => {
       clearInterval(interval); // Cleanup to prevent memory leaks
@@ -20,9 +20,8 @@ const Carousel = () => {
 
   return (
     <div className={styles.carousel}>
-    {/* Add a class to the img element to control its size */}
     <img
-      className={styles.carouselImage} /* Create this class in your CSS */
+      className={styles.carouselImage} 
       src={`/img/${images[currentImageIndex]}`}
       alt={`Image ${currentImageIndex + 1}`}
     />

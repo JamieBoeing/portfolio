@@ -9,8 +9,8 @@ const HomePage = () => {
   return (
     <div className={styles.container}>
       <header>
-        <h1>Welcome to Jamie Boeing's Portfolio</h1>
-        <p>A showcase of my web development and design journey.</p>
+        <h1 className={styles.titleCenter}>Welcome to Jamie Boeing's Portfolio</h1>
+        <h2 className={styles.titleSub}>A showcase of my web development and design journey.</h2>
       </header>
       <div className={styles.contentWrapper}>
         <section className={styles.tag}>

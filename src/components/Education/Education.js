@@ -5,14 +5,14 @@ import styles from './Education.module.scss';
 
 const Education = () => {
   return (
-    <div className='education-container'>
+    <div className={styles.eduContainer}>
       <h2>Education</h2>
       <ul className='education-list'>
         {educationData.map((entry, index) => (
           <li key={index} className='education-entry'>
-            <div className="education-item">
+            <div className={styles.eduItem}>
               <img 
-                src={`/img/${entry.image}`} // Change 'educationData.image' to 'entry.image'
+                src={`/img/${entry.image}`}
                 alt={entry.university} 
                 className={styles.edImage} 
               />

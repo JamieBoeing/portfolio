@@ -48,34 +48,6 @@ const App = () => {
 
 /***/ }),
 
-/***/ "./src/components/About/About.js":
-/*!***************************************!*\
-  !*** ./src/components/About/About.js ***!
-  \***************************************/
-/***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _About_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./About.module.scss */ "./src/components/About/About.module.scss");
-// About.js
-
-
-const About = () => {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _About_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].container
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _About_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].img
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    src: "public/img/profileImage.jpg",
-    alt: "me"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "About Me"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-    className: _About_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].content
-  }, "As an accomplished and versatile professional with over a decade of experience, I bring a unique blend of skills in software engineering, graphic design, artistry, management, and communication to the table. My career journey reflects a passion for both people and technology, where meticulous attention to detail and boundless creativity shine as my defining attributes. I thrive on embracing complex challenges, fostering an environment of continuous learning, and nurturing personal growth."));
-};
-/* unused harmony default export */ var __WEBPACK_DEFAULT_EXPORT__ = (About);
-
-/***/ }),
-
 /***/ "./src/components/Carousel/Carousel.js":
 /*!*********************************************!*\
   !*** ./src/components/Carousel/Carousel.js ***!
@@ -99,7 +71,7 @@ const Carousel = () => {
     const nextImage = () => {
       setCurrentImageIndex(prevIndex => (prevIndex + 1) % _data__WEBPACK_IMPORTED_MODULE_1__.images.length);
     };
-    const interval = setInterval(nextImage, 3000); // Change image every 5 seconds
+    const interval = setInterval(nextImage, 3000); // Change image every 3 seconds
 
     return () => {
       clearInterval(interval); // Cleanup to prevent memory leaks
@@ -108,7 +80,7 @@ const Carousel = () => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: _Carousel_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].carousel
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    className: _Carousel_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].carouselImage /* Create this class in your CSS */,
+    className: _Carousel_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].carouselImage,
     src: "/img/".concat(_data__WEBPACK_IMPORTED_MODULE_1__.images[currentImageIndex]),
     alt: "Image ".concat(currentImageIndex + 1)
   }));
@@ -240,17 +212,16 @@ const ContactModalForm = _ref => {
 
 const Education = () => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "education-container"
+    className: _Education_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].eduContainer
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "Education"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
     className: "education-list"
   }, _data__WEBPACK_IMPORTED_MODULE_1__.educationData.map((entry, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
     key: index,
     className: "education-entry"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "education-item"
+    className: _Education_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].eduItem
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    src: "/img/".concat(entry.image) // Change 'educationData.image' to 'entry.image'
-    ,
+    src: "/img/".concat(entry.image),
     alt: entry.university,
     className: _Education_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].edImage
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, entry.degree), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, entry.certification), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, entry.university), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, entry.graduationYear), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, entry.achievements)))))));
@@ -645,6 +616,9 @@ const projects = [{
 //     skills: ['Management', 'Customer Service', 'Design'],
 //   },
 // ];
+
+// Express, VS Code, Github, OpenAI API, Gulp, WebPack, Nginx, PM2, Bootstrap, Jest, Supertest, JsonWebToken, Certbot
+
 const skills = [{
   category: 'Front-end Development &  Programming Languages',
   skills: [{
@@ -694,7 +668,7 @@ const skills = [{
 const aboutMe = {
   name: 'Jamie Boeing',
   title: 'Full-Stack Web Developer',
-  tag: 'As an accomplished and versatile professional with over a decade of experience, I possess a unique blend of skills in software engineering, graphic design, artistry, management, and communications. My passion for people, meticulous attention to detail, and creativity make me an exceptional asset for any project. I thrive on overcoming challenges, embracing learning opportunities, and pursuing personal growth.',
+  tag: 'As an accomplished and versatile professional with over a decade of experience, I bring a unique blend of skills in software engineering, graphic design, artistry, management, and communication to the table. My career journey reflects a passion for both people and technology, where meticulous attention to detail and boundless creativity shine as my defining attributes. I thrive on embracing complex challenges, fostering an environment of continuous learning, and nurturing personal growth.',
   bio: 'My name is Jamie Boeing, I am a Full-Stack Web developer, Graphic Designer and Artist. I Would love to tell you more about myself'
 };
 const experienceData = [{
@@ -790,14 +764,15 @@ react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPOR
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _components_About_About__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/About/About */ "./src/components/About/About.js");
-/* harmony import */ var _components_Experience_Experience__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/Experience/Experience */ "./src/components/Experience/Experience.js");
-/* harmony import */ var _components_Skills_Skills__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/Skills/Skills */ "./src/components/Skills/Skills.js");
-/* harmony import */ var _components_Education_Education__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/Education/Education */ "./src/components/Education/Education.js");
-/* harmony import */ var _components_Footer_Footer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/Footer/Footer */ "./src/components/Footer/Footer.js");
-/* harmony import */ var _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./AboutPage.module.scss */ "./src/pages/AboutPage/AboutPage.module.scss");
-/* harmony import */ var _components_Contact_ContactModalForm__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/Contact/ContactModalForm */ "./src/components/Contact/ContactModalForm.js");
+/* harmony import */ var _components_Experience_Experience__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/Experience/Experience */ "./src/components/Experience/Experience.js");
+/* harmony import */ var _components_Skills_Skills__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/Skills/Skills */ "./src/components/Skills/Skills.js");
+/* harmony import */ var _components_Education_Education__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/Education/Education */ "./src/components/Education/Education.js");
+/* harmony import */ var _components_Footer_Footer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/Footer/Footer */ "./src/components/Footer/Footer.js");
+/* harmony import */ var _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./AboutPage.module.scss */ "./src/pages/AboutPage/AboutPage.module.scss");
+/* harmony import */ var _components_Contact_ContactModalForm__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/Contact/ContactModalForm */ "./src/components/Contact/ContactModalForm.js");
+Object(function webpackMissingModule() { var e = new Error("Cannot find module '..././public/img/portrait.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 /* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../data */ "./src/data.js");
+
 
 
 
@@ -817,22 +792,25 @@ const AboutPage = () => {
     setIsContactModalOpen(false);
   };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].container
+    className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_5__["default"].container
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "About Me")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
-    className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].intro
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, _data__WEBPACK_IMPORTED_MODULE_8__.aboutMe.bio)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].contentWrapper
+    className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_5__["default"].intro
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, _data__WEBPACK_IMPORTED_MODULE_8__.aboutMe.bio)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: Object(function webpackMissingModule() { var e = new Error("Cannot find module '..././public/img/portrait.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()),
+    alt: "portrait"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_5__["default"].contentWrapper
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].leftColumn
+    className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_5__["default"].leftColumn
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
-    className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].experience
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Experience_Experience__WEBPACK_IMPORTED_MODULE_2__["default"], null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].rightColumn
+    className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_5__["default"].experience
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Experience_Experience__WEBPACK_IMPORTED_MODULE_1__["default"], null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_5__["default"].rightColumn
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
-    className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].skills
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Skills_Skills__WEBPACK_IMPORTED_MODULE_3__["default"], null)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
-    className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].education
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Education_Education__WEBPACK_IMPORTED_MODULE_4__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_5__["default"], null), isContactModalOpen && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Contact_ContactModalForm__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_5__["default"].skills
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Skills_Skills__WEBPACK_IMPORTED_MODULE_2__["default"], null)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
+    className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_5__["default"].education
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Education_Education__WEBPACK_IMPORTED_MODULE_3__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_4__["default"], null), isContactModalOpen && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Contact_ContactModalForm__WEBPACK_IMPORTED_MODULE_6__["default"], {
     isOpen: isContactModalOpen,
     onClose: closeContactModal
   }));
@@ -866,7 +844,11 @@ const AboutPage = () => {
 const HomePage = () => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: _HomePage_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].container
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Welcome to Jamie Boeing's Portfolio"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "A showcase of my web development and design journey.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
+    className: _HomePage_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].titleCenter
+  }, "Welcome to Jamie Boeing's Portfolio"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
+    className: _HomePage_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].titleSub
+  }, "A showcase of my web development and design journey.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: _HomePage_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].contentWrapper
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
     className: _HomePage_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].tag
@@ -1026,48 +1008,6 @@ ___CSS_LOADER_EXPORT___.locals = {
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/components/About/About.module.scss":
-/*!***************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/components/About/About.module.scss ***!
-  \***************************************************************************************************************************************************************************************************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-// Imports
-
-
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, `.BQHzun991KU3pIv34VIQ {
-  padding: auto;
-}
-
-.RlES3PbQi7mc8Mv5_Zw6 {
-  width: 50px; /* Set the desired width */
-  height: auto; /* Automatically adjust the height to maintain aspect ratio */
-}
-
-.HrgP6M80Yvq15EfJBfpw {
-  padding: auto;
-}`, "",{"version":3,"sources":["webpack://./src/components/About/About.module.scss"],"names":[],"mappings":"AAAA;EACE,aAAA;AACF;;AACA;EACI,WAAA,EAAA,0BAAA;EACA,YAAA,EAAA,6DAAA;AAEJ;;AAAA;EACI,aAAA;AAGJ","sourcesContent":[".container {\n  padding: auto;\n}\n.img {\n    width: 50px; /* Set the desired width */\n    height: auto; /* Automatically adjust the height to maintain aspect ratio */\n  }\n.content {\n    padding: auto;\n}"],"sourceRoot":""}]);
-// Exports
-___CSS_LOADER_EXPORT___.locals = {
-	"container": `BQHzun991KU3pIv34VIQ`,
-	"img": `RlES3PbQi7mc8Mv5_Zw6`,
-	"content": `HrgP6M80Yvq15EfJBfpw`
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-
 /***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/components/Carousel/Carousel.module.scss":
 /*!*********************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/components/Carousel/Carousel.module.scss ***!
@@ -1094,15 +1034,14 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* Carousel.module.scss */
   margin: 0 auto; /* Center the container horizontally */
   text-align: center; /* Center the contents within the container */
   padding: 20px; /* Add some spacing if desired */
-  /* Remove rounded corners */
   background-color: transparent; /* Remove background color */
 }
 
 .us6xXbnTOqgJpV586KPQ {
   width: 350px; /* Adjust the width to the desired size */
   height: auto; /* Maintain the aspect ratio */
-  border-radius: 2.2px;
-}`, "",{"version":3,"sources":["webpack://./src/components/Carousel/Carousel.module.scss"],"names":[],"mappings":"AAAA,yBAAA;AAEA;EACI,WAAA,EAAA,kCAAA;EACA,YAAA;EACA,cAAA,EAAA,sCAAA;EACA,kBAAA,EAAA,6CAAA;EACA,aAAA,EAAA,gCAAA;EACF,2BAAA;EACE,6BAAA,EAAA,4BAAA;AAAJ;;AAGE;EACE,YAAA,EAAA,yCAAA;EACA,YAAA,EAAA,8BAAA;EACA,oBAAA;AAAJ","sourcesContent":["/* Carousel.module.scss */\n\n.carousel {\n    width: 100%; /* Make the container full-width */\n    height: auto;\n    margin: 0 auto; /* Center the container horizontally */\n    text-align: center; /* Center the contents within the container */\n    padding: 20px; /* Add some spacing if desired */\n  /* Remove rounded corners */\n    background-color: transparent; /* Remove background color */\n  }\n  \n  .carouselImage {\n    width: 350px; /* Adjust the width to the desired size */\n    height: auto; /* Maintain the aspect ratio */\n    border-radius: 2.2px;\n  }\n  \n"],"sourceRoot":""}]);
+  border-radius: 6px;
+}`, "",{"version":3,"sources":["webpack://./src/components/Carousel/Carousel.module.scss"],"names":[],"mappings":"AAAA,yBAAA;AAEA;EACI,WAAA,EAAA,kCAAA;EACA,YAAA;EACA,cAAA,EAAA,sCAAA;EACA,kBAAA,EAAA,6CAAA;EACA,aAAA,EAAA,gCAAA;EACA,6BAAA,EAAA,4BAAA;AAAJ;;AAGE;EACE,YAAA,EAAA,yCAAA;EACA,YAAA,EAAA,8BAAA;EACA,kBAAA;AAAJ","sourcesContent":["/* Carousel.module.scss */\n\n.carousel {\n    width: 100%; /* Make the container full-width */\n    height: auto;\n    margin: 0 auto; /* Center the container horizontally */\n    text-align: center; /* Center the contents within the container */\n    padding: 20px; /* Add some spacing if desired */\n    background-color: transparent; /* Remove background color */\n  }\n  \n  .carouselImage {\n    width: 350px; /* Adjust the width to the desired size */\n    height: auto; /* Maintain the aspect ratio */\n    border-radius: 6px;\n  }\n  \n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"carousel": `gpetVLQZHYUp_GY0Hsng`,
@@ -1213,17 +1152,17 @@ ___CSS_LOADER_EXPORT___.locals = {
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `.cdFg0y0n186gtHrhrzOP {
+___CSS_LOADER_EXPORT___.push([module.id, `.fcJFu5Rcew3sw3qbbu0p {
   padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.cdFg0y0n186gtHrhrzOP h2 {
+.fcJFu5Rcew3sw3qbbu0p h2 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
-.cdFg0y0n186gtHrhrzOP .PWB_Nk92mjZdNv9X35YF {
+.fcJFu5Rcew3sw3qbbu0p .xG1tGq4NqK3zrwmBa5rw {
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 1rem;
@@ -1232,26 +1171,26 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.cdFg0y0n186gtHrhrzOP {
   max-width: 400px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.cdFg0y0n186gtHrhrzOP .PWB_Nk92mjZdNv9X35YF h3 {
+.fcJFu5Rcew3sw3qbbu0p .xG1tGq4NqK3zrwmBa5rw h3 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
-.cdFg0y0n186gtHrhrzOP .PWB_Nk92mjZdNv9X35YF p {
+.fcJFu5Rcew3sw3qbbu0p .xG1tGq4NqK3zrwmBa5rw p {
   font-size: 1rem;
   margin-bottom: 0.5rem;
 }
-.cdFg0y0n186gtHrhrzOP .PWB_Nk92mjZdNv9X35YF .dEJqsUBLQoz0dILIIW6t {
+.fcJFu5Rcew3sw3qbbu0p .xG1tGq4NqK3zrwmBa5rw .dEJqsUBLQoz0dILIIW6t {
   font-size: 0.9rem;
   color: #555;
 }
 
 .MXCQmfDKMNYFwLK38M23 {
   padding: auto;
-}`, "",{"version":3,"sources":["webpack://./src/components/Education/Education.module.scss"],"names":[],"mappings":"AACA;EACI,aAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;AAAJ;AAEI;EACE,iBAAA;EACA,mBAAA;AAAN;AAGI;EACE,sBAAA;EACA,kBAAA;EACA,aAAA;EACA,mBAAA;EACA,WAAA;EACA,gBAAA;EACA,wCAAA;AADN;AAGM;EACE,iBAAA;EACA,qBAAA;AADR;AAIM;EACE,eAAA;EACA,qBAAA;AAFR;AAKM;EACE,iBAAA;EACA,WAAA;AAHR;;AAOE;EACE,aAAA;AAJJ","sourcesContent":["\n.education-container {\n    padding: 2rem;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n  \n    h2 {\n      font-size: 1.5rem;\n      margin-bottom: 1rem;\n    }\n  \n    .education-item {\n      border: 1px solid #ccc;\n      border-radius: 8px;\n      padding: 1rem;\n      margin-bottom: 1rem;\n      width: 100%;\n      max-width: 400px;\n      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n  \n      h3 {\n        font-size: 1.2rem;\n        margin-bottom: 0.5rem;\n      }\n  \n      p {\n        font-size: 1rem;\n        margin-bottom: 0.5rem;\n      }\n  \n      .dates {\n        font-size: 0.9rem;\n        color: #555;\n      }\n    }\n  }\n  .edImage {\n    padding: auto;\n  }\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/Education/Education.module.scss"],"names":[],"mappings":"AACA;EACI,aAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;AAAJ;AAEI;EACE,iBAAA;EACA,mBAAA;AAAN;AAGI;EACE,sBAAA;EACA,kBAAA;EACA,aAAA;EACA,mBAAA;EACA,WAAA;EACA,gBAAA;EACA,wCAAA;AADN;AAGM;EACE,iBAAA;EACA,qBAAA;AADR;AAIM;EACE,eAAA;EACA,qBAAA;AAFR;AAKM;EACE,iBAAA;EACA,WAAA;AAHR;;AAOE;EACE,aAAA;AAJJ","sourcesContent":["\n.eduContainer {\n    padding: 2rem;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n  \n    h2 {\n      font-size: 1.5rem;\n      margin-bottom: 1rem;\n    }\n  \n    .eduItem {\n      border: 1px solid #ccc;\n      border-radius: 8px;\n      padding: 1rem;\n      margin-bottom: 1rem;\n      width: 100%;\n      max-width: 400px;\n      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n  \n      h3 {\n        font-size: 1.2rem;\n        margin-bottom: 0.5rem;\n      }\n  \n      p {\n        font-size: 1rem;\n        margin-bottom: 0.5rem;\n      }\n  \n      .dates {\n        font-size: 0.9rem;\n        color: #555;\n      }\n    }\n  }\n  .edImage {\n    padding: auto;\n  }\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
-	"education-container": `cdFg0y0n186gtHrhrzOP`,
-	"education-item": `PWB_Nk92mjZdNv9X35YF`,
+	"eduContainer": `fcJFu5Rcew3sw3qbbu0p`,
+	"eduItem": `xG1tGq4NqK3zrwmBa5rw`,
 	"dates": `dEJqsUBLQoz0dILIIW6t`,
 	"edImage": `MXCQmfDKMNYFwLK38M23`
 };
@@ -1794,6 +1733,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.sQkdi7KRaUR4jafWumCI {
 .xouQhGwjP45KgPHzkj5V {
   text-align: center;
   margin-top: auto; /* Push the education section to the bottom */
+  margin-bottom: 20px;
 }
 
 .xv88iKLs2S2f6PKgaSn0 {
@@ -1811,7 +1751,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.sQkdi7KRaUR4jafWumCI {
 
 .lk2tEymXQqD96bCWLCJ7 p {
   margin: 20px 0;
-}`, "",{"version":3,"sources":["webpack://./src/pages/AboutPage/AboutPage.module.scss"],"names":[],"mappings":"AACA;EACE,aAAA;EACA,mBAAA;EACA,uBAAA,EAAA,qCAAA;EACA,8BAAA,EAAA,iCAAA;EACA,WAAA;EACA,aAAA;AAAF;;AAGA;EACE,UAAA,EAAA,qBAAA;EACA,kBAAA;AAAF;;AAGA;EACE,UAAA,EAAA,qBAAA;AAAF;;AAGA;EACE,aAAA;AAAF;;AAGA;EACE,kBAAA;EACA,gBAAA,EAAA,6CAAA;AAAF;;AAGA;EACE,WAAA;EACA,kBAAA;EACA,YAAA;EACA,kBAAA;EACA,eAAA;EACA,sCAAA;AAAF;;AAGA;EACE,yBAAA;AAAF;;AAGA;EACE,cAAA;AAAF","sourcesContent":["\n.contentWrapper {\n  display: flex;\n  flex-direction: row;\n  align-items: flex-start; /* Align the left column at the top */\n  justify-content: space-between; /* Create space between columns */\n  width: 100%;\n  padding: 1rem;\n}\n\n.leftColumn {\n  width: 40%; /* Adjust as needed */\n  margin-right: 1rem;\n}\n\n.rightColumn {\n  width: 60%; /* Adjust as needed */\n}\n\n.skills {\n  padding: 1rem;\n}\n\n.education {\n  text-align: center;\n  margin-top: auto; /* Push the education section to the bottom */\n}\n\n.contactButton {\n  color: #fff;\n  padding: 10px 20px;\n  border: none;\n  border-radius: 5px;\n  cursor: pointer;\n  transition: background-color 0.3s ease;\n}\n\n.contactButton:hover {\n  background-color: #0056b3;\n}\n\n.contact p {\n  margin: 20px 0;\n}\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/pages/AboutPage/AboutPage.module.scss"],"names":[],"mappings":"AACA;EACE,aAAA;EACA,mBAAA;EACA,uBAAA,EAAA,qCAAA;EACA,8BAAA,EAAA,iCAAA;EACA,WAAA;EACA,aAAA;AAAF;;AAGA;EACE,UAAA,EAAA,qBAAA;EACA,kBAAA;AAAF;;AAGA;EACE,UAAA,EAAA,qBAAA;AAAF;;AAGA;EACE,aAAA;AAAF;;AAGA;EACE,kBAAA;EACA,gBAAA,EAAA,6CAAA;EACA,mBAAA;AAAF;;AAGA;EACE,WAAA;EACA,kBAAA;EACA,YAAA;EACA,kBAAA;EACA,eAAA;EACA,sCAAA;AAAF;;AAGA;EACE,yBAAA;AAAF;;AAGA;EACE,cAAA;AAAF","sourcesContent":["\n.contentWrapper {\n  display: flex;\n  flex-direction: row;\n  align-items: flex-start; /* Align the left column at the top */\n  justify-content: space-between; /* Create space between columns */\n  width: 100%;\n  padding: 1rem;\n}\n\n.leftColumn {\n  width: 40%; /* Adjust as needed */\n  margin-right: 1rem;\n}\n\n.rightColumn {\n  width: 60%; /* Adjust as needed */\n}\n\n.skills {\n  padding: 1rem;\n}\n\n.education {\n  text-align: center;\n  margin-top: auto; /* Push the education section to the bottom */\n  margin-bottom: 20px;\n}\n\n.contactButton {\n  color: #fff;\n  padding: 10px 20px;\n  border: none;\n  border-radius: 5px;\n  cursor: pointer;\n  transition: background-color 0.3s ease;\n}\n\n.contactButton:hover {\n  background-color: #0056b3;\n}\n\n.contact p {\n  margin: 20px 0;\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"contentWrapper": `sQkdi7KRaUR4jafWumCI`,
@@ -1852,9 +1792,17 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.i7JD0mLtNn3FLv6dkbiC {
   align-items: center;
 }
 
+.Eq21mHtG5aTTJ4GArzw_ {
+  text-align: center !important;
+}
+
 .uYIIXhYJv5OixJHJsMbR {
-  margin-right: 10px;
-  border-radius: 7px;
+  margin-right: 33px;
+}
+
+.xPQPLtKObSsR3IJtaSLh {
+  margin-left: 73px;
+  text-shadow: 1rem;
 }
 
 .DUEGqbTIf5ob2wpiWA_Z {
@@ -1867,11 +1815,13 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.i7JD0mLtNn3FLv6dkbiC {
   background-color: #f5f5f5;
   font-size: 1.2rem;
   max-width: 600px;
-}`, "",{"version":3,"sources":["webpack://./src/pages/HomePage/HomePage.module.scss"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,8BAAA;EACA,mBAAA;AACF;;AAEE;EACE,kBAAA;EACA,kBAAA;AACJ;;AAGE;EACE,aAAA;EACA,YAAA;EACA,iBAAA;EACA,kBAAA;EACA,yBAAA;EACA,kBAAA;EACA,yBAAA;EACA,iBAAA;EACA,gBAAA;AAAJ","sourcesContent":[".contentWrapper {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n\n  .imageCarousel {\n    margin-right: 10px;\n    border-radius: 7px;\n  }\n\n\n  .tag {\n    padding: 20px;\n    margin:20px;\n    margin-left: 60px;\n    text-align: center;\n    border: 1px solid #e4ead8;\n    border-radius: 7px;\n    background-color: #f5f5f5;\n    font-size: 1.2rem;\n    max-width: 600px;\n  }"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/pages/HomePage/HomePage.module.scss"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,8BAAA;EACA,mBAAA;AACF;;AAEA;EACE,6BAAA;AACF;;AAEE;EACE,kBAAA;AACJ;;AAEE;EACE,iBAAA;EACA,iBAAA;AACJ;;AAEE;EACE,aAAA;EACA,YAAA;EACA,iBAAA;EACA,kBAAA;EACA,yBAAA;EACA,kBAAA;EACA,yBAAA;EACA,iBAAA;EACA,gBAAA;AACJ","sourcesContent":[".contentWrapper {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n\n.titleCenter {\n  text-align: center !important;\n}\n\n  .imageCarousel {\n    margin-right: 33px;\n  }\n\n  .titleSub {\n    margin-left: 73px;\n    text-shadow: 1rem;\n  }\n\n  .tag {\n    padding: 20px;\n    margin:20px;\n    margin-left: 60px;\n    text-align: center;\n    border: 1px solid #e4ead8;\n    border-radius: 7px;\n    background-color: #f5f5f5;\n    font-size: 1.2rem;\n    max-width: 600px;\n  }"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"contentWrapper": `i7JD0mLtNn3FLv6dkbiC`,
+	"titleCenter": `Eq21mHtG5aTTJ4GArzw_`,
 	"imageCarousel": `uYIIXhYJv5OixJHJsMbR`,
+	"titleSub": `xPQPLtKObSsR3IJtaSLh`,
 	"tag": `DUEGqbTIf5ob2wpiWA_Z`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
@@ -1987,60 +1937,6 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
        /* unused harmony default export */ var __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_App_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_App_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_App_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
-
-
-/***/ }),
-
-/***/ "./src/components/About/About.module.scss":
-/*!************************************************!*\
-  !*** ./src/components/About/About.module.scss ***!
-  \************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_About_module_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!../../../node_modules/sass-loader/dist/cjs.js!../../../node_modules/postcss-loader/dist/cjs.js!./About.module.scss */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/components/About/About.module.scss");
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var options = {};
-
-options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
-options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
-
-      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
-    
-options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
-options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
-
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_About_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"], options);
-
-
-
-
-       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_About_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_About_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_About_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
 
 
 /***/ }),
@@ -2998,4 +2894,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.bd3bdcf94fcfc344ebb9fa84385195d7.js.map
+//# sourceMappingURL=App.9673dff4b815f724092133817396b03e.js.map

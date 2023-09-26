@@ -4,11 +4,18 @@
   align-items: center;
 }
 
+.titleCenter {
+  text-align: center !important;
+}
+
   .imageCarousel {
-    margin-right: 10px;
-    border-radius: 7px;
+    margin-right: 33px;
   }
 
+  .titleSub {
+    margin-left: 73px;
+    text-shadow: 1rem;
+  }
 
   .tag {
     padding: 20px;
