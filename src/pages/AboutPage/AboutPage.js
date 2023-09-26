@@ -37,10 +37,8 @@ const AboutPage = () => {
       </header>
       <section className={styles.intro}>
             <p>{aboutMe.bio}</p>
-        <div className='portraitContainer'>
-          <img src='/img/portrait.png' alt="portrait" />
-        </div>
           </section>
+          <img className={styles.portraitImg} src='/img/portrait.png' alt="portrait" />
       <div className={styles.contentWrapper}>
         <div className={styles.leftColumn}>
           <section className={styles.experience}>

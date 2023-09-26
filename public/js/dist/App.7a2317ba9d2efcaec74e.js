@@ -793,12 +793,11 @@ const AboutPage = () => {
     className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_5__["default"].container
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "About Me")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
     className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_5__["default"].intro
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, _data__WEBPACK_IMPORTED_MODULE_7__.aboutMe.bio), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "portraitContainer"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, _data__WEBPACK_IMPORTED_MODULE_7__.aboutMe.bio)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_5__["default"].portraitImg,
     src: "/img/portrait.png",
     alt: "portrait"
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_5__["default"].contentWrapper
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_5__["default"].leftColumn
@@ -1751,7 +1750,12 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.sQkdi7KRaUR4jafWumCI {
 
 .lk2tEymXQqD96bCWLCJ7 p {
   margin: 20px 0;
-}`, "",{"version":3,"sources":["webpack://./src/pages/AboutPage/AboutPage.module.scss"],"names":[],"mappings":"AACA;EACE,aAAA;EACA,mBAAA;EACA,uBAAA,EAAA,qCAAA;EACA,8BAAA,EAAA,iCAAA;EACA,WAAA;EACA,aAAA;AAAF;;AAGA;EACE,UAAA,EAAA,qBAAA;EACA,kBAAA;AAAF;;AAGA;EACE,UAAA,EAAA,qBAAA;AAAF;;AAGA;EACE,aAAA;AAAF;;AAGA;EACE,kBAAA;EACA,gBAAA,EAAA,6CAAA;EACA,mBAAA;AAAF;;AAGA;EACE,WAAA;EACA,kBAAA;EACA,YAAA;EACA,kBAAA;EACA,eAAA;EACA,sCAAA;AAAF;;AAGA;EACE,yBAAA;AAAF;;AAGA;EACE,cAAA;AAAF","sourcesContent":["\n.contentWrapper {\n  display: flex;\n  flex-direction: row;\n  align-items: flex-start; /* Align the left column at the top */\n  justify-content: space-between; /* Create space between columns */\n  width: 100%;\n  padding: 1rem;\n}\n\n.leftColumn {\n  width: 40%; /* Adjust as needed */\n  margin-right: 1rem;\n}\n\n.rightColumn {\n  width: 60%; /* Adjust as needed */\n}\n\n.skills {\n  padding: 1rem;\n}\n\n.education {\n  text-align: center;\n  margin-top: auto; /* Push the education section to the bottom */\n  margin-bottom: 20px;\n}\n\n.contactButton {\n  color: #fff;\n  padding: 10px 20px;\n  border: none;\n  border-radius: 5px;\n  cursor: pointer;\n  transition: background-color 0.3s ease;\n}\n\n.contactButton:hover {\n  background-color: #0056b3;\n}\n\n.contact p {\n  margin: 20px 0;\n}\n"],"sourceRoot":""}]);
+}
+
+img.OD2vRxKFqxzq2NqPvMkQ {
+  border-radius: 50%;
+  align-items: right;
+}`, "",{"version":3,"sources":["webpack://./src/pages/AboutPage/AboutPage.module.scss"],"names":[],"mappings":"AACA;EACE,aAAA;EACA,mBAAA;EACA,uBAAA,EAAA,qCAAA;EACA,8BAAA,EAAA,iCAAA;EACA,WAAA;EACA,aAAA;AAAF;;AAGA;EACE,UAAA,EAAA,qBAAA;EACA,kBAAA;AAAF;;AAGA;EACE,UAAA,EAAA,qBAAA;AAAF;;AAGA;EACE,aAAA;AAAF;;AAGA;EACE,kBAAA;EACA,gBAAA,EAAA,6CAAA;EACA,mBAAA;AAAF;;AAGA;EACE,WAAA;EACA,kBAAA;EACA,YAAA;EACA,kBAAA;EACA,eAAA;EACA,sCAAA;AAAF;;AAGA;EACE,yBAAA;AAAF;;AAGA;EACE,cAAA;AAAF;;AAGA;EACE,kBAAA;EACA,kBAAA;AAAF","sourcesContent":["\n.contentWrapper {\n  display: flex;\n  flex-direction: row;\n  align-items: flex-start; /* Align the left column at the top */\n  justify-content: space-between; /* Create space between columns */\n  width: 100%;\n  padding: 1rem;\n}\n\n.leftColumn {\n  width: 40%; /* Adjust as needed */\n  margin-right: 1rem;\n}\n\n.rightColumn {\n  width: 60%; /* Adjust as needed */\n}\n\n.skills {\n  padding: 1rem;\n}\n\n.education {\n  text-align: center;\n  margin-top: auto; /* Push the education section to the bottom */\n  margin-bottom: 20px;\n}\n\n.contactButton {\n  color: #fff;\n  padding: 10px 20px;\n  border: none;\n  border-radius: 5px;\n  cursor: pointer;\n  transition: background-color 0.3s ease;\n}\n\n.contactButton:hover {\n  background-color: #0056b3;\n}\n\n.contact p {\n  margin: 20px 0;\n}\n\nimg.portrait {\n  border-radius: 50%;\n  align-items: right;\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"contentWrapper": `sQkdi7KRaUR4jafWumCI`,
@@ -1760,7 +1764,8 @@ ___CSS_LOADER_EXPORT___.locals = {
 	"skills": `TQtoyLM4BCcepFioP8zK`,
 	"education": `xouQhGwjP45KgPHzkj5V`,
 	"contactButton": `xv88iKLs2S2f6PKgaSn0`,
-	"contact": `lk2tEymXQqD96bCWLCJ7`
+	"contact": `lk2tEymXQqD96bCWLCJ7`,
+	"portrait": `OD2vRxKFqxzq2NqPvMkQ`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -2894,4 +2899,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.f333b5e6149214ec47d18c1fc6cc94b0.js.map
+//# sourceMappingURL=App.fee4a7744e5d4d5c4b171552fc58ca65.js.map
