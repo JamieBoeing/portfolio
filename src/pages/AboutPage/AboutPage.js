@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import Footer from '../../components/Footer/Footer';
 import styles from './AboutPage.module.scss';
 import ContactModalForm from '../../components/Contact/ContactModalForm';
-import portrait from '..././public/img/portrait.png'
+
 
 import {
   projects,
@@ -37,8 +37,10 @@ const AboutPage = () => {
       </header>
       <section className={styles.intro}>
             <p>{aboutMe.bio}</p>
+        <div className='portraitContainer'>
+          <img src='/img/portrait.png' alt="portrait" />
+        </div>
           </section>
-          <img src={portrait} alt="portrait" />
       <div className={styles.contentWrapper}>
         <div className={styles.leftColumn}>
           <section className={styles.experience}>

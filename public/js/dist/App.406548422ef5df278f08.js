@@ -770,9 +770,7 @@ react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPOR
 /* harmony import */ var _components_Footer_Footer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/Footer/Footer */ "./src/components/Footer/Footer.js");
 /* harmony import */ var _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./AboutPage.module.scss */ "./src/pages/AboutPage/AboutPage.module.scss");
 /* harmony import */ var _components_Contact_ContactModalForm__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/Contact/ContactModalForm */ "./src/components/Contact/ContactModalForm.js");
-Object(function webpackMissingModule() { var e = new Error("Cannot find module '..././public/img/portrait.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-/* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../data */ "./src/data.js");
-
+/* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../data */ "./src/data.js");
 
 
 
@@ -795,10 +793,12 @@ const AboutPage = () => {
     className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_5__["default"].container
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "About Me")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
     className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_5__["default"].intro
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, _data__WEBPACK_IMPORTED_MODULE_8__.aboutMe.bio)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    src: Object(function webpackMissingModule() { var e = new Error("Cannot find module '..././public/img/portrait.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()),
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, _data__WEBPACK_IMPORTED_MODULE_7__.aboutMe.bio), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "portraitContainer"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "/img/portrait.png",
     alt: "portrait"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_5__["default"].contentWrapper
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_5__["default"].leftColumn
@@ -2894,4 +2894,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.9673dff4b815f724092133817396b03e.js.map
+//# sourceMappingURL=App.f333b5e6149214ec47d18c1fc6cc94b0.js.map
