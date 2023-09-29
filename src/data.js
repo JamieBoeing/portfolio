@@ -26,38 +26,8 @@ const projects = [
     liveDemoLink: 'https://bazaar.hlysllrs.me/home',
   },
   // Add more project objects here...
-];
+]
 
-// const skills = [
-//   {
-//     category: 'Programming Languages',
-//     skills: ['JavaScript', 'Python'],
-//   },
-//   {
-//     category: 'Front-end Development',
-//     skills: ['React', 'HTML', 'CSS'],
-//   },
-//   {
-//     category: 'Back-end Development',
-//     skills: ['Node.js', 'PHP', 'Django'],
-//   },
-//   {
-//     category: 'Databases',
-//     skills: ['MongoDB'],
-//   },
-//   {
-//     category: 'Operating Systems',
-//     skills: ['Mac', 'Windows', 'Linux'],
-//   },
-//   {
-//     category: 'Design Tools',
-//     skills: ['Adobe Photoshop', 'Adobe Illustrator', 'Adobe InDesign'],
-//   },
-//   {
-//     category: 'Other',
-//     skills: ['Management', 'Customer Service', 'Design'],
-//   },
-// ];
 
 
 // Express, VS Code, Github, OpenAI API, Gulp, WebPack, Nginx, PM2, Bootstrap, Jest, Supertest, JsonWebToken, Certbot
@@ -90,6 +60,7 @@ const skills = [
         name: 'CSS',
         image: 'css-icon.png', // Image filename for CSS
       },
+      
     ],
   },
   {
@@ -129,8 +100,8 @@ const skills = [
 const aboutMe = {
   name: 'Jamie Boeing',
   title: 'Full-Stack Web Developer',
-  tag: 'As an accomplished and versatile professional with over a decade of experience, I bring a unique blend of skills in software engineering, graphic design, artistry, management, and communication to the table. My career journey reflects a passion for both people and technology, where meticulous attention to detail and boundless creativity shine as my defining attributes. I thrive on embracing complex challenges, fostering an environment of continuous learning, and nurturing personal growth.',
-  bio: 'My name is Jamie Boeing, I am a Full-Stack Web developer, Graphic Designer and Artist. I Would love to tell you more about myself',
+  tag: 'As an accomplished and versatile professional with over a decade of experience, I bring a unique blend of skills to Software Engineering, and Graphic Design.',
+  bio: 'Hello... My name is Jamie Boeing, a Full-Stack Web Developer, Graphic Designer, and Artist. With a long-standing career as an independent Artist, I have cultivated a love for teamwork and collaboration. My background in customer service and management has equipped me with valuable business experience. I am passionate about personal growth, community engagement, travel, and connecting with people. I am eager to become part of a supportive community in the Web Developer world and am excited to bring my diverse skills to contribute to new and exciting opportunities.',
 }
 
 
@@ -194,7 +165,7 @@ const educationData = [
     certification: 'Web Certification',
     university: 'John Wood Community College',
     graduationYear: 2016,
-    achievements: 'Academic Sorority, and Dean list student'
+    achievements: 'Academic Sorority, and Dean\'s list student'
   },
   {
     id: 2,
@@ -203,8 +174,9 @@ const educationData = [
     university: 'General Assembly',
     graduationYear: 2023,
     achievements: [
-      'Completed many successful current projects',
-      'add stats and certs here'
+      'Deployed and working current projects',
+      'Successfully completed 500+ hours of expert led instruction in Full Stack Web and Software Development',
+      `Completed hands-on learning of the fundamentals and the industry's most in demand technologies. `
     ]
   },
   // Add more education entries...

@@ -8,7 +8,6 @@ import Footer from '../../components/Footer/Footer';
 import styles from './AboutPage.module.scss';
 import ContactModalForm from '../../components/Contact/ContactModalForm';
 
-
 import {
   projects,
   skills,
@@ -30,30 +29,35 @@ const AboutPage = () => {
   const closeContactModal = () => {
     setIsContactModalOpen(false);
   };
+
   return (
     <div className={styles.container}>
       <header>
         <h1>About Me</h1>
       </header>
-      <section className={styles.intro}>
-            <p>{aboutMe.bio}</p>
-          </section>
-          <img className={styles.portraitImg} src='/img/portrait.png' alt="portrait" />
       <div className={styles.contentWrapper}>
-        <div className={styles.leftColumn}>
+        <section className={styles.leftColumn}>
+        <img
+            className={styles.portraitImg}
+            src='/img/portrait.png'
+            alt="portrait"
+          />
           <section className={styles.experience}>
             <Experience />
           </section>
-        </div>
-        <div className={styles.rightColumn}>
+        </section>
+        <section className={styles.rightColumn}>
+        <section className={styles.intro}>
+            <p className={styles.aboutBio}>{aboutMe.bio}</p>
+          </section>
           <section className={styles.skills}>
             <Skills />
           </section>
-        </div>
-      </div>
-        <section className={styles.education}>
-          <Education />
         </section>
+      </div>
+      <section className={styles.education}>
+        <Education />
+      </section>
       <Footer />
       {isContactModalOpen && (
         <ContactModalForm isOpen={isContactModalOpen} onClose={closeContactModal} />
@@ -63,4 +67,3 @@ const AboutPage = () => {
 };
 
 export default AboutPage;
-

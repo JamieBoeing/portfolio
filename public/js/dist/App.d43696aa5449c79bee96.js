@@ -483,7 +483,7 @@ const Services = () => {
 
 const Skills = () => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _Skills_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].container
+    className: _Skills_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].skillsContainer
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "Skills"), _data__WEBPACK_IMPORTED_MODULE_1__.skills.map((category, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: _Skills_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].category,
     key: index
@@ -586,37 +586,6 @@ const projects = [{
 // Add more project objects here...
 ];
 
-// const skills = [
-//   {
-//     category: 'Programming Languages',
-//     skills: ['JavaScript', 'Python'],
-//   },
-//   {
-//     category: 'Front-end Development',
-//     skills: ['React', 'HTML', 'CSS'],
-//   },
-//   {
-//     category: 'Back-end Development',
-//     skills: ['Node.js', 'PHP', 'Django'],
-//   },
-//   {
-//     category: 'Databases',
-//     skills: ['MongoDB'],
-//   },
-//   {
-//     category: 'Operating Systems',
-//     skills: ['Mac', 'Windows', 'Linux'],
-//   },
-//   {
-//     category: 'Design Tools',
-//     skills: ['Adobe Photoshop', 'Adobe Illustrator', 'Adobe InDesign'],
-//   },
-//   {
-//     category: 'Other',
-//     skills: ['Management', 'Customer Service', 'Design'],
-//   },
-// ];
-
 // Express, VS Code, Github, OpenAI API, Gulp, WebPack, Nginx, PM2, Bootstrap, Jest, Supertest, JsonWebToken, Certbot
 
 const skills = [{
@@ -668,8 +637,8 @@ const skills = [{
 const aboutMe = {
   name: 'Jamie Boeing',
   title: 'Full-Stack Web Developer',
-  tag: 'As an accomplished and versatile professional with over a decade of experience, I bring a unique blend of skills in software engineering, graphic design, artistry, management, and communication to the table. My career journey reflects a passion for both people and technology, where meticulous attention to detail and boundless creativity shine as my defining attributes. I thrive on embracing complex challenges, fostering an environment of continuous learning, and nurturing personal growth.',
-  bio: 'My name is Jamie Boeing, I am a Full-Stack Web developer, Graphic Designer and Artist. I Would love to tell you more about myself'
+  tag: 'As an accomplished and versatile professional with over a decade of experience, I bring a unique blend of skills to Software Engineering, and Graphic Design.',
+  bio: 'Hello... My name is Jamie Boeing, a Full-Stack Web Developer, Graphic Designer, and Artist. With a long-standing career as an independent Artist, I have cultivated a love for teamwork and collaboration. My background in customer service and management has equipped me with valuable business experience. I am passionate about personal growth, community engagement, travel, and connecting with people. I am eager to become part of a supportive community in the Web Developer world and am excited to bring my diverse skills to contribute to new and exciting opportunities.'
 };
 const experienceData = [{
   id: 1,
@@ -702,14 +671,14 @@ const educationData = [{
   certification: 'Web Certification',
   university: 'John Wood Community College',
   graduationYear: 2016,
-  achievements: 'Academic Sorority, and Dean list student'
+  achievements: 'Academic Sorority, and Dean\'s list student'
 }, {
   id: 2,
   image: 'degree.png',
   degree: 'Web Development Bootcamp',
   university: 'General Assembly',
   graduationYear: 2023,
-  achievements: ['Completed many successful current projects', 'add stats and certs here']
+  achievements: ['Deployed and working current projects', 'Successfully completed 500+ hours of expert led instruction in Full Stack Web and Software Development', "Completed hands-on learning of the fundamentals and the industry's most in demand technologies. "]
 }
 // Add more education entries...
 ];
@@ -791,21 +760,23 @@ const AboutPage = () => {
   };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_5__["default"].container
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "About Me")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
-    className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_5__["default"].intro
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, _data__WEBPACK_IMPORTED_MODULE_7__.aboutMe.bio)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "About Me")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_5__["default"].contentWrapper
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
+    className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_5__["default"].leftColumn
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_5__["default"].portraitImg,
     src: "/img/portrait.png",
     alt: "portrait"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_5__["default"].contentWrapper
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_5__["default"].leftColumn
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
     className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_5__["default"].experience
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Experience_Experience__WEBPACK_IMPORTED_MODULE_1__["default"], null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Experience_Experience__WEBPACK_IMPORTED_MODULE_1__["default"], null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
     className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_5__["default"].rightColumn
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
+    className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_5__["default"].intro
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_5__["default"].aboutBio
+  }, _data__WEBPACK_IMPORTED_MODULE_7__.aboutMe.bio)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
     className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_5__["default"].skills
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Skills_Skills__WEBPACK_IMPORTED_MODULE_2__["default"], null)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
     className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_5__["default"].education
@@ -841,6 +812,24 @@ const AboutPage = () => {
 
 
 const HomePage = () => {
+  const [typingText, setTypingText] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('');
+  const fullText = _data__WEBPACK_IMPORTED_MODULE_5__.aboutMe.tag;
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    let charIndex = 0;
+    let typingTimer;
+    function typeText() {
+      if (charIndex < fullText.length) {
+        setTypingText(fullText.substring(0, charIndex + 1));
+        charIndex++;
+        typingTimer = setTimeout(typeText, 100); // Adjust the typing speed here
+      }
+    }
+
+    typeText();
+    return () => {
+      clearTimeout(typingTimer);
+    };
+  }, [fullText]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: _HomePage_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].container
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
@@ -851,7 +840,9 @@ const HomePage = () => {
     className: _HomePage_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].contentWrapper
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
     className: _HomePage_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].tag
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, _data__WEBPACK_IMPORTED_MODULE_5__.aboutMe.tag)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    className: typingText
+  }, typingText)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: _HomePage_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].imageCarousel
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Carousel_Carousel__WEBPACK_IMPORTED_MODULE_4__["default"], {
     images: _data__WEBPACK_IMPORTED_MODULE_5__.images
@@ -881,7 +872,7 @@ const HomePage = () => {
 
 const ProjectPage = () => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _ProjectPage_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].container
+    className: _ProjectPage_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].projectContainer
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "A Showcase of My Projects")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Projects_Projects__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], null));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ProjectPage);
@@ -1300,6 +1291,13 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* Footer.module.scss */
   display: flex;
   align-items: center;
 }
+.aFyFehz8aeZeiJnpnjpE img {
+  width: 35px;
+  height: auto;
+  padding: 8px; /* Reduce padding to bring the links closer to the center */
+  border-radius: 50%;
+  margin-right: 24px; /* Add margin to push the links to the right */
+}
 
 .eW9ij6nP8axm1anPkNAw {
   margin-bottom: 10px;
@@ -1349,17 +1347,9 @@ a:hover {
   transform: scale(1.9);
 }
 
-img {
-  width: 35px;
-  height: auto;
-  padding: 8px; /* Reduce padding to bring the links closer to the center */
-  border-radius: 50%;
-  margin-right: 24px; /* Add margin to push the links to the right */
-}
-
 p {
   margin: 0;
-}`, "",{"version":3,"sources":["webpack://./src/components/Footer/Footer.module.scss"],"names":[],"mappings":"AAAA,uBAAA;AAEA;EACE,aAAA;EACA,kBAAA;EACA,eAAA;EACA,SAAA;EACA,OAAA;EACA,QAAA;EACA,yBAAA;EACA,WAAA;EACA,WAAA;EACA,YAAA;EACA,aAAA;EACA,mBAAA;EACA,8BAAA,EAAA,iCAAA;AAAF;;AAGA;EACE,aAAA;EACA,mBAAA;AAAF;;AAGA;EACE,mBAAA;EACA,cAAA;EACA,mBAAA,EAAA,6DAAA;EACA,uBAAA,EAAA,+DAAA;AAAF;;AAGA;EACE,iBAAA;EACA,cAAA;EACA,eAAA;AAAF;;AAEA;EACE,aAAA;EACA,8BAAA;AACF;;AAEA;EACE,cAAA;EACA,qBAAA;EACA,0BAAA;EACA,kBAAA;EACA,aAAA;EACA,aAAA;AACF;;AAEA;EACE,WAAA;EACA,kBAAA;EACA,UAAA;EACA,WAAA;EACA,YAAA;EACA,aAAA;EACA,UAAA;EACA,gCAAA;EACA,WAAA;AACF;;AAEA;EACE,UAAA;AACF;;AAEA;;EAEE,qBAAA;AACF;;AAEA;EACE,WAAA;EACA,YAAA;EACA,YAAA,EAAA,2DAAA;EACA,kBAAA;EACA,kBAAA,EAAA,8CAAA;AACF;;AAEA;EACE,SAAA;AACF","sourcesContent":["/* Footer.module.scss */\n\n.footer {\n  padding: 15px;\n  text-align: center;\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  background-color: #1f1c30;\n  color: #fff;\n  width: 100%;\n  opacity: 70%;\n  display: flex;\n  align-items: center;\n  justify-content: space-between; /* Adjust to align to the right */\n}\n\n.linked {\n  display: flex;\n  align-items: center;\n}\n\n.contactInfo {\n  margin-bottom: 10px;\n  display: flexs;\n  align-items: center; /* Center the content vertically within the contactInfo div */\n  justify-content: center; /* Center the content horizontally within the contactInfo div */\n}\n\n.email {\n  font-size: 0.9rem;\n  color: #f7f6f5;\n  cursor: pointer;\n}\n.links {\n  display: flex;\n  justify-content: space-between;\n}\n\na {\n  margin: 0 10px;\n  display: inline-block;\n  transition: transform 0.3s;\n  position: relative;\n  padding: 20px;\n  margin: -20px;\n}\n\na::before {\n  content: '';\n  position: absolute;\n  top: -20px;\n  left: -20px;\n  right: -20px;\n  bottom: -20px;\n  opacity: 0;\n  transition: opacity 0.3s ease-in;\n  z-index: -1;\n}\n\na:hover::before {\n  opacity: 1;\n}\n\na:hover::before,\na:hover {\n  transform: scale(1.9);\n}\n\nimg {\n  width: 35px;\n  height: auto;\n  padding: 8px; /* Reduce padding to bring the links closer to the center */\n  border-radius: 50%;\n  margin-right: 24px; /* Add margin to push the links to the right */\n}\n\np {\n  margin: 0;\n}\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/Footer/Footer.module.scss"],"names":[],"mappings":"AAAA,uBAAA;AAEA;EACE,aAAA;EACA,kBAAA;EACA,eAAA;EACA,SAAA;EACA,OAAA;EACA,QAAA;EACA,yBAAA;EACA,WAAA;EACA,WAAA;EACA,YAAA;EACA,aAAA;EACA,mBAAA;EACA,8BAAA,EAAA,iCAAA;AAAF;;AAGA;EACE,aAAA;EACA,mBAAA;AAAF;AACE;EACE,WAAA;EACA,YAAA;EACA,YAAA,EAAA,2DAAA;EACA,kBAAA;EACA,kBAAA,EAAA,8CAAA;AACJ;;AAIA;EACE,mBAAA;EACA,cAAA;EACA,mBAAA,EAAA,6DAAA;EACA,uBAAA,EAAA,+DAAA;AADF;;AAIA;EACE,iBAAA;EACA,cAAA;EACA,eAAA;AADF;;AAGA;EACE,aAAA;EACA,8BAAA;AAAF;;AAGA;EACE,cAAA;EACA,qBAAA;EACA,0BAAA;EACA,kBAAA;EACA,aAAA;EACA,aAAA;AAAF;;AAGA;EACE,WAAA;EACA,kBAAA;EACA,UAAA;EACA,WAAA;EACA,YAAA;EACA,aAAA;EACA,UAAA;EACA,gCAAA;EACA,WAAA;AAAF;;AAGA;EACE,UAAA;AAAF;;AAGA;;EAEE,qBAAA;AAAF;;AAIA;EACE,SAAA;AADF","sourcesContent":["/* Footer.module.scss */\n\n.footer {\n  padding: 15px;\n  text-align: center;\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  background-color: #1f1c30;\n  color: #fff;\n  width: 100%;\n  opacity: 70%;\n  display: flex;\n  align-items: center;\n  justify-content: space-between; /* Adjust to align to the right */\n}\n\n.linked {\n  display: flex;\n  align-items: center;\n  img {\n    width: 35px;\n    height: auto;\n    padding: 8px; /* Reduce padding to bring the links closer to the center */\n    border-radius: 50%;\n    margin-right: 24px; /* Add margin to push the links to the right */\n  }\n  \n}\n\n.contactInfo {\n  margin-bottom: 10px;\n  display: flexs;\n  align-items: center; /* Center the content vertically within the contactInfo div */\n  justify-content: center; /* Center the content horizontally within the contactInfo div */\n}\n\n.email {\n  font-size: 0.9rem;\n  color: #f7f6f5;\n  cursor: pointer;\n}\n.links {\n  display: flex;\n  justify-content: space-between;\n}\n\na {\n  margin: 0 10px;\n  display: inline-block;\n  transition: transform 0.3s;\n  position: relative;\n  padding: 20px;\n  margin: -20px;\n}\n\na::before {\n  content: '';\n  position: absolute;\n  top: -20px;\n  left: -20px;\n  right: -20px;\n  bottom: -20px;\n  opacity: 0;\n  transition: opacity 0.3s ease-in;\n  z-index: -1;\n}\n\na:hover::before {\n  opacity: 1;\n}\n\na:hover::before,\na:hover {\n  transform: scale(1.9);\n}\n\n\np {\n  margin: 0;\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"footer": `ceS4EgxnSPoT9JOwqjeP`,
@@ -1607,25 +1597,25 @@ ___CSS_LOADER_EXPORT___.locals = {
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `.Brf_yR15dYo4NETg0JTU {
+___CSS_LOADER_EXPORT___.push([module.id, `.Ts3qWjeJKnasnLkvsufw {
   padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.Brf_yR15dYo4NETg0JTU .iR2y6namh21c3PIQrXun {
+.Ts3qWjeJKnasnLkvsufw .iR2y6namh21c3PIQrXun {
   margin-bottom: 1rem;
 }
-.Brf_yR15dYo4NETg0JTU .iR2y6namh21c3PIQrXun h3 {
+.Ts3qWjeJKnasnLkvsufw .iR2y6namh21c3PIQrXun h3 {
   font-size: 1.2rem;
   color: #1f1c30;
   margin-bottom: 10px;
 }
-.Brf_yR15dYo4NETg0JTU .iR2y6namh21c3PIQrXun .OGzEytfFmVnevKN7eEia {
+.Ts3qWjeJKnasnLkvsufw .iR2y6namh21c3PIQrXun .OGzEytfFmVnevKN7eEia {
   display: flex;
   flex-wrap: wrap;
 }
-.Brf_yR15dYo4NETg0JTU .iR2y6namh21c3PIQrXun .OGzEytfFmVnevKN7eEia .uI2pMXmkaNRvrDmKpVf4 {
+.Ts3qWjeJKnasnLkvsufw .iR2y6namh21c3PIQrXun .OGzEytfFmVnevKN7eEia .uI2pMXmkaNRvrDmKpVf4 {
   padding: 0.3rem;
   margin: 0.2rem;
   border-radius: 4px;
@@ -1633,23 +1623,23 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.Brf_yR15dYo4NETg0JTU {
   display: flex;
   align-items: center; /* Center the image and text vertically */
 }
-.Brf_yR15dYo4NETg0JTU .iR2y6namh21c3PIQrXun .OGzEytfFmVnevKN7eEia .uI2pMXmkaNRvrDmKpVf4 img.fUHE4gBT0lLidQwqH56K {
+.Ts3qWjeJKnasnLkvsufw .iR2y6namh21c3PIQrXun .OGzEytfFmVnevKN7eEia .uI2pMXmkaNRvrDmKpVf4 .fUHE4gBT0lLidQwqH56K {
   width: 70px; /* Set desired width for the images */
-  height: 7cap; /* Set  desired height for the images */
+  height: 6cap; /* Set  desired height for the images */
   -o-object-fit: cover;
   object-fit: cover; /* Maintain aspect ratio and cover the entire space */
   border-radius: 50%; /* Create a circular shape for the image */
   margin-right: 8px; /* Add spacing between the image and text */
   padding: auto;
 }
-.Brf_yR15dYo4NETg0JTU .iR2y6namh21c3PIQrXun .OGzEytfFmVnevKN7eEia .uI2pMXmkaNRvrDmKpVf4 span.jFnD1QfjiGUL11LaqyrA {
+.Ts3qWjeJKnasnLkvsufw .iR2y6namh21c3PIQrXun .OGzEytfFmVnevKN7eEia .uI2pMXmkaNRvrDmKpVf4 span.jFnD1QfjiGUL11LaqyrA {
   font-weight: bold;
   color: #1f1c30;
   font-size: 1rem;
-}`, "",{"version":3,"sources":["webpack://./src/components/Skills/Skills.module.scss"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;AACF;AACE;EACE,mBAAA;AACJ;AACI;EACE,iBAAA;EACA,cAAA;EACA,mBAAA;AACN;AAEI;EACE,aAAA;EACA,eAAA;AAAN;AAEM;EACE,eAAA;EACA,cAAA;EACA,kBAAA;EACA,iBAAA;EACA,aAAA;EACA,mBAAA,EAAA,yCAAA;AAAR;AAEQ;EACE,WAAA,EAAA,qCAAA;EACA,YAAA,EAAA,uCAAA;EACA,oBAAA;EACG,iBAAA,EAAA,qDAAA;EACH,kBAAA,EAAA,0CAAA;EACA,iBAAA,EAAA,2CAAA;EACA,aAAA;AAAV;AAEQ;EACE,iBAAA;EACA,cAAA;EACA,eAAA;AAAV","sourcesContent":[".container {\n  padding: 2rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n\n  .category {\n    margin-bottom: 1rem;\n\n    h3 {\n      font-size: 1.2rem;\n      color: #1f1c30;\n      margin-bottom: 10px;\n    }\n\n    .list {\n      display: flex;\n      flex-wrap: wrap;\n\n      .skill {\n        padding: 0.3rem;\n        margin: 0.2rem;\n        border-radius: 4px;\n        font-size: 0.9rem;\n        display: flex;\n        align-items: center; /* Center the image and text vertically */\n\n        img.skillImage {\n          width: 70px; /* Set desired width for the images */\n          height: 7cap; /* Set  desired height for the images */\n          -o-object-fit: cover;\n             object-fit: cover; /* Maintain aspect ratio and cover the entire space */\n          border-radius: 50%; /* Create a circular shape for the image */\n          margin-right: 8px; /* Add spacing between the image and text */\n          padding: auto;\n        }\n        span.skillName {\n          font-weight: bold;\n          color:#1f1c30;\n          font-size: 1rem;\n        }\n      }\n    }\n  }\n}\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/Skills/Skills.module.scss"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;AACF;AACE;EACE,mBAAA;AACJ;AACI;EACE,iBAAA;EACA,cAAA;EACA,mBAAA;AACN;AAEI;EACE,aAAA;EACA,eAAA;AAAN;AAEM;EACE,eAAA;EACA,cAAA;EACA,kBAAA;EACA,iBAAA;EACA,aAAA;EACA,mBAAA,EAAA,yCAAA;AAAR;AAEQ;EACE,WAAA,EAAA,qCAAA;EACA,YAAA,EAAA,uCAAA;EACA,oBAAA;EACG,iBAAA,EAAA,qDAAA;EACH,kBAAA,EAAA,0CAAA;EACA,iBAAA,EAAA,2CAAA;EACA,aAAA;AAAV;AAEQ;EACE,iBAAA;EACA,cAAA;EACA,eAAA;AAAV","sourcesContent":[".skillsContainer {\n  padding: 2rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n\n  .category {\n    margin-bottom: 1rem;\n\n    h3 {\n      font-size: 1.2rem;\n      color: #1f1c30;\n      margin-bottom: 10px;\n    }\n\n    .list {\n      display: flex;\n      flex-wrap: wrap;\n\n      .skill {\n        padding: 0.3rem;\n        margin: 0.2rem;\n        border-radius: 4px;\n        font-size: 0.9rem;\n        display: flex;\n        align-items: center; /* Center the image and text vertically */\n\n        .skillImage {\n          width: 70px; /* Set desired width for the images */\n          height: 6cap; /* Set  desired height for the images */\n          -o-object-fit: cover;\n             object-fit: cover; /* Maintain aspect ratio and cover the entire space */\n          border-radius: 50%; /* Create a circular shape for the image */\n          margin-right: 8px; /* Add spacing between the image and text */\n          padding: auto;\n        }\n        span.skillName {\n          font-weight: bold;\n          color:#1f1c30;\n          font-size: 1rem;\n        }\n      }\n    }\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
-	"container": `Brf_yR15dYo4NETg0JTU`,
+	"skillsContainer": `Ts3qWjeJKnasnLkvsufw`,
 	"category": `iR2y6namh21c3PIQrXun`,
 	"list": `OGzEytfFmVnevKN7eEia`,
 	"skill": `uI2pMXmkaNRvrDmKpVf4`,
@@ -1732,7 +1722,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.sQkdi7KRaUR4jafWumCI {
 .xouQhGwjP45KgPHzkj5V {
   text-align: center;
   margin-top: auto; /* Push the education section to the bottom */
-  margin-bottom: 20px;
+  margin-bottom: 70px;
 }
 
 .xv88iKLs2S2f6PKgaSn0 {
@@ -1752,10 +1742,26 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.sQkdi7KRaUR4jafWumCI {
   margin: 20px 0;
 }
 
-img.OD2vRxKFqxzq2NqPvMkQ {
+.ax88xrECsTAB4PpYfYAn {
+  padding: 2px;
+  margin: 2px;
   border-radius: 50%;
-  align-items: right;
-}`, "",{"version":3,"sources":["webpack://./src/pages/AboutPage/AboutPage.module.scss"],"names":[],"mappings":"AACA;EACE,aAAA;EACA,mBAAA;EACA,uBAAA,EAAA,qCAAA;EACA,8BAAA,EAAA,iCAAA;EACA,WAAA;EACA,aAAA;AAAF;;AAGA;EACE,UAAA,EAAA,qBAAA;EACA,kBAAA;AAAF;;AAGA;EACE,UAAA,EAAA,qBAAA;AAAF;;AAGA;EACE,aAAA;AAAF;;AAGA;EACE,kBAAA;EACA,gBAAA,EAAA,6CAAA;EACA,mBAAA;AAAF;;AAGA;EACE,WAAA;EACA,kBAAA;EACA,YAAA;EACA,kBAAA;EACA,eAAA;EACA,sCAAA;AAAF;;AAGA;EACE,yBAAA;AAAF;;AAGA;EACE,cAAA;AAAF;;AAGA;EACE,kBAAA;EACA,kBAAA;AAAF","sourcesContent":["\n.contentWrapper {\n  display: flex;\n  flex-direction: row;\n  align-items: flex-start; /* Align the left column at the top */\n  justify-content: space-between; /* Create space between columns */\n  width: 100%;\n  padding: 1rem;\n}\n\n.leftColumn {\n  width: 40%; /* Adjust as needed */\n  margin-right: 1rem;\n}\n\n.rightColumn {\n  width: 60%; /* Adjust as needed */\n}\n\n.skills {\n  padding: 1rem;\n}\n\n.education {\n  text-align: center;\n  margin-top: auto; /* Push the education section to the bottom */\n  margin-bottom: 20px;\n}\n\n.contactButton {\n  color: #fff;\n  padding: 10px 20px;\n  border: none;\n  border-radius: 5px;\n  cursor: pointer;\n  transition: background-color 0.3s ease;\n}\n\n.contactButton:hover {\n  background-color: #0056b3;\n}\n\n.contact p {\n  margin: 20px 0;\n}\n\nimg.portrait {\n  border-radius: 50%;\n  align-items: right;\n}"],"sourceRoot":""}]);
+  max-width: 375px;
+}
+
+.ByAae_BzjGr1_tJ9Maka {
+  max-width: 550px;
+  margin-right: 80px;
+}
+
+.TUH8MaEdqfmIVrr6BNQJ {
+  line-height: 1.5;
+  color: #1f1c30;
+  background-color: #f7f6f5;
+  border-radius: 6px;
+  padding: 22px;
+  margin: 22px;
+}`, "",{"version":3,"sources":["webpack://./src/pages/AboutPage/AboutPage.module.scss"],"names":[],"mappings":"AACA;EACE,aAAA;EACA,mBAAA;EACA,uBAAA,EAAA,qCAAA;EACA,8BAAA,EAAA,iCAAA;EACA,WAAA;EACA,aAAA;AAAF;;AAGA;EACE,UAAA,EAAA,qBAAA;EACA,kBAAA;AAAF;;AAGA;EACE,UAAA,EAAA,qBAAA;AAAF;;AAGA;EACE,aAAA;AAAF;;AAGA;EACE,kBAAA;EACA,gBAAA,EAAA,6CAAA;EACA,mBAAA;AAAF;;AAGA;EACE,WAAA;EACA,kBAAA;EACA,YAAA;EACA,kBAAA;EACA,eAAA;EACA,sCAAA;AAAF;;AAGA;EACE,yBAAA;AAAF;;AAGA;EACE,cAAA;AAAF;;AAGA;EACE,YAAA;EACA,WAAA;EACA,kBAAA;EACA,gBAAA;AAAF;;AAGA;EACE,gBAAA;EACA,kBAAA;AAAF;;AAGA;EACE,gBAAA;EACA,cAAA;EACA,yBAAA;EACA,kBAAA;EACA,aAAA;EACA,YAAA;AAAF","sourcesContent":["\n.contentWrapper {\n  display: flex;\n  flex-direction: row;\n  align-items: flex-start; /* Align the left column at the top */\n  justify-content: space-between; /* Create space between columns */\n  width: 100%;\n  padding: 1rem;\n}\n\n.leftColumn {\n  width: 40%; /* Adjust as needed */\n  margin-right: 1rem;\n}\n\n.rightColumn {\n  width: 60%; /* Adjust as needed */\n}\n\n.skills {\n  padding: 1rem;\n}\n\n.education {\n  text-align: center;\n  margin-top: auto; /* Push the education section to the bottom */\n  margin-bottom: 70px;\n}\n\n.contactButton {\n  color: #fff;\n  padding: 10px 20px;\n  border: none;\n  border-radius: 5px;\n  cursor: pointer;\n  transition: background-color 0.3s ease;\n}\n\n.contactButton:hover {\n  background-color: #0056b3;\n}\n\n.contact p {\n  margin: 20px 0;\n}\n\n.portraitImg {\n  padding: 2px;\n  margin: 2px;\n  border-radius: 50%;\n  max-width: 375px;\n}\n\n.intro {\n  max-width: 550px;\n  margin-right: 80px;\n}\n\n.aboutBio {\n  line-height: 1.5;\n  color: #1f1c30;\n  background-color: #f7f6f5;\n  border-radius: 6px;\n  padding: 22px;\n  margin: 22px;\n \n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"contentWrapper": `sQkdi7KRaUR4jafWumCI`,
@@ -1765,7 +1771,9 @@ ___CSS_LOADER_EXPORT___.locals = {
 	"education": `xouQhGwjP45KgPHzkj5V`,
 	"contactButton": `xv88iKLs2S2f6PKgaSn0`,
 	"contact": `lk2tEymXQqD96bCWLCJ7`,
-	"portrait": `OD2vRxKFqxzq2NqPvMkQ`
+	"portraitImg": `ax88xrECsTAB4PpYfYAn`,
+	"intro": `ByAae_BzjGr1_tJ9Maka`,
+	"aboutBio": `TUH8MaEdqfmIVrr6BNQJ`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1853,15 +1861,15 @@ ___CSS_LOADER_EXPORT___.locals = {
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `.dCiIJLuPUsiDFgb8ySNJ {
+___CSS_LOADER_EXPORT___.push([module.id, `.AM8fAzFyMxCKaEGdyJlL {
   padding: auto;
 }
-.dCiIJLuPUsiDFgb8ySNJ h1 {
+.AM8fAzFyMxCKaEGdyJlL h1 {
   display: inline-flex;
-}`, "",{"version":3,"sources":["webpack://./src/pages/ProjectPage/ProjectPage.module.scss"],"names":[],"mappings":"AAAA;EACI,aAAA;AACJ;AAAI;EACI,oBAAA;AAER","sourcesContent":[".contianer {\n    padding: auto;\n    h1 {\n        display: inline-flex;\n    }\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/pages/ProjectPage/ProjectPage.module.scss"],"names":[],"mappings":"AAAA;EACI,aAAA;AACJ;AAAI;EACI,oBAAA;AAER","sourcesContent":[".projectContianer {\n    padding: auto;\n    h1 {\n        display: inline-flex;\n    }\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
-	"contianer": `dCiIJLuPUsiDFgb8ySNJ`
+	"projectContianer": `AM8fAzFyMxCKaEGdyJlL`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -2899,4 +2907,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.fee4a7744e5d4d5c4b171552fc58ca65.js.map
+//# sourceMappingURL=App.29dbc0c7450bb7229c2e06f049b2395c.js.map

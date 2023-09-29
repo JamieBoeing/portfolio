@@ -1,4 +1,4 @@
-.container {
+.skillsContainer {
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -25,9 +25,9 @@
         display: flex;
         align-items: center; /* Center the image and text vertically */
 
-        img.skillImage {
+        .skillImage {
           width: 70px; /* Set desired width for the images */
-          height: 7cap; /* Set  desired height for the images */
+          height: 6cap; /* Set  desired height for the images */
           object-fit: cover; /* Maintain aspect ratio and cover the entire space */
           border-radius: 50%; /* Create a circular shape for the image */
           margin-right: 8px; /* Add spacing between the image and text */

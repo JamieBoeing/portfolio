@@ -19,6 +19,14 @@
 .linked {
   display: flex;
   align-items: center;
+  img {
+    width: 35px;
+    height: auto;
+    padding: 8px; /* Reduce padding to bring the links closer to the center */
+    border-radius: 50%;
+    margin-right: 24px; /* Add margin to push the links to the right */
+  }
+  
 }
 
 .contactInfo {
@@ -68,13 +76,6 @@ a:hover {
   transform: scale(1.9);
 }
 
-img {
-  width: 35px;
-  height: auto;
-  padding: 8px; /* Reduce padding to bring the links closer to the center */
-  border-radius: 50%;
-  margin-right: 24px; /* Add margin to push the links to the right */
-}
 
 p {
   margin: 0;

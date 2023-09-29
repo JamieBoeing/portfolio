@@ -5,7 +5,7 @@ import Footer from '../../components/Footer/Footer'
 
 const ProjectPage = () => {
     return (
-        <div className={styles.container}>
+        <div className={styles.projectContainer}>
             <header>
                 <h1>A Showcase of My Projects</h1>
             </header>

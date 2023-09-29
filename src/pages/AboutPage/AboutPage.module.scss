@@ -24,7 +24,7 @@
 .education {
   text-align: center;
   margin-top: auto; /* Push the education section to the bottom */
-  margin-bottom: 20px;
+  margin-bottom: 70px;
 }
 
 .contactButton {
@@ -44,7 +44,25 @@
   margin: 20px 0;
 }
 
-img.portraitImg {
+.portraitImg {
+  padding: 2px;
+  margin: 2px;
   border-radius: 50%;
+  max-width: 375px;
+  margin-left: 18px;
+}
 
+.intro {
+  max-width: 550px;
+  margin-right: 80px;
+}
+
+.aboutBio {
+  line-height: 1.5;
+  color: #1f1c30;
+  background-color: #f7f6f5;
+  border-radius: 6px;
+  padding: 22px;
+  margin: 22px;
+ 
 }

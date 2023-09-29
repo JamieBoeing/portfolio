@@ -4,7 +4,7 @@ import styles from './Skills.module.scss';
 
 const Skills = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.skillsContainer}>
       <h2>Skills</h2>
       {skills.map((category, index) => (
         <div className={styles.category} key={index}>
