@@ -16,6 +16,7 @@
     .list {
       display: flex;
       flex-wrap: wrap;
+      align-items: center;
 
       .skill {
         padding: 0.3rem;
@@ -23,19 +24,22 @@
         border-radius: 4px;
         font-size: 0.9rem;
         display: flex;
+        flex-direction: column; /* Display image and text in a column */
         align-items: center; /* Center the image and text vertically */
+        text-align: center; /* Center the text horizontally */
 
         .skillImage {
           width: 70px; /* Set desired width for the images */
-          height: 6cap; /* Set  desired height for the images */
+          height: 70px; /* Set desired height for the images */
           object-fit: cover; /* Maintain aspect ratio and cover the entire space */
           border-radius: 50%; /* Create a circular shape for the image */
-          margin-right: 8px; /* Add spacing between the image and text */
-          padding: auto;
+          margin-bottom: 8px; /* Add spacing between the image and text */
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+
         span.skillName {
           font-weight: bold;
-          color:#1f1c30;
+          color: #1f1c30;
           font-size: 1rem;
         }
       }

@@ -14,21 +14,23 @@
 }
 
 .rightColumn {
-  width: 40%; /* Adjust as needed */
+  width: 47%; /* Adjust as needed */
 }
 
 .skills {
   padding: 1rem;
-}
-
-.education {
   text-align: center;
   margin-top: auto; /* Push the education section to the bottom */
   margin-bottom: 70px;
 }
 
+.education {
+ padding: 1rem;
+}
+
 .experience {
   margin-top: 10px;
+  align-items: center;
 }
 
 .contactButton {

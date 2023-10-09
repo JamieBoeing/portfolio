@@ -81,7 +81,7 @@ const skills = [
     ],
   },
   {
-    category: 'Database',
+    category: 'Databases',
     skills: [
       {
         name: 'MongoDB',

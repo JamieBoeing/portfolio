@@ -2,19 +2,19 @@
 
 .experienceContainer {
   padding: 2rem;
+  padding-right: 4rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background-color: #1f1c30; /* Dark background color */
+  background-color: #60b4c4; /* Dark background color */
   border-radius: 10px;
   color: white;
-  text-align: left;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ 
 
   .workTitle {
     font-size: 47px;
     margin-bottom: 1rem;
     color: #572387;
-    text-align: left;
   }
 
   .experienceItem {
@@ -23,6 +23,9 @@
     width: 100%;
     max-width: 600px; /* Wider container for better spacing */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #161417;
+    border-radius: 10px;
+    
 
     .expTitle {
       font-size: 32px; /* Slightly larger heading */
@@ -40,20 +43,12 @@
       color: #555;
     }
 
-    .projectTile {
-      background-color: #333; /* Background color for project tiles */
-      padding: 1rem;
-      margin-top: 1rem; /* Spacing between project tiles */
-      border-radius: 5px;
-
-      p {
-        font-size: 1rem; /* Style for project name */
-      }
-    }
+    
 
     .expLink {
       color: aquamarine; /* Style for project links */
       text-decoration: none;
+      text-align: right;
 
       &:hover {
         text-decoration: underline;
@@ -65,4 +60,10 @@
 .experienceList {
   list-style-type: none;
   padding: auto;
+}
+
+.expoBulletList {
+  font-size: 20px;
+  list-style: disc; /* Use bullets as list-style */
+  margin-bottom: 10px;
 }

@@ -316,6 +316,8 @@ const Education = () => {
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../data */ "./src/data.js");
 /* harmony import */ var _Experience_module_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Experience.module.scss */ "./src/components/Experience/Experience.module.scss");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
+
 
 
 
@@ -336,15 +338,15 @@ const Experience = () => {
   }, entry.company), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
     className: _Experience_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].dates
   }, entry.date), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
-    className: _Experience_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].bulletList
+    className: _Experience_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].expBulletList
   }, entry.description.map((point, i) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
     key: i
   }, point))), entry.projects && entry.projects.length > 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "".concat(_Experience_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].projectTile, " ").concat(_Experience_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].expLink)
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, entry.projects.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-    href: entry.projects.link,
-    className: _Experience_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].link
-  }, entry.projects.name))))));
+    className: _Experience_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].expLink
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
+    to: "/projects",
+    className: _Experience_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].expLink
+  }, "View Projects"))))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Experience);
 
@@ -687,7 +689,7 @@ const skills = [{
     image: 'node-icon.png'
   }]
 }, {
-  category: 'Database',
+  category: 'Databases',
   skills: [{
     name: 'MongoDB',
     image: 'mongoDb-icon.png' // Image filename for React
@@ -848,10 +850,10 @@ const AboutPage = () => {
     src: "/img/portrait.png",
     alt: "portrait"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
-    className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].skills
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Skills_Skills__WEBPACK_IMPORTED_MODULE_3__["default"], null)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
     className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].education
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Education_Education__WEBPACK_IMPORTED_MODULE_4__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_5__["default"], null));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Education_Education__WEBPACK_IMPORTED_MODULE_4__["default"], null)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
+    className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].skills
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Skills_Skills__WEBPACK_IMPORTED_MODULE_3__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_5__["default"], null));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AboutPage);
 
@@ -1111,10 +1113,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* About.module.scss */
 }
 
 .txhFcFuRgJtiRy4NFblA {
-  font-size: 30px;
+  font-size: 20px;
   list-style: disc; /* Use bullets as list-style */
   margin-bottom: 10px;
-}`, "",{"version":3,"sources":["webpack://./src/components/About/About.module.scss"],"names":[],"mappings":"AAAA,sBAAA;AAEA;EACI,yBAAA,EAAA,0BAAA;EACA,aAAA;EACA,mBAAA;EACA,YAAA;AAAJ;;AAGE;EACE,eAAA;EACA,mBAAA;EACA,cAAA;AAAJ;;AAGE;EACE,eAAA;EACA,mBAAA;AAAJ;;AAGE;EACE,eAAA;AAAJ;;AAEE;EACE,eAAA;EACA,gBAAA,EAAA,8BAAA;EAEA,mBAAA;AAAJ","sourcesContent":["/* About.module.scss */\n\n.intro {\n    background-color: #1f1c30; /* Dark background color */\n    padding: 20px;\n    border-radius: 10px;\n    color: white;\n  }\n  \n  .title {\n    font-size: 47px;\n    margin-bottom: 10px;\n    color: #572387;\n  }\n  \n  .tag {\n    font-size: 32px;\n    margin-bottom: 20px;\n  }\n  \n  .bio {\n    font-size: 25px;\n  }\n  .bioBulletPoint {\n    font-size: 30px;\n    list-style: disc; /* Use bullets as list-style */\n   \n    margin-bottom: 10px;\n  }"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/About/About.module.scss"],"names":[],"mappings":"AAAA,sBAAA;AAEA;EACI,yBAAA,EAAA,0BAAA;EACA,aAAA;EACA,mBAAA;EACA,YAAA;AAAJ;;AAGE;EACE,eAAA;EACA,mBAAA;EACA,cAAA;AAAJ;;AAGE;EACE,eAAA;EACA,mBAAA;AAAJ;;AAGE;EACE,eAAA;AAAJ;;AAEE;EACE,eAAA;EACA,gBAAA,EAAA,8BAAA;EACA,mBAAA;AACJ","sourcesContent":["/* About.module.scss */\n\n.intro {\n    background-color: #1f1c30; /* Dark background color */\n    padding: 20px;\n    border-radius: 10px;\n    color: white;\n  }\n  \n  .title {\n    font-size: 47px;\n    margin-bottom: 10px;\n    color: #572387;\n  }\n  \n  .tag {\n    font-size: 32px;\n    margin-bottom: 20px;\n  }\n  \n  .bio {\n    font-size: 25px;\n  }\n  .bioBulletPoint {\n    font-size: 20px;\n    list-style: disc; /* Use bullets as list-style */\n    margin-bottom: 10px;\n  }"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"intro": `pyRgnPakkZDPVpT1PNzu`,
@@ -1348,19 +1350,18 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 ___CSS_LOADER_EXPORT___.push([module.id, `/* Experience.module.scss */
 .l_wko_W3JfW1JmNK3RIC {
   padding: 2rem;
+  padding-right: 4rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background-color: #1f1c30; /* Dark background color */
+  background-color: #60b4c4; /* Dark background color */
   border-radius: 10px;
   color: white;
-  text-align: left;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .l_wko_W3JfW1JmNK3RIC .Sid5nAtMp7iNV7VOoYKq {
   font-size: 47px;
   margin-bottom: 1rem;
   color: #572387;
-  text-align: left;
 }
 .l_wko_W3JfW1JmNK3RIC .LGNR_UfT0Xr8tEQq4cbg {
   padding: 1rem;
@@ -1368,6 +1369,8 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* Experience.module.scss */
   width: 100%;
   max-width: 600px; /* Wider container for better spacing */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #161417;
+  border-radius: 10px;
 }
 .l_wko_W3JfW1JmNK3RIC .LGNR_UfT0Xr8tEQq4cbg .dDwG9q1KZw95_O57kZJS {
   font-size: 32px; /* Slightly larger heading */
@@ -1382,18 +1385,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* Experience.module.scss */
   font-size: 1rem;
   color: #555;
 }
-.l_wko_W3JfW1JmNK3RIC .LGNR_UfT0Xr8tEQq4cbg .JuGqnr4AGGqT7Na9FQwS {
-  background-color: #333; /* Background color for project tiles */
-  padding: 1rem;
-  margin-top: 1rem; /* Spacing between project tiles */
-  border-radius: 5px;
-}
-.l_wko_W3JfW1JmNK3RIC .LGNR_UfT0Xr8tEQq4cbg .JuGqnr4AGGqT7Na9FQwS p {
-  font-size: 1rem; /* Style for project name */
-}
 .l_wko_W3JfW1JmNK3RIC .LGNR_UfT0Xr8tEQq4cbg .qvwdY9A9xMTOqtHoneou {
   color: aquamarine; /* Style for project links */
   text-decoration: none;
+  text-align: right;
 }
 .l_wko_W3JfW1JmNK3RIC .LGNR_UfT0Xr8tEQq4cbg .qvwdY9A9xMTOqtHoneou:hover {
   text-decoration: underline;
@@ -1402,7 +1397,13 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* Experience.module.scss */
 .HzTxMFSkng6tH6DhGtSe {
   list-style-type: none;
   padding: auto;
-}`, "",{"version":3,"sources":["webpack://./src/components/Experience/Experience.module.scss"],"names":[],"mappings":"AAAA,2BAAA;AAEA;EACE,aAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,yBAAA,EAAA,0BAAA;EACA,mBAAA;EACA,YAAA;EACA,gBAAA;AAAF;AAEE;EACE,eAAA;EACA,mBAAA;EACA,cAAA;EACA,gBAAA;AAAJ;AAGE;EACE,aAAA;EACA,mBAAA,EAAA,wCAAA;EACA,WAAA;EACA,gBAAA,EAAA,uCAAA;EACA,wCAAA;AADJ;AAGI;EACE,eAAA,EAAA,4BAAA;EACA,mBAAA,EAAA,iCAAA;EACA,cAAA;AADN;AAII;EACE,iBAAA,EAAA,qCAAA;EACA,mBAAA,EAAA,+BAAA;AAFN;AAKI;EACE,eAAA;EACA,WAAA;AAHN;AAMI;EACE,sBAAA,EAAA,uCAAA;EACA,aAAA;EACA,gBAAA,EAAA,kCAAA;EACA,kBAAA;AAJN;AAMM;EACE,eAAA,EAAA,2BAAA;AAJR;AAQI;EACE,iBAAA,EAAA,4BAAA;EACA,qBAAA;AANN;AAQM;EACE,0BAAA;AANR;;AAYA;EACE,qBAAA;EACA,aAAA;AATF","sourcesContent":["/* Experience.module.scss */\n\n.experienceContainer {\n  padding: 2rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  background-color: #1f1c30; /* Dark background color */\n  border-radius: 10px;\n  color: white;\n  text-align: left;\n\n  .workTitle {\n    font-size: 47px;\n    margin-bottom: 1rem;\n    color: #572387;\n    text-align: left;\n  }\n\n  .experienceItem {\n    padding: 1rem;\n    margin-bottom: 2rem; /* Increase margin to separate entries */\n    width: 100%;\n    max-width: 600px; /* Wider container for better spacing */\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n\n    .expTitle {\n      font-size: 32px; /* Slightly larger heading */\n      margin-bottom: 1rem; /* More spacing below the title */\n      color: #60b4c4;\n    }\n\n    .company {\n      font-size: 1.1rem; /* Larger font size for description */\n      margin-bottom: 1rem; /* More spacing between lines */\n    }\n\n    .dates {\n      font-size: 1rem;\n      color: #555;\n    }\n\n    .projectTile {\n      background-color: #333; /* Background color for project tiles */\n      padding: 1rem;\n      margin-top: 1rem; /* Spacing between project tiles */\n      border-radius: 5px;\n\n      p {\n        font-size: 1rem; /* Style for project name */\n      }\n    }\n\n    .expLink {\n      color: aquamarine; /* Style for project links */\n      text-decoration: none;\n\n      &:hover {\n        text-decoration: underline;\n      }\n    }\n  }\n}\n\n.experienceList {\n  list-style-type: none;\n  padding: auto;\n}\n"],"sourceRoot":""}]);
+}
+
+.L2Zve5fH1iGi6d6UN0bP {
+  font-size: 20px;
+  list-style: disc; /* Use bullets as list-style */
+  margin-bottom: 10px;
+}`, "",{"version":3,"sources":["webpack://./src/components/Experience/Experience.module.scss"],"names":[],"mappings":"AAAA,2BAAA;AAEA;EACE,aAAA;EACA,mBAAA;EACA,aAAA;EACA,sBAAA;EACA,yBAAA,EAAA,0BAAA;EACA,mBAAA;EACA,YAAA;EACA,wCAAA;AAAF;AAGE;EACE,eAAA;EACA,mBAAA;EACA,cAAA;AADJ;AAIE;EACE,aAAA;EACA,mBAAA,EAAA,wCAAA;EACA,WAAA;EACA,gBAAA,EAAA,uCAAA;EACA,wCAAA;EACA,yBAAA;EACA,mBAAA;AAFJ;AAKI;EACE,eAAA,EAAA,4BAAA;EACA,mBAAA,EAAA,iCAAA;EACA,cAAA;AAHN;AAMI;EACE,iBAAA,EAAA,qCAAA;EACA,mBAAA,EAAA,+BAAA;AAJN;AAOI;EACE,eAAA;EACA,WAAA;AALN;AAUI;EACE,iBAAA,EAAA,4BAAA;EACA,qBAAA;EACA,iBAAA;AARN;AAUM;EACE,0BAAA;AARR;;AAcA;EACE,qBAAA;EACA,aAAA;AAXF;;AAcA;EACE,eAAA;EACA,gBAAA,EAAA,8BAAA;EACA,mBAAA;AAXF","sourcesContent":["/* Experience.module.scss */\n\n.experienceContainer {\n  padding: 2rem;\n  padding-right: 4rem;\n  display: flex;\n  flex-direction: column;\n  background-color: #60b4c4; /* Dark background color */\n  border-radius: 10px;\n  color: white;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n \n\n  .workTitle {\n    font-size: 47px;\n    margin-bottom: 1rem;\n    color: #572387;\n  }\n\n  .experienceItem {\n    padding: 1rem;\n    margin-bottom: 2rem; /* Increase margin to separate entries */\n    width: 100%;\n    max-width: 600px; /* Wider container for better spacing */\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n    background-color: #161417;\n    border-radius: 10px;\n    \n\n    .expTitle {\n      font-size: 32px; /* Slightly larger heading */\n      margin-bottom: 1rem; /* More spacing below the title */\n      color: #60b4c4;\n    }\n\n    .company {\n      font-size: 1.1rem; /* Larger font size for description */\n      margin-bottom: 1rem; /* More spacing between lines */\n    }\n\n    .dates {\n      font-size: 1rem;\n      color: #555;\n    }\n\n    \n\n    .expLink {\n      color: aquamarine; /* Style for project links */\n      text-decoration: none;\n      text-align: right;\n\n      &:hover {\n        text-decoration: underline;\n      }\n    }\n  }\n}\n\n.experienceList {\n  list-style-type: none;\n  padding: auto;\n}\n\n.expoBulletList {\n  font-size: 20px;\n  list-style: disc; /* Use bullets as list-style */\n  margin-bottom: 10px;\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"experienceContainer": `l_wko_W3JfW1JmNK3RIC`,
@@ -1411,9 +1412,9 @@ ___CSS_LOADER_EXPORT___.locals = {
 	"expTitle": `dDwG9q1KZw95_O57kZJS`,
 	"company": `VlMpCrXd7i_eF88rN96k`,
 	"dates": `_8fLtJdD6OAp2alkiw82p`,
-	"projectTile": `JuGqnr4AGGqT7Na9FQwS`,
 	"expLink": `qvwdY9A9xMTOqtHoneou`,
-	"experienceList": `HzTxMFSkng6tH6DhGtSe`
+	"experienceList": `HzTxMFSkng6tH6DhGtSe`,
+	"expoBulletList": `L2Zve5fH1iGi6d6UN0bP`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1626,6 +1627,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* Projects.module.scss */
   gap: 20px;
   padding: 2rem;
   justify-items: center;
+  text-align: left;
 }
 
 .WL_csyXcz9fuX7NR7iMV {
@@ -1681,7 +1683,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* Projects.module.scss */
 }
 .WL_csyXcz9fuX7NR7iMV .zGbJvQU7P0x9do1B25R5 a:hover {
   color: #301b5e;
-}`, "",{"version":3,"sources":["webpack://./src/components/Projects/Projects.module.scss"],"names":[],"mappings":"AAAA,yBAAA;AAEA;EACE,aAAA;EACA,2DAAA;EACA,SAAA;EACA,aAAA;EACA,qBAAA;AAAF;;AAGA;EACE,sBAAA;EACA,kBAAA;EACA,aAAA;EACA,wCAAA;EACA,WAAA;EACA,gBAAA;EACA,2CAAA;AAAF;AAEE;EACE,sBAAA,EAAA,qBAAA;EACA,wCAAA,EAAA,mCAAA;AAAJ;AAEE;EACE,iBAAA;EACA,mBAAA;EACA,kBAAA,EAAA,4BAAA;AAAJ;AAGE;EACE,eAAA;EACA,YAAA;EACA,mBAAA;EACA,kBAAA;EACA,wCAAA;AADJ;AAIE;EACE,kBAAA;EACA,qBAAA;EACA,uBAAA;EACA,kBAAA;EACA,aAAA;EACA,qBAAA;EACA,gBAAA;EACA,uBAAA;AAFJ;AAKE;EACE,iBAAA;EACA,WAAA;EACA,qBAAA;AAHJ;AAME;EACE,aAAA;EACA,6BAAA;AAJJ;AAMI;EACE,eAAA;EACA,cAAA;EACA,qBAAA;EACA,sBAAA;EACA,eAAA;AAJN;AAMM;EACE,cAAA;AAJR","sourcesContent":["/* Projects.module.scss */\n\n.container {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\n  gap: 20px;\n  padding: 2rem;\n  justify-items: center;\n}\n\n.item {\n  border: 1px solid #ccc;\n  border-radius: 8px;\n  padding: 1rem;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n  width: 100%;\n  max-width: 400px;\n  transition: transform 0.2s, box-shadow 0.2s;\n\n  &:hover {\n    transform: scale(1.05); /* Enlarge the item */\n    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a box shadow for elevation */\n  }\n  h3 {\n    font-size: 1.5rem;\n    margin-bottom: 1rem;\n    text-align: center; /* Center-align the titles */\n  }\n\n  img {\n    max-width: 100%;\n    height: auto;\n    margin-bottom: 1rem;\n    border-radius: 8px;\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n  }\n\n  p {\n    font-size: 1.75rem;\n    margin-bottom: 0.5rem;\n    background-color: white;\n    border-radius: 8px;\n    padding: 4rem;\n    white-space: pre-wrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n\n  .technologies {\n    font-size: 0.9rem;\n    color: #555;\n    margin-bottom: 0.5rem;\n  }\n\n  .links {\n    display: flex;\n    justify-content: space-around;\n\n    a {\n      font-size: 1rem;\n      color: #60b4c4;\n      text-decoration: none;\n      transition: color 0.2s;\n      cursor: pointer;\n\n      &:hover {\n        color: #301b5e;\n      }\n    }\n  }\n}\n\n\n\n\n\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/Projects/Projects.module.scss"],"names":[],"mappings":"AAAA,yBAAA;AAEA;EACE,aAAA;EACA,2DAAA;EACA,SAAA;EACA,aAAA;EACA,qBAAA;EACA,gBAAA;AAAF;;AAGA;EACE,sBAAA;EACA,kBAAA;EACA,aAAA;EACA,wCAAA;EACA,WAAA;EACA,gBAAA;EACA,2CAAA;AAAF;AAEE;EACE,sBAAA,EAAA,qBAAA;EACA,wCAAA,EAAA,mCAAA;AAAJ;AAEE;EACE,iBAAA;EACA,mBAAA;EACA,kBAAA,EAAA,4BAAA;AAAJ;AAGE;EACE,eAAA;EACA,YAAA;EACA,mBAAA;EACA,kBAAA;EACA,wCAAA;AADJ;AAIE;EACE,kBAAA;EACA,qBAAA;EACA,uBAAA;EACA,kBAAA;EACA,aAAA;EACA,qBAAA;EACA,gBAAA;EACA,uBAAA;AAFJ;AAKE;EACE,iBAAA;EACA,WAAA;EACA,qBAAA;AAHJ;AAME;EACE,aAAA;EACA,6BAAA;AAJJ;AAMI;EACE,eAAA;EACA,cAAA;EACA,qBAAA;EACA,sBAAA;EACA,eAAA;AAJN;AAMM;EACE,cAAA;AAJR","sourcesContent":["/* Projects.module.scss */\n\n.container {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\n  gap: 20px;\n  padding: 2rem;\n  justify-items: center;\n  text-align: left;\n}\n\n.item {\n  border: 1px solid #ccc;\n  border-radius: 8px;\n  padding: 1rem;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n  width: 100%;\n  max-width: 400px;\n  transition: transform 0.2s, box-shadow 0.2s;\n\n  &:hover {\n    transform: scale(1.05); /* Enlarge the item */\n    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a box shadow for elevation */\n  }\n  h3 {\n    font-size: 1.5rem;\n    margin-bottom: 1rem;\n    text-align: center; /* Center-align the titles */\n  }\n\n  img {\n    max-width: 100%;\n    height: auto;\n    margin-bottom: 1rem;\n    border-radius: 8px;\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n  }\n\n  p {\n    font-size: 1.75rem;\n    margin-bottom: 0.5rem;\n    background-color: white;\n    border-radius: 8px;\n    padding: 4rem;\n    white-space: pre-wrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n\n  .technologies {\n    font-size: 0.9rem;\n    color: #555;\n    margin-bottom: 0.5rem;\n  }\n\n  .links {\n    display: flex;\n    justify-content: space-around;\n\n    a {\n      font-size: 1rem;\n      color: #60b4c4;\n      text-decoration: none;\n      transition: color 0.2s;\n      cursor: pointer;\n\n      &:hover {\n        color: #301b5e;\n      }\n    }\n  }\n}\n\n\n\n\n\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"container": `Re9b4dg0VO9C3H0aAuBl`,
@@ -1761,6 +1763,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.Ts3qWjeJKnasnLkvsufw {
 .Ts3qWjeJKnasnLkvsufw .iR2y6namh21c3PIQrXun .OGzEytfFmVnevKN7eEia {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 .Ts3qWjeJKnasnLkvsufw .iR2y6namh21c3PIQrXun .OGzEytfFmVnevKN7eEia .uI2pMXmkaNRvrDmKpVf4 {
   padding: 0.3rem;
@@ -1768,22 +1771,24 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.Ts3qWjeJKnasnLkvsufw {
   border-radius: 4px;
   font-size: 0.9rem;
   display: flex;
+  flex-direction: column; /* Display image and text in a column */
   align-items: center; /* Center the image and text vertically */
+  text-align: center; /* Center the text horizontally */
 }
 .Ts3qWjeJKnasnLkvsufw .iR2y6namh21c3PIQrXun .OGzEytfFmVnevKN7eEia .uI2pMXmkaNRvrDmKpVf4 .fUHE4gBT0lLidQwqH56K {
   width: 70px; /* Set desired width for the images */
-  height: 6cap; /* Set  desired height for the images */
+  height: 70px; /* Set desired height for the images */
   -o-object-fit: cover;
   object-fit: cover; /* Maintain aspect ratio and cover the entire space */
   border-radius: 50%; /* Create a circular shape for the image */
-  margin-right: 8px; /* Add spacing between the image and text */
-  padding: auto;
+  margin-bottom: 8px; /* Add spacing between the image and text */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .Ts3qWjeJKnasnLkvsufw .iR2y6namh21c3PIQrXun .OGzEytfFmVnevKN7eEia .uI2pMXmkaNRvrDmKpVf4 span.jFnD1QfjiGUL11LaqyrA {
   font-weight: bold;
   color: #1f1c30;
   font-size: 1rem;
-}`, "",{"version":3,"sources":["webpack://./src/components/Skills/Skills.module.scss"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;AACF;AACE;EACE,mBAAA;AACJ;AACI;EACE,iBAAA;EACA,cAAA;EACA,mBAAA;AACN;AAEI;EACE,aAAA;EACA,eAAA;AAAN;AAEM;EACE,eAAA;EACA,cAAA;EACA,kBAAA;EACA,iBAAA;EACA,aAAA;EACA,mBAAA,EAAA,yCAAA;AAAR;AAEQ;EACE,WAAA,EAAA,qCAAA;EACA,YAAA,EAAA,uCAAA;EACA,oBAAA;EACG,iBAAA,EAAA,qDAAA;EACH,kBAAA,EAAA,0CAAA;EACA,iBAAA,EAAA,2CAAA;EACA,aAAA;AAAV;AAEQ;EACE,iBAAA;EACA,cAAA;EACA,eAAA;AAAV","sourcesContent":[".skillsContainer {\n  padding: 2rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n\n  .category {\n    margin-bottom: 1rem;\n\n    h3 {\n      font-size: 1.2rem;\n      color: #1f1c30;\n      margin-bottom: 10px;\n    }\n\n    .list {\n      display: flex;\n      flex-wrap: wrap;\n\n      .skill {\n        padding: 0.3rem;\n        margin: 0.2rem;\n        border-radius: 4px;\n        font-size: 0.9rem;\n        display: flex;\n        align-items: center; /* Center the image and text vertically */\n\n        .skillImage {\n          width: 70px; /* Set desired width for the images */\n          height: 6cap; /* Set  desired height for the images */\n          -o-object-fit: cover;\n             object-fit: cover; /* Maintain aspect ratio and cover the entire space */\n          border-radius: 50%; /* Create a circular shape for the image */\n          margin-right: 8px; /* Add spacing between the image and text */\n          padding: auto;\n        }\n        span.skillName {\n          font-weight: bold;\n          color:#1f1c30;\n          font-size: 1rem;\n        }\n      }\n    }\n  }\n}\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/Skills/Skills.module.scss"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;AACF;AACE;EACE,mBAAA;AACJ;AACI;EACE,iBAAA;EACA,cAAA;EACA,mBAAA;AACN;AAEI;EACE,aAAA;EACA,eAAA;EACA,mBAAA;AAAN;AAEM;EACE,eAAA;EACA,cAAA;EACA,kBAAA;EACA,iBAAA;EACA,aAAA;EACA,sBAAA,EAAA,uCAAA;EACA,mBAAA,EAAA,yCAAA;EACA,kBAAA,EAAA,iCAAA;AAAR;AAEQ;EACE,WAAA,EAAA,qCAAA;EACA,YAAA,EAAA,sCAAA;EACA,oBAAA;EACG,iBAAA,EAAA,qDAAA;EACH,kBAAA,EAAA,0CAAA;EACA,kBAAA,EAAA,2CAAA;EACA,wCAAA;AAAV;AAGQ;EACE,iBAAA;EACA,cAAA;EACA,eAAA;AADV","sourcesContent":[".skillsContainer {\n  padding: 2rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n\n  .category {\n    margin-bottom: 1rem;\n\n    h3 {\n      font-size: 1.2rem;\n      color: #1f1c30;\n      margin-bottom: 10px;\n    }\n\n    .list {\n      display: flex;\n      flex-wrap: wrap;\n      align-items: center;\n\n      .skill {\n        padding: 0.3rem;\n        margin: 0.2rem;\n        border-radius: 4px;\n        font-size: 0.9rem;\n        display: flex;\n        flex-direction: column; /* Display image and text in a column */\n        align-items: center; /* Center the image and text vertically */\n        text-align: center; /* Center the text horizontally */\n\n        .skillImage {\n          width: 70px; /* Set desired width for the images */\n          height: 70px; /* Set desired height for the images */\n          -o-object-fit: cover;\n             object-fit: cover; /* Maintain aspect ratio and cover the entire space */\n          border-radius: 50%; /* Create a circular shape for the image */\n          margin-bottom: 8px; /* Add spacing between the image and text */\n          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n        }\n\n        span.skillName {\n          font-weight: bold;\n          color: #1f1c30;\n          font-size: 1rem;\n        }\n      }\n    }\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"skillsContainer": `Ts3qWjeJKnasnLkvsufw`,
@@ -1859,21 +1864,23 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.sQkdi7KRaUR4jafWumCI {
 }
 
 .K2fI0tJ2EKl7u0ykMEHz {
-  width: 40%; /* Adjust as needed */
+  width: 47%; /* Adjust as needed */
 }
 
 .TQtoyLM4BCcepFioP8zK {
   padding: 1rem;
-}
-
-.xouQhGwjP45KgPHzkj5V {
   text-align: center;
   margin-top: auto; /* Push the education section to the bottom */
   margin-bottom: 70px;
 }
 
+.xouQhGwjP45KgPHzkj5V {
+  padding: 1rem;
+}
+
 .YnZPhvUb5L7KpILX4RrA {
   margin-top: 10px;
+  align-items: center;
 }
 
 .xv88iKLs2S2f6PKgaSn0 {
@@ -1916,7 +1923,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.sQkdi7KRaUR4jafWumCI {
   padding: 22px;
   margin: 22px;
   text-align: center;
-}`, "",{"version":3,"sources":["webpack://./src/pages/AboutPage/AboutPage.module.scss"],"names":[],"mappings":"AACA;EACE,aAAA;EACA,mBAAA;EACA,uBAAA,EAAA,qCAAA;EACA,8BAAA,EAAA,iCAAA;EACA,WAAA;EACA,aAAA;AAAF;;AAGA;EACE,UAAA,EAAA,qBAAA;EACA,kBAAA;AAAF;;AAGA;EACE,UAAA,EAAA,qBAAA;AAAF;;AAGA;EACE,aAAA;AAAF;;AAGA;EACE,kBAAA;EACA,gBAAA,EAAA,6CAAA;EACA,mBAAA;AAAF;;AAGA;EACE,gBAAA;AAAF;;AAGA;EACE,WAAA;EACA,kBAAA;EACA,YAAA;EACA,kBAAA;EACA,eAAA;EACA,sCAAA;AAAF;;AAGA;EACE,yBAAA;AAAF;;AAGA;EACE,cAAA;AAAF;;AAGA;EACE,YAAA;EACA,WAAA;EACA,kBAAA;EACA,8BAAA;EACA,gBAAA;EACA,iBAAA;EACA,kBAAA;EACA,yBAAA;AAAF;;AAGA;EACE,gBAAA;AAAF;;AAIA;EACE,gBAAA;EACA,cAAA;EACA,yBAAA;EACA,kBAAA;EACA,aAAA;EACA,YAAA;EACA,kBAAA;AADF","sourcesContent":["\n.contentWrapper {\n  display: flex;\n  flex-direction: row;\n  align-items: flex-start; /* Align the left column at the top */\n  justify-content: space-between; /* Create space between columns */\n  width: 100%;\n  padding: 1rem;\n}\n\n.leftColumn {\n  width: 60%; /* Adjust as needed */\n  margin-right: 1rem;\n}\n\n.rightColumn {\n  width: 40%; /* Adjust as needed */\n}\n\n.skills {\n  padding: 1rem;\n}\n\n.education {\n  text-align: center;\n  margin-top: auto; /* Push the education section to the bottom */\n  margin-bottom: 70px;\n}\n\n.experience {\n  margin-top: 10px;\n}\n\n.contactButton {\n  color: #fff;\n  padding: 10px 20px;\n  border: none;\n  border-radius: 5px;\n  cursor: pointer;\n  transition: background-color 0.3s ease;\n}\n\n.contactButton:hover {\n  background-color: #60b4c4;\n}\n\n.contact p {\n  margin: 20px 0;\n}\n\n.portraitImg {\n  padding: 4px;\n  margin: 2px;\n  border-radius: 6px;\n  border: solid #161417 .175rem;\n  max-width: 380px;\n  margin-left: 45px;\n  margin-right: 25px;\n  background-color: #60b4c4;\n}\n\n.intro {\n  max-width: 550px;\n  \n}\n\n.aboutBio {\n  line-height: 1.5;\n  color: #2c3437;\n  background-color: #f7f6f5;\n  border-radius: 6px;\n  padding: 22px;\n  margin: 22px;\n  text-align: center;\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/pages/AboutPage/AboutPage.module.scss"],"names":[],"mappings":"AACA;EACE,aAAA;EACA,mBAAA;EACA,uBAAA,EAAA,qCAAA;EACA,8BAAA,EAAA,iCAAA;EACA,WAAA;EACA,aAAA;AAAF;;AAGA;EACE,UAAA,EAAA,qBAAA;EACA,kBAAA;AAAF;;AAGA;EACE,UAAA,EAAA,qBAAA;AAAF;;AAGA;EACE,aAAA;EACA,kBAAA;EACA,gBAAA,EAAA,6CAAA;EACA,mBAAA;AAAF;;AAGA;EACC,aAAA;AAAD;;AAGA;EACE,gBAAA;EACA,mBAAA;AAAF;;AAGA;EACE,WAAA;EACA,kBAAA;EACA,YAAA;EACA,kBAAA;EACA,eAAA;EACA,sCAAA;AAAF;;AAGA;EACE,yBAAA;AAAF;;AAGA;EACE,cAAA;AAAF;;AAGA;EACE,YAAA;EACA,WAAA;EACA,kBAAA;EACA,8BAAA;EACA,gBAAA;EACA,iBAAA;EACA,kBAAA;EACA,yBAAA;AAAF;;AAGA;EACE,gBAAA;AAAF;;AAIA;EACE,gBAAA;EACA,cAAA;EACA,yBAAA;EACA,kBAAA;EACA,aAAA;EACA,YAAA;EACA,kBAAA;AADF","sourcesContent":["\n.contentWrapper {\n  display: flex;\n  flex-direction: row;\n  align-items: flex-start; /* Align the left column at the top */\n  justify-content: space-between; /* Create space between columns */\n  width: 100%;\n  padding: 1rem;\n}\n\n.leftColumn {\n  width: 60%; /* Adjust as needed */\n  margin-right: 1rem;\n}\n\n.rightColumn {\n  width: 47%; /* Adjust as needed */\n}\n\n.skills {\n  padding: 1rem;\n  text-align: center;\n  margin-top: auto; /* Push the education section to the bottom */\n  margin-bottom: 70px;\n}\n\n.education {\n padding: 1rem;\n}\n\n.experience {\n  margin-top: 10px;\n  align-items: center;\n}\n\n.contactButton {\n  color: #fff;\n  padding: 10px 20px;\n  border: none;\n  border-radius: 5px;\n  cursor: pointer;\n  transition: background-color 0.3s ease;\n}\n\n.contactButton:hover {\n  background-color: #60b4c4;\n}\n\n.contact p {\n  margin: 20px 0;\n}\n\n.portraitImg {\n  padding: 4px;\n  margin: 2px;\n  border-radius: 6px;\n  border: solid #161417 .175rem;\n  max-width: 380px;\n  margin-left: 45px;\n  margin-right: 25px;\n  background-color: #60b4c4;\n}\n\n.intro {\n  max-width: 550px;\n  \n}\n\n.aboutBio {\n  line-height: 1.5;\n  color: #2c3437;\n  background-color: #f7f6f5;\n  border-radius: 6px;\n  padding: 22px;\n  margin: 22px;\n  text-align: center;\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"contentWrapper": `sQkdi7KRaUR4jafWumCI`,
@@ -3120,4 +3127,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.67fa34d8ea4f2b6acd340258f38d710f.js.map
+//# sourceMappingURL=App.a09fa5bd5f9ef656265b2e9a6bda7bce.js.map

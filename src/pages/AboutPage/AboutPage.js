@@ -40,15 +40,17 @@ const AboutPage = () => {
             src='/img/portrait.png'
             alt="portrait"
           />
-        
-          <section className={styles.skills}>
-            <Skills />
-          </section>
-        </section>
-      </div>
-      <section className={styles.education}>
+         <section className={styles.education}>
         <Education />
       </section>
+
+        </section>
+      </div>
+     
+
+      <section className={styles.skills}>
+            <Skills />
+          </section>
       <Footer />
     </div>
   );
