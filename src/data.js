@@ -180,11 +180,11 @@ const educationData = [
   {
     id: 1,
     image: 'degree.png',
-    degree: 'Associates in Computer Aided Design', 
+    degree: 'Associates in Computer Aided Design',
     certification: 'Web Certification',
     university: 'John Wood Community College',
     graduationYear: 2016,
-    achievements: 'Academic Sorority, and Dean\'s list student'
+    achievements: ['Academic Sorority', "Dean's list student"],
   },
   {
     id: 2,
@@ -194,13 +194,12 @@ const educationData = [
     graduationYear: 2023,
     achievements: [
       'Deployed and working current projects',
-      'Successfully completed 500+ hours of expert led instruction in Full Stack Web and Software Development',
-      `Completed hands-on learning of the fundamentals and the industry's most in demand technologies. `
-    ]
+      'Successfully completed 500+ hours of expert-led instruction in Full Stack Web and Software Development',
+      `Completed hands-on learning of the fundamentals and the industry's most in-demand technologies.`,
+    ],
   },
   // Add more education entries...
-]
-
+];
 
 
 const wordData = [

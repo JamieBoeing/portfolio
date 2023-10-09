@@ -297,7 +297,11 @@ const Education = () => {
     src: "/img/".concat(entry.image),
     alt: entry.university,
     className: _Education_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].edImage
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, entry.degree), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, entry.certification), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, entry.university), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, entry.graduationYear), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, entry.achievements)))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, entry.degree), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, entry.certification), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, entry.university), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, entry.graduationYear), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+    className: _Education_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].achievements
+  }, entry.achievements.map((achievement, i) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    key: i
+  }, achievement)))))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
     href: "/img/resume.pdf",
     target: "_blank",
     rel: "noopener noreferrer",
@@ -772,14 +776,14 @@ const educationData = [{
   certification: 'Web Certification',
   university: 'John Wood Community College',
   graduationYear: 2016,
-  achievements: 'Academic Sorority, and Dean\'s list student'
+  achievements: ['Academic Sorority', "Dean's list student"]
 }, {
   id: 2,
   image: 'degree.png',
   degree: 'Web Development Bootcamp',
   university: 'General Assembly',
   graduationYear: 2023,
-  achievements: ['Deployed and working current projects', 'Successfully completed 500+ hours of expert led instruction in Full Stack Web and Software Development', "Completed hands-on learning of the fundamentals and the industry's most in demand technologies. "]
+  achievements: ['Deployed and working current projects', 'Successfully completed 500+ hours of expert-led instruction in Full Stack Web and Software Development', "Completed hands-on learning of the fundamentals and the industry's most in-demand technologies."]
 }
 // Add more education entries...
 ];
@@ -1320,17 +1324,12 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.fcJFu5Rcew3sw3qbbu0p {
   width: 100%;
   max-width: 400px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  list-style: none;
   background-color: white;
   text-align: center;
   align-items: center;
 }
 .fcJFu5Rcew3sw3qbbu0p .xG1tGq4NqK3zrwmBa5rw h3 {
   font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-.fcJFu5Rcew3sw3qbbu0p .xG1tGq4NqK3zrwmBa5rw p {
-  font-size: 1rem;
   margin-bottom: 0.5rem;
 }
 .fcJFu5Rcew3sw3qbbu0p .xG1tGq4NqK3zrwmBa5rw .dEJqsUBLQoz0dILIIW6t {
@@ -1347,7 +1346,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.fcJFu5Rcew3sw3qbbu0p {
 }
 
 .gWyjJKsoBGL40SAp6uxD {
-  list-style: none;
   align-items: center;
   text-align: center;
   margin-right: 46px;
@@ -1355,11 +1353,33 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.fcJFu5Rcew3sw3qbbu0p {
 
 .L7wzdj0LGGKVCaXC6WyS {
   align-items: center;
+  list-style: none;
 }
 
 .QGhI7K9tY0Jyn4D2CC6i {
   color: aquamarine;
-}`, "",{"version":3,"sources":["webpack://./src/components/Education/Education.module.scss"],"names":[],"mappings":"AACA;EACI,aAAA;EACA,kBAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,yBAAA;EACA,mBAAA;EACA,kBAAA;AAAJ;AAGI;EACE,eAAA;EACA,mBAAA;EACA,cAAA;AADN;AAII;EACE,kBAAA;EACA,aAAA;EACA,mBAAA;EACA,WAAA;EACA,gBAAA;EACA,wCAAA;EACA,gBAAA;EACA,uBAAA;EACA,kBAAA;EACA,mBAAA;AAFN;AAIM;EACE,iBAAA;EACA,qBAAA;AAFR;AAKM;EACE,eAAA;EACA,qBAAA;AAHR;AAMM;EACE,iBAAA;EACA,WAAA;AAJR;;AAQE;EACE,aAAA;EACA,mBAAA;EACA,uBAAA;EACA,gBAAA;EACA,mBAAA;AALJ;;AAQA;EACE,gBAAA;EACA,mBAAA;EACA,kBAAA;EACA,kBAAA;AALF;;AAQA;EACA,mBAAA;AALA;;AAQA;EACE,iBAAA;AALF","sourcesContent":["\n.eduContainer {\n    padding: 2rem;\n    margin-right: 18px;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    background-color: #572387;\n    border-radius: 10px;\n    text-align: center;\n\n  \n    h2 {\n      font-size: 47px;\n      margin-bottom: 1rem;\n      color: #60b4c4;\n    }\n  \n    .eduItem {\n      border-radius: 8px;\n      padding: 1rem;\n      margin-bottom: 1rem;\n      width: 100%;\n      max-width: 400px;\n      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n      list-style: none;\n      background-color: white;\n      text-align: center;\n      align-items: center;\n  \n      h3 {\n        font-size: 1.2rem;\n        margin-bottom: 0.5rem;\n      }\n  \n      p {\n        font-size: 1rem;\n        margin-bottom: 0.5rem;\n      }\n  \n      .dates {\n        font-size: 0.9rem;\n        color: #555;\n      }\n    }\n  }\n  .edImage {\n    padding: auto;\n    border-radius: 10px;\n    background-color: white;\n    list-style: none;\n    align-items: center;\n\n  }\n.eduList {\n  list-style: none;\n  align-items: center;\n  text-align: center;\n  margin-right: 46px ;\n}\n\n.eduListItem {\nalign-items: center;\n}\n\n.resumeLink {\n  color:aquamarine;\n}"],"sourceRoot":""}]);
+}
+
+.FguP31XS9F0B1w5iLho6 {
+  list-style-type: disc;
+  padding-left: 2.5rem;
+  padding: 4px;
+  text-align: left;
+  margin: 2px;
+}
+
+.aQjlWHsLjAw3eEMDjHFT {
+  font-size: 1.7rem;
+}
+
+.Edi7ssqrfPRMtBQ5v4c_ {
+  font-size: 1.3rem;
+}
+
+.m8TeojzqHVVmtHXH0IvO {
+  font-weight: 600;
+  font-size: 1.5;
+}`, "",{"version":3,"sources":["webpack://./src/components/Education/Education.module.scss"],"names":[],"mappings":"AACA;EACI,aAAA;EACA,kBAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,yBAAA;EACA,mBAAA;EACA,kBAAA;AAAJ;AAGI;EACE,eAAA;EACA,mBAAA;EACA,cAAA;AADN;AAII;EACE,kBAAA;EACA,aAAA;EACA,mBAAA;EACA,WAAA;EACA,gBAAA;EACA,wCAAA;EACA,uBAAA;EACA,kBAAA;EACA,mBAAA;AAFN;AAIM;EACE,iBAAA;EACA,qBAAA;AAFR;AAOM;EACE,iBAAA;EACA,WAAA;AALR;;AASE;EACE,aAAA;EACA,mBAAA;EACA,uBAAA;EACA,gBAAA;EACA,mBAAA;AANJ;;AASA;EACE,mBAAA;EACA,kBAAA;EACA,kBAAA;AANF;;AASA;EACA,mBAAA;EACA,gBAAA;AANA;;AASA;EACE,iBAAA;AANF;;AASA;EACE,qBAAA;EACA,oBAAA;EACA,YAAA;EACA,gBAAA;EACA,WAAA;AANF;;AAQA;EACE,iBAAA;AALF;;AAQA;EACE,iBAAA;AALF;;AAQA;EACE,gBAAA;EACA,cAAA;AALF","sourcesContent":["\n.eduContainer {\n    padding: 2rem;\n    margin-right: 18px;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    background-color: #572387;\n    border-radius: 10px;\n    text-align: center;\n\n  \n    h2 {\n      font-size: 47px;\n      margin-bottom: 1rem;\n      color: #60b4c4;\n    }\n  \n    .eduItem {\n      border-radius: 8px;\n      padding: 1rem;\n      margin-bottom: 1rem;\n      width: 100%;\n      max-width: 400px;\n      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n      background-color: white;\n      text-align: center;\n      align-items: center;\n  \n      h3 {\n        font-size: 1.2rem;\n        margin-bottom: 0.5rem;\n      }\n  \n      \n  \n      .dates {\n        font-size: 0.9rem;\n        color: #555;\n      }\n    }\n  }\n  .edImage {\n    padding: auto;\n    border-radius: 10px;\n    background-color: white;\n    list-style: none;\n    align-items: center;\n\n  }\n.eduList {\n  align-items: center;\n  text-align: center;\n  margin-right: 46px ;\n}\n\n.eduListItem {\nalign-items: center;\nlist-style: none;\n}\n\n.resumeLink {\n  color:aquamarine;\n}\n\n.achievements {\n  list-style-type: disc;\n  padding-left: 2.5rem;\n  padding: 4px;\n  text-align: left;\n  margin: 2px;\n}\n.university {\n  font-size: 1.7rem;\n}\n\n.gradYear {\n  font-size: 1.3rem;\n}\n\n.certification {\n  font-weight: 600;\n  font-size: 1.5;\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"eduContainer": `fcJFu5Rcew3sw3qbbu0p`,
@@ -1368,7 +1388,11 @@ ___CSS_LOADER_EXPORT___.locals = {
 	"edImage": `MXCQmfDKMNYFwLK38M23`,
 	"eduList": `gWyjJKsoBGL40SAp6uxD`,
 	"eduListItem": `L7wzdj0LGGKVCaXC6WyS`,
-	"resumeLink": `QGhI7K9tY0Jyn4D2CC6i`
+	"resumeLink": `QGhI7K9tY0Jyn4D2CC6i`,
+	"achievements": `FguP31XS9F0B1w5iLho6`,
+	"university": `aQjlWHsLjAw3eEMDjHFT`,
+	"gradYear": `Edi7ssqrfPRMtBQ5v4c_`,
+	"certification": `m8TeojzqHVVmtHXH0IvO`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1808,7 +1832,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.Ts3qWjeJKnasnLkvsufw {
   margin-bottom: 1rem;
 }
 .Ts3qWjeJKnasnLkvsufw .iR2y6namh21c3PIQrXun h3 {
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   color: #1f1c30;
   margin-bottom: 10px;
 }
@@ -1838,6 +1862,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.Ts3qWjeJKnasnLkvsufw {
   background-color: #60b4c4;
   border: solid #161417 0.175rem;
   margin: 2px;
+  animation: bDNpF4OBapbdYRk9NbRT 3s infinite linear;
   transition: transform 0.2s ease-in-out;
 }
 .Ts3qWjeJKnasnLkvsufw .iR2y6namh21c3PIQrXun .OGzEytfFmVnevKN7eEia .uI2pMXmkaNRvrDmKpVf4 .fUHE4gBT0lLidQwqH56K:hover {
@@ -1848,7 +1873,29 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.Ts3qWjeJKnasnLkvsufw {
   font-weight: bold;
   color: #1f1c30;
   font-size: 1rem;
-}`, "",{"version":3,"sources":["webpack://./src/components/Skills/Skills.module.scss"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;AACF;AACE;EACE,mBAAA;AACJ;AACI;EACE,iBAAA;EACA,cAAA;EACA,mBAAA;AACN;AAEI;EACE,aAAA;EACA,eAAA;EACA,mBAAA;AAAN;AAEM;EACE,eAAA;EACA,cAAA;EACA,kBAAA;EACA,iBAAA;EACA,aAAA;EACA,sBAAA,EAAA,uCAAA;EACA,mBAAA,EAAA,yCAAA;EACA,kBAAA,EAAA,iCAAA;AAAR;AAEQ;EACE,YAAA,EAAA,qCAAA;EACA,aAAA,EAAA,sCAAA;EACA,oBAAA;EACG,iBAAA,EAAA,qDAAA;EACH,kBAAA,EAAA,0CAAA;EACA,kBAAA,EAAA,2CAAA;EACA,wCAAA;EACA,yBAAA;EACA,8BAAA;EACA,WAAA;EACA,sCAAA;AAAV;AAEU;EACE,qBAAA;EACA,kBAAA;AAAZ;AAIQ;EACE,iBAAA;EACA,cAAA;EACA,eAAA;AAFV","sourcesContent":[".skillsContainer {\n  padding: 2rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n\n  .category {\n    margin-bottom: 1rem;\n\n    h3 {\n      font-size: 1.2rem;\n      color: #1f1c30;\n      margin-bottom: 10px;\n    }\n\n    .list {\n      display: flex;\n      flex-wrap: wrap;\n      align-items: center;\n\n      .skill {\n        padding: 0.3rem;\n        margin: 0.2rem;\n        border-radius: 4px;\n        font-size: 1.9rem;\n        display: flex;\n        flex-direction: column; /* Display image and text in a column */\n        align-items: center; /* Center the image and text vertically */\n        text-align: center; /* Center the text horizontally */\n\n        .skillImage {\n          width: 100px; /* Set desired width for the images */\n          height: 100px; /* Set desired height for the images */\n          -o-object-fit: cover;\n             object-fit: cover; /* Maintain aspect ratio and cover the entire space */\n          border-radius: 50%; /* Create a circular shape for the image */\n          margin-bottom: 8px; /* Add spacing between the image and text */\n          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n          background-color: #60b4c4;\n          border: solid #161417 .175rem;\n          margin: 2px;\n          transition: transform 0.2s ease-in-out;\n\n          &:hover {\n            transform: scale(1.9);\n            border: aquamarine;\n          }\n        }\n\n        span.skillName {\n          font-weight: bold;\n          color: #1f1c30;\n          font-size: 1rem;\n        }\n      }\n    }\n  }\n}\n"],"sourceRoot":""}]);
+}
+
+@keyframes bDNpF4OBapbdYRk9NbRT {
+  0% {
+    transform: translate(0, 0);
+  }
+  /* Define custom animations for individual images */
+  20% {
+    transform: translate(3px, -4px);
+  }
+  40% {
+    transform: translate(-2px, 5px);
+  }
+  60% {
+    transform: translate(4px, 1px);
+  }
+  80% {
+    transform: translate(-3px, -2px);
+  }
+  100% {
+    transform: translate(2px, 3px);
+  }
+}`, "",{"version":3,"sources":["webpack://./src/components/Skills/Skills.module.scss"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;AACF;AACE;EACE,mBAAA;AACJ;AAEI;EACE,iBAAA;EACA,cAAA;EACA,mBAAA;AAAN;AAGI;EACE,aAAA;EACA,eAAA;EACA,mBAAA;AADN;AAGM;EACE,eAAA;EACA,cAAA;EACA,kBAAA;EACA,iBAAA;EACA,aAAA;EACA,sBAAA,EAAA,uCAAA;EACA,mBAAA,EAAA,yCAAA;EACA,kBAAA,EAAA,iCAAA;AADR;AAGQ;EACE,YAAA,EAAA,qCAAA;EACA,aAAA,EAAA,sCAAA;EACA,oBAAA;EACG,iBAAA,EAAA,qDAAA;EACH,kBAAA,EAAA,0CAAA;EACA,kBAAA,EAAA,2CAAA;EACA,wCAAA;EACA,yBAAA;EACA,8BAAA;EACA,WAAA;EACA,kDAAA;EACA,sCAAA;AADV;AAGU;EACE,qBAAA;EACA,kBAAA;AADZ;AAKQ;EACE,iBAAA;EACA,cAAA;EACA,eAAA;AAHV;;AAWA;EACE;IACE,0BAAA;EARF;EAWA,mDAAA;EACA;IACE,+BAAA;EATF;EAYA;IACE,+BAAA;EAVF;EAaA;IACE,8BAAA;EAXF;EAcA;IACE,gCAAA;EAZF;EAeA;IACE,8BAAA;EAbF;AACF","sourcesContent":[".skillsContainer {\n  padding: 2rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n\n  .category {\n    margin-bottom: 1rem;\n  \n\n    h3 {\n      font-size: 1.7rem;\n      color: #1f1c30;\n      margin-bottom: 10px;\n    }\n\n    .list {\n      display: flex;\n      flex-wrap: wrap;\n      align-items: center;\n\n      .skill {\n        padding: 0.3rem;\n        margin: 0.2rem;\n        border-radius: 4px;\n        font-size: 1.9rem;\n        display: flex;\n        flex-direction: column; /* Display image and text in a column */\n        align-items: center; /* Center the image and text vertically */\n        text-align: center; /* Center the text horizontally */\n\n        .skillImage {\n          width: 100px; /* Set desired width for the images */\n          height: 100px; /* Set desired height for the images */\n          -o-object-fit: cover;\n             object-fit: cover; /* Maintain aspect ratio and cover the entire space */\n          border-radius: 50%; /* Create a circular shape for the image */\n          margin-bottom: 8px; /* Add spacing between the image and text */\n          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n          background-color: #60b4c4;\n          border: solid #161417 .175rem;\n          margin: 2px;\n          animation: randomAnimation 3s infinite linear;\n          transition: transform 0.2s ease-in-out;\n\n          &:hover {\n            transform: scale(1.9);\n            border: aquamarine;\n          }\n        }\n\n        span.skillName {\n          font-weight: bold;\n          color: #1f1c30;\n          font-size: 1rem;\n        }\n      }\n    }\n  }\n}\n\n\n@keyframes randomAnimation {\n  0% {\n    transform: translate(0, 0);\n  }\n\n  /* Define custom animations for individual images */\n  20% {\n    transform: translate(3px, -4px);\n  }\n\n  40% {\n    transform: translate(-2px, 5px);\n  }\n\n  60% {\n    transform: translate(4px, 1px);\n  }\n\n  80% {\n    transform: translate(-3px, -2px);\n  }\n\n  100% {\n    transform: translate(2px, 3px);\n  }\n}\n\n\n\n\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"skillsContainer": `Ts3qWjeJKnasnLkvsufw`,
@@ -1856,6 +1903,7 @@ ___CSS_LOADER_EXPORT___.locals = {
 	"list": `OGzEytfFmVnevKN7eEia`,
 	"skill": `uI2pMXmkaNRvrDmKpVf4`,
 	"skillImage": `fUHE4gBT0lLidQwqH56K`,
+	"randomAnimation": `bDNpF4OBapbdYRk9NbRT`,
 	"skillName": `jFnD1QfjiGUL11LaqyrA`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
@@ -3188,4 +3236,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.97968e8ddbea18079e4c3ceb00a172f9.js.map
+//# sourceMappingURL=App.4ee2b4316a8580bcc4fdda023581ee47.js.map

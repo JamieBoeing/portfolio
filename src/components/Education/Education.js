@@ -21,7 +21,11 @@ const Education = () => {
                 <p>{entry.certification}</p>
                 <p>{entry.university}</p>
                 <p>{entry.graduationYear}</p>
-                <p>{entry.achievements}</p>
+                <ul className={styles.achievements}>
+                  {entry.achievements.map((achievement, i) => (
+                    <li key={i}>{achievement}</li>
+                  ))}
+                  </ul>
               </div>
             </div>
           </li>
