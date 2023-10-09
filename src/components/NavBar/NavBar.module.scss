@@ -1,52 +1,51 @@
 .NavBar {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 2.5rem 1.5rem 2.5rem;
+  background-color: #4c5570;
+  color: white;
+
+  .navBarLinks {
     display: flex;
-    flex-direction: column;
-    padding: 1.5rem 2.5rem 1.5rem 2.5rem;
-    background-color: #4c5570;
-    color: white;
-  
-    .navBarLinks {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-  
-      a {
-        text-decoration: underline;
-        color: #f7f6f5;
-  
-        &:hover {
-          cursor: pointer;
-          border-radius: 7px;
-          padding: 3px;
-          margin: 3px;
-          background: linear-gradient(
-            90deg,
-            #646e67 12.5%,
-            #3d4742 25%,
-            #2c3437 37.5%,
-            #e37d4e 50%,
-            #e4ead8 62.5%,
-            #4c5570 75%,
-            #ced5eb 87.5%,
-            #f7f6f5 100%
-          );
-          background-size: 1000px 100%;
-          animation: shimmer 38s infinite;
-          background-clip: text;
-          -webkit-background-clip: text;
-          color: transparent;
-          transition: ease-in-out;
-        }
+    justify-content: space-around;
+    align-items: center;
+
+    a {
+      text-decoration: underline;
+      color: #f7f6f5;
+
+      &:hover {
+        cursor: pointer;
+        border-radius: 7px;
+        padding: 3px;
+        margin: 3px;
+        background: linear-gradient(
+          90deg,
+          #646e67 12.5%,
+          #3d4742 25%,
+          #2c3437 37.5%,
+          #e37d4e 50%,
+          #e4ead8 62.5%,
+          #4c5570 75%,
+          #ced5eb 87.5%,
+          #f7f6f5 100%
+        );
+        background-size: 1000px 100%;
+        animation: shimmer 38s infinite;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        transition: ease-in-out;
       }
     }
   }
-  
-  @keyframes shimmer {
-    0% {
-      background-position: -1000px 0;
-    }
-    100% {
-      background-position: 1000px 0;
-    }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
   }
-  
+  100% {
+    background-position: 1000px 0;
+  }
+}

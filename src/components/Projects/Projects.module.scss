@@ -36,11 +36,14 @@
   }
 
   p {
-    font-size: 1rem;
+    font-size: 1.75rem;
     margin-bottom: 0.5rem;
     background-color: white;
     border-radius: 8px;
-    padding: 1rem;
+    padding: 4rem;
+    white-space: pre-wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .technologies {
@@ -55,7 +58,7 @@
 
     a {
       font-size: 1rem;
-      color: #007bff;
+      color: #60b4c4;
       text-decoration: none;
       transition: color 0.2s;
       cursor: pointer;
@@ -67,27 +70,7 @@
   }
 }
 
-/* Projects.module.scss */
 
-/* ... other styles ... */
 
-.title {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  color: #1f1c30;
-}
 
-.description {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  white-space: pre-wrap; /* Wrap text */
-  overflow: hidden; /* Hide overflow text */
-  text-overflow: ellipsis; /* Add ellipsis for long text */
-}
 
-.technologies {
-  font-size: 0.9rem;
-  color: #555;
-  margin-bottom: 0.5rem;
-}

@@ -100,10 +100,11 @@ const skills = [
 const aboutMe = {
   name: 'Jamie Boeing',
   title: 'Full-Stack Web Developer',
-  tag: 'As an accomplished and versatile professional with over a decade of experience, I bring a unique blend of skills to Software Engineering, and Graphic Design.',
-  bio: 'Hello... My name is Jamie Boeing, a Full-Stack Web Developer, Graphic Designer, and Artist. With a long-standing career as an independent Artist, I have cultivated a love for teamwork and collaboration. My background in customer service and management has equipped me with valuable business experience. I am passionate about personal growth, community engagement, travel, and connecting with people. I am eager to become part of a supportive community in the Web Developer world and am excited to bring my diverse skills to contribute to new and exciting opportunities.',
-}
-
+  tag:
+    'As an accomplished and versatile professional with over a decade of experience, I bring a unique blend of skills to Software Engineering, and Graphic Design.',
+  bio:
+    'Full-Stack Web Developer, Graphic Designer, and Artist, fueled by a passion for collaboration.\nBacked by a foundation in customer service and management, I offer valuable business expertise.\nEnthusiastic about personal growth, community engagement, travel, and meaningful connections.\nExcited to integrate into the Web Developer community, contributing diverse skills to exciting opportunities.',
+};
 
 
 const experienceData = [
@@ -113,15 +114,32 @@ const experienceData = [
     company: 'General Assembly',
     location: 'Remote',
     date: 'Sept 2023',
+    projects: [
+      {
+        name: 'Personal Portfolio',
+        link: 'GitHub Repository',
+      },
+      {
+        name: 'Group Bazaar Project',
+        link: 'Express React Node.js [GitHub Repository]',
+      },
+      {
+        name: 'Art Supplies Store',
+        link: 'Express React Node.js [GitHub Repository] [LiveLink Deployment]',
+      },
+      {
+        name: 'Recipes API',
+        link: 'GitHub Repository',
+      },
+      {
+        name: 'Quiz Biz - A simple trivia game',
+        link: 'VS Code [GitHub Repository]',
+      }
+    ],
     description: [
       'Successfully completed 500+ hours of expert-led instruction in Full Stack Web and Software Development.',
       'Completed hands-on learning of the fundamentals and the industry\'s most in-demand technologies.',
-      'Developed projects, including:',
-      '- Personal Portfolio: [GitHub Repository]',
-      '- Group Bazaar Project: Express React Node.js [GitHub Repository]',
-      '- Art Supplies Store: Express React Node.js [GitHub Repository] [LiveLink Deployment]',
-      '- Recipes API: [GitHub Repository]',
-      '- Quiz Biz - A simple trivia game: VS Code [GitHub Repository]'
+      'Developed projects, including:'
     ]
   },
   {
@@ -155,7 +173,8 @@ const experienceData = [
     ]
   }
   // Add more experience entries...
-]
+];
+
 
 const educationData = [
   {
@@ -247,9 +266,11 @@ const servicesData = [
 const images = [
   'image1.jpeg',
   'image2.jpeg',
+  'portrait.png',
   'image3.jpeg',
   'image4.jpeg',
-  'image5.jpeg'
+  'image5.jpeg',
+  'profileImage.jpg'
 
 ]
 

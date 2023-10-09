@@ -5,27 +5,32 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #1f1c30; /* Dark background color */
+  border-radius: 10px;
+  color: white;
+  text-align: left;
 
-  h2 {
-    font-size: 1.5rem;
+  .workTitle {
+    font-size: 47px;
     margin-bottom: 1rem;
+    color: #572387;
+    text-align: left;
   }
 
   .experienceItem {
-    border: 1px solid #ccc;
-    border-radius: 8px;
     padding: 1rem;
     margin-bottom: 2rem; /* Increase margin to separate entries */
     width: 100%;
     max-width: 600px; /* Wider container for better spacing */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
-    h3 {
-      font-size: 1.5rem; /* Slightly larger heading */
+    .expTitle {
+      font-size: 32px; /* Slightly larger heading */
       margin-bottom: 1rem; /* More spacing below the title */
+      color: #60b4c4;
     }
 
-    p {
+    .company {
       font-size: 1.1rem; /* Larger font size for description */
       margin-bottom: 1rem; /* More spacing between lines */
     }
@@ -34,5 +39,30 @@
       font-size: 1rem;
       color: #555;
     }
+
+    .projectTile {
+      background-color: #333; /* Background color for project tiles */
+      padding: 1rem;
+      margin-top: 1rem; /* Spacing between project tiles */
+      border-radius: 5px;
+
+      p {
+        font-size: 1rem; /* Style for project name */
+      }
+    }
+
+    .expLink {
+      color: aquamarine; /* Style for project links */
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
+}
+
+.experienceList {
+  list-style-type: none;
+  padding: auto;
 }
