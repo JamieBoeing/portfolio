@@ -287,17 +287,22 @@ const Education = () => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: _Education_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].eduContainer
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "Education"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
-    className: "education-list"
+    className: _Education_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].eduList
   }, _data__WEBPACK_IMPORTED_MODULE_1__.educationData.map((entry, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
     key: index,
-    className: "education-entry"
+    className: _Education_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].eduListItem
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: _Education_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].eduItem
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     src: "/img/".concat(entry.image),
     alt: entry.university,
     className: _Education_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].edImage
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, entry.degree), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, entry.certification), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, entry.university), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, entry.graduationYear), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, entry.achievements)))))));
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, entry.degree), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, entry.certification), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, entry.university), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, entry.graduationYear), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, entry.achievements)))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+    href: "/img/resume.pdf",
+    target: "_blank",
+    rel: "noopener noreferrer",
+    className: _Education_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].resumeLink
+  }, "Resume"));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Education);
 
@@ -346,7 +351,15 @@ const Experience = () => {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
     to: "/projects",
     className: _Experience_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].expLink
-  }, "View Projects"))))));
+  }, "View Projects")), entry.salonWebsite && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: _Experience_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].salonLinkContainer
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+    href: 'https://www.evokesalonquincy.com' // put link here
+    ,
+    target: "_blank",
+    rel: "noopener noreferrer",
+    className: _Experience_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].salonLink
+  }, "Visit Salon Website"))))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Experience);
 
@@ -448,7 +461,12 @@ const NavBar = () => {
     to: "/projects"
   }, "Projects"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
     to: "/services"
-  }, "Services")));
+  }, "Services"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+    href: "/img/resume.pdf",
+    target: "_blank",
+    rel: "noopener noreferrer",
+    className: _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].resumeLink
+  }, "Resume")));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (NavBar);
 
@@ -1100,7 +1118,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* About.module.scss */
 .zzkxuQz1UyKxuNaaCigI {
   font-size: 47px;
   margin-bottom: 10px;
-  color: #572387;
+  color: aquamarine;
 }
 
 .CAh7kmOYU3KaRvw1H0b5 {
@@ -1116,7 +1134,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* About.module.scss */
   font-size: 20px;
   list-style: disc; /* Use bullets as list-style */
   margin-bottom: 10px;
-}`, "",{"version":3,"sources":["webpack://./src/components/About/About.module.scss"],"names":[],"mappings":"AAAA,sBAAA;AAEA;EACI,yBAAA,EAAA,0BAAA;EACA,aAAA;EACA,mBAAA;EACA,YAAA;AAAJ;;AAGE;EACE,eAAA;EACA,mBAAA;EACA,cAAA;AAAJ;;AAGE;EACE,eAAA;EACA,mBAAA;AAAJ;;AAGE;EACE,eAAA;AAAJ;;AAEE;EACE,eAAA;EACA,gBAAA,EAAA,8BAAA;EACA,mBAAA;AACJ","sourcesContent":["/* About.module.scss */\n\n.intro {\n    background-color: #1f1c30; /* Dark background color */\n    padding: 20px;\n    border-radius: 10px;\n    color: white;\n  }\n  \n  .title {\n    font-size: 47px;\n    margin-bottom: 10px;\n    color: #572387;\n  }\n  \n  .tag {\n    font-size: 32px;\n    margin-bottom: 20px;\n  }\n  \n  .bio {\n    font-size: 25px;\n  }\n  .bioBulletPoint {\n    font-size: 20px;\n    list-style: disc; /* Use bullets as list-style */\n    margin-bottom: 10px;\n  }"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/About/About.module.scss"],"names":[],"mappings":"AAAA,sBAAA;AAEA;EACI,yBAAA,EAAA,0BAAA;EACA,aAAA;EACA,mBAAA;EACA,YAAA;AAAJ;;AAGE;EACE,eAAA;EACA,mBAAA;EACA,iBAAA;AAAJ;;AAGE;EACE,eAAA;EACA,mBAAA;AAAJ;;AAGE;EACE,eAAA;AAAJ;;AAEE;EACE,eAAA;EACA,gBAAA,EAAA,8BAAA;EACA,mBAAA;AACJ","sourcesContent":["/* About.module.scss */\n\n.intro {\n    background-color: #1f1c30; /* Dark background color */\n    padding: 20px;\n    border-radius: 10px;\n    color: white;\n  }\n  \n  .title {\n    font-size: 47px;\n    margin-bottom: 10px;\n    color: aquamarine;\n  }\n  \n  .tag {\n    font-size: 32px;\n    margin-bottom: 20px;\n  }\n  \n  .bio {\n    font-size: 25px;\n  }\n  .bioBulletPoint {\n    font-size: 20px;\n    list-style: disc; /* Use bullets as list-style */\n    margin-bottom: 10px;\n  }"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"intro": `pyRgnPakkZDPVpT1PNzu`,
@@ -1282,23 +1300,30 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `.fcJFu5Rcew3sw3qbbu0p {
   padding: 2rem;
+  margin-right: 18px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #572387;
+  border-radius: 10px;
+  text-align: center;
 }
 .fcJFu5Rcew3sw3qbbu0p h2 {
   font-size: 47px;
   margin-bottom: 1rem;
-  color: #572387;
+  color: #60b4c4;
 }
 .fcJFu5Rcew3sw3qbbu0p .xG1tGq4NqK3zrwmBa5rw {
-  border: 1px solid #ccc;
   border-radius: 8px;
   padding: 1rem;
   margin-bottom: 1rem;
   width: 100%;
   max-width: 400px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  background-color: white;
+  text-align: center;
+  align-items: center;
 }
 .fcJFu5Rcew3sw3qbbu0p .xG1tGq4NqK3zrwmBa5rw h3 {
   font-size: 1.2rem;
@@ -1315,13 +1340,35 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.fcJFu5Rcew3sw3qbbu0p {
 
 .MXCQmfDKMNYFwLK38M23 {
   padding: auto;
-}`, "",{"version":3,"sources":["webpack://./src/components/Education/Education.module.scss"],"names":[],"mappings":"AACA;EACI,aAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;AAAJ;AAEI;EACE,eAAA;EACA,mBAAA;EACA,cAAA;AAAN;AAGI;EACE,sBAAA;EACA,kBAAA;EACA,aAAA;EACA,mBAAA;EACA,WAAA;EACA,gBAAA;EACA,wCAAA;AADN;AAGM;EACE,iBAAA;EACA,qBAAA;AADR;AAIM;EACE,eAAA;EACA,qBAAA;AAFR;AAKM;EACE,iBAAA;EACA,WAAA;AAHR;;AAOE;EACE,aAAA;AAJJ","sourcesContent":["\n.eduContainer {\n    padding: 2rem;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n  \n    h2 {\n      font-size: 47px;\n      margin-bottom: 1rem;\n      color: #572387;\n    }\n  \n    .eduItem {\n      border: 1px solid #ccc;\n      border-radius: 8px;\n      padding: 1rem;\n      margin-bottom: 1rem;\n      width: 100%;\n      max-width: 400px;\n      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n  \n      h3 {\n        font-size: 1.2rem;\n        margin-bottom: 0.5rem;\n      }\n  \n      p {\n        font-size: 1rem;\n        margin-bottom: 0.5rem;\n      }\n  \n      .dates {\n        font-size: 0.9rem;\n        color: #555;\n      }\n    }\n  }\n  .edImage {\n    padding: auto;\n  }\n"],"sourceRoot":""}]);
+  border-radius: 10px;
+  background-color: white;
+  list-style: none;
+  align-items: center;
+}
+
+.gWyjJKsoBGL40SAp6uxD {
+  list-style: none;
+  align-items: center;
+  text-align: center;
+  margin-right: 46px;
+}
+
+.L7wzdj0LGGKVCaXC6WyS {
+  align-items: center;
+}
+
+.QGhI7K9tY0Jyn4D2CC6i {
+  color: aquamarine;
+}`, "",{"version":3,"sources":["webpack://./src/components/Education/Education.module.scss"],"names":[],"mappings":"AACA;EACI,aAAA;EACA,kBAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,yBAAA;EACA,mBAAA;EACA,kBAAA;AAAJ;AAGI;EACE,eAAA;EACA,mBAAA;EACA,cAAA;AADN;AAII;EACE,kBAAA;EACA,aAAA;EACA,mBAAA;EACA,WAAA;EACA,gBAAA;EACA,wCAAA;EACA,gBAAA;EACA,uBAAA;EACA,kBAAA;EACA,mBAAA;AAFN;AAIM;EACE,iBAAA;EACA,qBAAA;AAFR;AAKM;EACE,eAAA;EACA,qBAAA;AAHR;AAMM;EACE,iBAAA;EACA,WAAA;AAJR;;AAQE;EACE,aAAA;EACA,mBAAA;EACA,uBAAA;EACA,gBAAA;EACA,mBAAA;AALJ;;AAQA;EACE,gBAAA;EACA,mBAAA;EACA,kBAAA;EACA,kBAAA;AALF;;AAQA;EACA,mBAAA;AALA;;AAQA;EACE,iBAAA;AALF","sourcesContent":["\n.eduContainer {\n    padding: 2rem;\n    margin-right: 18px;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    background-color: #572387;\n    border-radius: 10px;\n    text-align: center;\n\n  \n    h2 {\n      font-size: 47px;\n      margin-bottom: 1rem;\n      color: #60b4c4;\n    }\n  \n    .eduItem {\n      border-radius: 8px;\n      padding: 1rem;\n      margin-bottom: 1rem;\n      width: 100%;\n      max-width: 400px;\n      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n      list-style: none;\n      background-color: white;\n      text-align: center;\n      align-items: center;\n  \n      h3 {\n        font-size: 1.2rem;\n        margin-bottom: 0.5rem;\n      }\n  \n      p {\n        font-size: 1rem;\n        margin-bottom: 0.5rem;\n      }\n  \n      .dates {\n        font-size: 0.9rem;\n        color: #555;\n      }\n    }\n  }\n  .edImage {\n    padding: auto;\n    border-radius: 10px;\n    background-color: white;\n    list-style: none;\n    align-items: center;\n\n  }\n.eduList {\n  list-style: none;\n  align-items: center;\n  text-align: center;\n  margin-right: 46px ;\n}\n\n.eduListItem {\nalign-items: center;\n}\n\n.resumeLink {\n  color:aquamarine;\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"eduContainer": `fcJFu5Rcew3sw3qbbu0p`,
 	"eduItem": `xG1tGq4NqK3zrwmBa5rw`,
 	"dates": `dEJqsUBLQoz0dILIIW6t`,
-	"edImage": `MXCQmfDKMNYFwLK38M23`
+	"edImage": `MXCQmfDKMNYFwLK38M23`,
+	"eduList": `gWyjJKsoBGL40SAp6uxD`,
+	"eduListItem": `L7wzdj0LGGKVCaXC6WyS`,
+	"resumeLink": `QGhI7K9tY0Jyn4D2CC6i`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1403,7 +1450,11 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* Experience.module.scss */
   font-size: 20px;
   list-style: disc; /* Use bullets as list-style */
   margin-bottom: 10px;
-}`, "",{"version":3,"sources":["webpack://./src/components/Experience/Experience.module.scss"],"names":[],"mappings":"AAAA,2BAAA;AAEA;EACE,aAAA;EACA,mBAAA;EACA,aAAA;EACA,sBAAA;EACA,yBAAA,EAAA,0BAAA;EACA,mBAAA;EACA,YAAA;EACA,wCAAA;AAAF;AAGE;EACE,eAAA;EACA,mBAAA;EACA,cAAA;AADJ;AAIE;EACE,aAAA;EACA,mBAAA,EAAA,wCAAA;EACA,WAAA;EACA,gBAAA,EAAA,uCAAA;EACA,wCAAA;EACA,yBAAA;EACA,mBAAA;AAFJ;AAKI;EACE,eAAA,EAAA,4BAAA;EACA,mBAAA,EAAA,iCAAA;EACA,cAAA;AAHN;AAMI;EACE,iBAAA,EAAA,qCAAA;EACA,mBAAA,EAAA,+BAAA;AAJN;AAOI;EACE,eAAA;EACA,WAAA;AALN;AAUI;EACE,iBAAA,EAAA,4BAAA;EACA,qBAAA;EACA,iBAAA;AARN;AAUM;EACE,0BAAA;AARR;;AAcA;EACE,qBAAA;EACA,aAAA;AAXF;;AAcA;EACE,eAAA;EACA,gBAAA,EAAA,8BAAA;EACA,mBAAA;AAXF","sourcesContent":["/* Experience.module.scss */\n\n.experienceContainer {\n  padding: 2rem;\n  padding-right: 4rem;\n  display: flex;\n  flex-direction: column;\n  background-color: #60b4c4; /* Dark background color */\n  border-radius: 10px;\n  color: white;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n \n\n  .workTitle {\n    font-size: 47px;\n    margin-bottom: 1rem;\n    color: #572387;\n  }\n\n  .experienceItem {\n    padding: 1rem;\n    margin-bottom: 2rem; /* Increase margin to separate entries */\n    width: 100%;\n    max-width: 600px; /* Wider container for better spacing */\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n    background-color: #161417;\n    border-radius: 10px;\n    \n\n    .expTitle {\n      font-size: 32px; /* Slightly larger heading */\n      margin-bottom: 1rem; /* More spacing below the title */\n      color: #60b4c4;\n    }\n\n    .company {\n      font-size: 1.1rem; /* Larger font size for description */\n      margin-bottom: 1rem; /* More spacing between lines */\n    }\n\n    .dates {\n      font-size: 1rem;\n      color: #555;\n    }\n\n    \n\n    .expLink {\n      color: aquamarine; /* Style for project links */\n      text-decoration: none;\n      text-align: right;\n\n      &:hover {\n        text-decoration: underline;\n      }\n    }\n  }\n}\n\n.experienceList {\n  list-style-type: none;\n  padding: auto;\n}\n\n.expoBulletList {\n  font-size: 20px;\n  list-style: disc; /* Use bullets as list-style */\n  margin-bottom: 10px;\n}\n"],"sourceRoot":""}]);
+}
+
+.UNZs0GGOt6d9a7Tl3FKy {
+  color: white;
+}`, "",{"version":3,"sources":["webpack://./src/components/Experience/Experience.module.scss"],"names":[],"mappings":"AAAA,2BAAA;AAEA;EACE,aAAA;EACA,mBAAA;EACA,aAAA;EACA,sBAAA;EACA,yBAAA,EAAA,0BAAA;EACA,mBAAA;EACA,YAAA;EACA,wCAAA;AAAF;AAGE;EACE,eAAA;EACA,mBAAA;EACA,cAAA;AADJ;AAIE;EACE,aAAA;EACA,mBAAA,EAAA,wCAAA;EACA,WAAA;EACA,gBAAA,EAAA,uCAAA;EACA,wCAAA;EACA,yBAAA;EACA,mBAAA;AAFJ;AAKI;EACE,eAAA,EAAA,4BAAA;EACA,mBAAA,EAAA,iCAAA;EACA,cAAA;AAHN;AAMI;EACE,iBAAA,EAAA,qCAAA;EACA,mBAAA,EAAA,+BAAA;AAJN;AAOI;EACE,eAAA;EACA,WAAA;AALN;AAUI;EACE,iBAAA,EAAA,4BAAA;EACA,qBAAA;EACA,iBAAA;AARN;AAUM;EACE,0BAAA;AARR;;AAcA;EACE,qBAAA;EACA,aAAA;AAXF;;AAcA;EACE,eAAA;EACA,gBAAA,EAAA,8BAAA;EACA,mBAAA;AAXF;;AAaA;EACE,YAAA;AAVF","sourcesContent":["/* Experience.module.scss */\n\n.experienceContainer {\n  padding: 2rem;\n  padding-right: 4rem;\n  display: flex;\n  flex-direction: column;\n  background-color: #60b4c4; /* Dark background color */\n  border-radius: 10px;\n  color: white;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n \n\n  .workTitle {\n    font-size: 47px;\n    margin-bottom: 1rem;\n    color: #572387;\n  }\n\n  .experienceItem {\n    padding: 1rem;\n    margin-bottom: 2rem; /* Increase margin to separate entries */\n    width: 100%;\n    max-width: 600px; /* Wider container for better spacing */\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n    background-color: #161417;\n    border-radius: 10px;\n    \n\n    .expTitle {\n      font-size: 32px; /* Slightly larger heading */\n      margin-bottom: 1rem; /* More spacing below the title */\n      color: #60b4c4;\n    }\n\n    .company {\n      font-size: 1.1rem; /* Larger font size for description */\n      margin-bottom: 1rem; /* More spacing between lines */\n    }\n\n    .dates {\n      font-size: 1rem;\n      color: #555;\n    }\n\n    \n\n    .expLink {\n      color: aquamarine; /* Style for project links */\n      text-decoration: none;\n      text-align: right;\n\n      &:hover {\n        text-decoration: underline;\n      }\n    }\n  }\n}\n\n.experienceList {\n  list-style-type: none;\n  padding: auto;\n}\n\n.expoBulletList {\n  font-size: 20px;\n  list-style: disc; /* Use bullets as list-style */\n  margin-bottom: 10px;\n}\n.salonLink {\n  color: white;\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"experienceContainer": `l_wko_W3JfW1JmNK3RIC`,
@@ -1414,7 +1465,8 @@ ___CSS_LOADER_EXPORT___.locals = {
 	"dates": `_8fLtJdD6OAp2alkiw82p`,
 	"expLink": `qvwdY9A9xMTOqtHoneou`,
 	"experienceList": `HzTxMFSkng6tH6DhGtSe`,
-	"expoBulletList": `L2Zve5fH1iGi6d6UN0bP`
+	"expoBulletList": `L2Zve5fH1iGi6d6UN0bP`,
+	"salonLink": `UNZs0GGOt6d9a7Tl3FKy`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1769,26 +1821,34 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.Ts3qWjeJKnasnLkvsufw {
   padding: 0.3rem;
   margin: 0.2rem;
   border-radius: 4px;
-  font-size: 0.9rem;
+  font-size: 1.9rem;
   display: flex;
   flex-direction: column; /* Display image and text in a column */
   align-items: center; /* Center the image and text vertically */
   text-align: center; /* Center the text horizontally */
 }
 .Ts3qWjeJKnasnLkvsufw .iR2y6namh21c3PIQrXun .OGzEytfFmVnevKN7eEia .uI2pMXmkaNRvrDmKpVf4 .fUHE4gBT0lLidQwqH56K {
-  width: 70px; /* Set desired width for the images */
-  height: 70px; /* Set desired height for the images */
+  width: 100px; /* Set desired width for the images */
+  height: 100px; /* Set desired height for the images */
   -o-object-fit: cover;
   object-fit: cover; /* Maintain aspect ratio and cover the entire space */
   border-radius: 50%; /* Create a circular shape for the image */
   margin-bottom: 8px; /* Add spacing between the image and text */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #60b4c4;
+  border: solid #161417 0.175rem;
+  margin: 2px;
+  transition: transform 0.2s ease-in-out;
+}
+.Ts3qWjeJKnasnLkvsufw .iR2y6namh21c3PIQrXun .OGzEytfFmVnevKN7eEia .uI2pMXmkaNRvrDmKpVf4 .fUHE4gBT0lLidQwqH56K:hover {
+  transform: scale(1.9);
+  border: aquamarine;
 }
 .Ts3qWjeJKnasnLkvsufw .iR2y6namh21c3PIQrXun .OGzEytfFmVnevKN7eEia .uI2pMXmkaNRvrDmKpVf4 span.jFnD1QfjiGUL11LaqyrA {
   font-weight: bold;
   color: #1f1c30;
   font-size: 1rem;
-}`, "",{"version":3,"sources":["webpack://./src/components/Skills/Skills.module.scss"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;AACF;AACE;EACE,mBAAA;AACJ;AACI;EACE,iBAAA;EACA,cAAA;EACA,mBAAA;AACN;AAEI;EACE,aAAA;EACA,eAAA;EACA,mBAAA;AAAN;AAEM;EACE,eAAA;EACA,cAAA;EACA,kBAAA;EACA,iBAAA;EACA,aAAA;EACA,sBAAA,EAAA,uCAAA;EACA,mBAAA,EAAA,yCAAA;EACA,kBAAA,EAAA,iCAAA;AAAR;AAEQ;EACE,WAAA,EAAA,qCAAA;EACA,YAAA,EAAA,sCAAA;EACA,oBAAA;EACG,iBAAA,EAAA,qDAAA;EACH,kBAAA,EAAA,0CAAA;EACA,kBAAA,EAAA,2CAAA;EACA,wCAAA;AAAV;AAGQ;EACE,iBAAA;EACA,cAAA;EACA,eAAA;AADV","sourcesContent":[".skillsContainer {\n  padding: 2rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n\n  .category {\n    margin-bottom: 1rem;\n\n    h3 {\n      font-size: 1.2rem;\n      color: #1f1c30;\n      margin-bottom: 10px;\n    }\n\n    .list {\n      display: flex;\n      flex-wrap: wrap;\n      align-items: center;\n\n      .skill {\n        padding: 0.3rem;\n        margin: 0.2rem;\n        border-radius: 4px;\n        font-size: 0.9rem;\n        display: flex;\n        flex-direction: column; /* Display image and text in a column */\n        align-items: center; /* Center the image and text vertically */\n        text-align: center; /* Center the text horizontally */\n\n        .skillImage {\n          width: 70px; /* Set desired width for the images */\n          height: 70px; /* Set desired height for the images */\n          -o-object-fit: cover;\n             object-fit: cover; /* Maintain aspect ratio and cover the entire space */\n          border-radius: 50%; /* Create a circular shape for the image */\n          margin-bottom: 8px; /* Add spacing between the image and text */\n          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n        }\n\n        span.skillName {\n          font-weight: bold;\n          color: #1f1c30;\n          font-size: 1rem;\n        }\n      }\n    }\n  }\n}\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/Skills/Skills.module.scss"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;AACF;AACE;EACE,mBAAA;AACJ;AACI;EACE,iBAAA;EACA,cAAA;EACA,mBAAA;AACN;AAEI;EACE,aAAA;EACA,eAAA;EACA,mBAAA;AAAN;AAEM;EACE,eAAA;EACA,cAAA;EACA,kBAAA;EACA,iBAAA;EACA,aAAA;EACA,sBAAA,EAAA,uCAAA;EACA,mBAAA,EAAA,yCAAA;EACA,kBAAA,EAAA,iCAAA;AAAR;AAEQ;EACE,YAAA,EAAA,qCAAA;EACA,aAAA,EAAA,sCAAA;EACA,oBAAA;EACG,iBAAA,EAAA,qDAAA;EACH,kBAAA,EAAA,0CAAA;EACA,kBAAA,EAAA,2CAAA;EACA,wCAAA;EACA,yBAAA;EACA,8BAAA;EACA,WAAA;EACA,sCAAA;AAAV;AAEU;EACE,qBAAA;EACA,kBAAA;AAAZ;AAIQ;EACE,iBAAA;EACA,cAAA;EACA,eAAA;AAFV","sourcesContent":[".skillsContainer {\n  padding: 2rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n\n  .category {\n    margin-bottom: 1rem;\n\n    h3 {\n      font-size: 1.2rem;\n      color: #1f1c30;\n      margin-bottom: 10px;\n    }\n\n    .list {\n      display: flex;\n      flex-wrap: wrap;\n      align-items: center;\n\n      .skill {\n        padding: 0.3rem;\n        margin: 0.2rem;\n        border-radius: 4px;\n        font-size: 1.9rem;\n        display: flex;\n        flex-direction: column; /* Display image and text in a column */\n        align-items: center; /* Center the image and text vertically */\n        text-align: center; /* Center the text horizontally */\n\n        .skillImage {\n          width: 100px; /* Set desired width for the images */\n          height: 100px; /* Set desired height for the images */\n          -o-object-fit: cover;\n             object-fit: cover; /* Maintain aspect ratio and cover the entire space */\n          border-radius: 50%; /* Create a circular shape for the image */\n          margin-bottom: 8px; /* Add spacing between the image and text */\n          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n          background-color: #60b4c4;\n          border: solid #161417 .175rem;\n          margin: 2px;\n          transition: transform 0.2s ease-in-out;\n\n          &:hover {\n            transform: scale(1.9);\n            border: aquamarine;\n          }\n        }\n\n        span.skillName {\n          font-weight: bold;\n          color: #1f1c30;\n          font-size: 1rem;\n        }\n      }\n    }\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"skillsContainer": `Ts3qWjeJKnasnLkvsufw`,
@@ -1876,6 +1936,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.sQkdi7KRaUR4jafWumCI {
 
 .xouQhGwjP45KgPHzkj5V {
   padding: 1rem;
+  align-items: center;
 }
 
 .YnZPhvUb5L7KpILX4RrA {
@@ -1923,7 +1984,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.sQkdi7KRaUR4jafWumCI {
   padding: 22px;
   margin: 22px;
   text-align: center;
-}`, "",{"version":3,"sources":["webpack://./src/pages/AboutPage/AboutPage.module.scss"],"names":[],"mappings":"AACA;EACE,aAAA;EACA,mBAAA;EACA,uBAAA,EAAA,qCAAA;EACA,8BAAA,EAAA,iCAAA;EACA,WAAA;EACA,aAAA;AAAF;;AAGA;EACE,UAAA,EAAA,qBAAA;EACA,kBAAA;AAAF;;AAGA;EACE,UAAA,EAAA,qBAAA;AAAF;;AAGA;EACE,aAAA;EACA,kBAAA;EACA,gBAAA,EAAA,6CAAA;EACA,mBAAA;AAAF;;AAGA;EACC,aAAA;AAAD;;AAGA;EACE,gBAAA;EACA,mBAAA;AAAF;;AAGA;EACE,WAAA;EACA,kBAAA;EACA,YAAA;EACA,kBAAA;EACA,eAAA;EACA,sCAAA;AAAF;;AAGA;EACE,yBAAA;AAAF;;AAGA;EACE,cAAA;AAAF;;AAGA;EACE,YAAA;EACA,WAAA;EACA,kBAAA;EACA,8BAAA;EACA,gBAAA;EACA,iBAAA;EACA,kBAAA;EACA,yBAAA;AAAF;;AAGA;EACE,gBAAA;AAAF;;AAIA;EACE,gBAAA;EACA,cAAA;EACA,yBAAA;EACA,kBAAA;EACA,aAAA;EACA,YAAA;EACA,kBAAA;AADF","sourcesContent":["\n.contentWrapper {\n  display: flex;\n  flex-direction: row;\n  align-items: flex-start; /* Align the left column at the top */\n  justify-content: space-between; /* Create space between columns */\n  width: 100%;\n  padding: 1rem;\n}\n\n.leftColumn {\n  width: 60%; /* Adjust as needed */\n  margin-right: 1rem;\n}\n\n.rightColumn {\n  width: 47%; /* Adjust as needed */\n}\n\n.skills {\n  padding: 1rem;\n  text-align: center;\n  margin-top: auto; /* Push the education section to the bottom */\n  margin-bottom: 70px;\n}\n\n.education {\n padding: 1rem;\n}\n\n.experience {\n  margin-top: 10px;\n  align-items: center;\n}\n\n.contactButton {\n  color: #fff;\n  padding: 10px 20px;\n  border: none;\n  border-radius: 5px;\n  cursor: pointer;\n  transition: background-color 0.3s ease;\n}\n\n.contactButton:hover {\n  background-color: #60b4c4;\n}\n\n.contact p {\n  margin: 20px 0;\n}\n\n.portraitImg {\n  padding: 4px;\n  margin: 2px;\n  border-radius: 6px;\n  border: solid #161417 .175rem;\n  max-width: 380px;\n  margin-left: 45px;\n  margin-right: 25px;\n  background-color: #60b4c4;\n}\n\n.intro {\n  max-width: 550px;\n  \n}\n\n.aboutBio {\n  line-height: 1.5;\n  color: #2c3437;\n  background-color: #f7f6f5;\n  border-radius: 6px;\n  padding: 22px;\n  margin: 22px;\n  text-align: center;\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/pages/AboutPage/AboutPage.module.scss"],"names":[],"mappings":"AACA;EACE,aAAA;EACA,mBAAA;EACA,uBAAA,EAAA,qCAAA;EACA,8BAAA,EAAA,iCAAA;EACA,WAAA;EACA,aAAA;AAAF;;AAGA;EACE,UAAA,EAAA,qBAAA;EACA,kBAAA;AAAF;;AAGA;EACE,UAAA,EAAA,qBAAA;AAAF;;AAGA;EACE,aAAA;EACA,kBAAA;EACA,gBAAA,EAAA,6CAAA;EACA,mBAAA;AAAF;;AAGA;EACC,aAAA;EACA,mBAAA;AAAD;;AAGA;EACE,gBAAA;EACA,mBAAA;AAAF;;AAGA;EACE,WAAA;EACA,kBAAA;EACA,YAAA;EACA,kBAAA;EACA,eAAA;EACA,sCAAA;AAAF;;AAGA;EACE,yBAAA;AAAF;;AAGA;EACE,cAAA;AAAF;;AAGA;EACE,YAAA;EACA,WAAA;EACA,kBAAA;EACA,8BAAA;EACA,gBAAA;EACA,iBAAA;EACA,kBAAA;EACA,yBAAA;AAAF;;AAGA;EACE,gBAAA;AAAF;;AAIA;EACE,gBAAA;EACA,cAAA;EACA,yBAAA;EACA,kBAAA;EACA,aAAA;EACA,YAAA;EACA,kBAAA;AADF","sourcesContent":["\n.contentWrapper {\n  display: flex;\n  flex-direction: row;\n  align-items: flex-start; /* Align the left column at the top */\n  justify-content: space-between; /* Create space between columns */\n  width: 100%;\n  padding: 1rem;\n}\n\n.leftColumn {\n  width: 60%; /* Adjust as needed */\n  margin-right: 1rem;\n}\n\n.rightColumn {\n  width: 47%; /* Adjust as needed */\n}\n\n.skills {\n  padding: 1rem;\n  text-align: center;\n  margin-top: auto; /* Push the education section to the bottom */\n  margin-bottom: 70px;\n}\n\n.education {\n padding: 1rem;\n align-items: center;\n}\n\n.experience {\n  margin-top: 10px;\n  align-items: center;\n}\n\n.contactButton {\n  color: #fff;\n  padding: 10px 20px;\n  border: none;\n  border-radius: 5px;\n  cursor: pointer;\n  transition: background-color 0.3s ease;\n}\n\n.contactButton:hover {\n  background-color: #60b4c4;\n}\n\n.contact p {\n  margin: 20px 0;\n}\n\n.portraitImg {\n  padding: 4px;\n  margin: 2px;\n  border-radius: 6px;\n  border: solid #161417 .175rem;\n  max-width: 380px;\n  margin-left: 45px;\n  margin-right: 25px;\n  background-color: #60b4c4;\n}\n\n.intro {\n  max-width: 550px;\n  \n}\n\n.aboutBio {\n  line-height: 1.5;\n  color: #2c3437;\n  background-color: #f7f6f5;\n  border-radius: 6px;\n  padding: 22px;\n  margin: 22px;\n  text-align: center;\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"contentWrapper": `sQkdi7KRaUR4jafWumCI`,
@@ -3127,4 +3188,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.a09fa5bd5f9ef656265b2e9a6bda7bce.js.map
+//# sourceMappingURL=App.97968e8ddbea18079e4c3ceb00a172f9.js.map

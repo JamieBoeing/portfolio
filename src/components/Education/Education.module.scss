@@ -1,24 +1,32 @@
 
 .eduContainer {
     padding: 2rem;
+    margin-right: 18px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #572387;
+    border-radius: 10px;
+    text-align: center;
+
   
     h2 {
       font-size: 47px;
       margin-bottom: 1rem;
-      color: #572387;
+      color: #60b4c4;
     }
   
     .eduItem {
-      border: 1px solid #ccc;
       border-radius: 8px;
       padding: 1rem;
       margin-bottom: 1rem;
       width: 100%;
       max-width: 400px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      list-style: none;
+      background-color: white;
+      text-align: center;
+      align-items: center;
   
       h3 {
         font-size: 1.2rem;
@@ -38,4 +46,23 @@
   }
   .edImage {
     padding: auto;
+    border-radius: 10px;
+    background-color: white;
+    list-style: none;
+    align-items: center;
+
   }
+.eduList {
+  list-style: none;
+  align-items: center;
+  text-align: center;
+  margin-right: 46px ;
+}
+
+.eduListItem {
+align-items: center;
+}
+
+.resumeLink {
+  color:aquamarine;
+}

@@ -7,9 +7,9 @@ const Education = () => {
   return (
     <div className={styles.eduContainer}>
       <h2>Education</h2>
-      <ul className='education-list'>
+      <ul className={styles.eduList}>
         {educationData.map((entry, index) => (
-          <li key={index} className='education-entry'>
+          <li key={index} className={styles.eduListItem}>
             <div className={styles.eduItem}>
               <img 
                 src={`/img/${entry.image}`}
@@ -27,6 +27,14 @@ const Education = () => {
           </li>
         ))}
       </ul>
+      <a
+        href="/img/resume.pdf" 
+        target="_blank"
+          rel="noopener noreferrer"
+          className={styles.resumeLink}
+      >
+        Resume
+      </a>
     </div>
   );
 };

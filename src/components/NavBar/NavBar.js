@@ -10,6 +10,14 @@ const NavBar = () => {
         <Link to="/about">About Me</Link>
         <Link to="/projects">Projects</Link>
         <Link to="/services">Services</Link>
+        <a
+        href="/img/resume.pdf" 
+        target="_blank"
+          rel="noopener noreferrer"
+          className={styles.resumeLink}
+      >
+        Resume
+      </a>
       </div>
     </nav>
   );

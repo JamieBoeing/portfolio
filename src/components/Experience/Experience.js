@@ -24,6 +24,18 @@ const Experience = () => {
                 </Link>
               </div>
             )}
+            {entry.salonWebsite && (
+              <div className={styles.salonLinkContainer}>
+                <a 
+                  href={'https://www.evokesalonquincy.com'} // put link here
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.salonLink}
+                >
+                  Visit Salon Website
+                </a>
+                </div>
+            )}
           </div>
         ))}
       </div>
