@@ -1,16 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { projects } from '../../data';
 import styles from './Projects.module.scss';
 
 const Projects = () => {
+  const [expandedProjectId, setExpandedProjectId] = useState(null);
+
+  const handleExpand = (projectId) => {
+    if (expandedProjectId === projectId) {
+      setExpandedProjectId(null);
+    } else {
+      setExpandedProjectId(projectId);
+    }
+  };
+
   return (
     <div className={styles.container}>
-      {projects.map((project, index) => (
-        <div key={project.id} className={styles.item}>
+      {projects.map((project) => (
+        <div
+          key={project.id}
+          className={`${styles.item} ${
+            expandedProjectId === project.id ? styles.expanded : ''
+          }`}
+          onClick={() => handleExpand(project.id)}
+        >
           <h3 className={styles.title}>{project.title}</h3>
           <img src={project.imageUrl} alt={project.title} className={styles.projectImage} />
-          <p className={styles.description}>{project.description}</p>
-          <p className={styles.technologies}>{project.technologies}</p>
+          <div className={styles.projectDetails}>
+            <p className={styles.projectDescription}>
+              <strong>Description:</strong> {project.description}
+            </p>
+            <p className={styles.technologies}>
+              <strong>Technologies:</strong> {project.technologies.join(', ')}
+            </p>
+          </div>
           <div className={styles.links}>
             <a
               href={project.githubLink}

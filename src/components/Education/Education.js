@@ -18,9 +18,9 @@ const Education = () => {
               />
               <div>
                 <h3>{entry.degree}</h3>
-                <p>{entry.certification}</p>
-                <p>{entry.university}</p>
-                <p>{entry.graduationYear}</p>
+                <p className={styles.certification}>{entry.certification}</p>
+                <p className={styles.university}>{entry.university}</p>
+                <p className={styles.gradYear}>{entry.graduationYear}</p>
                 <ul className={styles.achievements}>
                   {entry.achievements.map((achievement, i) => (
                     <li key={i}>{achievement}</li>

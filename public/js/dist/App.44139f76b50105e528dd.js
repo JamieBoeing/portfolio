@@ -297,7 +297,13 @@ const Education = () => {
     src: "/img/".concat(entry.image),
     alt: entry.university,
     className: _Education_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].edImage
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, entry.degree), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, entry.certification), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, entry.university), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, entry.graduationYear), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, entry.degree), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    className: _Education_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].certification
+  }, entry.certification), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    className: _Education_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].university
+  }, entry.university), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    className: _Education_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].gradYear
+  }, entry.graduationYear), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
     className: _Education_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].achievements
   }, entry.achievements.map((achievement, i) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
     key: i
@@ -493,22 +499,33 @@ const NavBar = () => {
 
 
 const Projects = () => {
+  const [expandedProjectId, setExpandedProjectId] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null);
+  const handleExpand = projectId => {
+    if (expandedProjectId === projectId) {
+      setExpandedProjectId(null);
+    } else {
+      setExpandedProjectId(projectId);
+    }
+  };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: _Projects_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].container
-  }, _data__WEBPACK_IMPORTED_MODULE_1__.projects.map((project, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, _data__WEBPACK_IMPORTED_MODULE_1__.projects.map(project => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     key: project.id,
-    className: _Projects_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].item
+    className: "".concat(_Projects_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].item, " ").concat(expandedProjectId === project.id ? _Projects_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].expanded : ''),
+    onClick: () => handleExpand(project.id)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", {
     className: _Projects_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].title
   }, project.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     src: project.imageUrl,
     alt: project.title,
     className: _Projects_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].projectImage
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-    className: _Projects_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].description
-  }, project.description), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: _Projects_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].projectDetails
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    className: _Projects_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].projectDescription
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("strong", null, "Description:"), " ", project.description), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
     className: _Projects_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].technologies
-  }, project.technologies), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("strong", null, "Technologies:"), " ", project.technologies.join(', '))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: _Projects_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].links
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
     href: project.githubLink,
@@ -648,29 +665,30 @@ const MyWordCloud = () => {
 /* harmony export */   skills: () => (/* binding */ skills),
 /* harmony export */   wordData: () => (/* binding */ wordData)
 /* harmony export */ });
-// data.js
-
 const projects = [{
   id: 1,
   title: 'Recipes API',
-  description: 'Recipe API Server: Developed a Node.js application that serves as a recipe API server. This RESTful API provides a collection of recipes with details such as ingredients, instructions, and cooking times. Utilizing Express.js, the server handles HTTP requests for retrieving, creating, updating, and deleting recipes. The data is stored in a JSON file and can be easily extended to include additional features like user authentication and search functionality.',
+  description: 'Developed a Node.js application that serves as a recipe API server. This RESTful API provides a collection of recipes with details such as ingredients, instructions, and cooking times. Utilizing Express.js, the server handles HTTP requests for retrieving, creating, updating, and deleting recipes. The data is stored in a JSON file and can be easily extended to include additional features like user authentication and search functionality.',
   technologies: ['React', 'Node.js'],
-  githubLink: 'https://github.com/JamieBoeing/unit_2_project'
-  // liveDemoLink: 'https://yourproject1demo.com',
+  githubLink: 'https://github.com/JamieBoeing/unit_2_project',
+  liveDemoLink: 'https://yourproject1demo.com',
+  imageUrl: 'img/recipe.svg' // Replace with the actual Imgur URL
 }, {
   id: 2,
   title: 'Art Supplies',
   description: 'Designed and developed a comprehensive e-commerce platform for an art supplies store, showcasing a range of art materials and tools. Leveraging the MERN (MongoDB, Express.js, React, Node.js) stack, the project offers a seamless user experience from browsing products to making purchases.',
   technologies: ['React', 'Express'],
   githubLink: 'https://github.com/JamieBoeing/art-supplies',
-  liveDemoLink: 'https://art-supplies.jamieboeing.me/orders'
+  liveDemoLink: 'https://art-supplies.jamieboeing.me/orders',
+  imageUrl: 'img/art.svg' // Replace with the actual Imgur URL
 }, {
   id: 3,
   title: 'Bazaar',
-  description: 'A group completed, full mern stack site, offering a user the ability to login, logout, sign up to be a seller and start entering their own items to add. This artistic website features multi functions utiilzing React, and Node.js',
+  description: 'A group completed, full MERN stack site, offering a user the ability to login, logout, sign up to be a seller and start entering their own items to add. This artistic website features multi functions utilizing React and Node.js.',
   technologies: ['React', 'Express', 'MongoDB'],
   githubLink: 'https://github.com/joe-bor/Etsy_Capstone',
-  liveDemoLink: 'https://bazaar.hlysllrs.me/home'
+  liveDemoLink: 'https://bazaar.hlysllrs.me/home',
+  imageUrl: 'img/bazaar.svg' // Replace with the actual Imgur URL
 }
 // Add more project objects here...
 ];
@@ -1696,14 +1714,14 @@ ___CSS_LOADER_EXPORT___.locals = {
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `/* Projects.module.scss */
-.Re9b4dg0VO9C3H0aAuBl {
+___CSS_LOADER_EXPORT___.push([module.id, `.Re9b4dg0VO9C3H0aAuBl {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   padding: 2rem;
   justify-items: center;
   text-align: left;
+  perspective: 1000px;
 }
 
 .WL_csyXcz9fuX7NR7iMV {
@@ -1713,59 +1731,122 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* Projects.module.scss */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 400px;
+  animation: u6fEW0ob9ZvwQ763iPQI 20s linear infinite;
+  transform-style: preserve-3d;
+  transform: rotateY(0);
   transition: transform 0.2s, box-shadow 0.2s;
+  background-color: #bf8575;
 }
 .WL_csyXcz9fuX7NR7iMV:hover {
-  transform: scale(1.05); /* Enlarge the item */
+  transform: rotateY(0);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a box shadow for elevation */
+  animation-play-state: paused;
 }
-.WL_csyXcz9fuX7NR7iMV h3 {
-  font-size: 1.5rem;
+.WL_csyXcz9fuX7NR7iMV .txzOpy1sbQWSoPiKLTVq {
+  font-size: 1.7rem;
   margin-bottom: 1rem;
   text-align: center; /* Center-align the titles */
 }
-.WL_csyXcz9fuX7NR7iMV img {
+.WL_csyXcz9fuX7NR7iMV .vWfUCwrZRq_vGSlQp9Ak {
   max-width: 100%;
-  height: auto;
+  height: 300px;
+  -o-object-fit: contain;
+  object-fit: contain;
   margin-bottom: 1rem;
+  border: solid 1rem #1a3d5c;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.WL_csyXcz9fuX7NR7iMV p {
-  font-size: 1.75rem;
-  margin-bottom: 0.5rem;
-  background-color: white;
-  border-radius: 8px;
-  padding: 4rem;
-  white-space: pre-wrap;
+.WL_csyXcz9fuX7NR7iMV .UF3WvfAPpAmourlbiCcy {
+  font-size: 1.3rem;
+}
+.WL_csyXcz9fuX7NR7iMV .UF3WvfAPpAmourlbiCcy .XMUC8p37Bly8vH_bONyK {
+  font-weight: bold;
+}
+.WL_csyXcz9fuX7NR7iMV .UF3WvfAPpAmourlbiCcy .XMUC8p37Bly8vH_bONyK ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+.WL_csyXcz9fuX7NR7iMV .UF3WvfAPpAmourlbiCcy .XMUC8p37Bly8vH_bONyK li {
+  margin-bottom: 5px;
+}
+.WL_csyXcz9fuX7NR7iMV .Eg_HZ4D4dhGDwQ5TOw3x {
+  font-size: 1.3rem;
+}
+.WL_csyXcz9fuX7NR7iMV .Eg_HZ4D4dhGDwQ5TOw3x p {
+  max-height: 120px; /* Adjust the height for the collapsed summary */
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.WL_csyXcz9fuX7NR7iMV .IK6BzG3mN_nEimNsMAEg {
+  font-size: 1.6rem;
+  background-color: #60b4c4;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.WL_csyXcz9fuX7NR7iMV .IK6BzG3mN_nEimNsMAEg:hover {
+  background-color: #301b5e;
+}
 .WL_csyXcz9fuX7NR7iMV .A7Wz_hoPe6EokPBKnxnQ {
-  font-size: 0.9rem;
+  font-size: 1.3rem;
   color: #555;
   margin-bottom: 0.5rem;
+  margin: 0.5rem 0;
+}
+.WL_csyXcz9fuX7NR7iMV .A7Wz_hoPe6EokPBKnxnQ ul {
+  padding: 2rem;
+  list-style-type: disc;
+}
+.WL_csyXcz9fuX7NR7iMV .A7Wz_hoPe6EokPBKnxnQ li {
+  margin-bottom: 5px;
 }
 .WL_csyXcz9fuX7NR7iMV .zGbJvQU7P0x9do1B25R5 {
   display: flex;
   justify-content: space-around;
+  align-items: baseline;
 }
 .WL_csyXcz9fuX7NR7iMV .zGbJvQU7P0x9do1B25R5 a {
-  font-size: 1rem;
+  font-size: 1.6rem;
   color: #60b4c4;
-  text-decoration: none;
+  text-decoration: underline;
   transition: color 0.2s;
   cursor: pointer;
 }
 .WL_csyXcz9fuX7NR7iMV .zGbJvQU7P0x9do1B25R5 a:hover {
   color: #301b5e;
-}`, "",{"version":3,"sources":["webpack://./src/components/Projects/Projects.module.scss"],"names":[],"mappings":"AAAA,yBAAA;AAEA;EACE,aAAA;EACA,2DAAA;EACA,SAAA;EACA,aAAA;EACA,qBAAA;EACA,gBAAA;AAAF;;AAGA;EACE,sBAAA;EACA,kBAAA;EACA,aAAA;EACA,wCAAA;EACA,WAAA;EACA,gBAAA;EACA,2CAAA;AAAF;AAEE;EACE,sBAAA,EAAA,qBAAA;EACA,wCAAA,EAAA,mCAAA;AAAJ;AAEE;EACE,iBAAA;EACA,mBAAA;EACA,kBAAA,EAAA,4BAAA;AAAJ;AAGE;EACE,eAAA;EACA,YAAA;EACA,mBAAA;EACA,kBAAA;EACA,wCAAA;AADJ;AAIE;EACE,kBAAA;EACA,qBAAA;EACA,uBAAA;EACA,kBAAA;EACA,aAAA;EACA,qBAAA;EACA,gBAAA;EACA,uBAAA;AAFJ;AAKE;EACE,iBAAA;EACA,WAAA;EACA,qBAAA;AAHJ;AAME;EACE,aAAA;EACA,6BAAA;AAJJ;AAMI;EACE,eAAA;EACA,cAAA;EACA,qBAAA;EACA,sBAAA;EACA,eAAA;AAJN;AAMM;EACE,cAAA;AAJR","sourcesContent":["/* Projects.module.scss */\n\n.container {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\n  gap: 20px;\n  padding: 2rem;\n  justify-items: center;\n  text-align: left;\n}\n\n.item {\n  border: 1px solid #ccc;\n  border-radius: 8px;\n  padding: 1rem;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n  width: 100%;\n  max-width: 400px;\n  transition: transform 0.2s, box-shadow 0.2s;\n\n  &:hover {\n    transform: scale(1.05); /* Enlarge the item */\n    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a box shadow for elevation */\n  }\n  h3 {\n    font-size: 1.5rem;\n    margin-bottom: 1rem;\n    text-align: center; /* Center-align the titles */\n  }\n\n  img {\n    max-width: 100%;\n    height: auto;\n    margin-bottom: 1rem;\n    border-radius: 8px;\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n  }\n\n  p {\n    font-size: 1.75rem;\n    margin-bottom: 0.5rem;\n    background-color: white;\n    border-radius: 8px;\n    padding: 4rem;\n    white-space: pre-wrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n\n  .technologies {\n    font-size: 0.9rem;\n    color: #555;\n    margin-bottom: 0.5rem;\n  }\n\n  .links {\n    display: flex;\n    justify-content: space-around;\n\n    a {\n      font-size: 1rem;\n      color: #60b4c4;\n      text-decoration: none;\n      transition: color 0.2s;\n      cursor: pointer;\n\n      &:hover {\n        color: #301b5e;\n      }\n    }\n  }\n}\n\n\n\n\n\n"],"sourceRoot":""}]);
+  transform: scale(1.9);
+}
+
+.WL_csyXcz9fuX7NR7iMV.i57_1aVGXV3m0qE3beAw {
+  transform: rotateY(0);
+  animation-play-state: paused;
+}
+
+@keyframes u6fEW0ob9ZvwQ763iPQI {
+  0% {
+    transform: rotateY(0);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}`, "",{"version":3,"sources":["webpack://./src/components/Projects/Projects.module.scss"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,2DAAA;EACA,SAAA;EACA,aAAA;EACA,qBAAA;EACA,gBAAA;EACA,mBAAA;AACF;;AAEA;EACE,sBAAA;EACA,kBAAA;EACA,aAAA;EACA,wCAAA;EACA,WAAA;EACA,gBAAA;EACA,mDAAA;EACA,4BAAA;EACA,qBAAA;EACA,2CAAA;EACA,yBAAA;AACF;AACE;EACE,qBAAA;EACA,wCAAA,EAAA,mCAAA;EACA,4BAAA;AACJ;AAEE;EACE,iBAAA;EACA,mBAAA;EACA,kBAAA,EAAA,4BAAA;AAAJ;AAGE;EACE,eAAA;EACA,aAAA;EACA,sBAAA;EACG,mBAAA;EACH,mBAAA;EACA,0BAAA;EACA,kBAAA;EACA,wCAAA;AADJ;AAIE;EACE,iBAAA;AAFJ;AAGI;EACE,iBAAA;AADN;AAEM;EACE,qBAAA;EACA,kBAAA;AAAR;AAEM;EACE,kBAAA;AAAR;AAKE;EACE,iBAAA;AAHJ;AAII;EACE,iBAAA,EAAA,gDAAA;EACA,gBAAA;EACA,uBAAA;AAFN;AAME;EACE,iBAAA;EACA,yBAAA;EACA,YAAA;EACA,YAAA;EACA,oBAAA;EACA,eAAA;EACA,iCAAA;AAJJ;AAMI;EACE,yBAAA;AAJN;AAQE;EACE,iBAAA;EACA,WAAA;EACA,qBAAA;EACA,gBAAA;AANJ;AAOI;EACE,aAAA;EACA,qBAAA;AALN;AAOI;EACE,kBAAA;AALN;AASE;EACE,aAAA;EACA,6BAAA;EACA,qBAAA;AAPJ;AASI;EACE,iBAAA;EACA,cAAA;EACA,0BAAA;EACA,sBAAA;EACA,eAAA;AAPN;AASM;EACE,cAAA;EACA,qBAAA;AAPR;;AAcA;EACE,qBAAA;EACA,4BAAA;AAXF;;AAeA;EACE;IACE,qBAAA;EAZF;EAcA;IACE,0BAAA;EAZF;AACF","sourcesContent":[".container {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\n  gap: 20px;\n  padding: 2rem;\n  justify-items: center;\n  text-align: left;\n  perspective: 1000px;\n}\n\n.item {\n  border: 1px solid #ccc;\n  border-radius: 8px;\n  padding: 1rem;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n  width: 100%;\n  max-width: 400px;\n  animation: rotate 20s linear infinite;\n  transform-style: preserve-3d;\n  transform: rotateY(0);\n  transition: transform 0.2s, box-shadow 0.2s;\n  background-color: #bf8575;\n\n  &:hover {\n    transform: rotateY(0);\n    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a box shadow for elevation */\n    animation-play-state: paused;\n  }\n\n  .title {\n    font-size: 1.7rem;\n    margin-bottom: 1rem;\n    text-align: center; /* Center-align the titles */\n  }\n\n  .projectImage {\n    max-width: 100%;\n    height: 300px;\n    -o-object-fit: contain;\n       object-fit: contain;\n    margin-bottom: 1rem;\n    border: solid 1rem #1a3d5c;\n    border-radius: 8px;\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n  }\n\n  .projectDetails {\n    font-size: 1.3rem;\n    .projectDescription {\n      font-weight: bold;\n      ul {\n        list-style-type: disc;\n        padding-left: 20px;\n      }\n      li {\n        margin-bottom: 5px;\n      }\n    }\n  }\n\n  .projectSummary {\n    font-size: 1.3rem;\n    p {\n      max-height: 120px; /* Adjust the height for the collapsed summary */\n      overflow: hidden;\n      text-overflow: ellipsis;\n    }\n  }\n\n  .expandButton {\n    font-size: 1.6rem;\n    background-color: #60b4c4;\n    color: white;\n    border: none;\n    padding: 0.5rem 1rem;\n    cursor: pointer;\n    transition: background-color 0.2s;\n\n    &:hover {\n      background-color: #301b5e;\n    }\n  }\n\n  .technologies {\n    font-size: 1.3rem;\n    color: #555;\n    margin-bottom: 0.5rem;\n    margin: 0.5rem 0;\n    ul {\n      padding: 2rem;\n      list-style-type: disc;\n    }\n    li {\n      margin-bottom: 5px;\n    }\n  }\n\n  .links {\n    display: flex;\n    justify-content: space-around;\n    align-items: baseline;\n\n    a {\n      font-size: 1.6rem;\n      color: #60b4c4;\n      text-decoration: underline;\n      transition: color 0.2s;\n      cursor: pointer;\n\n      &:hover {\n        color: #301b5e;\n        transform: scale(1.9);\n      }\n    }\n  }\n}\n\n\n.item.show-details {\n  transform: rotateY(0);\n  animation-play-state: paused;\n}\n\n\n@keyframes rotate {\n  0% {\n    transform: rotateY(0);\n  }\n  100% {\n    transform: rotateY(360deg);\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"container": `Re9b4dg0VO9C3H0aAuBl`,
 	"item": `WL_csyXcz9fuX7NR7iMV`,
+	"rotate": `u6fEW0ob9ZvwQ763iPQI`,
+	"title": `txzOpy1sbQWSoPiKLTVq`,
+	"projectImage": `vWfUCwrZRq_vGSlQp9Ak`,
+	"projectDetails": `UF3WvfAPpAmourlbiCcy`,
+	"projectDescription": `XMUC8p37Bly8vH_bONyK`,
+	"projectSummary": `Eg_HZ4D4dhGDwQ5TOw3x`,
+	"expandButton": `IK6BzG3mN_nEimNsMAEg`,
 	"technologies": `A7Wz_hoPe6EokPBKnxnQ`,
-	"links": `zGbJvQU7P0x9do1B25R5`
+	"links": `zGbJvQU7P0x9do1B25R5`,
+	"show-details": `i57_1aVGXV3m0qE3beAw`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -3236,4 +3317,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.4ee2b4316a8580bcc4fdda023581ee47.js.map
+//# sourceMappingURL=App.3f0b6c34017ebc9119be7f69a7d78088.js.map
