@@ -1,7 +1,7 @@
 // const sgMail = require('@sendgrid/mail');
 // require('dotenv').config()
 
-// sgMail.setApiKey(process.env.REACT_APP_SENDGRID_API_KEY);
+// sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 
 // const sendEmail = async (req, res) => {

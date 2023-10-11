@@ -17,7 +17,7 @@ const projects = [
     technologies: ['React', 'Express', 'Node.js', 'MongoDB', 'Digital Ocean'],
     githubLink: 'https://github.com/JamieBoeing/art-supplies',
     liveDemoLink: 'https://art-supplies.jamieboeing.me/orders',
-    imageUrl: 'img/art.svg', // Replace with the actual Imgur URL
+    imageUrl: 'img/art.svg', 
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const projects = [
     technologies: ['React', 'Express', 'MongoDB', 'Digital Ocean'],
     githubLink: 'https://github.com/joe-bor/Etsy_Capstone',
     liveDemoLink: 'https://bazaar.hlysllrs.me/home',
-    imageUrl: 'img/bazaar.svg', // Replace with the actual Imgur URL
+    imageUrl: 'img/bazaar.svg', 
   },
   // Add more project objects here...
 ];
