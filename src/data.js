@@ -1,10 +1,10 @@
-
 const projects = [
   {
     id: 1,
     title: 'Recipes API',
-    description: 'Developed a Node.js application that serves as a recipe API server. This RESTful API provides a collection of recipes with details such as ingredients, instructions, and cooking times. Utilizing Express.js, the server handles HTTP requests for retrieving, creating, updating, and deleting recipes. The data is stored in a JSON file and can be easily extended to include additional features like user authentication and search functionality.',
-    technologies: ['React', 'Node.js'],
+    description:
+      'Developed a Node.js application that serves as a recipe API server.\nThis RESTful API provides a collection of recipes with details such as ingredients, instructions, and cooking times.\nUtilizing Express.js, the server handles HTTP requests for retrieving, creating, updating, and deleting recipes.\nThe data is stored in a JSON file and can be easily extended to include additional features like user authentication and search functionality.',
+    technologies: ['React', 'Node.js', 'MongoDB'],
     githubLink: 'https://github.com/JamieBoeing/unit_2_project',
     liveDemoLink: 'https://yourproject1demo.com',
     imageUrl: 'img/recipe.svg', // Replace with the actual Imgur URL
@@ -12,8 +12,9 @@ const projects = [
   {
     id: 2,
     title: 'Art Supplies',
-    description: 'Designed and developed a comprehensive e-commerce platform for an art supplies store, showcasing a range of art materials and tools. Leveraging the MERN (MongoDB, Express.js, React, Node.js) stack, the project offers a seamless user experience from browsing products to making purchases.',
-    technologies: ['React', 'Express'],
+    description:
+      'Designed and developed a comprehensive e-commerce platform for an art supplies store, showcasing a range of art materials and tools.\nLeveraging the MERN (MongoDB, Express.js, React, Node.js) stack, the project offers a seamless user experience from browsing products to making purchases.',
+    technologies: ['React', 'Express', 'Node.js', 'MongoDB', 'Digital Ocean'],
     githubLink: 'https://github.com/JamieBoeing/art-supplies',
     liveDemoLink: 'https://art-supplies.jamieboeing.me/orders',
     imageUrl: 'img/art.svg', // Replace with the actual Imgur URL
@@ -21,14 +22,16 @@ const projects = [
   {
     id: 3,
     title: 'Bazaar',
-    description: 'A group completed, full MERN stack site, offering a user the ability to login, logout, sign up to be a seller and start entering their own items to add. This artistic website features multi functions utilizing React and Node.js.',
-    technologies: ['React', 'Express', 'MongoDB'],
+    description:
+      'A group completed, full MERN stack site, offering a user the ability to login, logout, sign up to be a seller and start entering their own items to add.\nThis artistic website features multi functions utilizing React and Node.js.',
+    technologies: ['React', 'Express', 'MongoDB', 'Digital Ocean'],
     githubLink: 'https://github.com/joe-bor/Etsy_Capstone',
     liveDemoLink: 'https://bazaar.hlysllrs.me/home',
     imageUrl: 'img/bazaar.svg', // Replace with the actual Imgur URL
   },
   // Add more project objects here...
 ];
+
 
 
 

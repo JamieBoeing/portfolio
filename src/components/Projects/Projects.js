@@ -23,14 +23,28 @@ const Projects = () => {
           }`}
           onClick={() => handleExpand(project.id)}
         >
-          <h3 className={styles.title}>{project.title}</h3>
+          <h3 className={styles.projectTitle}>{project.title}</h3>
           <img src={project.imageUrl} alt={project.title} className={styles.projectImage} />
           <div className={styles.projectDetails}>
             <p className={styles.projectDescription}>
-              <strong>Description:</strong> {project.description}
+              <strong>Description:</strong>
+              {typeof project.description === 'string' ? (
+                <ul>
+                  {project.description.split('\n').map((line, index) => (
+                    <li key={index}>{line}</li>
+                  ))}
+                </ul>
+              ) : (
+                project.description
+              )}
             </p>
             <p className={styles.technologies}>
-              <strong>Technologies:</strong> {project.technologies.join(', ')}
+              <strong>Technologies:</strong>
+              <ul>
+                {project.technologies.map((tech, index) => (
+                  <li key={index}>{tech}</li>
+                ))}
+              </ul>
             </p>
           </div>
           <div className={styles.links}>

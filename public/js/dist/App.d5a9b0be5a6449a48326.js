@@ -514,7 +514,7 @@ const Projects = () => {
     className: "".concat(_Projects_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].item, " ").concat(expandedProjectId === project.id ? _Projects_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].expanded : ''),
     onClick: () => handleExpand(project.id)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", {
-    className: _Projects_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].title
+    className: _Projects_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].projectTitle
   }, project.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     src: project.imageUrl,
     alt: project.title,
@@ -523,9 +523,13 @@ const Projects = () => {
     className: _Projects_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].projectDetails
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
     className: _Projects_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].projectDescription
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("strong", null, "Description:"), " ", project.description), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("strong", null, "Description:"), typeof project.description === 'string' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", null, project.description.split('\n').map((line, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    key: index
+  }, line))) : project.description), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
     className: _Projects_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].technologies
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("strong", null, "Technologies:"), " ", project.technologies.join(', '))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("strong", null, "Technologies:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", null, project.technologies.map((tech, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    key: index
+  }, tech))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: _Projects_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].links
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
     href: project.githubLink,
@@ -668,24 +672,24 @@ const MyWordCloud = () => {
 const projects = [{
   id: 1,
   title: 'Recipes API',
-  description: 'Developed a Node.js application that serves as a recipe API server. This RESTful API provides a collection of recipes with details such as ingredients, instructions, and cooking times. Utilizing Express.js, the server handles HTTP requests for retrieving, creating, updating, and deleting recipes. The data is stored in a JSON file and can be easily extended to include additional features like user authentication and search functionality.',
-  technologies: ['React', 'Node.js'],
+  description: 'Developed a Node.js application that serves as a recipe API server.\nThis RESTful API provides a collection of recipes with details such as ingredients, instructions, and cooking times.\nUtilizing Express.js, the server handles HTTP requests for retrieving, creating, updating, and deleting recipes.\nThe data is stored in a JSON file and can be easily extended to include additional features like user authentication and search functionality.',
+  technologies: ['React', 'Node.js', 'MongoDB'],
   githubLink: 'https://github.com/JamieBoeing/unit_2_project',
   liveDemoLink: 'https://yourproject1demo.com',
   imageUrl: 'img/recipe.svg' // Replace with the actual Imgur URL
 }, {
   id: 2,
   title: 'Art Supplies',
-  description: 'Designed and developed a comprehensive e-commerce platform for an art supplies store, showcasing a range of art materials and tools. Leveraging the MERN (MongoDB, Express.js, React, Node.js) stack, the project offers a seamless user experience from browsing products to making purchases.',
-  technologies: ['React', 'Express'],
+  description: 'Designed and developed a comprehensive e-commerce platform for an art supplies store, showcasing a range of art materials and tools.\nLeveraging the MERN (MongoDB, Express.js, React, Node.js) stack, the project offers a seamless user experience from browsing products to making purchases.',
+  technologies: ['React', 'Express', 'Node.js', 'MongoDB', 'Digital Ocean'],
   githubLink: 'https://github.com/JamieBoeing/art-supplies',
   liveDemoLink: 'https://art-supplies.jamieboeing.me/orders',
   imageUrl: 'img/art.svg' // Replace with the actual Imgur URL
 }, {
   id: 3,
   title: 'Bazaar',
-  description: 'A group completed, full MERN stack site, offering a user the ability to login, logout, sign up to be a seller and start entering their own items to add. This artistic website features multi functions utilizing React and Node.js.',
-  technologies: ['React', 'Express', 'MongoDB'],
+  description: 'A group completed, full MERN stack site, offering a user the ability to login, logout, sign up to be a seller and start entering their own items to add.\nThis artistic website features multi functions utilizing React and Node.js.',
+  technologies: ['React', 'Express', 'MongoDB', 'Digital Ocean'],
   githubLink: 'https://github.com/joe-bor/Etsy_Capstone',
   liveDemoLink: 'https://bazaar.hlysllrs.me/home',
   imageUrl: 'img/bazaar.svg' // Replace with the actual Imgur URL
@@ -1742,10 +1746,21 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.Re9b4dg0VO9C3H0aAuBl {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a box shadow for elevation */
   animation-play-state: paused;
 }
-.WL_csyXcz9fuX7NR7iMV .txzOpy1sbQWSoPiKLTVq {
+.WL_csyXcz9fuX7NR7iMV .CIHI0EnOcLSjcuolDMsj {
   font-size: 1.7rem;
   margin-bottom: 1rem;
   text-align: center; /* Center-align the titles */
+  color: #1a3d5c;
+}
+.WL_csyXcz9fuX7NR7iMV .XMUC8p37Bly8vH_bONyK {
+  font-weight: bold;
+}
+.WL_csyXcz9fuX7NR7iMV .XMUC8p37Bly8vH_bONyK ul {
+  padding-left: 20px;
+  color: #2c3437;
+}
+.WL_csyXcz9fuX7NR7iMV .XMUC8p37Bly8vH_bONyK li {
+  margin-bottom: 5px;
 }
 .WL_csyXcz9fuX7NR7iMV .vWfUCwrZRq_vGSlQp9Ak {
   max-width: 100%;
@@ -1759,12 +1774,13 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.Re9b4dg0VO9C3H0aAuBl {
 }
 .WL_csyXcz9fuX7NR7iMV .UF3WvfAPpAmourlbiCcy {
   font-size: 1.3rem;
+  list-style-type: disc;
 }
 .WL_csyXcz9fuX7NR7iMV .UF3WvfAPpAmourlbiCcy .XMUC8p37Bly8vH_bONyK {
   font-weight: bold;
+  list-style: disc;
 }
 .WL_csyXcz9fuX7NR7iMV .UF3WvfAPpAmourlbiCcy .XMUC8p37Bly8vH_bONyK ul {
-  list-style-type: disc;
   padding-left: 20px;
 }
 .WL_csyXcz9fuX7NR7iMV .UF3WvfAPpAmourlbiCcy .XMUC8p37Bly8vH_bONyK li {
@@ -1797,8 +1813,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.Re9b4dg0VO9C3H0aAuBl {
   margin: 0.5rem 0;
 }
 .WL_csyXcz9fuX7NR7iMV .A7Wz_hoPe6EokPBKnxnQ ul {
-  padding: 2rem;
-  list-style-type: disc;
+  padding-left: 20px;
 }
 .WL_csyXcz9fuX7NR7iMV .A7Wz_hoPe6EokPBKnxnQ li {
   margin-bottom: 5px;
@@ -1832,16 +1847,16 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.Re9b4dg0VO9C3H0aAuBl {
   100% {
     transform: rotateY(360deg);
   }
-}`, "",{"version":3,"sources":["webpack://./src/components/Projects/Projects.module.scss"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,2DAAA;EACA,SAAA;EACA,aAAA;EACA,qBAAA;EACA,gBAAA;EACA,mBAAA;AACF;;AAEA;EACE,sBAAA;EACA,kBAAA;EACA,aAAA;EACA,wCAAA;EACA,WAAA;EACA,gBAAA;EACA,mDAAA;EACA,4BAAA;EACA,qBAAA;EACA,2CAAA;EACA,yBAAA;AACF;AACE;EACE,qBAAA;EACA,wCAAA,EAAA,mCAAA;EACA,4BAAA;AACJ;AAEE;EACE,iBAAA;EACA,mBAAA;EACA,kBAAA,EAAA,4BAAA;AAAJ;AAGE;EACE,eAAA;EACA,aAAA;EACA,sBAAA;EACG,mBAAA;EACH,mBAAA;EACA,0BAAA;EACA,kBAAA;EACA,wCAAA;AADJ;AAIE;EACE,iBAAA;AAFJ;AAGI;EACE,iBAAA;AADN;AAEM;EACE,qBAAA;EACA,kBAAA;AAAR;AAEM;EACE,kBAAA;AAAR;AAKE;EACE,iBAAA;AAHJ;AAII;EACE,iBAAA,EAAA,gDAAA;EACA,gBAAA;EACA,uBAAA;AAFN;AAME;EACE,iBAAA;EACA,yBAAA;EACA,YAAA;EACA,YAAA;EACA,oBAAA;EACA,eAAA;EACA,iCAAA;AAJJ;AAMI;EACE,yBAAA;AAJN;AAQE;EACE,iBAAA;EACA,WAAA;EACA,qBAAA;EACA,gBAAA;AANJ;AAOI;EACE,aAAA;EACA,qBAAA;AALN;AAOI;EACE,kBAAA;AALN;AASE;EACE,aAAA;EACA,6BAAA;EACA,qBAAA;AAPJ;AASI;EACE,iBAAA;EACA,cAAA;EACA,0BAAA;EACA,sBAAA;EACA,eAAA;AAPN;AASM;EACE,cAAA;EACA,qBAAA;AAPR;;AAcA;EACE,qBAAA;EACA,4BAAA;AAXF;;AAeA;EACE;IACE,qBAAA;EAZF;EAcA;IACE,0BAAA;EAZF;AACF","sourcesContent":[".container {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\n  gap: 20px;\n  padding: 2rem;\n  justify-items: center;\n  text-align: left;\n  perspective: 1000px;\n}\n\n.item {\n  border: 1px solid #ccc;\n  border-radius: 8px;\n  padding: 1rem;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n  width: 100%;\n  max-width: 400px;\n  animation: rotate 20s linear infinite;\n  transform-style: preserve-3d;\n  transform: rotateY(0);\n  transition: transform 0.2s, box-shadow 0.2s;\n  background-color: #bf8575;\n\n  &:hover {\n    transform: rotateY(0);\n    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a box shadow for elevation */\n    animation-play-state: paused;\n  }\n\n  .title {\n    font-size: 1.7rem;\n    margin-bottom: 1rem;\n    text-align: center; /* Center-align the titles */\n  }\n\n  .projectImage {\n    max-width: 100%;\n    height: 300px;\n    -o-object-fit: contain;\n       object-fit: contain;\n    margin-bottom: 1rem;\n    border: solid 1rem #1a3d5c;\n    border-radius: 8px;\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n  }\n\n  .projectDetails {\n    font-size: 1.3rem;\n    .projectDescription {\n      font-weight: bold;\n      ul {\n        list-style-type: disc;\n        padding-left: 20px;\n      }\n      li {\n        margin-bottom: 5px;\n      }\n    }\n  }\n\n  .projectSummary {\n    font-size: 1.3rem;\n    p {\n      max-height: 120px; /* Adjust the height for the collapsed summary */\n      overflow: hidden;\n      text-overflow: ellipsis;\n    }\n  }\n\n  .expandButton {\n    font-size: 1.6rem;\n    background-color: #60b4c4;\n    color: white;\n    border: none;\n    padding: 0.5rem 1rem;\n    cursor: pointer;\n    transition: background-color 0.2s;\n\n    &:hover {\n      background-color: #301b5e;\n    }\n  }\n\n  .technologies {\n    font-size: 1.3rem;\n    color: #555;\n    margin-bottom: 0.5rem;\n    margin: 0.5rem 0;\n    ul {\n      padding: 2rem;\n      list-style-type: disc;\n    }\n    li {\n      margin-bottom: 5px;\n    }\n  }\n\n  .links {\n    display: flex;\n    justify-content: space-around;\n    align-items: baseline;\n\n    a {\n      font-size: 1.6rem;\n      color: #60b4c4;\n      text-decoration: underline;\n      transition: color 0.2s;\n      cursor: pointer;\n\n      &:hover {\n        color: #301b5e;\n        transform: scale(1.9);\n      }\n    }\n  }\n}\n\n\n.item.show-details {\n  transform: rotateY(0);\n  animation-play-state: paused;\n}\n\n\n@keyframes rotate {\n  0% {\n    transform: rotateY(0);\n  }\n  100% {\n    transform: rotateY(360deg);\n  }\n}\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/Projects/Projects.module.scss"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,2DAAA;EACA,SAAA;EACA,aAAA;EACA,qBAAA;EACA,gBAAA;EACA,mBAAA;AACF;;AAEA;EACE,sBAAA;EACA,kBAAA;EACA,aAAA;EACA,wCAAA;EACA,WAAA;EACA,gBAAA;EACA,mDAAA;EACA,4BAAA;EACA,qBAAA;EACA,2CAAA;EACA,yBAAA;AACF;AACE;EACE,qBAAA;EACA,wCAAA,EAAA,mCAAA;EACA,4BAAA;AACJ;AAEE;EACE,iBAAA;EACA,mBAAA;EACA,kBAAA,EAAA,4BAAA;EACA,cAAA;AAAJ;AAGE;EACE,iBAAA;AADJ;AAEI;EACE,kBAAA;EACA,cAAA;AAAN;AAEI;EACE,kBAAA;AAAN;AAGE;EACE,eAAA;EACA,aAAA;EACA,sBAAA;EACG,mBAAA;EACH,mBAAA;EACA,0BAAA;EACA,kBAAA;EACA,wCAAA;AADJ;AAIE;EACE,iBAAA;EACA,qBAAA;AAFJ;AAGI;EACE,iBAAA;EACA,gBAAA;AADN;AAGM;EAEE,kBAAA;AAFR;AAIM;EACE,kBAAA;AAFR;AAOE;EACE,iBAAA;AALJ;AAMI;EACE,iBAAA,EAAA,gDAAA;EACA,gBAAA;EACA,uBAAA;AAJN;AAQE;EACE,iBAAA;EACA,yBAAA;EACA,YAAA;EACA,YAAA;EACA,oBAAA;EACA,eAAA;EACA,iCAAA;AANJ;AAQI;EACE,yBAAA;AANN;AAUE;EACE,iBAAA;EACA,WAAA;EACA,qBAAA;EACA,gBAAA;AARJ;AASI;EACE,kBAAA;AAPN;AAUI;EACE,kBAAA;AARN;AAYE;EACE,aAAA;EACA,6BAAA;EACA,qBAAA;AAVJ;AAYI;EACE,iBAAA;EACA,cAAA;EACA,0BAAA;EACA,sBAAA;EACA,eAAA;AAVN;AAYM;EACE,cAAA;EACA,qBAAA;AAVR;;AAiBA;EACE,qBAAA;EACA,4BAAA;AAdF;;AAkBA;EACE;IACE,qBAAA;EAfF;EAiBA;IACE,0BAAA;EAfF;AACF","sourcesContent":[".container {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\n  gap: 20px;\n  padding: 2rem;\n  justify-items: center;\n  text-align: left;\n  perspective: 1000px;\n}\n\n.item {\n  border: 1px solid #ccc;\n  border-radius: 8px;\n  padding: 1rem;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n  width: 100%;\n  max-width: 400px;\n  animation: rotate 20s linear infinite;\n  transform-style: preserve-3d;\n  transform: rotateY(0);\n  transition: transform 0.2s, box-shadow 0.2s;\n  background-color: #bf8575;\n\n  &:hover {\n    transform: rotateY(0);\n    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a box shadow for elevation */\n    animation-play-state: paused;\n  }\n\n  .projectTitle {\n    font-size: 1.7rem;\n    margin-bottom: 1rem;\n    text-align: center; /* Center-align the titles */\n    color: #1a3d5c;\n  }\n\n  .projectDescription {\n    font-weight: bold;\n    ul {\n      padding-left: 20px;\n      color: #2c3437;\n    }\n    li {\n      margin-bottom: 5px;\n    }\n  }\n  .projectImage {\n    max-width: 100%;\n    height: 300px;\n    -o-object-fit: contain;\n       object-fit: contain;\n    margin-bottom: 1rem;\n    border: solid 1rem #1a3d5c;\n    border-radius: 8px;\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n  }\n\n  .projectDetails {\n    font-size: 1.3rem;\n    list-style-type: disc;\n    .projectDescription {\n      font-weight: bold;\n      list-style: disc;\n      \n      ul {\n       \n        padding-left: 20px;\n      }\n      li {\n        margin-bottom: 5px;\n      }\n    }\n  }\n\n  .projectSummary {\n    font-size: 1.3rem;\n    p {\n      max-height: 120px; /* Adjust the height for the collapsed summary */\n      overflow: hidden;\n      text-overflow: ellipsis;\n    }\n  }\n\n  .expandButton {\n    font-size: 1.6rem;\n    background-color: #60b4c4;\n    color: white;\n    border: none;\n    padding: 0.5rem 1rem;\n    cursor: pointer;\n    transition: background-color 0.2s;\n\n    &:hover {\n      background-color: #301b5e;\n    }\n  }\n\n  .technologies {\n    font-size: 1.3rem;\n    color: #555;\n    margin-bottom: 0.5rem;\n    margin: 0.5rem 0;\n    ul {\n      padding-left: 20px;\n      \n    }\n    li {\n      margin-bottom: 5px;\n    }\n  }\n\n  .links {\n    display: flex;\n    justify-content: space-around;\n    align-items: baseline;\n\n    a {\n      font-size: 1.6rem;\n      color: #60b4c4;\n      text-decoration: underline;\n      transition: color 0.2s;\n      cursor: pointer;\n\n      &:hover {\n        color: #301b5e;\n        transform: scale(1.9);\n      }\n    }\n  }\n}\n\n\n.item.show-details {\n  transform: rotateY(0);\n  animation-play-state: paused;\n}\n\n\n@keyframes rotate {\n  0% {\n    transform: rotateY(0);\n  }\n  100% {\n    transform: rotateY(360deg);\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"container": `Re9b4dg0VO9C3H0aAuBl`,
 	"item": `WL_csyXcz9fuX7NR7iMV`,
 	"rotate": `u6fEW0ob9ZvwQ763iPQI`,
-	"title": `txzOpy1sbQWSoPiKLTVq`,
+	"projectTitle": `CIHI0EnOcLSjcuolDMsj`,
+	"projectDescription": `XMUC8p37Bly8vH_bONyK`,
 	"projectImage": `vWfUCwrZRq_vGSlQp9Ak`,
 	"projectDetails": `UF3WvfAPpAmourlbiCcy`,
-	"projectDescription": `XMUC8p37Bly8vH_bONyK`,
 	"projectSummary": `Eg_HZ4D4dhGDwQ5TOw3x`,
 	"expandButton": `IK6BzG3mN_nEimNsMAEg`,
 	"technologies": `A7Wz_hoPe6EokPBKnxnQ`,
@@ -2214,16 +2229,9 @@ ___CSS_LOADER_EXPORT___.locals = {
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `.AM8fAzFyMxCKaEGdyJlL {
-  padding: auto;
-}
-.AM8fAzFyMxCKaEGdyJlL h1 {
-  display: inline-flex;
-}`, "",{"version":3,"sources":["webpack://./src/pages/ProjectPage/ProjectPage.module.scss"],"names":[],"mappings":"AAAA;EACI,aAAA;AACJ;AAAI;EACI,oBAAA;AAER","sourcesContent":[".projectContianer {\n    padding: auto;\n    h1 {\n        display: inline-flex;\n    }\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ``, "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
 // Exports
-___CSS_LOADER_EXPORT___.locals = {
-	"projectContianer": `AM8fAzFyMxCKaEGdyJlL`
-};
+___CSS_LOADER_EXPORT___.locals = {};
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
 
@@ -3317,4 +3325,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.3f0b6c34017ebc9119be7f69a7d78088.js.map
+//# sourceMappingURL=App.19ac82c9355737b2de4e3cdd341f7dad.js.map
