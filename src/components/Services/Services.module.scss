@@ -1,3 +1,55 @@
 .services {
-    padding: auto;
-}
+    margin: 0 auto;
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #60b4c4;
+    border-radius: 10px;
+  }
+  
+  .service {
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    background-color:#ced5eb;
+    min-width: 900px;
+  }
+  
+  .service:hover {
+    transform: scale(1.05);
+  }
+  
+  .serviceItem {
+    text-decoration: underline;
+    color: #572387;
+    font-size: 2.2rem;
+  }
+  
+  .serviceDescription {
+    margin-left: 10px;
+    font-size: 1.62rem;
+  }
+  
+
+  #mySpecialDiv {
+   /* Your desired styles here */
+    font-size: 24px;
+  }
+  
+  @media (max-width: 768px) {
+    /* Styles for screens up to 768px wide (typical tablet portrait) */
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Styles for screens up to 480px wide (typical mobile phones) */
+    h1 {
+      font-size: 2rem;
+    }
+  }
+  

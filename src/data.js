@@ -257,15 +257,53 @@ const wordData = [
 
 const servicesData = [
   {
-    category: 'Web Development',
-    service: 'Front-End Web Development',
+    category: 'Full-Stack Development',
+    service: 'End-to-End Web Application Development',
+    description: 'Crafting seamless, responsive, and scalable web applications that cover every aspect of the user experience, from front-end design to robust back-end functionality.',
   },
   {
-    category: 'Web Development',
-    service: 'Back-End Web Development',
+    category: 'Front-End Development',
+    service: 'User-Centric Front-End Solutions',
+    description: 'Building captivating, user-friendly interfaces and ensuring optimal performance on various devices, creating an exceptional first impression for your web visitors.',
   },
-  // Add more services...
-]
+  {
+    category: 'Back-End Development',
+    service: 'Server-Side Logic and Data Management',
+    description: 'Architecting the backbone of your web applications, handling data storage, user authentication, and the intricacies of server-side logic to empower your website or platform.',
+  },
+  {
+    category: 'Web Design',
+    service: 'Creative Web Interface Design',
+    description: 'Crafting visually appealing and intuitive designs that not only attract but engage your audience, ensuring a delightful user experience with a focus on aesthetics and usability.',
+  },
+  {
+    category: 'Database Management',
+    service: 'Efficient Database Design and Management',
+    description: 'Designing and optimizing databases to store, organize, and retrieve data seamlessly, ensuring data integrity and smooth system operation.',
+  },
+  {
+    category: 'API Development',
+    service: 'Custom API Creation and Integration',
+    description: 'Developing customized APIs to facilitate data communication between various software components, enabling seamless integration and data exchange.',
+  },
+  {
+    category: 'Performance Optimization',
+    service: 'Web Application Performance Enhancement',
+    description: 'Fine-tuning web applications to maximize speed, responsiveness, and efficiency, ensuring that your digital solutions operate at their best.',
+  },
+  {
+    category: 'Graphic Design',
+    service: 'Logo Design',
+    description: 'Crafting unique and impactful logos to represnet your brand or business.',
+  },
+  {
+    category: 'Graphic Design',
+    service: 'Print Design',
+    description: 'Designing visually appealing print materials, such as brochures, posters, and flyers.'
+  },
+  // add more services as needed...
+];
+
 
 
 const images = [

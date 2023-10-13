@@ -7,7 +7,7 @@ import styles from './ServicesPage.module.scss'
 
 const ServicesPage= () => {
     return (
-        <div className={styles.container}>
+        <div className={styles.serviceHeader}>
             <header>
                 <h1>My Services</h1>
             </header>

@@ -429,11 +429,17 @@ const Projects = () => {
 
 const Services = () => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
-    id: "services"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "Available Services"), _data__WEBPACK_IMPORTED_MODULE_1__.servicesData.map((serviceItem, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _Services_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].services,
+    className: _Services_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].services
+  }, _data__WEBPACK_IMPORTED_MODULE_1__.servicesData.map((serviceItem, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: _Services_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].service,
     key: index
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, serviceItem.category), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, serviceItem.service))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", {
+    className: _Services_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].serviceItem
+  }, serviceItem.service), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "mySpecialDiv"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    className: _Services_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].serviceDescription
+  }, serviceItem.description)))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Services);
 
@@ -675,13 +681,43 @@ const wordData = [{
   words: ['Full-Stack Developer', 'Web Development', 'JavaScript', 'React', 'Node.js', 'Express.js', 'HTML', 'CSS', 'MongoDB', 'Responsive Design', 'Git', 'RESTful API', 'UI/UX Design', 'Problem Solving', 'Agile', 'Scrum', 'Team Collaboration', 'Front-end', 'Back-end', 'Database', 'Creative', 'Adaptable', 'Innovative', 'Detail-Oriented', 'Problem Solver', 'Collaborative', 'Communicative', 'Organized', 'Curious', 'Motivated', 'Resourceful', 'Analytical', 'Patient', 'Empathetic', 'Positive', 'Team Player', 'Leadership', 'Self-Motivated', 'Open-Minded', 'Resilient']
 }];
 const servicesData = [{
-  category: 'Web Development',
-  service: 'Front-End Web Development'
+  category: 'Full-Stack Development',
+  service: 'End-to-End Web Application Development',
+  description: 'Crafting seamless, responsive, and scalable web applications that cover every aspect of the user experience, from front-end design to robust back-end functionality.'
 }, {
-  category: 'Web Development',
-  service: 'Back-End Web Development'
+  category: 'Front-End Development',
+  service: 'User-Centric Front-End Solutions',
+  description: 'Building captivating, user-friendly interfaces and ensuring optimal performance on various devices, creating an exceptional first impression for your web visitors.'
+}, {
+  category: 'Back-End Development',
+  service: 'Server-Side Logic and Data Management',
+  description: 'Architecting the backbone of your web applications, handling data storage, user authentication, and the intricacies of server-side logic to empower your website or platform.'
+}, {
+  category: 'Web Design',
+  service: 'Creative Web Interface Design',
+  description: 'Crafting visually appealing and intuitive designs that not only attract but engage your audience, ensuring a delightful user experience with a focus on aesthetics and usability.'
+}, {
+  category: 'Database Management',
+  service: 'Efficient Database Design and Management',
+  description: 'Designing and optimizing databases to store, organize, and retrieve data seamlessly, ensuring data integrity and smooth system operation.'
+}, {
+  category: 'API Development',
+  service: 'Custom API Creation and Integration',
+  description: 'Developing customized APIs to facilitate data communication between various software components, enabling seamless integration and data exchange.'
+}, {
+  category: 'Performance Optimization',
+  service: 'Web Application Performance Enhancement',
+  description: 'Fine-tuning web applications to maximize speed, responsiveness, and efficiency, ensuring that your digital solutions operate at their best.'
+}, {
+  category: 'Graphic Design',
+  service: 'Logo Design',
+  description: 'Crafting unique and impactful logos to represnet your brand or business.'
+}, {
+  category: 'Graphic Design',
+  service: 'Print Design',
+  description: 'Designing visually appealing print materials, such as brochures, posters, and flyers.'
 }
-// Add more services...
+// add more services as needed...
 ];
 
 const images = ['image1.jpeg', 'image2.jpeg', 'portrait.png', 'image3.jpeg', 'image4.jpeg', 'image5.jpeg', 'profileImage.jpg'];
@@ -871,7 +907,7 @@ const ProjectPage = () => {
 
 const ServicesPage = () => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _ServicesPage_module_scss__WEBPACK_IMPORTED_MODULE_3__["default"].container
+    className: _ServicesPage_module_scss__WEBPACK_IMPORTED_MODULE_3__["default"].serviceHeader
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "My Services")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Services_Services__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], null));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ServicesPage);
@@ -1319,11 +1355,7 @@ a:hover::before {
 a:hover::before,
 a:hover {
   transform: scale(1.9);
-}
-
-p {
-  margin: 0;
-}`, "",{"version":3,"sources":["webpack://./src/components/Footer/Footer.module.scss"],"names":[],"mappings":"AAAA,uBAAA;AAEA;EACE,aAAA;EACA,kBAAA;EACA,eAAA;EACA,SAAA;EACA,OAAA;EACA,QAAA;EACA,yBAAA;EACA,WAAA;EACA,WAAA;EACA,YAAA;EACA,aAAA;EACA,mBAAA;EACA,8BAAA,EAAA,iCAAA;AAAF;;AAGA;EACE,aAAA;EACA,mBAAA;AAAF;AACE;EACE,WAAA;EACA,YAAA;EACA,YAAA,EAAA,2DAAA;EACA,kBAAA;EACA,kBAAA,EAAA,8CAAA;AACJ;;AAIA;EACE,mBAAA;EACA,cAAA;EACA,mBAAA,EAAA,6DAAA;EACA,uBAAA,EAAA,+DAAA;AADF;;AAIA;EACE,iBAAA;EACA,cAAA;EACA,eAAA;AADF;;AAGA;EACE,aAAA;EACA,8BAAA;AAAF;;AAGA;EACE,cAAA;EACA,qBAAA;EACA,0BAAA;EACA,kBAAA;EACA,aAAA;EACA,aAAA;AAAF;;AAGA;EACE,WAAA;EACA,kBAAA;EACA,UAAA;EACA,WAAA;EACA,YAAA;EACA,aAAA;EACA,UAAA;EACA,gCAAA;EACA,WAAA;AAAF;;AAGA;EACE,UAAA;AAAF;;AAGA;;EAEE,qBAAA;AAAF;;AAIA;EACE,SAAA;AADF","sourcesContent":["/* Footer.module.scss */\n\n.footer {\n  padding: 15px;\n  text-align: center;\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  background-color: #1f1c30;\n  color: #fff;\n  width: 100%;\n  opacity: 70%;\n  display: flex;\n  align-items: center;\n  justify-content: space-between; /* Adjust to align to the right */\n}\n\n.linked {\n  display: flex;\n  align-items: center;\n  img {\n    width: 35px;\n    height: auto;\n    padding: 8px; /* Reduce padding to bring the links closer to the center */\n    border-radius: 50%;\n    margin-right: 24px; /* Add margin to push the links to the right */\n  }\n  \n}\n\n.contactInfo {\n  margin-bottom: 10px;\n  display: flexs;\n  align-items: center; /* Center the content vertically within the contactInfo div */\n  justify-content: center; /* Center the content horizontally within the contactInfo div */\n}\n\n.email {\n  font-size: 0.9rem;\n  color: #f7f6f5;\n  cursor: pointer;\n}\n.links {\n  display: flex;\n  justify-content: space-between;\n}\n\na {\n  margin: 0 10px;\n  display: inline-block;\n  transition: transform 0.3s;\n  position: relative;\n  padding: 20px;\n  margin: -20px;\n}\n\na::before {\n  content: '';\n  position: absolute;\n  top: -20px;\n  left: -20px;\n  right: -20px;\n  bottom: -20px;\n  opacity: 0;\n  transition: opacity 0.3s ease-in;\n  z-index: -1;\n}\n\na:hover::before {\n  opacity: 1;\n}\n\na:hover::before,\na:hover {\n  transform: scale(1.9);\n}\n\n\np {\n  margin: 0;\n}\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/Footer/Footer.module.scss"],"names":[],"mappings":"AAAA,uBAAA;AAEA;EACE,aAAA;EACA,kBAAA;EACA,eAAA;EACA,SAAA;EACA,OAAA;EACA,QAAA;EACA,yBAAA;EACA,WAAA;EACA,WAAA;EACA,YAAA;EACA,aAAA;EACA,mBAAA;EACA,8BAAA,EAAA,iCAAA;AAAF;;AAGA;EACE,aAAA;EACA,mBAAA;AAAF;AACE;EACE,WAAA;EACA,YAAA;EACA,YAAA,EAAA,2DAAA;EACA,kBAAA;EACA,kBAAA,EAAA,8CAAA;AACJ;;AAIA;EACE,mBAAA;EACA,cAAA;EACA,mBAAA,EAAA,6DAAA;EACA,uBAAA,EAAA,+DAAA;AADF;;AAIA;EACE,iBAAA;EACA,cAAA;EACA,eAAA;AADF;;AAGA;EACE,aAAA;EACA,8BAAA;AAAF;;AAGA;EACE,cAAA;EACA,qBAAA;EACA,0BAAA;EACA,kBAAA;EACA,aAAA;EACA,aAAA;AAAF;;AAGA;EACE,WAAA;EACA,kBAAA;EACA,UAAA;EACA,WAAA;EACA,YAAA;EACA,aAAA;EACA,UAAA;EACA,gCAAA;EACA,WAAA;AAAF;;AAGA;EACE,UAAA;AAAF;;AAGA;;EAEE,qBAAA;AAAF","sourcesContent":["/* Footer.module.scss */\n\n.footer {\n  padding: 15px;\n  text-align: center;\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  background-color: #1f1c30;\n  color: #fff;\n  width: 100%;\n  opacity: 70%;\n  display: flex;\n  align-items: center;\n  justify-content: space-between; /* Adjust to align to the right */\n}\n\n.linked {\n  display: flex;\n  align-items: center;\n  img {\n    width: 35px;\n    height: auto;\n    padding: 8px; /* Reduce padding to bring the links closer to the center */\n    border-radius: 50%;\n    margin-right: 24px; /* Add margin to push the links to the right */\n  }\n  \n}\n\n.contactInfo {\n  margin-bottom: 10px;\n  display: flexs;\n  align-items: center; /* Center the content vertically within the contactInfo div */\n  justify-content: center; /* Center the content horizontally within the contactInfo div */\n}\n\n.email {\n  font-size: 0.9rem;\n  color: #f7f6f5;\n  cursor: pointer;\n}\n.links {\n  display: flex;\n  justify-content: space-between;\n}\n\na {\n  margin: 0 10px;\n  display: inline-block;\n  transition: transform 0.3s;\n  position: relative;\n  padding: 20px;\n  margin: -20px;\n}\n\na::before {\n  content: '';\n  position: absolute;\n  top: -20px;\n  left: -20px;\n  right: -20px;\n  bottom: -20px;\n  opacity: 0;\n  transition: opacity 0.3s ease-in;\n  z-index: -1;\n}\n\na:hover::before {\n  opacity: 1;\n}\n\na:hover::before,\na:hover {\n  transform: scale(1.9);\n}\n\n\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"footer": `ceS4EgxnSPoT9JOwqjeP`,
@@ -1591,11 +1623,64 @@ ___CSS_LOADER_EXPORT___.locals = {
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `.EjhMvsCUQLCTQ0Y_vV7g {
-  padding: auto;
-}`, "",{"version":3,"sources":["webpack://./src/components/Services/Services.module.scss"],"names":[],"mappings":"AAAA;EACI,aAAA;AACJ","sourcesContent":[".services {\n    padding: auto;\n}"],"sourceRoot":""}]);
+  margin: 0 auto;
+  max-width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #60b4c4;
+  border-radius: 10px;
+}
+
+.YFAI4OgmzoUhCerYzSLG {
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  background-color: #ced5eb;
+  min-width: 900px;
+}
+
+.YFAI4OgmzoUhCerYzSLG:hover {
+  transform: scale(1.05);
+}
+
+.cLxB3q3QpossuQuAIz0T {
+  text-decoration: underline;
+  color: #572387;
+  font-size: 2.2rem;
+}
+
+.nBt5sWqxHvxy8QXMvrvo {
+  margin-left: 10px;
+  font-size: 1.62rem;
+}
+
+#k4X6l3lWYRk3ASAoLmgT {
+  /* Your desired styles here */
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  /* Styles for screens up to 768px wide (typical tablet portrait) */
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 480px) {
+  /* Styles for screens up to 480px wide (typical mobile phones) */
+  h1 {
+    font-size: 2rem;
+  }
+}`, "",{"version":3,"sources":["webpack://./src/components/Services/Services.module.scss"],"names":[],"mappings":"AAAA;EACI,cAAA;EACA,iBAAA;EACA,aAAA;EACA,eAAA;EACA,8BAAA;EACA,yBAAA;EACA,mBAAA;AACJ;;AAEE;EACE,aAAA;EACA,YAAA;EACA,mBAAA;EACA,wCAAA;EACA,+BAAA;EACA,yBAAA;EACA,gBAAA;AACJ;;AAEE;EACE,sBAAA;AACJ;;AAEE;EACE,0BAAA;EACA,cAAA;EACA,iBAAA;AACJ;;AAEE;EACE,iBAAA;EACA,kBAAA;AACJ;;AAGE;EACC,6BAAA;EACC,eAAA;AAAJ;;AAGE;EACE,kEAAA;EACA;IACE,iBAAA;EAAJ;AACF;AAGE;EACE,gEAAA;EACA;IACE,eAAA;EADJ;AACF","sourcesContent":[".services {\n    margin: 0 auto;\n    max-width: 1000px;\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: space-between;\n    background-color: #60b4c4;\n    border-radius: 10px;\n  }\n  \n  .service {\n    padding: 20px;\n    margin: 10px;\n    border-radius: 10px;\n    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);\n    transition: transform 0.3s ease;\n    background-color:#ced5eb;\n    min-width: 900px;\n  }\n  \n  .service:hover {\n    transform: scale(1.05);\n  }\n  \n  .serviceItem {\n    text-decoration: underline;\n    color: #572387;\n    font-size: 2.2rem;\n  }\n  \n  .serviceDescription {\n    margin-left: 10px;\n    font-size: 1.62rem;\n  }\n  \n\n  #mySpecialDiv {\n   /* Your desired styles here */\n    font-size: 24px;\n  }\n  \n  @media (max-width: 768px) {\n    /* Styles for screens up to 768px wide (typical tablet portrait) */\n    h1 {\n      font-size: 2.5rem;\n    }\n  }\n  \n  @media (max-width: 480px) {\n    /* Styles for screens up to 480px wide (typical mobile phones) */\n    h1 {\n      font-size: 2rem;\n    }\n  }\n  "],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
-	"services": `EjhMvsCUQLCTQ0Y_vV7g`
+	"services": `EjhMvsCUQLCTQ0Y_vV7g`,
+	"service": `YFAI4OgmzoUhCerYzSLG`,
+	"serviceItem": `cLxB3q3QpossuQuAIz0T`,
+	"serviceDescription": `nBt5sWqxHvxy8QXMvrvo`,
+	"mySpecialDiv": `k4X6l3lWYRk3ASAoLmgT`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1953,9 +2038,23 @@ ___CSS_LOADER_EXPORT___.locals = {};
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ``, "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, `.KffWU_vMGlGBdXhvMgWm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-bottom: 70px;
+}
+
+.d_yZzAeWG4rl_snBIFdm {
+  align-items: left;
+}`, "",{"version":3,"sources":["webpack://./src/pages/ServicesPage/ServicesPage.module.scss"],"names":[],"mappings":"AAAA;EACI,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,uBAAA;EACA,aAAA;EACA,mBAAA;AACJ;;AAEA;EACI,iBAAA;AACJ","sourcesContent":[".servicePageContainer {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    padding: 20px;\n    margin-bottom: 70px; \n  }\n  \n.serviceHeader {\n    align-items: left;\n}\n"],"sourceRoot":""}]);
 // Exports
-___CSS_LOADER_EXPORT___.locals = {};
+___CSS_LOADER_EXPORT___.locals = {
+	"servicePageContainer": `KffWU_vMGlGBdXhvMgWm`,
+	"serviceHeader": `d_yZzAeWG4rl_snBIFdm`
+};
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
 
@@ -2953,4 +3052,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.ebf93c1aebf319fd7d8fc3df0852be74.js.map
+//# sourceMappingURL=App.2814669546e7137e65b53b8b80affed3.js.map

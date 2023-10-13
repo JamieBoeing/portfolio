@@ -1,22 +1,20 @@
-import React from 'react'
-import { servicesData } from '../../data'
-import styles from './Services.module.scss'
-
+import React from 'react';
+import { servicesData } from '../../data';
+import styles from './Services.module.scss';
 
 const Services = () => {
-    return (
-        <section id="services">
-          <h2>Available Services</h2>
-          {servicesData.map((serviceItem, index) => (
-            <div className={styles.services} key={index}>
-              <h3>{serviceItem.category}</h3>
-              <p>{serviceItem.service}</p>
-              {/* <p>{serviceItem.price}</p> */}
-            </div>
-          ))}
-        </section>
-      )
-}
+  return (
+    <section className={styles.services}>
+      {servicesData.map((serviceItem, index) => (
+        <div className={styles.service} key={index}>
+          <h3 className={styles.serviceItem}>{serviceItem.service}</h3>
+          <div id="mySpecialDiv">
+          <p className={styles.serviceDescription}>{serviceItem.description}</p>
+          </div>
+        </div>
+      ))}
+    </section>
+  );
+};
 
-
-export default Services
+export default Services;

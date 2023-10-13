@@ -3,7 +3,7 @@ $color2: #3d4742; /* Olive Grey */
 $color3: #2c3437; /* Dark Forest Grey */
 $color4: #e37d4e; /* Coral */
 $color5: #e4ead8; /* Sage White */
-$color6: #4c5570; /* Medium Grey Purple */
+$color6: hsl(225, 19%, 37%); /* Medium Grey Purple */
 $color7: #ced5eb; /* Light Blue White */
 $color8: #f7f6f5; /* Light Orange White */
 $color9: #1f1c30; /* Dark Purple */
@@ -37,19 +37,21 @@ main {
   background-color: #ced5eb;
   padding: 1.5px;
   margin-bottom: 100px;
- }
- 
- p {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+p {
   font-size: 1.5rem;
- }
+}
 
 h1 {
   background: none;
   color: $color14;
   font-size: 4rem;
   margin-bottom: 1rem;
-  margin-left:20px;
-  transition: ease-in-out;
+  margin-left: 20px;
+  transition: ease-in-out 0.5s; /* Transition applied to 'ease-in-out' */
   justify-content: center;
   align-items: center;
   animation: swoopIn 1s ease-in-out;
@@ -57,7 +59,7 @@ h1 {
 }
 
 h2 {
-  font-size: 3rem; 
+  font-size: 3rem;
   margin-bottom: 1rem;
 }
 
@@ -68,10 +70,9 @@ h3 {
 
 .container {
   padding: 5px;
-  border-radius: 4px; 
+  border-radius: 4px;
   min-height: 100vh;
 }
-
 
 /* animations */
 @keyframes backgroundAnimation {
@@ -83,31 +84,30 @@ h3 {
   }
   17% {
     background-color: $color2; /* Transition to Olive Grey */
-   
   }
   25% {
     background-color: $color3; /* Transition to Dark Forest Grey */
-    
   }
   37% {
-    background-color: $color13 ; /* Transition color purple black */
+    background-color: $color13; /* Transition color purple black */
   }
   50% {
     background-color: $color9; /* Transition color Dark Purple */
   }
   63% {
-    background-color: $color10; /* Transition color DRDC purple  */
+    background-color: $color10; /* Transition color DRDC purple */
   }
   75% {
-    background-color: $color9;  /* Transition to Dark Purple */
+    background-color: $color9; /* Transition to Dark Purple */
   }
   84% {
-    background-color: $color11; /* Transition color  Dark Blue */
+    background-color: $color11; /* Transition color Dark Blue */
   }
   100% {
     background-color: $color12; /* Ending color Dark Teal */
   }
 }
+
 @keyframes shimmer {
   0% {
     background-position: -1000px 0;
@@ -116,6 +116,7 @@ h3 {
     background-position: 1000px 0;
   }
 }
+
 /* page transition */
 -enter {
   opacity: 0;
@@ -135,7 +136,6 @@ h3 {
   transition: opacity 500ms;
 }
 
-
 @keyframes swoopIn {
   0% {
     transform: translateY(-100%) translateX(-100%) rotate(-45deg);
@@ -147,15 +147,12 @@ h3 {
   }
 }
 
-
-
 /* media queries */
-
-
 @media (max-width: 768px) {
   /* Styles for screens up to 768px wide (typical tablet portrait) */
   h1 {
-    font-size: 2.5rem;
+    font-size:
+    2.5rem;
   }
 }
 
