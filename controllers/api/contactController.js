@@ -1,33 +1,37 @@
-// const sgMail = require('@sendgrid/mail');
-// require('dotenv').config()
+const sgMail = require('@sendgrid/mail');
+require('dotenv').config();
+const Email = require('../../models/api/submission')
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-// sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+const sendEmail = async (user_name, user_email, message) => {
+  try {
+    // Create an email message
+    const msg = {
+      to: 'contact@portfolio.jamieboeing.me', // Recipient email
+      from: user_email, // Sender (from)
+      subject: 'New Portfolio Contact Form Submission ',
+      text: `Name: ${user_name}\nEmail: ${user_email}\nMessage: ${message}`,
+    };
 
+    // Send the email using SendGrid
+  await sgMail.send(msg);
 
-// const sendEmail = async (req, res) => {
-//   try {
-//     const { name, email, message } = req.body;
+  const emailSubmission = new Email({
+    user_name,
+    user_email,
+    message,
+  })
 
-//     if (!name || !email || !message ) {
-//       return res.status(400).json({ message: 'Invalid request body' });
-//     }
+  // save submission to database
+  await emailSubmission.save()
 
-//     const msg = {
-//       to: process.env.EMAIL_USER,
-//       from: user_email,
-//       subject: 'New Contact Form Submission',
-//       text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+    return { message: 'Email sent successfully' };
+  } catch (error) {
+    console.error('Error sending email:', error);
+    return { message: 'Internal server error. Please try again later.' };
+  }
+};
 
-//     };
-
-//     await sgMail.send(msg); 
-//     return res.status(200).json({ message: 'Email sent successfully' });
-//   } catch (error) {
-//     console.error('Error sending email:', error);
-//     return res.status(500).json({ message: 'Internal server error' });
-//   }
-// };
-
-// module.exports = {
-//   sendEmail,
-// };
+module.exports = {
+  sendEmail,
+};

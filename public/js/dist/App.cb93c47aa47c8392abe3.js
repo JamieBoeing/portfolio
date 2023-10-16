@@ -902,8 +902,9 @@ const ProjectPage = () => {
 
 
 
-// import ContactForm from '../../components/Contact/ContactModalForm'
 
+
+// import ContactModal from '../../components/Contact/ContactModal'
 
 const ServicesPage = () => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -3052,4 +3053,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.2814669546e7137e65b53b8b80affed3.js.map
+//# sourceMappingURL=App.9316d9c16108d19e69b8952cca20aee0.js.map

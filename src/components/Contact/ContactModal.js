@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
-import styles from './ContactModalForm.module.scss';
-import api from '../../utilities/send-email';
+import styles from './ContactModal.module.scss'; // Import your CSS or SCSS styles
+import { sendEmail } from '../../../controllers/api/contactController'; // Import your controller
 
-function ContactForm() {
+function ContactModal() {
   const [formData, setFormData] = useState({
     user_name: '',
     user_email: '',
     message: '',
   });
 
-  const [isModalOpen, setIsModalOpen] = useState(false); // State for the modal
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [successMessage, setSuccessMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -21,34 +23,37 @@ function ContactForm() {
 
   const closeModal = () => {
     setIsModalOpen(false);
+    clearForm(); // Clear the form when the modal is closed
   };
 
-  const sendEmail = async () => {
-    try {
-      // Make a POST request using your custom utility
-      const response = await api.post('/contact', formData);
+  const clearForm = () => {
+    setFormData({
+      user_name: '',
+      user_email: '',
+      message: '',
+    });
+  };
 
-      if (response.status === 'success') {
-        console.log('Email sent:', response.data);
-        // You can close the modal or display a success message here
-        closeModal(); // Close the modal after sending the email
-      } else {
-        console.error('Error sending email:', response.error);
-        // Handle and display an error message here
-      }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    clearMessages(); // Clear any previous messages
+
+    try {
+      await sendEmail(formData.user_name, formData.user_email, formData.message);
+
+      // Handle success, e.g., display a success message or reset the form
+      setSuccessMessage('Email sent successfully');
+      clearForm();
     } catch (error) {
+      // Handle errors, e.g., display an error message
       console.error('Error sending email:', error);
-      // Handle and display an error message here
+      setErrorMessage('Internal server error. Please try again later.');
     }
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault(); // Prevent the default form submission behavior
-    sendEmail(); // Call your sendEmail function to handle the submission
-  };
-
-  const stopPropagation = (e) => {
-    e.stopPropagation();
+  const clearMessages = () => {
+    setSuccessMessage('');
+    setErrorMessage('');
   };
 
   return (
@@ -56,7 +61,7 @@ function ContactForm() {
       <button onClick={openModal}>Contact Me</button>
       {isModalOpen && (
         <div className={styles.modalOverlay} onClick={closeModal}>
-          <div className={styles.modal} onClick={stopPropagation}>
+          <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
             <div className={styles.modalContainer}>
               <div className={styles.modalBody}>
                 <form onSubmit={handleSubmit}>
@@ -68,7 +73,6 @@ function ContactForm() {
                       id="user_name"
                       value={formData.user_name}
                       onChange={handleChange}
-                      onClick={stopPropagation}
                     />
                   </div>
 
@@ -80,7 +84,6 @@ function ContactForm() {
                       id="user_email"
                       value={formData.user_email}
                       onChange={handleChange}
-                      onClick={stopPropagation}
                     />
                   </div>
 
@@ -91,21 +94,20 @@ function ContactForm() {
                       id="message"
                       value={formData.message}
                       onChange={handleChange}
-                      onClick={stopPropagation}
                     />
                   </div>
 
-                  <button type="submit" onClick={stopPropagation}>
-                    Send
-                  </button>
+                  <button type="submit">Send</button>
                 </form>
               </div>
             </div>
           </div>
         </div>
       )}
+      {successMessage && <div className={styles.successMessage}>{successMessage}</div>}
+      {errorMessage && <div className={styles.errorMessage}>{errorMessage}</div>}
     </div>
   );
 }
 
-export default ContactForm;
+export default ContactModal;
