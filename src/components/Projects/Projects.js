@@ -26,7 +26,7 @@ const Projects = () => {
           <h3 className={styles.projectTitle}>{project.title}</h3>
           <img src={project.imageUrl} alt={project.title} className={styles.projectImage} />
           <div className={styles.projectDetails}>
-            <p className={styles.projectDescription}>
+            <div className={styles.projectDescription}>
               <strong>Description:</strong>
               {typeof project.description === 'string' ? (
                 <ul>
@@ -37,7 +37,7 @@ const Projects = () => {
               ) : (
                 project.description
               )}
-            </p>
+            </div>
             <p className={styles.technologies}>
               <strong>Technologies:</strong>
               <ul>

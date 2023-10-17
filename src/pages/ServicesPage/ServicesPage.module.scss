@@ -1,12 +1,22 @@
 .servicePageContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    margin-bottom: 70px; 
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-bottom: 70px; 
+}
+
 .serviceHeader {
-    align-items: left;
+  align-items: left;
+}
+
+.serviceFooter {
+  margin-top: 140px;
+}
+
+.serviceContact {
+  margin-bottom: 100px;
+  margin: 20px;
+  justify-content: center;
 }

@@ -1,57 +1,57 @@
 
 .eduContainer {
-    padding: 2rem;
-    margin-right: 18px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #572387;
-    border-radius: 10px;
-    text-align: center;
-
-  
-    h2 {
-      font-size: 47px;
-      margin-bottom: 1rem;
-      color: #60b4c4;
-    }
-  
-    .eduItem {
-      border-radius: 8px;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      width: 100%;
-      max-width: 400px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      background-color: white;
-      text-align: center;
-      align-items: center;
-  
-      h3 {
-        font-size: 1.2rem;
-        margin-bottom: 0.5rem;
-      }
-  
-      
-  
-      .dates {
-        font-size: 0.9rem;
-        color: #555;
-      }
-    }
-  }
-  .edImage {
-    padding: auto;
-    border-radius: 10px;
-    background-color: white;
-    list-style: none;
-    align-items: center;
-
-  }
-.eduList {
+  padding: 2rem;
+  margin-right: 18px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  background-color: #572387;
+  border-radius: 10px;
   text-align: center;
-  margin-right: 46px ;
+
+
+  h2 {
+    font-size: 47px;
+    margin-bottom: 1rem;
+    color: #60b4c4;
+  }
+
+  .eduItem {
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    text-align: center;
+    align-items: center;
+
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    
+
+    .dates {
+      font-size: 0.9rem;
+      color: #555;
+    }
+  }
+}
+.edImage {
+  padding: auto;
+  border-radius: 10px;
+  background-color: white;
+  list-style: none;
+  align-items: center;
+
+}
+.eduList {
+align-items: center;
+text-align: center;
+margin-right: 46px ;
 }
 
 .eduListItem {
@@ -60,25 +60,25 @@ list-style: none;
 }
 
 .resumeLink {
-  color:aquamarine;
+color:aquamarine;
 }
 
 .achievements {
-  list-style-type: disc;
-  padding-left: 2.5rem;
-  padding: 4px;
-  text-align: left;
-  margin: 2px;
+list-style-type: disc;
+padding-left: 2.5rem;
+padding: 4px;
+text-align: left;
+margin: 2px;
 }
 .university {
-  font-size: 1.7rem;
+font-size: 1.7rem;
 }
 
 .gradYear {
-  font-size: 1.3rem;
+font-size: 1.3rem;
 }
 
 .certification {
-  font-weight: 600;
-  font-size: 1.5;
+font-weight: 600;
+font-size: 1.5;
 }

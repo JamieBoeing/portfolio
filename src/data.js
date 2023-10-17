@@ -7,7 +7,7 @@ const projects = [
     technologies: ['React', 'Node.js', 'MongoDB'],
     githubLink: 'https://github.com/JamieBoeing/unit_2_project',
     liveDemoLink: 'https://yourproject1demo.com',
-    imageUrl: 'img/recipe.svg', // Replace with the actual Imgur URL
+    imageUrl: 'img/recipe.svg', 
   },
   {
     id: 2,
@@ -309,7 +309,6 @@ const servicesData = [
 const images = [
   'image1.jpeg',
   'image2.jpeg',
-  'portrait.png',
   'image3.jpeg',
   'image4.jpeg',
   'image5.jpeg',
