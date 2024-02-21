@@ -207,53 +207,51 @@ const educationData = [
   // Add more education entries...
 ];
 
-
 const wordData = [
-  {
-  words: [
-  'Full-Stack Developer', 
-  'Web Development', 
-  'JavaScript', 
-  'React', 
-  'Node.js', 
-  'Express.js', 
-  'HTML',
-  'CSS',
-  'MongoDB', 
-  'Responsive Design',
-  'Git', 
-  'RESTful API', 
-  'UI/UX Design', 
-  'Problem Solving', 
-  'Agile', 
-  'Scrum',
-  'Team Collaboration',
-  'Front-end', 
-  'Back-end', 
-  'Database', 
-  'Creative', 
-  'Adaptable', 
-  'Innovative', 
-  'Detail-Oriented', 
-  'Problem Solver', 
-  'Collaborative', 
-  'Communicative', 
-  'Organized', 
-  'Curious', 
-  'Motivated', 
-  'Resourceful', 
-  'Analytical', 
-  'Patient', 
-  'Empathetic', 
-  'Positive', 
-  'Team Player', 
-  'Leadership',
-  'Self-Motivated', 
-  'Open-Minded', 
-  'Resilient'
-  ],
-},
-]
+  { text: 'Full-Stack Developer', value: 10 },
+  { text: 'Web Development', value: 8 },
+  { text: 'JavaScript', value: 7 },
+  { text: 'React', value: 6 },
+  { text: 'Node.js', value: 5 },
+  { text: 'Express.js', value: 5 },
+  { text: 'HTML', value: 4 },
+  { text: 'CSS', value: 4 },
+  { text: 'MongoDB', value: 4 },
+  { text: 'Responsive Design', value: 4 },
+  { text: 'Git', value: 3 },
+  { text: 'RESTful API', value: 3 },
+  { text: 'UI/UX Design', value: 3 },
+  { text: 'Problem Solving', value: 3 },
+  { text: 'Agile', value: 2 },
+  { text: 'Scrum', value: 2 },
+  { text: 'Team Collaboration', value: 2 },
+  { text: 'Front-end', value: 2 },
+  { text: 'Back-end', value: 2 },
+  { text: 'Database', value: 2 },
+  { text: 'Creative', value: 3 },
+  { text: 'Adaptable', value: 3 },
+  { text: 'Innovative', value: 3 },
+  { text: 'Detail-Oriented', value: 3 },
+  { text: 'Problem Solver', value: 3 },
+  { text: 'Collaborative', value: 3 },
+  { text: 'Communicative', value: 3 },
+  { text: 'Organized', value: 3 },
+  { text: 'Curious', value: 3 },
+  { text: 'Motivated', value: 3 },
+  { text: 'Resourceful', value: 3 },
+  { text: 'Analytical', value: 3 },
+  { text: 'Patient', value: 3 },
+  { text: 'Empathetic', value: 3 },
+  { text: 'Positive', value: 3 },
+  { text: 'Team Player', value: 3 },
+  { text: 'Leadership', value: 3 },
+  { text: 'Self-Motivated', value: 3 },
+  { text: 'Open-Minded', value: 3 },
+  { text: 'Resilient', value: 3 },
+];
+
+export default wordData;
+
 
 const servicesData = [
   {
@@ -317,4 +315,12 @@ const images = [
 ]
 
 
-export { projects, skills, aboutMe, experienceData, educationData, wordData, servicesData, images };
+const graphics = [
+  'nail-cards.jpg',
+  'salon-card.jpg',
+  'tattoo-card.jpg',
+  'mom-brochure.jpg',
+  'flyer.jpg'
+]
+
+export { projects, skills, aboutMe, experienceData, educationData, wordData, servicesData, images, graphics };

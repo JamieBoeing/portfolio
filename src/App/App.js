@@ -7,6 +7,7 @@ import AboutPage from '../pages/AboutPage/AboutPage';
 import ProjectPage from '../pages/ProjectPage/ProjectPage';
 import ServicesPage from '../pages/ServicesPage/ServicesPage';
 
+
 const App = () => {
   const location = useLocation();
   const [isTransitioning, setIsTransitioning] = useState(false);

@@ -5,7 +5,7 @@ const contactController = require('../../controllers/api/contactController');
 
 // Define a route to handle form submissions.
 // router.post('/contact', contactController.sendEmail)
-router.post('/api/contact', async (req, res) => {
+router.post('/', async (req, res) => {
     // Call your controller to handle the contact form submission
     try {
       const result = await contactController.sendEmail(

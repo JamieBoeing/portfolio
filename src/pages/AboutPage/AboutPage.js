@@ -37,8 +37,8 @@ const AboutPage = () => {
         <section className={styles.rightColumn}>
         <img
             className={styles.portraitImg}
-            src='/img/portrait.png'
-            alt="portrait"
+            src='/img/profileImage.jpg'
+            alt="profile"
           />
          <section className={styles.education}>
         <Education />

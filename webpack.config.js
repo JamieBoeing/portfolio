@@ -33,7 +33,7 @@ module.exports = (env) => {
           use: ['babel-loader'],
         },
         {
-          test: /\.scss$/,
+          test: /\.s?css$/,
           use: [
             isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
             {
@@ -50,6 +50,14 @@ module.exports = (env) => {
     },
     resolve: {
       modules: ['node_modules'],
+      fallback: {
+        fs: false,
+        path: require.resolve("path-browserify"),
+        os: require.resolve("os-browserify/browser"),
+        crypto: require.resolve("crypto-browserify"),
+        buffer: require.resolve("buffer"),
+        stream: require.resolve("stream-browserify"),
+      },
     },
     plugins: [
       new MiniCssExtractPlugin({

@@ -1,2 +1,23 @@
-
-
+.myWordCloudComponent {
+    width: 800px; /* Adjust the width as needed */
+    height: 400px; /* Adjust the height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .react-word-cloud {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .react-word-cloud .word {
+    display: inline-block;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    font-size: 16px; /* Adjust the font size as needed */
+  }
+  
+  /* You can add more styles for the words, like hover effects, animations, etc. */
+  

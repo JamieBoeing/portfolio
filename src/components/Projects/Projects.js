@@ -14,7 +14,7 @@ const Projects = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.containerProjects}>
       {projects.map((project) => (
         <div
           key={project.id}

@@ -309,6 +309,55 @@ const Footer = () => {
 
 /***/ }),
 
+/***/ "./src/components/ImageSlider/ImageSlider.js":
+/*!***************************************************!*\
+  !*** ./src/components/ImageSlider/ImageSlider.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_slick__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-slick */ "./node_modules/react-slick/lib/index.js");
+/* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../data */ "./src/data.js");
+/* harmony import */ var _ImageSlider_module_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ImageSlider.module.scss */ "./src/components/ImageSlider/ImageSlider.module.scss");
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+
+
+
+const ImageSlider = () => {
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: _ImageSlider_module_scss__WEBPACK_IMPORTED_MODULE_3__["default"].sliderContainer
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_slick__WEBPACK_IMPORTED_MODULE_1__["default"], _extends({
+    className: _ImageSlider_module_scss__WEBPACK_IMPORTED_MODULE_3__["default"].customInnerSlider
+  }, settings), _data__WEBPACK_IMPORTED_MODULE_2__.graphics.map((image, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    key: index
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: image,
+    alt: "Image ".concat(index)
+  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: _ImageSlider_module_scss__WEBPACK_IMPORTED_MODULE_3__["default"].customArrows
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    className: _ImageSlider_module_scss__WEBPACK_IMPORTED_MODULE_3__["default"].customPrevArrow
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    className: _ImageSlider_module_scss__WEBPACK_IMPORTED_MODULE_3__["default"].customNextArrow
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: _ImageSlider_module_scss__WEBPACK_IMPORTED_MODULE_3__["default"].customDots
+  }));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ImageSlider);
+
+/***/ }),
+
 /***/ "./src/components/NavBar/NavBar.js":
 /*!*****************************************!*\
   !*** ./src/components/NavBar/NavBar.js ***!
@@ -373,7 +422,7 @@ const Projects = () => {
     }
   };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _Projects_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].container
+    className: _Projects_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].containerProjects
   }, _data__WEBPACK_IMPORTED_MODULE_1__.projects.map(project => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     key: project.id,
     className: "".concat(_Projects_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].item, " ").concat(expandedProjectId === project.id ? _Projects_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].expanded : ''),
@@ -386,7 +435,7 @@ const Projects = () => {
     className: _Projects_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].projectImage
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: _Projects_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].projectDetails
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: _Projects_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].projectDescription
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("strong", null, "Description:"), typeof project.description === 'string' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", null, project.description.split('\n').map((line, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
     key: index
@@ -487,8 +536,11 @@ const Skills = () => {
 /*!***********************************************!*\
   !*** ./src/components/WordCloud/WordCloud.js ***!
   \***********************************************/
-/***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_wordcloud2__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-wordcloud2 */ "./node_modules/react-wordcloud2/lib/react-wordcloud2.es.js");
 /* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../data */ "./src/data.js");
@@ -498,25 +550,32 @@ const Skills = () => {
 
 
 const MyWordCloud = () => {
-  const colors = [_WordCloud_module_scss__WEBPACK_IMPORTED_MODULE_3__["default"]['col-1'], _WordCloud_module_scss__WEBPACK_IMPORTED_MODULE_3__["default"]['col-2'], _WordCloud_module_scss__WEBPACK_IMPORTED_MODULE_3__["default"]['col-3'], _WordCloud_module_scss__WEBPACK_IMPORTED_MODULE_3__["default"]['col-4'], _WordCloud_module_scss__WEBPACK_IMPORTED_MODULE_3__["default"]['col-5']];
+  const colors = ['hsl(225, 19%, 37%)', '#572387', '#60b4c4', '#e37d4e', '#1a3d5c'];
   const options = {
     rotations: 2,
     rotationAngles: [0, 90],
-    fontSizes: [20, 60] // Define your desired font size range
+    fontSizes: [20, 60]
   };
-
   const assignRandomColor = () => colors[Math.floor(Math.random() * colors.length)];
-  const wordColors = words.map(word => ({
-    text: word.text,
-    size: word.size,
-    color: assignRandomColor()
+  if (!_data__WEBPACK_IMPORTED_MODULE_2__.wordData[0] || !_data__WEBPACK_IMPORTED_MODULE_2__.wordData[0].words) {
+    return null;
+  }
+  const wordsWithRandomProperties = _data__WEBPACK_IMPORTED_MODULE_2__.wordData[0].words.map(word => ({
+    text: word,
+    size: Math.floor(Math.random() * 40) + 20,
+    color: assignRandomColor(),
+    rotation: Math.random() * 90
   }));
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_wordcloud2__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    wordData: _data__WEBPACK_IMPORTED_MODULE_2__.wordData,
-    options: options
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: _WordCloud_module_scss__WEBPACK_IMPORTED_MODULE_3__["default"].myWordCloudComponent
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_wordcloud2__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    words: wordsWithRandomProperties,
+    options: options,
+    width: 800,
+    height: 400
   }));
 };
-/* unused harmony default export */ var __WEBPACK_DEFAULT_EXPORT__ = (MyWordCloud);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MyWordCloud);
 
 /***/ }),
 
@@ -530,6 +589,7 @@ const MyWordCloud = () => {
 /* harmony export */   aboutMe: () => (/* binding */ aboutMe),
 /* harmony export */   educationData: () => (/* binding */ educationData),
 /* harmony export */   experienceData: () => (/* binding */ experienceData),
+/* harmony export */   graphics: () => (/* binding */ graphics),
 /* harmony export */   images: () => (/* binding */ images),
 /* harmony export */   projects: () => (/* binding */ projects),
 /* harmony export */   servicesData: () => (/* binding */ servicesData),
@@ -543,7 +603,7 @@ const projects = [{
   technologies: ['React', 'Node.js', 'MongoDB'],
   githubLink: 'https://github.com/JamieBoeing/unit_2_project',
   liveDemoLink: 'https://yourproject1demo.com',
-  imageUrl: 'img/recipe.svg' // Replace with the actual Imgur URL
+  imageUrl: 'img/recipe.svg'
 }, {
   id: 2,
   title: 'Art Supplies',
@@ -678,8 +738,127 @@ const educationData = [{
 ];
 
 const wordData = [{
-  words: ['Full-Stack Developer', 'Web Development', 'JavaScript', 'React', 'Node.js', 'Express.js', 'HTML', 'CSS', 'MongoDB', 'Responsive Design', 'Git', 'RESTful API', 'UI/UX Design', 'Problem Solving', 'Agile', 'Scrum', 'Team Collaboration', 'Front-end', 'Back-end', 'Database', 'Creative', 'Adaptable', 'Innovative', 'Detail-Oriented', 'Problem Solver', 'Collaborative', 'Communicative', 'Organized', 'Curious', 'Motivated', 'Resourceful', 'Analytical', 'Patient', 'Empathetic', 'Positive', 'Team Player', 'Leadership', 'Self-Motivated', 'Open-Minded', 'Resilient']
+  text: 'Full-Stack Developer',
+  value: 10
+}, {
+  text: 'Web Development',
+  value: 8
+}, {
+  text: 'JavaScript',
+  value: 7
+}, {
+  text: 'React',
+  value: 6
+}, {
+  text: 'Node.js',
+  value: 5
+}, {
+  text: 'Express.js',
+  value: 5
+}, {
+  text: 'HTML',
+  value: 4
+}, {
+  text: 'CSS',
+  value: 4
+}, {
+  text: 'MongoDB',
+  value: 4
+}, {
+  text: 'Responsive Design',
+  value: 4
+}, {
+  text: 'Git',
+  value: 3
+}, {
+  text: 'RESTful API',
+  value: 3
+}, {
+  text: 'UI/UX Design',
+  value: 3
+}, {
+  text: 'Problem Solving',
+  value: 3
+}, {
+  text: 'Agile',
+  value: 2
+}, {
+  text: 'Scrum',
+  value: 2
+}, {
+  text: 'Team Collaboration',
+  value: 2
+}, {
+  text: 'Front-end',
+  value: 2
+}, {
+  text: 'Back-end',
+  value: 2
+}, {
+  text: 'Database',
+  value: 2
+}, {
+  text: 'Creative',
+  value: 3
+}, {
+  text: 'Adaptable',
+  value: 3
+}, {
+  text: 'Innovative',
+  value: 3
+}, {
+  text: 'Detail-Oriented',
+  value: 3
+}, {
+  text: 'Problem Solver',
+  value: 3
+}, {
+  text: 'Collaborative',
+  value: 3
+}, {
+  text: 'Communicative',
+  value: 3
+}, {
+  text: 'Organized',
+  value: 3
+}, {
+  text: 'Curious',
+  value: 3
+}, {
+  text: 'Motivated',
+  value: 3
+}, {
+  text: 'Resourceful',
+  value: 3
+}, {
+  text: 'Analytical',
+  value: 3
+}, {
+  text: 'Patient',
+  value: 3
+}, {
+  text: 'Empathetic',
+  value: 3
+}, {
+  text: 'Positive',
+  value: 3
+}, {
+  text: 'Team Player',
+  value: 3
+}, {
+  text: 'Leadership',
+  value: 3
+}, {
+  text: 'Self-Motivated',
+  value: 3
+}, {
+  text: 'Open-Minded',
+  value: 3
+}, {
+  text: 'Resilient',
+  value: 3
 }];
+/* unused harmony default export */ var __WEBPACK_DEFAULT_EXPORT__ = (wordData);
 const servicesData = [{
   category: 'Full-Stack Development',
   service: 'End-to-End Web Application Development',
@@ -720,7 +899,8 @@ const servicesData = [{
 // add more services as needed...
 ];
 
-const images = ['image1.jpeg', 'image2.jpeg', 'portrait.png', 'image3.jpeg', 'image4.jpeg', 'image5.jpeg', 'profileImage.jpg'];
+const images = ['image1.jpeg', 'image2.jpeg', 'image3.jpeg', 'image4.jpeg', 'image5.jpeg', 'profileImage.jpg'];
+const graphics = ['nail-cards.jpeg', 'salon-card.jpeg', 'tattoo-card.jpeg', 'mom-brochure.jpeg', 'flyer.jpeg'];
 
 
 /***/ }),
@@ -786,8 +966,8 @@ const AboutPage = () => {
     className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].rightColumn
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].portraitImg,
-    src: "/img/portrait.png",
-    alt: "portrait"
+    src: "/img/profileImage.jpg",
+    alt: "profile"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
     className: _AboutPage_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].education
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Education_Education__WEBPACK_IMPORTED_MODULE_4__["default"], null)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
@@ -854,7 +1034,9 @@ const HomePage = () => {
     className: _HomePage_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].imageCarousel
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Carousel_Carousel__WEBPACK_IMPORTED_MODULE_4__["default"], {
     images: _data__WEBPACK_IMPORTED_MODULE_5__.images
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], null));
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: _HomePage_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].wordCloudStyles
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_WordCloud_WordCloud__WEBPACK_IMPORTED_MODULE_1__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], null));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HomePage);
 
@@ -873,6 +1055,8 @@ const HomePage = () => {
 /* harmony import */ var _ProjectPage_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ProjectPage.module.scss */ "./src/pages/ProjectPage/ProjectPage.module.scss");
 /* harmony import */ var _components_Projects_Projects__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/Projects/Projects */ "./src/components/Projects/Projects.js");
 /* harmony import */ var _components_Footer_Footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/Footer/Footer */ "./src/components/Footer/Footer.js");
+/* harmony import */ var _components_ImageSlider_ImageSlider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/ImageSlider/ImageSlider */ "./src/components/ImageSlider/ImageSlider.js");
+
 
 
 
@@ -880,7 +1064,11 @@ const HomePage = () => {
 const ProjectPage = () => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: _ProjectPage_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].projectContainer
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "A Showcase of My Projects")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Projects_Projects__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], null));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "A Showcase of My Projects")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: _ProjectPage_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].projectPageContainer
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Projects_Projects__WEBPACK_IMPORTED_MODULE_2__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: _ProjectPage_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].projectPageGraphicContainer
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_ImageSlider_ImageSlider__WEBPACK_IMPORTED_MODULE_4__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], null));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ProjectPage);
 
@@ -904,12 +1092,15 @@ const ProjectPage = () => {
 
 
 
-// import ContactModal from '../../components/Contact/ContactModal'
 
 const ServicesPage = () => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: _ServicesPage_module_scss__WEBPACK_IMPORTED_MODULE_3__["default"].serviceHeader
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "My Services")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Services_Services__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "My Services")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Services_Services__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
+    className: _ServicesPage_module_scss__WEBPACK_IMPORTED_MODULE_3__["default"].serviceContact
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: _ServicesPage_module_scss__WEBPACK_IMPORTED_MODULE_3__["default"].serviceFooter
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], null)));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ServicesPage);
 
@@ -1146,7 +1337,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.fcJFu5Rcew3sw3qbbu0p {
 .m8TeojzqHVVmtHXH0IvO {
   font-weight: 600;
   font-size: 1.5;
-}`, "",{"version":3,"sources":["webpack://./src/components/Education/Education.module.scss"],"names":[],"mappings":"AACA;EACI,aAAA;EACA,kBAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,yBAAA;EACA,mBAAA;EACA,kBAAA;AAAJ;AAGI;EACE,eAAA;EACA,mBAAA;EACA,cAAA;AADN;AAII;EACE,kBAAA;EACA,aAAA;EACA,mBAAA;EACA,WAAA;EACA,gBAAA;EACA,wCAAA;EACA,uBAAA;EACA,kBAAA;EACA,mBAAA;AAFN;AAIM;EACE,iBAAA;EACA,qBAAA;AAFR;AAOM;EACE,iBAAA;EACA,WAAA;AALR;;AASE;EACE,aAAA;EACA,mBAAA;EACA,uBAAA;EACA,gBAAA;EACA,mBAAA;AANJ;;AASA;EACE,mBAAA;EACA,kBAAA;EACA,kBAAA;AANF;;AASA;EACA,mBAAA;EACA,gBAAA;AANA;;AASA;EACE,iBAAA;AANF;;AASA;EACE,qBAAA;EACA,oBAAA;EACA,YAAA;EACA,gBAAA;EACA,WAAA;AANF;;AAQA;EACE,iBAAA;AALF;;AAQA;EACE,iBAAA;AALF;;AAQA;EACE,gBAAA;EACA,cAAA;AALF","sourcesContent":["\n.eduContainer {\n    padding: 2rem;\n    margin-right: 18px;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    background-color: #572387;\n    border-radius: 10px;\n    text-align: center;\n\n  \n    h2 {\n      font-size: 47px;\n      margin-bottom: 1rem;\n      color: #60b4c4;\n    }\n  \n    .eduItem {\n      border-radius: 8px;\n      padding: 1rem;\n      margin-bottom: 1rem;\n      width: 100%;\n      max-width: 400px;\n      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n      background-color: white;\n      text-align: center;\n      align-items: center;\n  \n      h3 {\n        font-size: 1.2rem;\n        margin-bottom: 0.5rem;\n      }\n  \n      \n  \n      .dates {\n        font-size: 0.9rem;\n        color: #555;\n      }\n    }\n  }\n  .edImage {\n    padding: auto;\n    border-radius: 10px;\n    background-color: white;\n    list-style: none;\n    align-items: center;\n\n  }\n.eduList {\n  align-items: center;\n  text-align: center;\n  margin-right: 46px ;\n}\n\n.eduListItem {\nalign-items: center;\nlist-style: none;\n}\n\n.resumeLink {\n  color:aquamarine;\n}\n\n.achievements {\n  list-style-type: disc;\n  padding-left: 2.5rem;\n  padding: 4px;\n  text-align: left;\n  margin: 2px;\n}\n.university {\n  font-size: 1.7rem;\n}\n\n.gradYear {\n  font-size: 1.3rem;\n}\n\n.certification {\n  font-weight: 600;\n  font-size: 1.5;\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/Education/Education.module.scss"],"names":[],"mappings":"AACA;EACE,aAAA;EACA,kBAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,yBAAA;EACA,mBAAA;EACA,kBAAA;AAAF;AAGE;EACE,eAAA;EACA,mBAAA;EACA,cAAA;AADJ;AAIE;EACE,kBAAA;EACA,aAAA;EACA,mBAAA;EACA,WAAA;EACA,gBAAA;EACA,wCAAA;EACA,uBAAA;EACA,kBAAA;EACA,mBAAA;AAFJ;AAII;EACE,iBAAA;EACA,qBAAA;AAFN;AAOI;EACE,iBAAA;EACA,WAAA;AALN;;AASA;EACE,aAAA;EACA,mBAAA;EACA,uBAAA;EACA,gBAAA;EACA,mBAAA;AANF;;AASA;EACA,mBAAA;EACA,kBAAA;EACA,kBAAA;AANA;;AASA;EACA,mBAAA;EACA,gBAAA;AANA;;AASA;EACA,iBAAA;AANA;;AASA;EACA,qBAAA;EACA,oBAAA;EACA,YAAA;EACA,gBAAA;EACA,WAAA;AANA;;AAQA;EACA,iBAAA;AALA;;AAQA;EACA,iBAAA;AALA;;AAQA;EACA,gBAAA;EACA,cAAA;AALA","sourcesContent":["\n.eduContainer {\n  padding: 2rem;\n  margin-right: 18px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  background-color: #572387;\n  border-radius: 10px;\n  text-align: center;\n\n\n  h2 {\n    font-size: 47px;\n    margin-bottom: 1rem;\n    color: #60b4c4;\n  }\n\n  .eduItem {\n    border-radius: 8px;\n    padding: 1rem;\n    margin-bottom: 1rem;\n    width: 100%;\n    max-width: 400px;\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n    background-color: white;\n    text-align: center;\n    align-items: center;\n\n    h3 {\n      font-size: 1.2rem;\n      margin-bottom: 0.5rem;\n    }\n\n    \n\n    .dates {\n      font-size: 0.9rem;\n      color: #555;\n    }\n  }\n}\n.edImage {\n  padding: auto;\n  border-radius: 10px;\n  background-color: white;\n  list-style: none;\n  align-items: center;\n\n}\n.eduList {\nalign-items: center;\ntext-align: center;\nmargin-right: 46px ;\n}\n\n.eduListItem {\nalign-items: center;\nlist-style: none;\n}\n\n.resumeLink {\ncolor:aquamarine;\n}\n\n.achievements {\nlist-style-type: disc;\npadding-left: 2.5rem;\npadding: 4px;\ntext-align: left;\nmargin: 2px;\n}\n.university {\nfont-size: 1.7rem;\n}\n\n.gradYear {\nfont-size: 1.3rem;\n}\n\n.certification {\nfont-weight: 600;\nfont-size: 1.5;\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"eduContainer": `fcJFu5Rcew3sw3qbbu0p`,
@@ -1370,6 +1561,112 @@ ___CSS_LOADER_EXPORT___.locals = {
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/components/ImageSlider/ImageSlider.module.scss":
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/components/ImageSlider/ImageSlider.module.scss ***!
+  \***************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `.P2U4tQDDW5BqAsSTKkDg {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+.P2U4tQDDW5BqAsSTKkDg .oDZis_EQYvu46J4K11yj {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.P2U4tQDDW5BqAsSTKkDg .oDZis_EQYvu46J4K11yj .qroLCoAblkm1YAcZ5MOo {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.P2U4tQDDW5BqAsSTKkDg .oDZis_EQYvu46J4K11yj .qroLCoAblkm1YAcZ5MOo .kdsLpzfF8X97CNVXiUgh {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+.P2U4tQDDW5BqAsSTKkDg .oDZis_EQYvu46J4K11yj .qroLCoAblkm1YAcZ5MOo .kdsLpzfF8X97CNVXiUgh.yONk5RWyu_RE1GNUvIrE {
+  display: block;
+}
+.P2U4tQDDW5BqAsSTKkDg .j4soAkJH0KGIXoKn_JHs {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  cursor: pointer;
+}
+.P2U4tQDDW5BqAsSTKkDg .j4soAkJH0KGIXoKn_JHs.YIX2Wi48y2y6pyMiWj4Q {
+  left: 10px;
+}
+.P2U4tQDDW5BqAsSTKkDg .j4soAkJH0KGIXoKn_JHs.rPNkFKHYbP62yI7l7vgC {
+  right: 10px;
+}
+.P2U4tQDDW5BqAsSTKkDg .VnROrdq62_0KNp4SkGpK {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.P2U4tQDDW5BqAsSTKkDg .VnROrdq62_0KNp4SkGpK li {
+  display: inline-block;
+  margin: 0 5px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.P2U4tQDDW5BqAsSTKkDg .VnROrdq62_0KNp4SkGpK li.yONk5RWyu_RE1GNUvIrE {
+  background-color: #007bff;
+}`, "",{"version":3,"sources":["webpack://./src/components/ImageSlider/ImageSlider.module.scss"],"names":[],"mappings":"AACA;EACI,kBAAA;EACA,cAAA;EACA,sBAAA;EACA,yBAAA;EACG,sBAAA;EACK,iBAAA;EACR,mBAAA;EACA,wCAAA;AAAJ;AACI;EACI,kBAAA;EACA,cAAA;EACA,gBAAA;EACA,SAAA;EACA,UAAA;AACR;AAAQ;EACI,kBAAA;EACA,cAAA;EACA,SAAA;EACA,UAAA;EACA,gBAAA;AAEZ;AADY;EACI,WAAA;EACA,YAAA;EACA,eAAA;EACA,aAAA;AAGhB;AAFgB;EACI,cAAA;AAIpB;AACI;EACI,kBAAA;EACA,QAAA;EACA,2BAAA;EACA,UAAA;EACA,eAAA;AACR;AAAQ;EACI,UAAA;AAEZ;AAAQ;EACI,WAAA;AAEZ;AACI;EACI,kBAAA;EACA,YAAA;EACA,OAAA;EACA,QAAA;EACA,kBAAA;EACA,SAAA;EACA,UAAA;EACA,gBAAA;AACR;AAAQ;EACI,qBAAA;EACA,aAAA;EACI,cAAA;EACA,WAAA;EACA,YAAA;EACA,kBAAA;EACA,sBAAA;EACA,YAAA;EACA,aAAA;EACA,eAAA;AAEhB;AADgB;EACI,yBAAA;AAGpB","sourcesContent":["\n.slick-slider {\n    position: relative; \n    display: block; \n    box-sizing: border-box;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n            user-select: none; \n    touch-action: pan-y; \n    -webkit-tap-highlight-color: transparent; \n    .slick-list {\n        position: relative; \n        display: block; \n        overflow: hidden; \n        margin: 0; \n        padding: 0; \n        .slick-track {\n            position: relative; \n            display: block; \n            margin: 0; \n            padding: 0; \n            overflow: hidden; \n            .slick-slide {\n                float: left; \n                height: 100%; \n                min-height: 1px; \n                display: none; \n                &.slick-active {\n                    display: block; \n                }\n            }\n        }\n    }\n    .slick-arrow {\n        position: absolute; \n        top: 50%; \n        transform: translateY(-50%); \n        z-index: 1; \n        cursor: pointer; \n        &.slick-prev {\n            left: 10px; \n        }\n        &.slick-next {\n            right: 10px; \n        }\n    }\n    .slick-dots {\n        position: absolute; \n        bottom: 10px; \n        left: 0; \n        right: 0; \n        text-align: center; \n        margin: 0; \n        padding: 0; \n        list-style: none; \n        li {\n            display: inline-block; \n            margin: 0 5px; \n                display: block; \n                width: 10px; \n                height: 10px; \n                border-radius: 50%; \n                background-color: #ccc; \n                border: none; \n                outline: none; \n                cursor: pointer; \n                &.slick-active {\n                    background-color: #007bff; \n                }\n            }\n        }\n    }\n\n"],"sourceRoot":""}]);
+// Exports
+___CSS_LOADER_EXPORT___.locals = {
+	"slick-slider": `P2U4tQDDW5BqAsSTKkDg`,
+	"slick-list": `oDZis_EQYvu46J4K11yj`,
+	"slick-track": `qroLCoAblkm1YAcZ5MOo`,
+	"slick-slide": `kdsLpzfF8X97CNVXiUgh`,
+	"slick-active": `yONk5RWyu_RE1GNUvIrE`,
+	"slick-arrow": `j4soAkJH0KGIXoKn_JHs`,
+	"slick-prev": `YIX2Wi48y2y6pyMiWj4Q`,
+	"slick-next": `rPNkFKHYbP62yI7l7vgC`,
+	"slick-dots": `VnROrdq62_0KNp4SkGpK`
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/components/NavBar/NavBar.module.scss":
 /*!*****************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/components/NavBar/NavBar.module.scss ***!
@@ -1455,7 +1752,7 @@ ___CSS_LOADER_EXPORT___.locals = {
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `.Re9b4dg0VO9C3H0aAuBl {
+___CSS_LOADER_EXPORT___.push([module.id, `.FLIce5zuzv1CKQ0R5o0t {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
@@ -1584,10 +1881,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.Re9b4dg0VO9C3H0aAuBl {
   100% {
     transform: rotateY(360deg);
   }
-}`, "",{"version":3,"sources":["webpack://./src/components/Projects/Projects.module.scss"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,2DAAA;EACA,SAAA;EACA,aAAA;EACA,qBAAA;EACA,gBAAA;EACA,mBAAA;AACF;;AAEA;EACE,sBAAA;EACA,kBAAA;EACA,aAAA;EACA,wCAAA;EACA,WAAA;EACA,gBAAA;EACA,mDAAA;EACA,4BAAA;EACA,qBAAA;EACA,2CAAA;EACA,yBAAA;AACF;AACE;EACE,qBAAA;EACA,wCAAA,EAAA,mCAAA;EACA,4BAAA;AACJ;AAEE;EACE,iBAAA;EACA,mBAAA;EACA,kBAAA,EAAA,4BAAA;EACA,cAAA;AAAJ;AAGE;EACE,iBAAA;AADJ;AAEI;EACE,kBAAA;EACA,cAAA;AAAN;AAEI;EACE,kBAAA;AAAN;AAGE;EACE,eAAA;EACA,aAAA;EACA,sBAAA;EACG,mBAAA;EACH,mBAAA;EACA,0BAAA;EACA,kBAAA;EACA,wCAAA;AADJ;AAIE;EACE,iBAAA;EACA,qBAAA;AAFJ;AAGI;EACE,iBAAA;EACA,gBAAA;AADN;AAGM;EAEE,kBAAA;AAFR;AAIM;EACE,kBAAA;AAFR;AAOE;EACE,iBAAA;AALJ;AAMI;EACE,iBAAA,EAAA,gDAAA;EACA,gBAAA;EACA,uBAAA;AAJN;AAQE;EACE,iBAAA;EACA,yBAAA;EACA,YAAA;EACA,YAAA;EACA,oBAAA;EACA,eAAA;EACA,iCAAA;AANJ;AAQI;EACE,yBAAA;AANN;AAUE;EACE,iBAAA;EACA,WAAA;EACA,qBAAA;EACA,gBAAA;AARJ;AASI;EACE,kBAAA;AAPN;AAUI;EACE,kBAAA;AARN;AAYE;EACE,aAAA;EACA,6BAAA;EACA,qBAAA;AAVJ;AAYI;EACE,iBAAA;EACA,cAAA;EACA,0BAAA;EACA,sBAAA;EACA,eAAA;AAVN;AAYM;EACE,cAAA;EACA,qBAAA;AAVR;;AAiBA;EACE,qBAAA;EACA,4BAAA;AAdF;;AAkBA;EACE;IACE,qBAAA;EAfF;EAiBA;IACE,0BAAA;EAfF;AACF","sourcesContent":[".container {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\n  gap: 20px;\n  padding: 2rem;\n  justify-items: center;\n  text-align: left;\n  perspective: 1000px;\n}\n\n.item {\n  border: 1px solid #ccc;\n  border-radius: 8px;\n  padding: 1rem;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n  width: 100%;\n  max-width: 400px;\n  animation: rotate 20s linear infinite;\n  transform-style: preserve-3d;\n  transform: rotateY(0);\n  transition: transform 0.2s, box-shadow 0.2s;\n  background-color: #bf8575;\n\n  &:hover {\n    transform: rotateY(0);\n    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a box shadow for elevation */\n    animation-play-state: paused;\n  }\n\n  .projectTitle {\n    font-size: 1.7rem;\n    margin-bottom: 1rem;\n    text-align: center; /* Center-align the titles */\n    color: #1a3d5c;\n  }\n\n  .projectDescription {\n    font-weight: bold;\n    ul {\n      padding-left: 20px;\n      color: #2c3437;\n    }\n    li {\n      margin-bottom: 5px;\n    }\n  }\n  .projectImage {\n    max-width: 100%;\n    height: 300px;\n    -o-object-fit: contain;\n       object-fit: contain;\n    margin-bottom: 1rem;\n    border: solid 1rem #1a3d5c;\n    border-radius: 8px;\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n  }\n\n  .projectDetails {\n    font-size: 1.3rem;\n    list-style-type: disc;\n    .projectDescription {\n      font-weight: bold;\n      list-style: disc;\n      \n      ul {\n       \n        padding-left: 20px;\n      }\n      li {\n        margin-bottom: 5px;\n      }\n    }\n  }\n\n  .projectSummary {\n    font-size: 1.3rem;\n    p {\n      max-height: 120px; /* Adjust the height for the collapsed summary */\n      overflow: hidden;\n      text-overflow: ellipsis;\n    }\n  }\n\n  .expandButton {\n    font-size: 1.6rem;\n    background-color: #60b4c4;\n    color: white;\n    border: none;\n    padding: 0.5rem 1rem;\n    cursor: pointer;\n    transition: background-color 0.2s;\n\n    &:hover {\n      background-color: #301b5e;\n    }\n  }\n\n  .technologies {\n    font-size: 1.3rem;\n    color: #555;\n    margin-bottom: 0.5rem;\n    margin: 0.5rem 0;\n    ul {\n      padding-left: 20px;\n      \n    }\n    li {\n      margin-bottom: 5px;\n    }\n  }\n\n  .links {\n    display: flex;\n    justify-content: space-around;\n    align-items: baseline;\n\n    a {\n      font-size: 1.6rem;\n      color: #60b4c4;\n      text-decoration: underline;\n      transition: color 0.2s;\n      cursor: pointer;\n\n      &:hover {\n        color: #301b5e;\n        transform: scale(1.9);\n      }\n    }\n  }\n}\n\n\n.item.show-details {\n  transform: rotateY(0);\n  animation-play-state: paused;\n}\n\n\n@keyframes rotate {\n  0% {\n    transform: rotateY(0);\n  }\n  100% {\n    transform: rotateY(360deg);\n  }\n}\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/Projects/Projects.module.scss"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,2DAAA;EACA,SAAA;EACA,aAAA;EACA,qBAAA;EACA,gBAAA;EACA,mBAAA;AACF;;AAEA;EACE,sBAAA;EACA,kBAAA;EACA,aAAA;EACA,wCAAA;EACA,WAAA;EACA,gBAAA;EACA,mDAAA;EACA,4BAAA;EACA,qBAAA;EACA,2CAAA;EACA,yBAAA;AACF;AACE;EACE,qBAAA;EACA,wCAAA,EAAA,mCAAA;EACA,4BAAA;AACJ;AAEE;EACE,iBAAA;EACA,mBAAA;EACA,kBAAA,EAAA,4BAAA;EACA,cAAA;AAAJ;AAGE;EACE,iBAAA;AADJ;AAEI;EACE,kBAAA;EACA,cAAA;AAAN;AAEI;EACE,kBAAA;AAAN;AAGE;EACE,eAAA;EACA,aAAA;EACA,sBAAA;EACG,mBAAA;EACH,mBAAA;EACA,0BAAA;EACA,kBAAA;EACA,wCAAA;AADJ;AAIE;EACE,iBAAA;EACA,qBAAA;AAFJ;AAGI;EACE,iBAAA;EACA,gBAAA;AADN;AAGM;EAEE,kBAAA;AAFR;AAIM;EACE,kBAAA;AAFR;AAOE;EACE,iBAAA;AALJ;AAMI;EACE,iBAAA,EAAA,gDAAA;EACA,gBAAA;EACA,uBAAA;AAJN;AAQE;EACE,iBAAA;EACA,yBAAA;EACA,YAAA;EACA,YAAA;EACA,oBAAA;EACA,eAAA;EACA,iCAAA;AANJ;AAQI;EACE,yBAAA;AANN;AAUE;EACE,iBAAA;EACA,WAAA;EACA,qBAAA;EACA,gBAAA;AARJ;AASI;EACE,kBAAA;AAPN;AAUI;EACE,kBAAA;AARN;AAYE;EACE,aAAA;EACA,6BAAA;EACA,qBAAA;AAVJ;AAYI;EACE,iBAAA;EACA,cAAA;EACA,0BAAA;EACA,sBAAA;EACA,eAAA;AAVN;AAYM;EACE,cAAA;EACA,qBAAA;AAVR;;AAiBA;EACE,qBAAA;EACA,4BAAA;AAdF;;AAkBA;EACE;IACE,qBAAA;EAfF;EAiBA;IACE,0BAAA;EAfF;AACF","sourcesContent":[".containerProjects {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\n  gap: 20px;\n  padding: 2rem;\n  justify-items: center;\n  text-align: left;\n  perspective: 1000px;\n}\n\n.item {\n  border: 1px solid #ccc;\n  border-radius: 8px;\n  padding: 1rem;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n  width: 100%;\n  max-width: 400px;\n  animation: rotate 20s linear infinite;\n  transform-style: preserve-3d;\n  transform: rotateY(0);\n  transition: transform 0.2s, box-shadow 0.2s;\n  background-color: #bf8575;\n\n  &:hover {\n    transform: rotateY(0);\n    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a box shadow for elevation */\n    animation-play-state: paused;\n  }\n\n  .projectTitle {\n    font-size: 1.7rem;\n    margin-bottom: 1rem;\n    text-align: center; /* Center-align the titles */\n    color: #1a3d5c;\n  }\n\n  .projectDescription {\n    font-weight: bold;\n    ul {\n      padding-left: 20px;\n      color: #2c3437;\n    }\n    li {\n      margin-bottom: 5px;\n    }\n  }\n  .projectImage {\n    max-width: 100%;\n    height: 300px;\n    -o-object-fit: contain;\n       object-fit: contain;\n    margin-bottom: 1rem;\n    border: solid 1rem #1a3d5c;\n    border-radius: 8px;\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n  }\n\n  .projectDetails {\n    font-size: 1.3rem;\n    list-style-type: disc;\n    .projectDescription {\n      font-weight: bold;\n      list-style: disc;\n      \n      ul {\n       \n        padding-left: 20px;\n      }\n      li {\n        margin-bottom: 5px;\n      }\n    }\n  }\n\n  .projectSummary {\n    font-size: 1.3rem;\n    p {\n      max-height: 120px; /* Adjust the height for the collapsed summary */\n      overflow: hidden;\n      text-overflow: ellipsis;\n    }\n  }\n\n  .expandButton {\n    font-size: 1.6rem;\n    background-color: #60b4c4;\n    color: white;\n    border: none;\n    padding: 0.5rem 1rem;\n    cursor: pointer;\n    transition: background-color 0.2s;\n\n    &:hover {\n      background-color: #301b5e;\n    }\n  }\n\n  .technologies {\n    font-size: 1.3rem;\n    color: #555;\n    margin-bottom: 0.5rem;\n    margin: 0.5rem 0;\n    ul {\n      padding-left: 20px;\n      \n    }\n    li {\n      margin-bottom: 5px;\n    }\n  }\n\n  .links {\n    display: flex;\n    justify-content: space-around;\n    align-items: baseline;\n\n    a {\n      font-size: 1.6rem;\n      color: #60b4c4;\n      text-decoration: underline;\n      transition: color 0.2s;\n      cursor: pointer;\n\n      &:hover {\n        color: #301b5e;\n        transform: scale(1.9);\n      }\n    }\n  }\n}\n\n\n.item.show-details {\n  transform: rotateY(0);\n  animation-play-state: paused;\n}\n\n\n@keyframes rotate {\n  0% {\n    transform: rotateY(0);\n  }\n  100% {\n    transform: rotateY(360deg);\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
-	"container": `Re9b4dg0VO9C3H0aAuBl`,
+	"containerProjects": `FLIce5zuzv1CKQ0R5o0t`,
 	"item": `WL_csyXcz9fuX7NR7iMV`,
 	"rotate": `u6fEW0ob9ZvwQ763iPQI`,
 	"projectTitle": `CIHI0EnOcLSjcuolDMsj`,
@@ -1639,8 +1936,9 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.EjhMvsCUQLCTQ0Y_vV7g {
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
-  background-color: #ced5eb;
+  background-color: whitesmoke;
   min-width: 900px;
+  opacity: 75%;
 }
 
 .YFAI4OgmzoUhCerYzSLG:hover {
@@ -1674,7 +1972,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.EjhMvsCUQLCTQ0Y_vV7g {
   h1 {
     font-size: 2rem;
   }
-}`, "",{"version":3,"sources":["webpack://./src/components/Services/Services.module.scss"],"names":[],"mappings":"AAAA;EACI,cAAA;EACA,iBAAA;EACA,aAAA;EACA,eAAA;EACA,8BAAA;EACA,yBAAA;EACA,mBAAA;AACJ;;AAEE;EACE,aAAA;EACA,YAAA;EACA,mBAAA;EACA,wCAAA;EACA,+BAAA;EACA,yBAAA;EACA,gBAAA;AACJ;;AAEE;EACE,sBAAA;AACJ;;AAEE;EACE,0BAAA;EACA,cAAA;EACA,iBAAA;AACJ;;AAEE;EACE,iBAAA;EACA,kBAAA;AACJ;;AAGE;EACC,6BAAA;EACC,eAAA;AAAJ;;AAGE;EACE,kEAAA;EACA;IACE,iBAAA;EAAJ;AACF;AAGE;EACE,gEAAA;EACA;IACE,eAAA;EADJ;AACF","sourcesContent":[".services {\n    margin: 0 auto;\n    max-width: 1000px;\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: space-between;\n    background-color: #60b4c4;\n    border-radius: 10px;\n  }\n  \n  .service {\n    padding: 20px;\n    margin: 10px;\n    border-radius: 10px;\n    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);\n    transition: transform 0.3s ease;\n    background-color:#ced5eb;\n    min-width: 900px;\n  }\n  \n  .service:hover {\n    transform: scale(1.05);\n  }\n  \n  .serviceItem {\n    text-decoration: underline;\n    color: #572387;\n    font-size: 2.2rem;\n  }\n  \n  .serviceDescription {\n    margin-left: 10px;\n    font-size: 1.62rem;\n  }\n  \n\n  #mySpecialDiv {\n   /* Your desired styles here */\n    font-size: 24px;\n  }\n  \n  @media (max-width: 768px) {\n    /* Styles for screens up to 768px wide (typical tablet portrait) */\n    h1 {\n      font-size: 2.5rem;\n    }\n  }\n  \n  @media (max-width: 480px) {\n    /* Styles for screens up to 480px wide (typical mobile phones) */\n    h1 {\n      font-size: 2rem;\n    }\n  }\n  "],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/Services/Services.module.scss"],"names":[],"mappings":"AAAA;EACE,cAAA;EACA,iBAAA;EACA,aAAA;EACA,eAAA;EACA,8BAAA;EACA,yBAAA;EACA,mBAAA;AACF;;AAEA;EACE,aAAA;EACA,YAAA;EACA,mBAAA;EACA,wCAAA;EACA,+BAAA;EACA,4BAAA;EACA,gBAAA;EACA,YAAA;AACF;;AAEA;EACE,sBAAA;AACF;;AAEA;EACE,0BAAA;EACA,cAAA;EACA,iBAAA;AACF;;AAEA;EACE,iBAAA;EACA,kBAAA;AACF;;AAGA;EACC,6BAAA;EACC,eAAA;AAAF;;AAGA;EACE,kEAAA;EACA;IACE,iBAAA;EAAF;AACF;AAGA;EACE,gEAAA;EACA;IACE,eAAA;EADF;AACF","sourcesContent":[".services {\n  margin: 0 auto;\n  max-width: 1000px;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-between;\n  background-color: #60b4c4;\n  border-radius: 10px;\n}\n\n.service {\n  padding: 20px;\n  margin: 10px;\n  border-radius: 10px;\n  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);\n  transition: transform 0.3s ease;\n  background-color: whitesmoke;\n  min-width: 900px;\n  opacity: 75%;\n}\n\n.service:hover {\n  transform: scale(1.05);\n}\n\n.serviceItem {\n  text-decoration: underline;\n  color: #572387;\n  font-size: 2.2rem;\n}\n\n.serviceDescription {\n  margin-left: 10px;\n  font-size: 1.62rem;\n}\n\n\n#mySpecialDiv {\n /* Your desired styles here */\n  font-size: 24px;\n}\n\n@media (max-width: 768px) {\n  /* Styles for screens up to 768px wide (typical tablet portrait) */\n  h1 {\n    font-size: 2.5rem;\n  }\n}\n\n@media (max-width: 480px) {\n  /* Styles for screens up to 480px wide (typical mobile phones) */\n  h1 {\n    font-size: 2rem;\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"services": `EjhMvsCUQLCTQ0Y_vV7g`,
@@ -1813,9 +2111,34 @@ ___CSS_LOADER_EXPORT___.locals = {
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ``, "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, `.evOUlRBOXk5cPHrGnbSc {
+  width: 800px; /* Adjust the width as needed */
+  height: 400px; /* Adjust the height as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bkY2jRNAY_QPt9nzJebC {
+  font-family: "Arial", sans-serif;
+}
+
+.bkY2jRNAY_QPt9nzJebC .g_a49G9P9XPiHAyfQCak {
+  display: inline-block;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  font-size: 16px; /* Adjust the font size as needed */
+}
+
+/* You can add more styles for the words, like hover effects, animations, etc. */`, "",{"version":3,"sources":["webpack://./src/components/WordCloud/WordCloud.module.scss"],"names":[],"mappings":"AAAA;EACI,YAAA,EAAA,+BAAA;EACA,aAAA,EAAA,gCAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;AACJ;;AAEE;EACE,gCAAA;AACJ;;AAEE;EACE,qBAAA;EACA,YAAA;EACA,WAAA;EACA,sBAAA;EACA,kBAAA;EACA,eAAA,EAAA,mCAAA;AACJ;;AAEE,gFAAA","sourcesContent":[".myWordCloudComponent {\n    width: 800px; /* Adjust the width as needed */\n    height: 400px; /* Adjust the height as needed */\n    display: flex;\n    justify-content: center;\n    align-items: center;\n  }\n  \n  .react-word-cloud {\n    font-family: 'Arial', sans-serif;\n  }\n  \n  .react-word-cloud .word {\n    display: inline-block;\n    padding: 5px;\n    margin: 5px;\n    border: 1px solid #333;\n    border-radius: 5px;\n    font-size: 16px; /* Adjust the font size as needed */\n  }\n  \n  /* You can add more styles for the words, like hover effects, animations, etc. */\n  "],"sourceRoot":""}]);
 // Exports
-___CSS_LOADER_EXPORT___.locals = {};
+___CSS_LOADER_EXPORT___.locals = {
+	"myWordCloudComponent": `evOUlRBOXk5cPHrGnbSc`,
+	"react-word-cloud": `bkY2jRNAY_QPt9nzJebC`,
+	"word": `g_a49G9P9XPiHAyfQCak`
+};
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
 
@@ -2013,9 +2336,14 @@ ___CSS_LOADER_EXPORT___.locals = {
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ``, "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, `.ImMviYl9fzTHFTRDxpg4 {
+  padding: 4rem;
+  margin: 4rem;
+}`, "",{"version":3,"sources":["webpack://./src/pages/ProjectPage/ProjectPage.module.scss"],"names":[],"mappings":"AAAA;EACI,aAAA;EACA,YAAA;AACJ","sourcesContent":[".projectPageContainer {\n    padding: 4rem;\n    margin: 4rem;\n}\n\n"],"sourceRoot":""}]);
 // Exports
-___CSS_LOADER_EXPORT___.locals = {};
+___CSS_LOADER_EXPORT___.locals = {
+	"projectPageContainer": `ImMviYl9fzTHFTRDxpg4`
+};
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
 
@@ -2050,11 +2378,23 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.KffWU_vMGlGBdXhvMgWm {
 
 .d_yZzAeWG4rl_snBIFdm {
   align-items: left;
-}`, "",{"version":3,"sources":["webpack://./src/pages/ServicesPage/ServicesPage.module.scss"],"names":[],"mappings":"AAAA;EACI,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,uBAAA;EACA,aAAA;EACA,mBAAA;AACJ;;AAEA;EACI,iBAAA;AACJ","sourcesContent":[".servicePageContainer {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    padding: 20px;\n    margin-bottom: 70px; \n  }\n  \n.serviceHeader {\n    align-items: left;\n}\n"],"sourceRoot":""}]);
+}
+
+.BL1VtAOLX4vdB58vgHGs {
+  margin-top: 140px;
+}
+
+.IhRXXMMdcqLiGrMQukXz {
+  margin-bottom: 100px;
+  margin: 20px;
+  justify-content: center;
+}`, "",{"version":3,"sources":["webpack://./src/pages/ServicesPage/ServicesPage.module.scss"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,uBAAA;EACA,aAAA;EACA,mBAAA;AACF;;AAEA;EACE,iBAAA;AACF;;AAEA;EACE,iBAAA;AACF;;AAEA;EACE,oBAAA;EACA,YAAA;EACA,uBAAA;AACF","sourcesContent":[".servicePageContainer {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  padding: 20px;\n  margin-bottom: 70px; \n}\n\n.serviceHeader {\n  align-items: left;\n}\n\n.serviceFooter {\n  margin-top: 140px;\n}\n\n.serviceContact {\n  margin-bottom: 100px;\n  margin: 20px;\n  justify-content: center;\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"servicePageContainer": `KffWU_vMGlGBdXhvMgWm`,
-	"serviceHeader": `d_yZzAeWG4rl_snBIFdm`
+	"serviceHeader": `d_yZzAeWG4rl_snBIFdm`,
+	"serviceFooter": `BL1VtAOLX4vdB58vgHGs`,
+	"serviceContact": `IhRXXMMdcqLiGrMQukXz`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -2372,6 +2712,59 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
        /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_Footer_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_Footer_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_Footer_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+
+
+/***/ }),
+
+/***/ "./src/components/ImageSlider/ImageSlider.module.scss":
+/*!************************************************************!*\
+  !*** ./src/components/ImageSlider/ImageSlider.module.scss ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_ImageSlider_module_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!../../../node_modules/sass-loader/dist/cjs.js!../../../node_modules/postcss-loader/dist/cjs.js!./ImageSlider.module.scss */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/components/ImageSlider/ImageSlider.module.scss");
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
+options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
+
+      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
+    
+options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
+options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_ImageSlider_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+
+
+
+
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_ImageSlider_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_ImageSlider_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_ImageSlider_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
 
 
 /***/ }),
@@ -2969,6 +3362,18 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -3048,9 +3453,9 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendors-node_modules_css-loader_dist_runtime_api_js-node_modules_css-loader_dist_runtime_sour-55cbeb"], () => (__webpack_require__("./src/index.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendors-node_modules_css-loader_dist_runtime_api_js-node_modules_css-loader_dist_runtime_sour-cd58b4"], () => (__webpack_require__("./src/index.js")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.9316d9c16108d19e69b8952cca20aee0.js.map
+//# sourceMappingURL=App.9768e73cb139d99a5991cb5beeacfec3.js.map

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Services from '../../components/Services/Services'
-// import ContactForm from '../../components/Contact/ContactModalForm'
+import ContactForm from '../../components/Contact/ContactForm'
 import Footer from '../../components/Footer/Footer'
 import styles from './ServicesPage.module.scss'
 

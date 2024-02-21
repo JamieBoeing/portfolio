@@ -1,8 +1,8 @@
 // import React, { useState } from 'react';
-// import styles from './ContactModal.module.scss'; // Import your CSS or SCSS styles
+// import styles from './ContactForm.module.scss'; // Import your CSS or SCSS styles
 // import { sendEmail } from '../../../controllers/api/contactController'; // Import your controller
 
-// function ContactModal() {
+// function ContactForm() {
 //   const [formData, setFormData] = useState({
 //     user_name: '',
 //     user_email: '',
@@ -110,4 +110,4 @@
 //   );
 // }
 
-// export default ContactModal;
+// export default ContactForm;

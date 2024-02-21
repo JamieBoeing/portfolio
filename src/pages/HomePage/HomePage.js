@@ -42,6 +42,9 @@ const HomePage = () => {
           <Carousel images={images} />
         </div>
       </div>
+      <div className={styles.wordCloudStyles}>
+       <MyWordCloud />
+      </div>
       <Footer />
     </div>
   );
